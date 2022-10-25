@@ -12,7 +12,7 @@ def save_sip(form_sip):
     random_hex = secrets.token_hex(8)
     _, f_ext = os.path.splitext(form_sip.filename)
     sip_fn = random_hex + f_ext
-    sip_path = os.path.join(current_app.root_path, 'static/assets/files/sip', sip_fn)
+    sip_path = os.path.join(current_app.root_path, 'static/assets/files/dokter/sip', sip_fn)
         
     form_sip.save(sip_path)
     return sip_fn 
@@ -21,7 +21,7 @@ def save_ijazah(form_ijazah):
     random_hex = secrets.token_hex(8)
     _, f_ext = os.path.splitext(form_ijazah.filename)
     ijazah_fn = random_hex + f_ext
-    ijazah_path = os.path.join(current_app.root_path, 'static/assets/files/ijazah', ijazah_fn)
+    ijazah_path = os.path.join(current_app.root_path, 'static/assets/files/dokter/ijazah', ijazah_fn)
         
     form_ijazah.save(ijazah_path)
     return ijazah_fn 
