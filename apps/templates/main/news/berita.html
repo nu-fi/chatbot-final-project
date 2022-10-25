@@ -1,0 +1,74 @@
+{% extends "/layouts/base.html" %}
+
+{% block content %}
+<div class="container mx-auto flex items-center flex-wrap pt-4 pb-12">
+    <div class="flex flex-wrap justify-between pt-12 -mx-6">                                            
+        {% for n in newss.items %}
+
+        <div class="w-full md:w-1/2 p-6 flex flex-col flex-grow flex-shrink">
+            <div class="flex-1 flex-row bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
+                <a href="#" class="flex flex-wrap no-underline hover:no-underline">	
+                    <img src="{{url_for('static', filename='assets/img/news/' + n.image_news)}}" class="h-full w-full rounded-t pb-6">
+                    <p class="w-full text-gray-600 text-xs md:text-sm px-6 uppercase py-2">{{ n.categoryn.name }}</p>
+                    <div class="w-full font-bold text-xl text-gray-900 px-6 pb-4">
+                        <a href="{{ url_for('main.news_detail', slug=n.slug) }}"  >{{ n.title }}</a>
+                    </div>
+                    <div class="text-justify line-clamp-3 mb-2 text-gray-800 font-semibold text-base px-6 dark:text-gray-400">
+                        {{ n.content | safe }}
+                    </div>
+            
+                </a>
+            </div>
+            <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow-lg p-6">
+                <div class="flex items-center justify-between">
+                    <p class="text-gray-600 text-xs md:text-sm">{{ n.date_posted.strftime('%d %B, %Y') }}</p>
+                </div>
+            </div>
+        </div>
+
+        {% endfor %}
+    </div>
+</div>
+
+<div class=" flex flex-col items-center">
+    <nav aria-label="Page navigation example">
+        <ul class="inline-flex items-center -space-x-px">
+            <li>
+                <a href="{{ prev_url }}" class="block py-2 px-3 ml-0 leading-tight text-gray-500 bg-white rounded-l-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+                <span class="sr-only">Previous</span>
+                <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                </a>
+            </li>
+
+            {% for page_num in newss.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2) %}
+                {% if page_num %}
+                
+                    {% if newss.page == page_num %}
+
+                    <li>
+                        <a href="{{ url_for('main.new', page=page_num) }}" aria-current="page" class="z-10 py-2 px-3 leading-tight text-blue-600 bg-blue-50 border border-blue-300 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white">{{ page_num }}</a>
+                    </li>
+                    
+                    {% else %}
+
+                    <li>
+                        <a href="{{ url_for('main.new', page=page_num) }}" class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">{{ page_num }}</a>
+                    </li>
+                
+                    {% endif %}
+                        
+                {% else %}
+                ...
+                {% endif %}
+            {% endfor %}
+
+            <li>
+                <a href="{{ next_url }}" class="block py-2 px-3 leading-tight text-gray-500 bg-white rounded-r-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+                <span class="sr-only">Next</span>
+                <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>
+{% endblock content%}

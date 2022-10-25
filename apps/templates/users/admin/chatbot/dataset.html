@@ -1,0 +1,47 @@
+{% extends "layouts/base_dashboard.html" %}
+
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-md-12 col-lg-12">
+      <div class="card">
+        <section class="section m-4">
+          <div class="mb-3">
+            <a href="{{ url_for('chatbot.add_dataset') }}" type="button" class="btn btn-info btn-md" data-placement="top" title="Add"><i class="fa-solid fa-plus"></i></a>
+            
+            <a href="{{ url_for('chatbot.training') }}" type="button" class="btn btn-success btn-md text-right" data-placement="top" title="Add">Training Dataset</a>
+          </div>
+        
+          <table id="data" class="table table-striped table-hover">
+              <thead>
+                  <tr>
+                    <th scope="col">Tag</th>
+                    <th scope="col">Patterns</th>
+                    <th scope="col">Responses</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  
+                {% for tag_patern_res in data['intents'] %} 
+                    {% for pat in tag_patern_res['patterns'] %}
+                    
+                    <tr>
+                        <td>{{ tag_patern_res['tag'] }}</td>          
+                        <td>{{pat}}</td>
+                        <td><ul class="list-group"></ul>{% for x in tag_patern_res['responses'] %} <li class="list-group-item">{{x}}</li> {% endfor %}</ul></td>
+                    </tr>
+                {% endfor %}
+        
+              {% endfor %}
+        
+                </tbody>
+          </table>
+        </section>
+      </div>
+      
+    </div>
+  </div>  
+</div>
+    
+{% endblock content%}
+

@@ -1,0 +1,159 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+
+<section class="">
+    <div class="container mx-auto p-4 ">
+        <div class="flex flex-wrap justify-between -mx-6">
+            <!--2/3 col -->
+            <div class="w-full md:w-2/3 p-6 flex flex-col flex-grow flex-shrink">
+                <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
+                    <div class="h-full w-full rounded-t">
+                        <iframe class="w-full h-full" src="https://maps.google.com/maps?q=idai%20kalimantan%20barat&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
+                    </div>
+                
+                </div>
+            </div>
+    
+            <!--1/3 col -->
+            <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+                <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg p-4">
+
+                    <div class="border-b-2 border-gray-600 p-2">
+                        <a href="#" class="flex flex-wrap no-underline hover:no-underline">
+                            
+                            <div class="mb-6 md:mb-0">
+                                <a href="#" class="flex items-center">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"></path></svg>&nbsp;
+
+                                    <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Alamat
+                                      
+                                    </span>
+                                    
+                                </a>
+                            </div>
+                            <p class="text-gray-800 font-semibold text-base px-6 mb-5 text-justify">
+                                Jl. KH. W. Hasyim No. 249, Mariana, Kec. Pontianak Kota, Kota Pontianak, Kalimantan Barat 78244
+                            </p>
+                        </a>
+                    </div>
+
+                    <div class="border-b-2 border-gray-600 p-2">
+                        <a href="#" class="flex flex-wrap no-underline hover:no-underline">
+                            
+                            <div class="mb-6 md:mb-0">
+                                <a href="#" class="flex items-center">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"></path></svg>&nbsp;
+
+                                    <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Email
+                                      
+                                    </span>
+                                    
+                                </a>
+                            </div>
+                            <p class="text-gray-800 font-semibold text-base px-6 mb-5">
+                                &nbsp;idaikalbar@gmail.com
+                            </p>
+                        </a>
+                    </div>
+
+                    <div class="border-b-2 border-gray-600 p-2">
+                        <a href="#" class="flex flex-wrap no-underline hover:no-underline">
+                            <div class="mb-6 md:mb-0">
+                                <a href="#" class="flex items-center">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>&nbsp;
+
+                                    <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Telepon
+                                      
+                                    </span>
+                                    
+                                </a>
+                            </div>
+                            <p class="text-gray-800 font-semibold text-base px-6 mb-5">
+                                &nbsp;(056) 173-2-101
+                            </p>
+                        </a>
+                    </div>
+                    
+                    
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+
+    <main class="bg-white max-w-lg mx-auto p-8 md:p-12 my-10 rounded-lg shadow-2xl">
+        <section>
+            <h3 class="font-bold text-2xl">Hubungi Kami</h3>
+        </section>
+
+         <section class="mt-10">
+            <form class="flex flex-col" method="POST" action="#">
+                {{ form.hidden_tag() }}
+                <label for="input-group-1" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Nama</label>
+                <div class="relative mb-6 ">
+                    {% if form.name.errors %}
+                    {{ form.name(class="bg-gray-50 border border-red-600 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-6 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500") }}
+                    <div class="invalid-feedback">
+                        {% for error in form.name.errors %}
+                        <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                    {% else %}
+                    {{ form.name(class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-6 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500") }}
+                    {% endif %}
+                </div>
+
+                <label for="input-group-1" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your Email</label>
+                <div class="relative mb-6">
+                    {% if form.email.errors %}
+                    {{ form.email(class="bg-gray-50 border border-red-600 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-6 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500") }}
+                    <div class="invalid-feedback">
+                        {% for error in form.email.errors %}
+                        <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                    {% else %}
+                    {{ form.email(class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-6 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500") }}
+                    {% endif %}
+                </div>
+
+                <label for="input-group-1" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your Subject</label>
+                <div class="relative mb-6">
+                    {% if form.subject.errors %}
+                    {{ form.subject(class="bg-gray-50 border border-red-600 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-6 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500") }}
+                    <div class="invalid-feedback">
+                        {% for error in form.subject.errors %}
+                        <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                    {% else %}
+                    {{ form.subject(class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-6 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500") }}
+                    {% endif %}
+                </div>
+                
+                <div class="mb-6 pt-3 rounded"> 
+                    <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Your message</label>
+                    {% if form.message.errors %}
+                    {{ form.message(class="bg-gray-50 border border-red-600 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-6 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500") }}
+                    <div class="invalid-feedback">
+                        {% for error in form.message.errors %}
+                        <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                    {% else %}
+                    {{ form.message(class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-6 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500") }}
+                    {% endif %}
+                </div>
+                <!-- <button name="submit" type="button" class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"><a href="{{ url_for('main.contact') }}">Kirim Pesan</a></button> -->
+                {{ form.submit(class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700") }}
+
+            </form>
+        </section>
+    </main>
+    
+    
+</section>
+    
+{% endblock content%}

@@ -1,0 +1,106 @@
+<div class="main-sidebar">
+    <aside id="sidebar-wrapper">
+        <div class="sidebar-brand">
+            <a href="#">IDAI KALBAR</a>
+        </div>
+        <div class="sidebar-brand sidebar-brand-sm">
+            <a href="#">IDAI</a>
+        </div>
+        <!-- dokter -->
+    {% if roles == 'Dokter' %}
+    <ul class="sidebar-menu">
+        <li class="menu-header">Dashboard</li>
+        <li class="nav-item dropdown active">
+            <a href="{{ url_for('users.dokter')}}" class="nav-link"><i class="fas fa-solid fa-house"></i><span>Dashboard</span></a>
+        </li>
+    </ul>
+    <ul class="sidebar-menu">
+        <li class="menu-header">Manajemen Data Pribadi</li>
+        <li class="nav-item dropdown active">
+            <a href="{{ url_for('doctors.tambah_data')}}" class="nav-link"><i class="fas fa-solid fa-book"></i><span>Data Pribadi</span></a>
+        </li>
+    </ul>
+    <ul class="sidebar-menu">
+        <li class="menu-header">Data Dokter Terdaftar</li>
+        <li class="nav-item dropdown active">
+            <a href="{{ url_for('doctors.data_dokter')}}" class="nav-link"><i class="fas fa-solid fa-book"></i><span>Data Dokter</span></a>
+        </li>
+    </ul>
+
+    <!-- admiin -->
+    {% else %}
+
+        <ul class="sidebar-menu">
+            <li class="menu-header">Dashboard</li>
+            <li class="nav-item dropdown active">
+                <a href="{{ url_for('users.admin')}}" class="nav-link"><i class="fas fa-solid fa-house"></i><span>Dashboard</span></a>
+            </li>
+        </ul>
+        <ul class="sidebar-menu">
+            <li class="menu-header">Manajemen Artikel</li>
+            <li class="nav-item dropdown active">
+                <a href="{{ url_for('articles.article_admin')}}" class="nav-link"><i class="fas fa-solid fa-book"></i><span>Artikel</span></a>
+            </li>
+            <li class="nav-item dropdown active">
+                <a href="{{ url_for('articles.new_category')}}" class="nav-link"><i class="fas fa-regular fa-rectangle-list"></i><span>Kategori Artikel</span></a>
+            </li>
+        </ul>
+
+        <ul class="sidebar-menu">
+            <li class="menu-header">Manajemen Berita</li>
+            <li class="nav-item dropdown active">
+                <a href="{{ url_for('news.news_admin')}}" class="nav-link"><i class="fas fa-regular fa-newspaper"></i><span>Berita</span></a>
+            </li>
+            <li class="nav-item dropdown active">
+                <a href="{{ url_for('news.new_category')}}" class="nav-link"><i class="fas fa-regular fa-rectangle-list"></i><span>Kategori Berita</span></a>
+            </li>
+        </ul>
+
+        <ul class="sidebar-menu">
+            <li class="menu-header">Manajemen Galeri</li>
+            <li class="nav-item dropdown active">
+                <a href="{{ url_for('galleries.new_image')}}" class="nav-link"><i class="fas fa-regular fa-images"></i><span>Gambar Galeri</span></a>
+            </li>
+            <li class="nav-item dropdown active">
+                <a href="{{ url_for('galleries.new_gallery')}}" class="nav-link"><i class="fas fa-solid fa-film"></i><span>Kategori Galeri</span></a>
+            </li>
+        </ul>
+
+        <ul class="sidebar-menu">
+            <li class="menu-header">Manajemen Lainnya</li>
+            <li class="nav-item dropdown active">
+                <a href="{{ url_for('files.new_files')}}" class="nav-link"><i class="fas fa-regular fa-folder-open"></i><span>Berkas Publik</span></a>
+            </li>
+            <li class="nav-item dropdown active">
+                <a href="{{ url_for('files.data_dokter')}}" class="nav-link"><i class="fas fa-solid fa-user-doctor"></i><span>Data Dokter</span></a>
+            </li>
+        </ul>
+
+        <ul class="sidebar-menu">
+            <li class="menu-header">Manajemen Chatbot</li>
+            <li class="nav-item dropdown active">
+                <a href="{{ url_for('chatbot.dataset')}}" class="nav-link"><i class="fas fa-solid fa-database"></i><span>Dataset</span></a>
+            </li>   
+            <li class="nav-item dropdown active">
+                <a href="{{ url_for('chatbot.history')}}" class="nav-link"><i class="fas fa-solid fa-clock-rotate-left"></i><span>History</span></a>
+            </li>
+            
+            <li class="nav-item dropdown active">
+                <a href="{{ url_for('chatbot.unans_chat')}}" class="nav-link"><i class="fas fa-regular fa-circle-question"></i><span>Unanswered</span></a>
+            </li>
+            
+        </ul>
+        {% endif %}
+        <!-- <ul class="sidebar-menu">
+            <li class="menu-header">Dashboard</li>
+            <li class="nav-item dropdown active">
+                <a href="#" class="nav-link"><i class="fas fa-fire"></i><span>Dashboard</span></a>
+            </li>
+        </ul> 
+        <div class="mt-4 mb-4 p-3 hide-sidebar-mini">
+            <a href="https://getstisla.com/docs" class="btn btn-primary btn-lg btn-block btn-icon-split">
+                <i class="fas fa-rocket"></i> Documentation
+            </a>
+        </div> -->
+    </aside>
+</div>

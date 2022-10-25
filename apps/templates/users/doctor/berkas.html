@@ -1,0 +1,251 @@
+{% extends "layouts/base_dashboard.html" %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <form action="" method="post" enctype="multipart/form-data" id="multiple_select_form">
+            {{ form.hidden_tag() }}
+            {{ form.csrf_token }}
+            <fieldset class="form-group">
+                <!-- <legend class="border-bottom mb-4">{{ legend }}</legend> -->
+
+                <div class="border-bottom">
+                    <h6>Data Pribadi</h6>
+                </div><br>
+                
+                <div class="form-group">
+                    <div class="row mb-3">
+                        <label for="nama" class="col-sm-3 col-form-label">{{form.nama.label}}</label>
+                        <div class="col-sm-9">
+                            {% if form.nama.errors %}
+                            <input type="text" class="form-control form-control is-invalid" id="nama" name="nama">
+                            <div class="invalid-feedback">
+                                {% for error in form.nama.errors %}
+                                <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                            {% else %}
+                            <input type="text" class="form-control form-control" id="nama" name="nama" value="{{ data.nama_lengkap }}">
+                            {% endif %}
+                        </div>
+                    </div>    
+                </div>
+
+                <div class="form-group">
+                    <div class="row mb-3">
+                        <label for="no_hp" class="col-sm-3 col-form-label">{{form.no_hp.label}}</label>
+                        <div class="col-sm-9">
+                            {% if form.no_hp.errors %}
+                            <input type="telp" class="form-control form-control is-invalid" id="no_hp" name="no_hp">
+                            <div class="invalid-feedback">
+                                {% for error in form.no_hp.errors %}
+                                <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                            {% else %}
+                            <input type="text" class="form-control form-control" id="no_hp" name="no_hp" value="{{ data.no_hp }}">
+                            {% endif %}
+                        </div>
+                    </div>    
+                </div>
+
+                <div class="border-bottom">
+                    <h6>Informasi Tempat Praktik</h6>
+                </div><br>
+                <div class="form-group">
+                    <div class="row mb-3">
+                        <label for="tempat_praktik" class="col-sm-3 col-form-label">{{form.tempat_praktik.label}}</label>
+                        <div class="col-sm-9">
+                            {% if form.tempat_praktik.errors %}
+                            <input type="text" class="form-control form-control is-invalid" id="tempat_praktik" name="tempat_praktik">
+                            <div class="invalid-feedback">
+                                {% for error in form.tempat_praktik.errors %}
+                                <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                            {% else %}
+                            <input type="text" class="form-control form-control" id="tempat_praktik" name="tempat_praktik" value="{{ data.tempat_praktik }}">
+                            {% endif %}
+                        </div>
+                    </div>    
+                </div>
+
+                <div class="form-group">
+                    <div class="row mb-3">
+                        <label for="alamat_praktik" class="col-sm-3 col-form-label">{{form.alamat_praktik.label}}</label>
+                        <div class="col-sm-9">
+                            {% if form.alamat_praktik.errors %}
+                            <input type="text" class="form-control form-control is-invalid" id="alamat_praktik" name="alamat_praktik">
+                            <div class="invalid-feedback">
+                                {% for error in form.alamat_praktik.errors %}
+                                <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                            {% else %}
+                            <input type="text" class="form-control form-control" id="alamat_praktik" name="alamat_praktik" value="{{ data.alamat_praktik }}">
+                            {% endif %}
+                        </div>
+                    </div>    
+                </div>  
+
+                <div class="form-group">
+                    <div class="row mb-3">
+                        <label for="kota_praktik" class="col-sm-3 col-form-label">{{form.kota_praktik.label}}</label>
+                        <div class="col-sm-9">
+                            {% if form.kota_praktik.errors %}
+                            <div class="form-control-file is-invalid" id="kota_praktik" name="kota_praktik">
+                                {{form.kota_praktik}}
+                            </div>
+
+                            <div class="invalid-feedback">
+                                {% for error in form.kota_praktik.errors %}
+                                <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                            {% else %}
+                            <div class="form-control-file" id="kota_praktik" name="kota_praktik" >
+                                {{form.kota_praktik}}
+                            </div>
+                                                        
+                            {% endif %}
+                        </div>
+                    </div>    
+                </div>
+
+                <!-- hari praktik multiple choices -->
+                <div class="form-group">
+                    <div class="row mb-3">
+                        <label for="kota_praktik" class="col-sm-3 col-form-label">Hari Praktik</label>
+                        <div class="col-sm-9 multi_select_box">
+                            <select id="days" class="form-control multi_select selectpicker" multiple >
+                                <option value="Senin">Senin</option>
+                                <option value="Selasa">Selasa</option>
+                                <option value="Rabu">Rabu</option>
+                                <option value="Kamis">Kamis</option>
+                                <option value="Jumat">Jumat</option>
+                                <option value="Sabtu">Sabtu</option>
+                                <option value="Minggu">Minggu</option>
+                            </select>
+
+                            <input type="hidden" name="hidden_days" id="hidden_days" name="hari_praktik" value="{{ data.hari_praktik }}">
+                        </div>
+                    </div>    
+                </div>
+  
+                <div class="form-group">
+                    <div class="row mb-3">
+                        <label for="nama" class="col-sm-3 col-form-label">Jam Mulai Praktik</label>
+                        <div class="col-sm-9">
+                            
+                            <input type="time" class="" name="jam_mulai" value="{{ data.jam_mulai }}">
+                                                        
+                        </div>
+                    </div>    
+                </div>
+
+                <div class="form-group">
+                    <div class="row mb-3">
+                        <label for="nama" class="col-sm-3 col-form-label">Jam Selasai Praktik</label>
+                        <div class="col-sm-9">
+                            
+                            <input type="time" class="" name="jam_selesai" value="{{ data.jam_selesai }}">
+                                                        
+                        </div>
+                    </div>    
+                </div>
+
+                <div class="form-group">
+                    <div class="row mb-3">
+                        <label for="nama" class="col-sm-3 col-form-label">{{form.batas_sip.label}}</label>
+                        <div class="col-sm-9">
+                            {% if form.batas_sip.errors %}
+                            <input type="date" class="" name="batas_sip">
+
+                            <div class="invalid-feedback">
+                                {% for error in form.batas_sip.errors %}
+                                <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                            {% else %}
+                            <input type="date" class="" name="batas_sip" value="{{ data.batas_sip }}">
+                                                        
+                            {% endif %}
+                        </div>
+                    </div>    
+                </div>
+
+                <div class="border-bottom">
+                    <h6>File Pendukung</h6>
+                </div><br>
+                <div class="form-group">
+                    <div class="row mb-3">
+                        <label for="nama" class="col-sm-3 col-form-label">{{form.file_sip.label}}</label>
+                        <div class="col-sm-9">
+                            {% if form.file_sip.errors %}
+                            {{ form.file_sip(class="form-control-file") }}
+
+                            <div class="invalid-feedback">
+                                {% for error in form.file_sip.errors %}
+                                <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                            {% else %}
+                            {{ form.file_sip(class="form-control-file") }}
+                                                        
+                            {% endif %}
+
+                        </div>
+                    </div>    
+                </div>
+
+                <div class="form-group">
+                    <div class="row mb-3">
+                        <label for="nama" class="col-sm-3 col-form-label">{{form.file_ijazah.label}}</label>
+                        <div class="col-sm-9">
+                            {% if form.file_ijazah.errors %}
+                            {{ form.file_ijazah(class="form-control-file") }}
+
+                            <div class="invalid-feedback">
+                                {% for error in form.file_ijazah.errors %}
+                                <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                            {% else %}
+                            {{ form.file_ijazah(class="form-control-file") }}
+                                                        
+                            {% endif %}
+
+                        </div>
+                    </div>    
+                </div>
+
+            </fieldset>
+            <div class="form-group">
+                {{ form.submit(class="btn btn-outline-info mb-4") }}                
+            </div>
+
+            
+        </form>
+        
+    </div>
+</div>
+    
+{% endblock content%}
+
+{% block scripts %}
+<script>
+    $(document).ready(function(){
+        $('.multi_select').selectpicker();
+
+        $('#days').change(function(){
+            $('#hidden_days').val($('#days').val());
+        });
+
+        
+    })
+
+    
+    
+</script>
+
+{% endblock scripts %}

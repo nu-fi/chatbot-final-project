@@ -1,0 +1,204 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+  <div class="">
+      <div class="carousel-wrap">
+        <div id="slider" class="owl-carousel owl-theme owl-loaded">
+          <div class="owl-stage-outer">
+              <div class="owl-stage">
+                  <div class="owl-item"><img src="{{url_for('static', filename='assets/img/articles/' + artikel_terbaru.image_article )}}" ></div>
+                  <div class="owl-item"><img src="{{url_for('static', filename='assets/img/articles/' + artikel_terbaru.image_article )}}" ></div>
+                  <div class="owl-item"><img src="{{url_for('static', filename='assets/img/articles/' + artikel_terbaru.image_article )}}" ></div>
+              </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container mx-auto flex flex-wrap py-6">
+
+        <section class="w-full md:w-2/3 flex flex-col items-center px-3">      
+            <article class="flex flex-col shadow my-4">
+                <a href="#" class="hover:opacity-75">
+                    <img class="w-full h-full" src="{{url_for('static', filename='assets/img/articles/' + artikel_terbaru.image_article )}}">
+                </a>
+                <div class="flex flex-col justify-start p-6">
+                    <a href="#" class="text-blue-700 text-sm font-bold uppercase pb-4">{{artikel_terbaru.category.name}}</a>
+                    <a href="#" class="text-3xl font-bold hover:text-gray-700 pb-4">{{artikel_terbaru.title}}</a>
+                    <p href="#" class="text-sm pb-3">
+                        By <a href="#" class="font-semibold hover:text-gray-800">{{artikel_terbaru.author.username}}</a>, Published on {{ artikel_terbaru.date_posted.strftime("%d %B, %Y") }}
+                    </p>
+                    <div class="prose max-w-none text-justify line-clamp-2 pb-6">
+                      
+                      {{ artikel_terbaru.content | safe }}
+                    </div>
+                    <a href="{{ url_for('main.article_detail', slug=artikel_terbaru.slug) }}" class="uppercase text-gray-800 hover:text-black">Continue Reading <i class="fas fa-arrow-right"></i></a>
+                </div>
+              </article>      
+
+              <!-- <div class="container mx-auto flex items-center flex-wrap pt-4 pb-12">
+
+                <div class="flex flex-wrap justify-between pt-12 -mx-6">
+
+                  {% for b in berita_terbaru %}
+                  <div class="w-full md:w-1/2 p-6 flex flex-col flex-grow flex-shrink">
+                    <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
+                      <a href="#" class="flex flex-wrap no-underline hover:no-underline">
+                        <img src="{{url_for('static', filename='assets/img/news/' + b.image_news )}}" class="h-full w-full rounded-t pb-6">
+                        <p class="w-full text-gray-600 text-xs md:text-sm px-6">GETTING STARTED</p>
+                        <div class="w-full font-bold text-xl text-gray-900 px-6">{{b.title}}</div>
+                        <p class="text-gray-800 font-semibold text-base px-6 mb-5">
+                          {{b.content}}
+                        </p>
+                      </a>
+                    </div>
+                    <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow-lg p-6">
+                      <div class="flex items-center justify-between">
+                        <img class="w-8 h-8 rounded-full mr-4 avatar" data-tippy-content="Author Name" src="http://i.pravatar.cc/300" alt="Avatar of Author">
+                        <p class="text-gray-600 text-xs md:text-sm">1 MIN READ</p>
+                      </div>
+                    </div>
+                  </div>
+                  {% endfor %}   
+                </div>
+              </div> -->
+      
+        </section>
+      
+        <!-- Sidebar Section -->
+        <aside class="w-full md:w-1/3 flex flex-col items-center px-3">
+
+          <div class="w-full bg-white shadow flex flex-col my-4 p-6">
+            <p class="text-xl font-semibold pb-5">Pencarian</p>
+            <form action="">
+              <input type="text" class="w-full">
+            </form>
+          </div>
+      
+            <div class="w-full bg-white shadow flex flex-col my-4 p-6">
+                <p class="text-xl font-semibold pb-5">Tentang Kami</p>
+                <p class="pb-2 text-justify">Website IDAI merupakan wadah informatif, baik bagi para dokter anak, maupun seluruh masyarakat, pemerintah, dan stakeholder kesehatan lain di Indonesia dalam bersinergi mewujudkan putra-putri bangsa yang lebih sehat. Dalam website ini, tersedia berbagai referensi, rekomendasi, dan informasi seputar kesehatan anak lainnya yang selalu up to date.</p>
+                <a href="#" class="w-full bg-blue-800 text-white font-bold text-sm uppercase rounded hover:bg-blue-700 flex items-center justify-center px-2 py-3 mt-4">
+                    Get to know us
+                </a>
+            </div>
+      
+            
+        </aside>
+      </div>
+  </div>
+
+    <div class="container mx-auto flex items-center flex-wrap pt-4">
+      <h2 class="w-full text-gray-600 font-bold text-3xl uppercase rounded flex items-center justify-center">Berita Terbaru</h2>
+      <p class="w-full text-gray-600 text-sm rounded flex items-center justify-center">Kumpulan berita mengenai kegiatan yang diselenggarakan oleh IDAI Cabang Kalimantan Barat</p>
+
+      <div class="flex flex-wrap justify-between pt-4 -mx-6">
+
+        {% for b in berita_terbaru %}
+        <div class="w-full md:w-1/2 p-6 flex flex-col flex-grow flex-shrink">
+          <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
+            <a href="#" class="flex flex-wrap no-underline hover:no-underline">
+              <img src="{{url_for('static', filename='assets/img/news/' + b.image_news )}}" class="h-full w-full rounded-t pb-6">
+              <p class="w-full text-gray-600 text-xs md:text-sm px-6 uppercase">{{b.categoryn.name}}</p>
+              <div class="w-full font-bold text-xl text-gray-900 px-6">{{b.title}}</div>
+              <div class="text-justify line-clamp-3 mb-2 text-gray-800 font-semibold text-base px-6 dark:text-gray-400">
+                {{ b.content |safe }}
+              </div>
+             
+            </a>
+          </div>
+          <!-- <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow-lg p-6">
+            <div class="flex items-center justify-between">
+              <img class="w-8 h-8 rounded-full mr-4 avatar" data-tippy-content="Author Name" src="http://i.pravatar.cc/300" alt="Avatar of Author">
+              <p class="text-gray-600 text-xs md:text-sm">1 MIN READ</p>
+            </div>
+          </div> -->
+        </div>
+        {% endfor %} 
+      </div>
+    </div>  
+
+    <div class="container mx-auto items-center pb-12">
+      <div class="flex flex-wrap justify-between pt-6 -mx-6">
+        <div class="w-full shadow flex flex-col my-4 p-6">
+          <h2 class="w-full text-gray-600 font-bold text-3xl uppercase rounded flex items-center justify-center pb-12">Galeri</h2>
+          
+              <div id="slider2" class="owl-carousel owl-theme owl-loaded">
+                <div class="item">
+                  <img class="h-full w-full hover:opacity-75" src="{{url_for('static', filename='assets/img/articles/' + artikel_terbaru.image_article )}}">
+                </div>
+                <div class="item">
+                  <img class="hover:opacity-75" src="{{url_for('static', filename='assets/img/articles/' + artikel_terbaru.image_article )}}">
+                </div>
+                <div class="item">
+                  <img class="hover:opacity-75" src="{{url_for('static', filename='assets/img/articles/' + artikel_terbaru.image_article )}}">
+                </div>
+                <div class="item">
+                  <img class="hover:opacity-75" src="{{url_for('static', filename='assets/img/articles/' + artikel_terbaru.image_article )}}">
+                </div>            
+            </div>
+        </div>
+      </div>
+    </div> 
+</div>
+
+<!-- Text Header -->
+
+<!-- Topic Nav -->
+<!-- <nav class="w-full py-4 border-t border-b bg-gray-100" x-data="{ open: false }">
+  <div class="block sm:hidden">
+      <a
+          href="#"
+          class=" md:hidden text-base font-bold uppercase text-center flex justify-center items-center"
+          @click="open = !open"
+      >
+          Topics <i :class="open ? 'fa-chevron-down': 'fa-chevron-up'" class="fas ml-2"></i>
+      </a>
+  </div>
+  <div :class="open ? 'block': 'hidden'" class="w-full flex-grow sm:flex sm:items-center sm:w-auto">
+      <div class="w-full container mx-auto flex flex-col sm:flex-row items-center justify-center text-sm font-bold uppercase mt-0 px-6 py-2">
+          <a href="#" class="hover:bg-gray-400 rounded py-2 px-4 mx-2">Technology</a>
+          <a href="#" class="hover:bg-gray-400 rounded py-2 px-4 mx-2">Automotive</a>
+          <a href="#" class="hover:bg-gray-400 rounded py-2 px-4 mx-2">Finance</a>
+          <a href="#" class="hover:bg-gray-400 rounded py-2 px-4 mx-2">Politics</a>
+          <a href="#" class="hover:bg-gray-400 rounded py-2 px-4 mx-2">Culture</a>
+          <a href="#" class="hover:bg-gray-400 rounded py-2 px-4 mx-2">Sports</a>
+      </div>
+  </div>
+</nav> -->
+    
+{% endblock content%}
+
+{% block scripts %}
+
+<script>
+  
+
+$('#slider').owlCarousel({
+  loop:true,
+  items: 1,
+  margin:10,
+  autoplay: true,
+  nav:true,
+  navText: ['<i class="" aria-hidden="true"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg></i>', '<i class="" aria-hidden="true"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></i>']
+})
+
+$('#slider2').owlCarousel({
+  loop:true,
+  margin:10,
+  nav:true,
+  autoplay: true,
+  responsive:{
+      0:{
+          items:1
+      },
+      600:{
+          items:2
+      },
+      1000:{
+          items:3
+      }
+  }
+})
+  
+</script>
+{% endblock scripts %}

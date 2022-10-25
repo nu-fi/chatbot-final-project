@@ -1,0 +1,35 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+    <h2 class="mb-3">Articles by {{ user.username }} ({{ articles.total }})</h2>
+    {% for article in articles.items %}
+    <div class="container">
+        <article class="media content-section">
+            <img src="{{ url_for('static', filename='assets/img/profile_pics/' + article.author.image_file) }}" class="rounded-circle article-img" alt="">
+            <div class="media-body">
+                <div class="article-metadata">
+                    <a href="{{ url_for('main.user_articles', username=article.author.username) }}" class="mr-2">{{ article.author.username }}</a>
+                    <small class="text-muted">{{ article.date_posted.strftime('%d-%m-%Y') }}</small>
+                    <h2> <a href="{{ url_for('main.article_detail', slug=article.slug) }}"  class="article-title">{{ article.title }}</a></h2>
+                    <p>{{ article.content }}</p>
+                   
+                </div>
+            </div>
+        </article>  
+    </div>
+    {% endfor %}
+
+    {% for page_num in articles.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2) %}
+        {% if page_num %}
+            {% if articles.page == page_num %}
+            <a class="btn btn-info mb-4" href="{{ url_for('main.user_articles', username=user.username, page=page_num) }}">{{ page_num }}</a>
+            {% else %}
+            <a class="btn btn-outline-info mb-4" href="{{ url_for('main.user_articles', username=user.username, page=page_num) }}">{{ page_num }}</a>
+            {% endif %}
+
+        {% else %}
+        ...
+        {% endif %}
+    {% endfor %}
+
+{% endblock content%}

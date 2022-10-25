@@ -1,0 +1,126 @@
+{% extends "layouts/base_dashboard.html" %}
+
+{% block content %}
+
+    <div class="container">
+        <div class="mb-3">
+            <a href="{{ url_for('news.new_news') }}" type="button" class="btn btn-info btn-md" data-placement="top" title="Add"><i class="fa-solid fa-plus"></i></a>
+        </div>
+
+        <!-- <a href="{{ url_for('news.new_news') }}" class="btn btn-info btn-md rounded-0" data-placement="top" title="Add"><i class="bi bi-plus-circle"></i></a> -->
+        
+        <table id="data" class="table table-hover table-striped" style="width:100%">
+            <thead>
+                <tr>
+                <th scope="col">Judul Berita</th>
+                <th scope="col">Isi Berita</th>
+                <th scope="col">Kategori</th>
+                <th scope="col">Tanggal Dibuat</th>
+                <th scope="col">Aksi</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for n in news %}
+                <tr>
+                <th>{{ n.title }}</th>
+                <th>
+                    <div class="module line-clamp">
+                        {{ n.content | safe}} 
+                     </div>
+                </th>
+                <th>{{ n.categoryn.name }}</th>
+
+                <th>{{ n.date_posted.strftime('%d %b, %Y') }}</th>
+                <th>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+
+                        <a href="{{ url_for('news.news_update', berita_id=n.id) }}" type="button" class="btn btn-success btn-md mr-1" title="Edit">
+                            <i class="fa-solid fa-pencil"></i>
+                        </a>
+    
+                        <button type="button" class="btn btn-danger btn-md mr-1" data-toggle="modal" data-target="#deleteModal{{n.id}}" title="Delete">
+                            <i class="fa-solid fa-trash-can"></i>
+                        </button>
+    
+                        <button type="button" class="btn btn-md btn-info " data-toggle="modal" data-target="#myModal{{n.id}}" title="Show">
+                            <i class="fa-solid fa-eye"></i>
+                        </button>
+
+                        <!-- Show Modal -->
+                        <div class="modal fade bd-example-modal-lg" id="myModal{{n.id}}">
+                            <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                        
+                                <!-- Modal Header -->
+                                <div class="modal-header">
+                                    <h4 class="modal-title">{{ n.title }}</h4>
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                </div>
+                        
+                                <!-- Modal body -->
+                                <div class="modal-body">
+                                    <div class="text-muted">
+                                        Kategori Artikel: {{ n.categoryn.name }} <br>
+                                        Created at: {{ n.date_posted.strftime('%d %b, %Y') }} <br>
+                                        Author: {{ n.author.username }}
+                                    </div>
+                                    <div class="text-center mt-4">
+                                        <img src="{{url_for('static', filename='assets/img/news/' + n.image_news)}}" alt="" class="img-thumbnail img-fluid" >
+                                    </div>
+
+                                    <div class="m-2">
+                                        {{ n.content | safe}} 
+                                    </div>
+                                </div>
+                        
+                                <!-- Modal footer -->
+                                <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                </div>
+                        
+                            </div>
+                            </div>
+                        </div>
+
+                        <!-- Delete Modal -->
+                        <div class="modal" id="deleteModal{{n.id}}" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                <h5 class="modal-title" id="deleteModalLabel">Hapus Berita</h5>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                </div>
+
+                                <div class="modal-body">
+                                    <p>Apakah yakin ingin menghapus berita dengan judul {{ n.title }}?</p>
+                                </div>
+
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                
+                                    <form action="{{ url_for('news.news_delete', berita_id=n.id) }}" method="POST">
+                                        <input type="submit" class="btn btn-danger" value="Delete">
+                                    </form>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </th>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+{% endblock content%}
+
+{% block scripts %}
+
+  <script type="text/javascript">
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+
+</script>
+{% endblock %}
