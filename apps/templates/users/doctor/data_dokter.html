@@ -3,81 +3,87 @@
 {% block content %}
 
     <!-- Table -->
-    <div class="container">
-        <table id="data" class="table table-striped table-hover">
-            <thead>
-                <tr>
-                    <th scope="col">Nama Lengkap</th>
-                    <th scope="col">No. Hp</th>
-                    <th scope="col">Kota Praktik</th>
-                    <th scope="col">Hari Praktik</th>
-                    <th scope="col">File Pendukung</th>
-                </tr>
-                </thead>
-                <tbody>
-                {% for d in data %}
-                <tr>
-                    <th>{{ d.nama_lengkap }}</th>
-                    <th>{{ d.no_hp }}</th>
-                    <th>{{ d.kota_praktik }}</th>
-                    <th>{{ d.hari_praktik }}</th>
-                    <th>
-                        <div>
-                            <!-- Trigger the modal with a button -->
-                            <button class="btn btn-primary btn-md rounded-0" type="button" data-placement="top" title="View File Ijazah" data-bs-toggle="modal" data-bs-target="#viewIjazahModal{{d.id}}"><i class="bi bi-eye"></i></button>
-
-                            <div class="modal" id="viewIjazahModal{{d.id}}" tabindex="-1" aria-labelledby="viewIjazahModalLabel" aria-hidden="true">
-                                <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="viewIjazahModalLabel">file ijazah {{ d.nama_lengkap }}</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <div class="container col-12 col-md-12 col-lg-12">
+        <div class="card">
+            <section class="m-4">
+                <table id="data" class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">Nama Lengkap</th>
+                            <th scope="col">No. Hp</th>
+                            <th scope="col">Kota Praktik</th>
+                            <th scope="col">Hari Praktik</th>
+                            <th scope="col">File Pendukung</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for d in data %}
+                        <tr>
+                            <th>{{ d.nama_lengkap }}</th>
+                            <th>{{ d.no_hp }}</th>
+                            <th>{{ d.kota_praktik }}</th>
+                            <th>{{ d.hari_praktik }}</th>
+                            <th>
+                                <div>
+                                    <!-- Trigger the modal with a button -->
+                                    <button class="btn btn-primary btn-md rounded-0" type="button" data-placement="top" title="View File Ijazah" data-toggle="modal" data-target="#viewIjazahModal{{d.id}}"><i class="fa-solid fa-eye"></i></button>
+        
+                                    <div class="modal" id="viewIjazahModal{{d.id}}" tabindex="-1" aria-labelledby="viewIjazahModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="viewIjazahModalLabel">file ijazah {{ d.nama_lengkap }}</h5>
+                                                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">&times;</button>
+                                            </div>
+        
+                                            <div class="modal-body">
+        
+                                                <embed src="{{url_for('static', filename='assets/files/dokter/ijazah/' + d.file_ijazah)}}" frameborder="0" width="100%" height="400px">
+        
+                                            </div>
+        
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            </div>
+                                        </div>
+                                        </div>
                                     </div>
-
-                                    <div class="modal-body">
-
-                                        <embed src="{{url_for('static', filename='assets/files/dokter/ijazah/' + d.file_ijazah)}}" frameborder="0" width="100%" height="400px">
-
-                                    </div>
-
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                
+        
+                                    <!-- Trigger the modal with a button -->
+                                    <button class="btn btn-primary btn-md rounded-0" type="button" data-placement="top" title="View File SIP" data-toggle="modal" data-target="#viewSIPModal{{d.id}}"><i class="fa-solid fa-eye"></i></button>
+        
+                                    <div class="modal" id="viewSIPModal{{d.id}}" tabindex="-1" aria-labelledby="viewSIPModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="viewSIPModalLabel">file SIP {{ d.nama_lengkap }}</h5>
+                                                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">&times;</button>
+                                            </div>
+        
+                                            <div class="modal-body">
+        
+                                                <embed src="{{url_for('static', filename='assets/files/dokter/sip/' + d.file_sip)}}" frameborder="0" width="100%" height="400px">
+        
+                                            </div>
+        
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            </div>
+                                        </div>
+                                        </div>
                                     </div>
                                 </div>
-                                </div>
-                            </div>
+                            </th>
+                        </tr>
                         
-
-                            <!-- Trigger the modal with a button -->
-                            <button class="btn btn-primary btn-md rounded-0" type="button" data-placement="top" title="View File SIP" data-bs-toggle="modal" data-bs-target="#viewSIPModal{{d.id}}"><i class="bi bi-eye"></i></button>
-
-                            <div class="modal" id="viewSIPModal{{d.id}}" tabindex="-1" aria-labelledby="viewSIPModalLabel" aria-hidden="true">
-                                <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="viewSIPModalLabel">file SIP {{ d.nama_lengkap }}</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-
-                                    <div class="modal-body">
-
-                                        <embed src="{{url_for('static', filename='assets/files/dokter/sip/' + d.file_sip)}}" frameborder="0" width="100%" height="400px">
-
-                                    </div>
-
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                    </div>
-                                </div>
-                                </div>
-                            </div>
-                        </div>
-                    </th>
-                </tr>
-                
-                {% endfor %}
-                </tbody>
-        </table>
+                        {% endfor %}
+                        </tbody>
+                </table>
+            </section>
+            
+        </div>
+        
     </div>
     
 {% endblock content%}

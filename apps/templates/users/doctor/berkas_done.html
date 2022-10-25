@@ -1,7 +1,159 @@
 {% extends "layouts/base_dashboard.html" %}
 
 {% block content %}
-<div class="container">
+<section class="section">
+
+    <div class="section-body">
+      <!-- <h2 class="section-title">Forms Data Pribadi</h2> -->
+      
+      <div class="row">
+        <div class="col-12 col-md-6 col-lg-6">
+          <div class="card">
+            <div class="card-header">
+              <h4>Data Pribadi</h4>
+            </div>
+
+            <div class="card-body">
+                <div class="form-group">
+                  <label>Nama Lengkap</label>
+                  <input type="text" class="form-control" value="{{data.nama_lengkap}}" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label>No. Handphone</label>
+                    <input type="text" class="form-control" value="{{data.no_hp}}" readonly>
+                  </div>
+            </div>            
+          </div>
+
+
+          <div class="card">
+            <div class="card-header">
+              <h4>Informai Tempat Praktik</h4>
+            </div>
+
+            <div class="card-body">
+                <div class="form-group">
+                  <label>Tempat Praktik</label>
+                  <input type="text" class="form-control" value="{{data.tempat_praktik}}" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label>Alamat Praktik</label>
+                    <input type="text" class="form-control" value="{{data.alamat_praktik}}" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label>Kota Praktik</label>
+                    <input type="text" class="form-control" value="{{data.kota_praktik}}" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label>Hari Praktik</label>
+                    <input type="text" class="form-control" value="{{data.hari_praktik}}" readonly>
+                </div>
+
+                <div>
+                    <div class="form-group">
+                        <label>Jam Mulai Praktik</label>
+                        <input type="text" class="form-control" value="{{data.jam_mulai}}" readonly>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Jam Selesai Praktik</label>
+                        <input type="text" class="form-control" value="{{data.jam_selesai}}" readonly>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Tanggal Berakhir SIP</label>
+                    <input type="text" class="form-control" value="{{data.batas_sip.strftime('%d %b, %Y')}}" readonly>
+                </div>
+
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-6">
+            <div class="card">
+                <div class="card-header">
+                  <h4>File Pendukung</h4>
+                </div>
+                <div class="card-body">
+                  <div class="form-group">
+                    <div class="input-group mb-3">
+                      <input type="text" class="form-control" placeholder="File SIP" aria-label="" readonly>
+                      <div class="input-group-append">
+                        <button class="btn btn-primary" type="button" data-placement="top" title="Lihat SIP" data-toggle="modal" data-target="#viewSIPModal"><i class="fa-solid fa-file-lines"></i></button>
+                        <!-- <button data-placement="top" title="Lihat SIP" data-bs-toggle="modal" data-bs-target="#viewSIPModal"><i class="bi bi-eye"></i> Lihat File</button> -->
+                      </div>
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="File Ijazah" aria-label="" readonly>
+                        <div class="input-group-append">
+                            <button class="btn btn-primary" type="button" data-placement="top" title="Lihat Ijazah" data-toggle="modal" data-target="#viewIjazahModal"><i class="fa-solid fa-file-lines"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="modal" id="viewSIPModal" tabindex="-1" aria-labelledby="viewModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="viewModalLabel">File SIP {{data.nama_lengkap}}</h5>
+                                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">&times;</button>
+                            </div>
+            
+                            <div class="modal-body">
+            
+                                <embed src="{{url_for('static', filename='assets/files/dokter/sip/' + data.file_sip)}}" frameborder="0" width="100%" height="400px">
+            
+                            </div>
+            
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+
+                    <div class="modal" id="viewIjazahModal" tabindex="-1" aria-labelledby="viewModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="viewModalLabel">File Ijazah {{data.nama_lengkap}}</h5>
+                                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">&times;</button>
+                            </div>
+            
+                            <div class="modal-body">
+            
+                                <embed src="{{url_for('static', filename='assets/files/dokter/ijazah/' + data.file_ijazah)}}" frameborder="0" width="100%" height="400px">
+            
+                            </div>
+            
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+            
+                  </div>
+                </div>
+            </div>
+
+            <div class="card">
+                  <div class="card-footer text-right">
+                    <button class="btn btn-primary mr-1" type="button"><a class="text-decoration-none text-dark" href="{{ url_for('doctors.berkas_update', id=current_user.id)}}">Update Data</a></button>
+                    <button class="btn btn-secondary" type="button"><a class="text-decoration-none text-dark" href="{{ url_for('doctors.berkas_delete', id=current_user.id)}}">Hapus Data</a></button>
+                  </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- <div class="container">
     <div class="row">
 
         <div class="border-bottom mb-3">
@@ -164,7 +316,7 @@
         
     </div>
 
-</div>
+</div> -->
     
 {% endblock content%}
 

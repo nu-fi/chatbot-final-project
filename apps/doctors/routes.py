@@ -5,6 +5,7 @@ from apps.models import Roles, DataDokter
 from apps.doctors.forms import BerkasForm
 from flask_login import current_user, login_required
 from apps import db
+import datetime
 
 doctors = Blueprint('doctors', __name__)
 
@@ -46,6 +47,8 @@ def tambah_data():
         data = DataDokter(nama_lengkap=form.nama.data, no_hp=form.no_hp.data, owner=current_user, alamat_praktik=form.alamat_praktik.data, tempat_praktik=form.tempat_praktik.data, file_sip=sip_file, file_ijazah=ijazah_file, kota_praktik=form.kota_praktik.data, jam_mulai=form.jam_mulai.data, jam_selesai=form.jam_selesai.data, batas_sip=form.batas_sip.data, hari_praktik=request.form['hidden_days'])
         db.session.add(data)
         db.session.commit()
+        flash('Your Data has been added!', 'primary')
+
         return redirect(url_for('doctors.get_data', id=current_user.id))
 
     return render_template('users/doctor/berkas.html', title='Data Pribadi', legend='Data Pribadi Dokter', form=form, data=data, roles=current_user.role.title)
@@ -90,11 +93,12 @@ def berkas_update(id):
         data.alamat_praktik = form.alamat_praktik.data
         data.kota_praktik = form.kota_praktik.data
         data.tempat_praktik = form.tempat_praktik.data
-        data.jam_mulai = form.jam_mulai.data
-        data.jam_selesai = form.jam_selesai.data
+        data.jam_mulai = form.jam_mulai.data or data.jam_mulai
+        data.jam_selesai = form.jam_selesai.data or data.jam_selesai
         data.batas_sip = form.batas_sip.data
         data.hari_praktik = request.form['hidden_days']
         db.session.commit()
+        flash('Your Data has been updated!', 'success')
 
         return redirect(url_for('doctors.get_data', id=current_user.id))
 
@@ -116,6 +120,8 @@ def berkas_delete(id):
     data = DataDokter.query.filter_by(user_id=id).first()
     db.session.delete(data)
     db.session.commit()
+    flash('Your Data has been deleted!', 'danger')
+
     return redirect(url_for('doctors.tambah_data'))
 
 @doctors.route("/data-dokter", methods=['GET', 'POST'])
