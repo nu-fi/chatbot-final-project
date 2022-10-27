@@ -1657,12 +1657,12 @@ input:checked + .toggle-bg {
   margin: 0px;
 }
 
-.m-2 {
-  margin: 0.5rem;
-}
-
 .m-4 {
   margin: 1rem;
+}
+
+.m-2 {
+  margin: 0.5rem;
 }
 
 .my-6 {

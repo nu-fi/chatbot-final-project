@@ -2,47 +2,50 @@
 
 {% block content %}
 <div class="container">
-
-  <section class="section">
-    <form action="/admin/tambah-dataset" method="post">
-      <div class="row">
-        <div class="col-12 col-md-6 col-lg-6">
-          <div class="card">
-            
-            <div class="card-body">
-              
-              <div class="form-group">
-                <label>Tag</label>
-                <input type="text" 
-                name="tag"
-                class="form-control" 
-                value="{{ request.form['tag'] }}">
-              </div>
-              
-              <div class="form-group">
-                <label>Patterns</label>
-                <textarea class="form-control" name="patterns">{{ request.form['patterns'] }}</textarea>
-              </div>
-
-              <div class="form-group">
-                <label>Responses</label>
-                <textarea class="form-control" name="responses">{{ request.form['responses'] }}</textarea>
+  <div class="row">
+    <div class="col-12 col-md-12 col-lg-12">
+      <div class="card">
+        <section class="section m-4">
+          <form action="/admin/tambah-dataset" method="post">
+            <div class="row">
+              <div class="col-12 col-md-6 col-lg-6">
+                <div class="card">
+                  
+                  <div class="card-body">
+                    
+                    <div class="form-group">
+                      <label>Tag</label>
+                      <input type="text" 
+                      name="tag"
+                      class="form-control" 
+                      value="{{ request.form['tag'] }}">
+                    </div>
+                    
+                    <div class="form-group">
+                      <label>Patterns</label>
+                      <textarea class="form-control" name="patterns">{{ request.form['patterns'] }}</textarea>
+                    </div>
+      
+                    <div class="form-group">
+                      <label>Responses</label>
+                      <textarea class="form-control" name="responses">{{ request.form['responses'] }}</textarea>
+                    </div>
+                    
+                  </div>
+                  <div class="card-footer text-right">
+                    <button class="btn btn-primary mr-1" type="submit">Submit</button>
+                    <button class="btn btn-secondary" type="reset">Reset</button>
+                  </div>
+                </div>
               </div>
               
             </div>
-            <div class="card-footer text-right">
-              <button class="btn btn-primary mr-1" type="submit">Submit</button>
-              <button class="btn btn-secondary" type="reset">Reset</button>
-            </div>
-          </div>
-        </div>
-        
+          </form>
+        </section> 
       </div>
-    </form>
-  </section>
-
-    
+    </div>
+  </div>
 </div>
-    
+   
 {% endblock content%}
 

@@ -1,7 +1,9 @@
 import nltk
 from nltk.stem import WordNetLemmatizer
 from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
-
+nltk.download('punkt')
+nltk.download('wordnet')
+nltk.download('omw-1.4')
 lemmatizer = WordNetLemmatizer()
 import json
 import pickle
