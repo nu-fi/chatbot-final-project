@@ -48,23 +48,33 @@ def predict_class(sentence, model):
     # filter out predictions below a threshold
     p = bow(sentence, words, show_details=False)
     res = model.predict(np.array([p]))[0]
-    ERROR_THRESHOLD = 0.25
+    ERROR_THRESHOLD = 0.75
     results = [[i,r] for i,r in enumerate(res) if r>ERROR_THRESHOLD]
+    no_result = [[i,r] for i,r in enumerate(res) if r<ERROR_THRESHOLD]
+    if no_result:
+        ans = "I do not understand..."
     # sort by strength of probability
     results.sort(key=lambda x: x[1], reverse=True)
     return_list = []
     for r in results:
         return_list.append({"intent": classes[r[0]], "probability": str(r[1])})
+
+    print(return_list)
+
     return return_list
 
 def get_response(ints, intents_json):
+    if len(ints) == 0:
+        return "I do not understand..."
+    
+    print(ints)
     tag = ints[0]['intent']
     list_of_intents = intents_json['intents']
     for i in list_of_intents:
         if(i['tag']== tag):
             result = random.choice(i['responses'])
             break
-    return result
+    return result 
 
 
 print("GO! Bot is running!")

@@ -3003,7 +3003,7 @@ input:checked + .toggle-bg {
   color: #3B82F6;
 }
 
-.alert-deleted {
+.alert-danger {
   background-color: #FEE2E2;
   color: #EF4444;
 }

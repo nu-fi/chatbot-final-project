@@ -1,14 +1,42 @@
 from email import message
 from flask import Blueprint, render_template, request, url_for, jsonify, flash, redirect, current_app, send_from_directory
-from apps.chat import get_response
+from apps.chat import get_response, predict_class
 from apps.models import Article, Images_Gallery, News, Gallery, Files_Public, Roles, Category, Categoryn, Message, User
-from flask_login import current_user
 from apps import db, mail
 from flask_mail import Message as Mess
 from apps.main.forms import ContactForm
 import os
+import json
+from keras.models import load_model
 
 main = Blueprint('main', __name__)
+
+@main.route("/predict", methods=['POST'])
+def predict():
+    text = request.get_json().get("message")
+    # TO DO: check if text is valid
+    if len(text) > 100:
+        message = {"answer": "I'm sorry, your query has too many characters for me to process."}
+        mess = Message(question=text)
+        db.session.add(mess)
+        db.session.commit()
+        return jsonify(message)
+
+    data_file = open('apps/intents.json').read()
+    intents = json.loads(data_file)
+
+    model = load_model('apps/chatbot_model.h5')
+
+    ints = predict_class(text, model)
+
+    response = get_response(ints, intents)
+    message = {"answer": response}
+    if response == "I do not understand...":
+        mess = Message(question=text)
+        db.session.add(mess)
+        db.session.commit()
+        
+    return jsonify(message)
 
 @main.route("/")
 @main.route("/home")
@@ -44,25 +72,6 @@ Terima kasih atas pesan yang telah diberikan. Mohon menunggu sebentar, Kami akan
 def stunting():
     return render_template('main/stunting.html', title='Tentang Stunting')
 
-@main.route("/predict", methods=['POST'])
-def predict():
-    text = request.get_json().get("message")
-    # TO DO: check if text is valid
-    if len(text) > 100:
-        message = {"answer": "I'm sorry, your query has too many characters for me to process."}
-        mess = Message(question=text)
-        db.session.add(mess)
-        db.session.commit()
-        return jsonify(message)
-
-    response = get_response(text)
-    message = {"answer": response}
-    if response == "I do not understand...":
-        mess = Message(question=text)
-        db.session.add(mess)
-        db.session.commit()
-        
-    return jsonify(message)
 
 # @main.route("/jurnal")
 # def journal():
