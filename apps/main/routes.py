@@ -1,5 +1,5 @@
 from email import message
-from flask import Blueprint, render_template, request, url_for, jsonify, flash, redirect, current_app, send_from_directory
+from flask import Blueprint, render_template, request, url_for, jsonify, flash, redirect, current_app, send_from_directory, abort
 from apps.chat import get_response, predict_class
 from apps.models import Article, Images_Gallery, News, Gallery, Files_Public, Roles, Category, Categoryn, Message, User
 from apps import db, mail
@@ -10,6 +10,10 @@ import json
 from keras.models import load_model
 
 main = Blueprint('main', __name__)
+
+@main.errorhandler(404)
+def page_not_found(error):
+   return render_template('error/404.html', title = '404'), 404
 
 @main.route("/predict", methods=['POST'])
 def predict():
@@ -41,11 +45,13 @@ def predict():
 @main.route("/")
 @main.route("/home")
 def home():
-    artikel = Article.query.order_by(Article.date_posted.desc()).limit(2)
-    berita = News.query.order_by(News.date_posted.desc()).limit(2)
     artikel_terbaru = Article.query.order_by(Article.date_posted.desc()).first()
+    artikel = Article.query.filter(Article.id < artikel_terbaru.id).limit(3)
+    berita = News.query.order_by(News.date_posted.desc()).limit(2)
     berita_terbaru = News.query.order_by(News.date_posted.desc()).limit(2)
-    return render_template('main/home.html', artikel=artikel, artikel_terbaru=artikel_terbaru, berita=berita, berita_terbaru=berita_terbaru)
+    gall = Images_Gallery.query.order_by(Images_Gallery.date_posted.desc()).limit(3)
+
+    return render_template('main/home.html', artikel=artikel, artikel_terbaru=artikel_terbaru, berita=berita, berita_terbaru=berita_terbaru, gall=gall)
 
 @main.route("/profile")
 def profile():
@@ -89,6 +95,10 @@ def article():
     articles = Article.query.order_by(Article.date_posted.desc()).paginate(page=page, per_page=4)
     next_url = url_for('main.article', page=articles.next_num) if articles.has_next else None
     prev_url = url_for('main.article', page=articles.prev_num) if articles.has_prev else None
+
+    # if articles.next_url or  articles.prev_url == None:
+    #     abort(404)
+
     return render_template('main/articles/artikel.html', title='Artikel', articles=articles, next_url=next_url, prev_url=prev_url)
 
 @main.route("/artikel/<slug>")

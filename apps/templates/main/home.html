@@ -1,176 +1,295 @@
 {% extends "layouts/base.html" %}
 
 {% block content %}
-  <div class="">
-      <div class="carousel-wrap">
-        <div id="slider" class="owl-carousel owl-theme owl-loaded">
-          <div class="owl-stage-outer">
-              <div class="owl-stage">
-                  <div class="owl-item"><img src="{{url_for('static', filename='assets/img/articles/' + artikel_terbaru.image_article )}}" ></div>
-                  <div class="owl-item"><img src="{{url_for('static', filename='assets/img/articles/' + artikel_terbaru.image_article )}}" ></div>
-                  <div class="owl-item"><img src="{{url_for('static', filename='assets/img/articles/' + artikel_terbaru.image_article )}}" ></div>
-              </div>
-          </div>
+
+<div>
+  <div id="carouselExampleCaptions" class="carousel slide relative" data-bs-ride="carousel">
+    <div class="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4">
+      <button
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide-to="0"
+        class="active"
+        aria-current="true"
+        aria-label="Slide 1"
+      ></button>
+      <button
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide-to="1"
+        aria-label="Slide 2"
+      ></button>
+      <button
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide-to="2"
+        aria-label="Slide 3"
+      ></button>
+    </div>
+    <div class="carousel-inner relative w-full overflow-hidden">
+      <div class="carousel-item active relative float-left w-full">
+        <img
+          src="https://mdbootstrap.com/img/Photos/Slides/img%20(15).jpg"
+          class="block w-full"
+          alt="..."
+        />
+        <div class="carousel-caption hidden md:block absolute text-center">
+          <h5 class="text-xl">First slide label</h5>
+          <p>Some representative placeholder content for the first slide.</p>
         </div>
       </div>
+      <div class="carousel-item relative float-left w-full">
+        <img
+          src="https://mdbootstrap.com/img/Photos/Slides/img%20(22).jpg"
+          class="block w-full"
+          alt="..."
+        />
+        <div class="carousel-caption hidden md:block absolute text-center">
+          <h5 class="text-xl">Second slide label</h5>
+          <p>Some representative placeholder content for the second slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item relative float-left w-full">
+        <img
+          src="https://mdbootstrap.com/img/Photos/Slides/img%20(23).jpg"
+          class="block w-full"
+          alt="..."
+        />
+        <div class="carousel-caption hidden md:block absolute text-center">
+          <h5 class="text-xl">Third slide label</h5>
+          <p>Some representative placeholder content for the third slide.</p>
+        </div>
+      </div>
+    </div>
+    <button
+      class="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0"
+      type="button"
+      data-bs-target="#carouselExampleCaptions"
+      data-bs-slide="prev"
+    >
+      <span class="carousel-control-prev-icon inline-block bg-no-repeat" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button
+      class="carousel-control-next absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0"
+      type="button"
+      data-bs-target="#carouselExampleCaptions"
+      data-bs-slide="next"
+    >
+      <span class="carousel-control-next-icon inline-block bg-no-repeat" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
 
-      <div class="container mx-auto flex flex-wrap py-6">
-
-        <section class="w-full md:w-2/3 flex flex-col items-center px-3">      
-            <article class="flex flex-col shadow my-4">
-                <a href="#" class="hover:opacity-75">
-                    <img class="w-full h-full" src="{{url_for('static', filename='assets/img/articles/' + artikel_terbaru.image_article )}}">
-                </a>
-                <div class="flex flex-col justify-start p-6">
-                    <a href="#" class="text-blue-700 text-sm font-bold uppercase pb-4">{{artikel_terbaru.category.name}}</a>
-                    <a href="#" class="text-3xl font-bold hover:text-gray-700 pb-4">{{artikel_terbaru.title}}</a>
-                    <p href="#" class="text-sm pb-3">
-                        By <a href="#" class="font-semibold hover:text-gray-800">{{artikel_terbaru.author.username}}</a>, Published on {{ artikel_terbaru.date_posted.strftime("%d %B, %Y") }}
-                    </p>
-                    <div class="prose max-w-none text-justify line-clamp-2 pb-6">
-                      
-                      {{ artikel_terbaru.content | safe }}
-                    </div>
-                    <a href="{{ url_for('main.article_detail', slug=artikel_terbaru.slug) }}" class="uppercase text-gray-800 hover:text-black">Continue Reading <i class="fas fa-arrow-right"></i></a>
+  <section class="w-full">
+    <div class="relative items-center w-full px-8 pt-8 mx-auto md:px-12 lg:px-16 max-w-7xl">
+      <h1 class="text-4xl font-bold leading-none text-center sm:text-5xl pt-8">Sambutan Ketua</h1>
+      <section class="container mx-auto p-10 md:py-10 px-0 md:p-10 md:px-0">
+        <section class="relative px-10 md:p-0 transform duration-500 hover:shadow-xl cursor-pointer hover:-translate-y-1 ">
+            <img class="xl:max-w-3xl" src="https://images.pexels.com/photos/5990153/pexels-photo-5990153.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1860" alt="">
+            <div class="content bg-white p-2 pt-4 md:p-12 pb-2 lg:max-w-2xl lg:absolute top-10 right-0">
+                <div class="flex justify-between font-bold text-sm">
+                    <p>Sambutan Ketua IDAI Kalimantan Barat</p>
+                    <p class="text-gray-400">20 Nov, 2022</p>
                 </div>
-              </article>      
+                <h2 class="text-2xl font-semibold mt-4 md:mt-10">dr. Muchamad Budi Nugroho, M.Kes., Sp.A</h2>
+                <p class="my-3 text-justify font-medium text-gray-700 leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem aperiam nulla cupiditate saepe sed quis veritatis minus rem adipisci aliquid. Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem aperiam nulla cupiditate saepe sed quis veritatis minus rem adipisci aliquid. Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem aperiam nulla cupiditate saepe sed quis veritatis minus rem adipisci aliquid.</p>
+                <button class="mt-2 md:mt-5 p-3 px-5 bg-black text-white font-bold text-sm hover:bg-purple-800">Read
+          More</button>
+            </div>
         </section>
-      
-        <!-- Sidebar Section -->
-        <aside class="w-full md:w-1/3 flex flex-col items-center px-3">
+      </section>
+    </div>
+  </section>
 
-          <div class="w-full bg-white shadow flex flex-col my-4 p-6">
-            <p class="text-xl font-semibold pb-5">Pencarian</p>
-            <form action="">
-              <input type="text" class="w-full">
-            </form>
-          </div>
+  <section class="w-full">
+    <div class="relative items-center w-full px-2 pt-8 mx-auto md:px-12 lg:px-16 max-w-7xl">
+      <h1 class="text-4xl font-bold leading-none text-center sm:text-5xl text-gray-800">Artikel Terbaru</h1>
+      <section class="container md:py-10 px-0 md:p-2 md:px-0">
+        <div class="container mx-auto flex flex-wrap  ">
+
+          <section class="md:w-2/3 flex flex-col items-center pr-3">      
+              <article class="flex flex-col shadow-xl rounded-lg transform duration-500 hover:-translate-y-2 cursor-pointer group">
+                  <a href="#" class="hover:opacity-75">
+                      <img class="w-full h-full rounded-t-lg" src="{{url_for('static', filename='assets/img/articles/' + artikel_terbaru.image_article )}}">
+                  </a>
+                  <div class="flex flex-col justify-start p-6">
+                      <a href="#" class="text-blue-700 text-sm font-bold uppercase pb-4">{{artikel_terbaru.category.name}}</a>
+                      <a href="#" class="text-3xl font-bold hover:text-gray-700 pb-4">{{artikel_terbaru.title}}</a>
+                      <p href="#" class="text-sm pb-3">
+                          By <a href="#" class="font-semibold hover:text-gray-800">{{artikel_terbaru.author.username}}</a>, Published on {{ artikel_terbaru.date_posted.strftime("%d %B, %Y") }}
+                      </p>
+                      <div class="prose max-w-none text-justify line-clamp-2 pb-6">
+                        
+                        {{ artikel_terbaru.content | safe }}
+                      </div>
+              
+                      <button class="flex mx-auto mt-6 mb-6 text-white bg-indigo-500 border-0 py-2 px-5 focus:outline-none hover:bg-indigo-600 rounded"> <a href="{{ url_for('main.article_detail', slug=artikel_terbaru.slug) }}">Continue Reading <i class="fa-solid fa-arrow-right"></i></a></button>
+                  </div>
+                </article>      
+          </section>
+        
+          <!-- Sidebar Section -->
+          <aside class="w-full md:w-1/3 flex flex-col items-center pl-3">
+            <div class=" bg-gray-300 p-8 flex flex-col md:ml-auto mb-5 mt-10 md:mt-0 shadow-xl transform duration-500 hover:-translate-y-2 cursor-pointer max-h-190 rounded-md">
+              <h1 class="font-extrabold text-3xl mt-4 mb-5 text-gray-800">Tentang IDAI Kalimantan Barat</h1>
+              <h2 class="font-bold mb-5 text-gray-800"></h2>
       
-            <div class="w-full bg-white shadow flex flex-col my-4 p-6">
-                <p class="text-xl font-semibold pb-5">Tentang Kami</p>
-                <p class="pb-2 text-justify">Website IDAI merupakan wadah informatif, baik bagi para dokter anak, maupun seluruh masyarakat, pemerintah, dan stakeholder kesehatan lain di Indonesia dalam bersinergi mewujudkan putra-putri bangsa yang lebih sehat. Dalam website ini, tersedia berbagai referensi, rekomendasi, dan informasi seputar kesehatan anak lainnya yang selalu up to date.</p>
-                <a href="#" class="w-full bg-blue-800 text-white font-bold text-sm uppercase rounded hover:bg-blue-700 flex items-center justify-center px-2 py-3 mt-4">
-                    Get to know us
+              <p class="text-sm leading-relaxed text-gray-700">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Id beatae repellendus nam! Dolor dignissimos unde, dolore laboriosam atque numquam quam.
+              </p>
+      
+              <div class="pt-8">
+                <a href="#" class="p-3  border-2 border-gray-500 rounded-md text-base hover:bg-black hover:border-gray-200 cursor-pointer hover:text-white">
+                  Get to know us
                 </a>
-            </div>
-      
-            
-        </aside>
-      </div>
-  </div>
-
-    <div class="container mx-auto flex items-center flex-wrap pt-4">
-      <h2 class="w-full text-gray-600 font-bold text-3xl uppercase rounded flex items-center justify-center">Berita Terbaru</h2>
-      <p class="w-full text-gray-600 text-sm rounded flex items-center justify-center">Kumpulan berita mengenai kegiatan yang diselenggarakan oleh IDAI Cabang Kalimantan Barat</p>
-
-      <div class="flex flex-wrap justify-between pt-4 -mx-6">
-
-        {% for b in berita_terbaru %}
-        <div class="w-full md:w-1/2 p-6 flex flex-col flex-grow flex-shrink">
-          <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
-            <a href="#" class="flex flex-wrap no-underline hover:no-underline">
-              <img src="{{url_for('static', filename='assets/img/news/' + b.image_news )}}" class="h-full w-full rounded-t pb-6">
-              <p class="w-full text-gray-600 text-xs md:text-sm px-6 uppercase">{{b.categoryn.name}}</p>
-              <div class="w-full font-bold text-xl text-gray-900 px-6">{{b.title}}</div>
-              <div class="text-justify line-clamp-3 mb-2 text-gray-800 font-semibold text-base px-6 dark:text-gray-400">
-                {{ b.content |safe }}
               </div>
-             
-            </a>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="text-gray-600 body-font">
+        <div class="container pb-24 mx-auto ">
+          <div class="flex flex-wrap -m-4 ">
+            {% for a in artikel %}
+            <div class="p-4 md:w-1/3 ">
+              <div class="h-full border-2 border-gray-200 border-opacity-60 overflow-hidden shadow-xl rounded-lg transform duration-500 hover:-translate-y-2 cursor-pointer group">
+                <img class="lg:h-48 md:h-36 w-full object-cover object-center" src="{{url_for('static', filename='assets/img/articles/' + a.image_article )}}" alt="blog">
+                <div class="p-6">
+                  <h2 class="tracking-widest uppercase text-xs title-font font-medium text-gray-400 mb-1">{{a.category.name}}</h2>
+                  <h1 class="title-font text-lg font-medium text-gray-900 mb-3">{{a.title}}</h1>
+                  <div class="prose max-w-none text-justify line-clamp-2 pb-6 leading-relaxed mb-3">
+                    {{ a.content | safe }}
+                  </div>
+                  <div class="flex items-center flex-wrap ">
+                    <a class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0" href="{{ url_for('main.article_detail', slug=a.slug) }}">Continue Reading
+                      <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 12h14"></path>
+                        <path d="M12 5l7 7-7 7"></path>
+                      </svg>
+                    </a>
+                    <!-- <span class="text-gray-400 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
+                      <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                        <circle cx="12" cy="12" r="3"></circle>
+                      </svg>1.2K
+                    </span>
+                    <span class="text-gray-400 inline-flex items-center leading-none text-sm">
+                      <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                        <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                      </svg>6
+                    </span> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+            {% endfor %} 
+
+            
           </div>
-          <!-- <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow-lg p-6">
-            <div class="flex items-center justify-between">
-              <img class="w-8 h-8 rounded-full mr-4 avatar" data-tippy-content="Author Name" src="http://i.pravatar.cc/300" alt="Avatar of Author">
-              <p class="text-gray-600 text-xs md:text-sm">1 MIN READ</p>
-            </div>
-          </div> -->
         </div>
+      </section>
+    </div>
+  </section>
+
+  <section class="w-full">
+    <div class="relative items-center w-full px-2 mx-auto md:px-8 lg:px-10 max-w-7xl ">
+    <h1 class="text-4xl font-bold leading-none text-center sm:text-5xl text-gray-800">Berita Terbaru</h1>
+
+      <section class="container px-10 md:py-10 md:p-10 md:px-0">
+          <section class="text-gray-600 body-font ">
+            <div class="container mx-auto ">
+              <div class="flex flex-wrap mx-5 -mb-10 text-center ">
+                {% for b in berita_terbaru %}
+                <div class="sm:w-1/2 mb-10 rounded-xl transform duration-500 hover:-translate-y-2 cursor-pointer shadow-xl">
+                  <div class="rounded-lg h-64 overflow-hidden">
+                    <img alt="content" class="object-cover object-center h-full w-full" src="{{url_for('static', filename='assets/img/news/' + b.image_news )}}">
+                  </div>
+                  <h2 class="title-font text-justify text-2xl font-medium text-gray-900 mt-6 mb-3 px-6">{{b.title}}</h2>
+                  <div class="text-justify line-clamp-3 mb-2 text-gray-800 font-semibold text-base px-6 dark:text-gray-400">
+                    {{ b.content |safe }}
+                  </div>
+                  <!-- <p class="leading-relaxed text-base line-clamp-2">{{ b.content |safe }}</p> -->
+                  <button class="flex mx-auto mt-6 mb-6 text-white bg-indigo-500 border-0 py-2 px-5 focus:outline-none hover:bg-indigo-600 rounded"> <a href="{{ url_for('main.news_detail', slug=b.slug) }}">Continue Reading <i class="fa-solid fa-arrow-right"></i></a></button>
+                </div>
+                {% endfor %}      
+              </div>
+          </section> 
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <section class="container mx-auto p-10 md:py-20 md:p-20 md:px-0 antialiased">
+    <h1 class="text-4xl font-bold leading-none text-center sm:text-5xl pb-8 text-gray-800">Galeri</h1>
+    <!-- <p class="max-w-2xl text-center text-gray-400">At a assumenda quas cum earum ut itaque commodi saepe rem aspernatur quam natus quis nihil quod, hic explicabo doloribus magnam neque, exercitationem eius sunt!</p> -->
+    <section class="grid lg:grid-cols-3 2xl:grid-cols-3 grid-cols-1 gap-30 ">
+      
+      {% for g in gall %}
+        <article class="mx-auto max-w-sm shadow-xl bg-cover bg-center min-h-70 transform duration-500 hover:-translate-y-2 cursor-pointer group" style="background-image: url({{url_for('static', filename='assets/img/galleries/' + g.image_gallery )}});">
+            <div class="bg-black bg-opacity-20 min-h-100 px-10 flex flex-wrap flex-col pt-96 hover:bg-opacity-75 transform duration-300">
+                <h1 class="text-white text-3xl mb-5 transform translate-y-20 group-hover:translate-y-0 duration-300">
+                    {{g.gallery.title}}
+                </h1>
+                <div class="w-16 h-2 bg-yellow-500 rounded-full mb-5 transform translate-y-20 group-hover:translate-y-0 duration-300">
+                </div>
+                <p class="opacity-0 text-white text-xl group-hover:opacity-80 transform duration-500 pb-6">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, beatae!
+                </p>
+            </div>
+        </article>
         {% endfor %} 
-      </div>
-    </div>  
+    </section>
 
-    <div class="container mx-auto items-center pb-12">
-      <div class="flex flex-wrap justify-between pt-6 -mx-6">
-        <div class="w-full shadow flex flex-col my-4 p-6">
-          <h2 class="w-full text-gray-600 font-bold text-3xl uppercase rounded flex items-center justify-center pb-12">Galeri</h2>
-          
-              <div id="slider2" class="owl-carousel owl-theme owl-loaded">
-                <div class="item">
-                  <img class="h-full w-full hover:opacity-75" src="{{url_for('static', filename='assets/img/articles/' + artikel_terbaru.image_article )}}">
-                </div>
-                <div class="item">
-                  <img class="hover:opacity-75" src="{{url_for('static', filename='assets/img/articles/' + artikel_terbaru.image_article )}}">
-                </div>
-                <div class="item">
-                  <img class="hover:opacity-75" src="{{url_for('static', filename='assets/img/articles/' + artikel_terbaru.image_article )}}">
-                </div>
-                <div class="item">
-                  <img class="hover:opacity-75" src="{{url_for('static', filename='assets/img/articles/' + artikel_terbaru.image_article )}}">
-                </div>            
-            </div>
+    <section class="py-6 bg-white text-gray-800">
+      <div class="container flex flex-col items-center justify-center p-4 mx-auto space-y-8 sm:p-10">
+        <h1 class="text-4xl font-bold leading-none text-center sm:text-5xl">Our team</h1>
+        <!-- <p class="max-w-2xl text-center text-gray-400">At a assumenda quas cum earum ut itaque commodi saepe rem aspernatur quam natus quis nihil quod, hic explicabo doloribus magnam neque, exercitationem eius sunt!</p> -->
+        <div class="flex flex-row flex-wrap-reverse justify-center">
+          <div class="flex flex-col justify-center m-8 text-center">
+            <img alt="" class="self-center flex-shrink-0 w-24 h-24 mb-4 bg-center bg-cover rounded-full bg-gray-500" src="https://source.unsplash.com/100x100/?portrait?0">
+            <p class="text-xl font-semibold leading-tight">Leroy Jenkins</p>
+            <p class="text-gray-400">Visual Designer</p>
+          </div>
+          <div class="flex flex-col justify-center m-8 text-center">
+            <img alt="" class="self-center flex-shrink-0 w-24 h-24 mb-4 bg-center bg-cover rounded-full bg-gray-500" src="https://source.unsplash.com/100x100/?portrait?1">
+            <p class="text-xl font-semibold leading-tight">Leroy Jenkins</p>
+            <p class="text-gray-400">Visual Designer</p>
+          </div>
+          <div class="flex flex-col justify-center m-8 text-center">
+            <img alt="" class="self-center flex-shrink-0 w-24 h-24 mb-4 bg-center bg-cover rounded-full bg-gray-500" src="https://source.unsplash.com/100x100/?portrait?2">
+            <p class="text-xl font-semibold leading-tight">Leroy Jenkins</p>
+            <p class="text-gray-400">Visual Designer</p>
+          </div>
+          <div class="flex flex-col justify-center m-8 text-center">
+            <img alt="" class="self-center flex-shrink-0 w-24 h-24 mb-4 bg-center bg-cover rounded-full bg-gray-500" src="https://source.unsplash.com/100x100/?portrait?3">
+            <p class="text-xl font-semibold leading-tight">Leroy Jenkins</p>
+            <p class="text-gray-400">Visual Designer</p>
+          </div>
+          <div class="flex flex-col justify-center m-8 text-center">
+            <img alt="" class="self-center flex-shrink-0 w-24 h-24 mb-4 bg-center bg-cover rounded-full bg-gray-500" src="https://source.unsplash.com/100x100/?portrait?4">
+            <p class="text-xl font-semibold leading-tight">Leroy Jenkins</p>
+            <p class="text-gray-400">Visual Designer</p>
+          </div>
+          <div class="flex flex-col justify-center m-8 text-center">
+            <img alt="" class="self-center flex-shrink-0 w-24 h-24 mb-4 bg-center bg-cover rounded-full bg-gray-500" src="https://source.unsplash.com/100x100/?portrait?5">
+            <p class="text-xl font-semibold leading-tight">Leroy Jenkins</p>
+            <p class="text-gray-400">Visual Designer</p>
+          </div>
         </div>
       </div>
-    </div> 
+    </section>
+    
+</section>
+
 </div>
-
-<!-- Text Header -->
-
-<!-- Topic Nav -->
-<!-- <nav class="w-full py-4 border-t border-b bg-gray-100" x-data="{ open: false }">
-  <div class="block sm:hidden">
-      <a
-          href="#"
-          class=" md:hidden text-base font-bold uppercase text-center flex justify-center items-center"
-          @click="open = !open"
-      >
-          Topics <i :class="open ? 'fa-chevron-down': 'fa-chevron-up'" class="fas ml-2"></i>
-      </a>
-  </div>
-  <div :class="open ? 'block': 'hidden'" class="w-full flex-grow sm:flex sm:items-center sm:w-auto">
-      <div class="w-full container mx-auto flex flex-col sm:flex-row items-center justify-center text-sm font-bold uppercase mt-0 px-6 py-2">
-          <a href="#" class="hover:bg-gray-400 rounded py-2 px-4 mx-2">Technology</a>
-          <a href="#" class="hover:bg-gray-400 rounded py-2 px-4 mx-2">Automotive</a>
-          <a href="#" class="hover:bg-gray-400 rounded py-2 px-4 mx-2">Finance</a>
-          <a href="#" class="hover:bg-gray-400 rounded py-2 px-4 mx-2">Politics</a>
-          <a href="#" class="hover:bg-gray-400 rounded py-2 px-4 mx-2">Culture</a>
-          <a href="#" class="hover:bg-gray-400 rounded py-2 px-4 mx-2">Sports</a>
-      </div>
-  </div>
-</nav> -->
     
 {% endblock content%}
 
 {% block scripts %}
 
 <script>
-  
-
-$('#slider').owlCarousel({
-  loop:true,
-  items: 1,
-  margin:10,
-  autoplay: true,
-  nav:true,
-  navText: ['<i class="" aria-hidden="true"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg></i>', '<i class="" aria-hidden="true"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></i>']
-})
-
-$('#slider2').owlCarousel({
-  loop:true,
-  margin:10,
-  nav:true,
-  autoplay: true,
-  responsive:{
-      0:{
-          items:1
-      },
-      600:{
-          items:2
-      },
-      1000:{
-          items:3
-      }
-  }
-})
   
 </script>
 {% endblock scripts %}
