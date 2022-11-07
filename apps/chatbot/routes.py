@@ -66,7 +66,7 @@ def history():
 @login_required
 def unans_chat():
     messages = Message.query.all()
-    return render_template('users/admin/chatbot/unanswered.html', messages=messages)
+    return render_template('users/admin/chatbot/unanswered.html', messages=messages, title='Unanswered Chatbot')
 
 @chatbot.route("/admin/unans-delete/<int:id>", methods=['POST'])
 @login_required

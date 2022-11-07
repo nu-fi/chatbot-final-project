@@ -21,15 +21,15 @@
                         <th>
                             <div>
         
-                                <button class="btn btn-danger btn-md rounded-0" type="button" data-placement="top" title="Delete" data-bs-toggle="modal" data-bs-target="#deleteModal{{m.id}}"><i class='bx bx-trash'></i></button>
+                                <button class="btn btn-danger btn-md rounded-0" type="button" data-placement="top" title="Delete" data-toggle="modal" data-target="#deleteModal{{m.id}}"><i class="fa-solid fa-trash-can"></i></button>
         
                                 <!-- Delete Modal -->
                                 <div class="modal" id="deleteModal{{m.id}}" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
                                     <div class="modal-dialog">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h5 class="modal-title" id="deleteModalLabel">Hapus Kategori Berita</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            <h5 class="modal-title" id="deleteModalLabel">Hapus Pertanyaan</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">&times;</button>
                                         </div>
         
                                         <div class="modal-body">
@@ -37,7 +37,7 @@
                                         </div>
         
                                         <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                                             
                                             <form action="{{ url_for('chatbot.quest_delete', id=m.id) }}" method="POST">
                                                 <input type="submit" class="btn btn-danger" value="Delete">
