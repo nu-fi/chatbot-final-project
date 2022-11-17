@@ -20,7 +20,6 @@ login_manager.login_message_category = 'info'
 
 mail = Mail()
 
-
 def create_app(config_class=Config):
     app = Flask(__name__)
     app.config.from_object(Config)
@@ -30,7 +29,7 @@ def create_app(config_class=Config):
     login_manager.init_app(app)
     mail.init_app(app)
     ckeditor.init_app(app)
-    # csrf.init_app(app)
+
     migrate.init_app(app, db, render_as_batch=True)
 
     from apps.users.routes import users

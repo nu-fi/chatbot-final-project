@@ -5761,16 +5761,16 @@ textarea.form-control.is-invalid {
   margin-top: -3rem;
 }
 
+.mt-5 {
+  margin-top: 1.25rem;
+}
+
 .mt-12 {
   margin-top: 3rem;
 }
 
 .ml-0 {
   margin-left: 0px;
-}
-
-.mt-5 {
-  margin-top: 1.25rem;
 }
 
 .box-border {
@@ -6680,6 +6680,11 @@ textarea.form-control.is-invalid {
   padding-bottom: 3rem;
 }
 
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
 .px-48 {
   padding-left: 12rem;
   padding-right: 12rem;
@@ -6688,11 +6693,6 @@ textarea.form-control.is-invalid {
 .px-16 {
   padding-left: 4rem;
   padding-right: 4rem;
-}
-
-.py-5 {
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
 }
 
 .pr-2 {
