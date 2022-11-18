@@ -37,7 +37,7 @@ def predict():
 
     response = get_response(ints, intents)
     message = {"answer": response}
-    if response == "I do not understand...":
+    if response == "Saya tidak mengerti...":
         mess = Message(question=text)
         db.session.add(mess)
         db.session.commit()

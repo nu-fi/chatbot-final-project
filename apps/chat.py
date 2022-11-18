@@ -52,7 +52,7 @@ def predict_class(sentence, model):
     results = [[i,r] for i,r in enumerate(res) if r>ERROR_THRESHOLD]
     no_result = [[i,r] for i,r in enumerate(res) if r<ERROR_THRESHOLD]
     if no_result:
-        ans = "I do not understand..."
+        ans = "Saya tidak mengerti..."
     # sort by strength of probability
     results.sort(key=lambda x: x[1], reverse=True)
     return_list = []
@@ -65,7 +65,7 @@ def predict_class(sentence, model):
 
 def get_response(ints, intents_json):
     if len(ints) == 0:
-        return "I do not understand..."
+        return "Saya tidak mengerti..."
     
     print(ints)
     tag = ints[0]['intent']
