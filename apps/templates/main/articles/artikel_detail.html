@@ -1,120 +1,99 @@
 {% extends "layouts/base.html" %}
 
 {% block content %}
-<!-- <nav id="store" class="w-full z-30 top-0 px-6 py-1">
-    <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-2 py-3">
-
-        <a class="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl " href="#">
-        Store
-        </a>
-
-        <div class="flex items-center" id="store-nav-content">
-
-            <a class="pl-3 inline-block no-underline hover:text-black" href="#">
-                <svg class="fill-current hover:text-black" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                    <path d="M7 11H17V13H7zM4 7H20V9H4zM10 15H14V17H10z" />
-                </svg>
-            </a>
-
-            <a class="pl-3 inline-block no-underline hover:text-black" href="#">
-                <svg class="fill-current hover:text-black" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                    <path d="M10,18c1.846,0,3.543-0.635,4.897-1.688l4.396,4.396l1.414-1.414l-4.396-4.396C17.365,13.543,18,11.846,18,10 c0-4.411-3.589-8-8-8s-8,3.589-8,8S5.589,18,10,18z M10,4c3.309,0,6,2.691,6,6s-2.691,6-6,6s-6-2.691-6-6S6.691,4,10,4z" />
-                </svg>
-            </a>
-
-        </div>
-    </div>
-</nav>     -->
-<div class="container mx-auto flex items-center flex-wrap pt-0 pb-12">
-    <div class="flex flex-wrap justify-between pt-12 -mx-6">
-        <!--2/3 col -->
-        <div class="w-full md:w-2/3 p-6 flex flex-col flex-grow flex-shrink">
-            
-
-            <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
-                <a href="#" class="flex flex-wrap no-underline hover:no-underline">	
-                <img src="{{url_for('static', filename='assets/img/articles/' + artikel.image_article )}}" class="h-full w-full rounded-t pb-6">
-
-                <div class="bg-white flex flex-col justify-start px-16">
-                    <a href="#" class="text-blue-700 text-sm font-bold uppercase pb-4">{{ artikel.category.name }}</a>
-                    <a href="#" class="text-3xl font-bold hover:text-gray-700 pb-4">{{ artikel.title }}</a>
-                    <p href="#" class="text-sm pb-3">
-                        By <a href="#" class="font-semibold hover:text-gray-800">{{ artikel.author.username }}</a>, Published on {{ artikel.date_posted.strftime("%d %B, %Y") }}
-                    </p>
-                    <div class="prose lg:prose-xl pb-6 text-justify">
-                        {{ artikel.content | safe }}
-                    </div>
-                </div>              
-                
-                </a>
-            </div>
-            
-        </div>
-
-        <!--1/3 col -->
-        <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
-
-        <div class="pb-4">
-            <div class="p-4 max-w-md bg-white rounded-lg border shadow-md sm:p-8 dark:bg-gray-800 dark:border-gray-700">
-                <div class="flex justify-between items-center mb-4">
-                    <h5 class="text-xl font-bold leading-none text-gray-900 dark:text-white">Artikel Terbaru</h5>
-                    <a href="{{ url_for('main.article') }}" class="text-sm font-medium text-blue-600 hover:underline dark:text-blue-500">
-                        View all
+<div class="mt-8">
+    <section class="py-6 text-gray-900"> 
+    <div class="container mx-auto flex items-center flex-wrap pt-0 pb-12">
+        <div class="flex flex-wrap justify-between pt-12 -mx-6">
+            <!--2/3 col -->
+            <div class="w-full md:w-2/3 p-6 flex flex-col flex-grow flex-shrink">    
+                <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden lg:shadow-lg lg:mx-5 sm:mx-0">
+                    <a href="#" class="flex flex-wrap no-underline hover:no-underline">	
+                    <img src="{{url_for('static', filename='assets/img/articles/' + artikel.image_article )}}" class="h-full w-full rounded-t pb-6">
+    
+                    <div class="bg-white flex flex-col justify-start px-16">
+                        <a href="#" class="text-blue-700 text-sm font-bold uppercase pb-4">{{ artikel.category.name }}</a>
+                        <a href="#" class="text-3xl font-bold hover:text-gray-700 pb-4">{{ artikel.title }}</a>
+                        <p href="#" class="text-sm pb-3">
+                            By <a href="#" class="font-semibold hover:text-gray-800">{{ artikel.author.username }}</a>, Published on {{ artikel.date_posted.strftime("%d %B, %Y") }}
+                        </p>
+                        <div class="prose lg:prose-md pb-6 text-justify">
+                            {{ artikel.content | safe }}
+                        </div>
+                    </div>              
+                    
                     </a>
                 </div>
+                
+            </div>
+    
+            <!--1/3 col -->
+            <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink items-center sm:mx-0">
+    
+            <div class="pb-4">
+                <div class="p-4 max-w-md bg-white rounded-lg border shadow-md sm:p-8  dark:border-gray-400">
+                    <div class="flex justify-between items-center mb-4">
+                        <h5 class="text-xl font-bold leading-none text-gray-900">Artikel Terbaru</h5>
+                        <a href="{{ url_for('main.article') }}" class="text-sm font-medium text-blue-600 hover:underline dark:text-blue-500">
+                            View all
+                        </a>
+                    </div>
+                    <div class="flow-root">
+                        <ul role="list" class="divide-y divide-gray-200 dark:divide-gray-400">
+    
+                            {% for a in artikel_terbaru.items %}
+                            <li class="py-3 sm:py-4">
+                                <div class="flex items-center space-x-4">
+                                    <div class="flex-shrink-0">
+                                        <img class="h-16" src="{{url_for('static', filename='assets/img/articles/' + a.image_article )}}" alt="artikel image">
+                                    </div>
+                                    <div class="flex-1 min-w-0">
+                                        <p class="text-sm font-medium text-gray-900 ">
+                                            <a href="{{ url_for('main.article_detail', slug=a.slug) }}">{{ a.title }}</a>
+                                        </p>
+                                        <p class="text-sm text-gray-500 truncate dark:text-gray-400">
+                                            <small>{{ a.date_posted.strftime("%d %B, %Y") }}</small>
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="p-4 max-w-md bg-white rounded-lg border shadow-md sm:p-8  dark:border-gray-400 w-full">
+                <div class="flex justify-between items-center mb-4">
+                    <h5 class="text-xl font-bold leading-none text-gray-900 ">Kategori Artikel</h5>
+                </div>
                 <div class="flow-root">
-                    <ul role="list" class="divide-y divide-gray-200 dark:divide-gray-700">
-
-                        {% for a in artikel_terbaru.items %}
+                    <ul role="list" class="divide-y divide-gray-200 dark:divide-gray-400">
+                        {% for c in cat %}
+    
                         <li class="py-3 sm:py-4">
                             <div class="flex items-center space-x-4">
                                 <div class="flex-shrink-0">
-                                    <img class="h-16" src="{{url_for('static', filename='assets/img/articles/' + a.image_article )}}" alt="artikel image">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"></path></svg>
                                 </div>
                                 <div class="flex-1 min-w-0">
-                                    <p class="text-sm font-medium text-gray-900 dark:text-white">
-                                        <a href="{{ url_for('main.article_detail', slug=a.slug) }}">{{ a.title }}</a>
-                                    </p>
-                                    <p class="text-sm text-gray-500 truncate dark:text-gray-400">
-                                        <small>{{ a.date_posted.strftime("%d %B, %Y") }}</small>
+                                    <p class="text-md font-medium text-gray-900 uppercase">
+                                        <a href="{{ url_for('main.article_category', slug=c.slug) }}">{{ c.name }}</a>
                                     </p>
                                 </div>
                             </div>
                         </li>
                         {% endfor %}
+                        
                     </ul>
                 </div>
             </div>
-        </div>
-        
-        <div class="p-4 max-w-md bg-white rounded-lg border shadow-md sm:p-8 dark:bg-gray-800 dark:border-gray-700">
-            <div class="flex justify-between items-center mb-4">
-                <h5 class="text-xl font-bold leading-none text-gray-900 dark:text-white">Kategori Artikel</h5>
+            
             </div>
-            <div class="flow-root">
-                <ul role="list" class="divide-y divide-gray-200 dark:divide-gray-700">
-                    {% for c in cat %}
-
-                    <li class="py-3 sm:py-4">
-                        <div class="flex items-center space-x-4">
-                            <div class="flex-shrink-0">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"></path></svg>
-                            </div>
-                            <div class="flex-1 min-w-0">
-                                <p class="text-md font-medium text-gray-900 uppercase dark:text-white">
-                                    <a href="{{ url_for('main.article_category', slug=c.slug) }}">{{ c.name }}</a>
-                                </p>
-                            </div>
-                        </div>
-                    </li>
-                    {% endfor %}
-                    
-                </ul>
-            </div>
+    
         </div>
-        
-        </div>
-
     </div>
+    </section>
 </div>
+
 {% endblock content%}

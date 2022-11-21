@@ -1,8 +1,67 @@
 {% extends "layouts/base.html" %}
 
 {% block content %}
+<div class="mt-8">
+    <section class="py-6 text-gray-900">
+        <div class="container flex flex-col items-center justify-center p-4 mx-auto sm:p-10">
+            <h1 class="text-4xl font-bold leading-none text-center sm:text-5xl">Kategori Artikel </h1>
+            <p class="p-2 text-2xl font-medium tracking-wider text-center uppercase">{{ cat.name }}</p>
+            
+            <section>
+                <div class="relative items-center w-full px-5 py-12 mx-auto md:px-12 lg:px-8 max-w-7xl">
+                    <div class="grid w-full grid-cols-1 gap-6 mx-auto lg:grid-cols-3">
+                        {% for a in artikel.items %}
+                        <div class="p-6 shadow-md rounded-xl">
+                            <img class="object-cover object-center w-full mb-8 lg:h-48 md:h-36 rounded-xl" src="{{url_for('static', filename='assets/img/articles/' + a.image_article)}}" alt="blog">
+                            <h2 class="mb-8 text-xs font-semibold tracking-widest text-blue-600 uppercase">{{ a.category.name }}</h2>
+                            <!-- <p class="mx-auto text-sm  font-medium leading-relaxed text-gray-500">{{ a.date_posted.strftime('%d %B, %Y') }}</p> -->
+                            
+                            <h1 class="mx-auto mb-8 text-2xl font-semibold leading-none tracking-tighter text-neutral-600 lg:text-3xl">{{ a.title }}</h1>
+                            <div class=" mx-auto text-base font-medium leading-relaxed text-gray-500 line-clamp-3 dark:text-gray-400">
+                                {{ a.content | safe }}
+                            </div>
+                            
+                            <div class="mt-4">
+                                <a href="{{ url_for('main.article_detail', slug=a.slug) }}" class="inline-flex items-center mt-4 font-semibold text-blue-600 lg:mb-0 hover:text-neutral-600" title="read more"> Read More » </a>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </section>
 
-<div class="container mx-auto flex items-center flex-wrap pt-4 pb-12">
+            <nav aria-label="Pagination" class="flex items-center text-gray-600">    
+                <a href="{{ prev_url }}" class="p-2 mr-4 rounded hover:bg-gray-100">      
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">        
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />      
+                    </svg>
+                </a>
+                
+                {% for page_num in artikel.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2) %}
+                    {% if page_num %}
+                    
+                        {% if artikel.page == page_num %}
+                        <a href="{{ url_for('main.new', page=page_num) }}" class="px-4 py-2 rounded bg-gray-200 text-gray-900 font-medium hover:bg-gray-100"> {{ page_num }} </a>    
+
+                        {% else %}
+                        <a href="{{ url_for('main.new', page=page_num) }}" class="px-4 py-2 rounded hover:bg-gray-100"> {{ page_num }} </a>  
+                    
+                        {% endif %}
+                            
+                    {% else %}
+                    ...
+                    {% endif %}
+                {% endfor %}
+                
+                <a href="{{ next_url }}" class="p-2 ml-4 rounded hover:bg-gray-100">      
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />      
+                    </svg>    
+                </a>  
+            </nav>
+        </div>
+    </section>
+</div>
+<!-- <div class="container mx-auto flex items-center flex-wrap pt-4 pb-12">
     
     <div class="flex flex-wrap justify-between pt-12 -mx-6">                                            
         {% for a in artikel.items %}
@@ -70,6 +129,6 @@
             </li>
         </ul>
     </nav>
-</div>
+</div> -->
 
 {% endblock content%}
