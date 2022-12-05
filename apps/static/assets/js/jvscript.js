@@ -36,3 +36,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
     
      // Your code to run since DOM is loaded and ready
     });
+
+document.querySelectorAll('.navi-link').forEach(link => {
+    if(link.href === window.location.href){
+        link.setAttribute('aria-current', 'page')
+    }
+})

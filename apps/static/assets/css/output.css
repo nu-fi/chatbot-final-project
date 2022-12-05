@@ -5765,6 +5765,14 @@ textarea.form-control.is-invalid {
   margin-left: 0px;
 }
 
+.mr-6 {
+  margin-right: 1.5rem;
+}
+
+.mt-0 {
+  margin-top: 0px;
+}
+
 .block {
   display: block;
 }
@@ -5933,10 +5941,6 @@ textarea.form-control.is-invalid {
   min-width: 0px;
 }
 
-.min-w-full {
-  min-width: 100%;
-}
-
 .max-w-\[400px\] {
   max-width: 400px;
 }
@@ -5963,6 +5967,10 @@ textarea.form-control.is-invalid {
 
 .max-w-md {
   max-width: 28rem;
+}
+
+.max-w-screen-xl {
+  max-width: 1280px;
 }
 
 .flex-1 {
@@ -6208,6 +6216,12 @@ textarea.form-control.is-invalid {
   --tw-space-x-reverse: 0;
   margin-right: calc(0.5rem * var(--tw-space-x-reverse));
   margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.space-x-8 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(2rem * var(--tw-space-x-reverse));
+  margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
 .divide-y > :not([hidden]) ~ :not([hidden]) {
@@ -6664,24 +6678,9 @@ textarea.form-control.is-invalid {
   padding-bottom: 1.25rem;
 }
 
-.px-48 {
-  padding-left: 12rem;
-  padding-right: 12rem;
-}
-
 .px-16 {
   padding-left: 4rem;
   padding-right: 4rem;
-}
-
-.px-36 {
-  padding-left: 9rem;
-  padding-right: 9rem;
-}
-
-.py-24 {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
 }
 
 .pr-2 {
@@ -6973,6 +6972,11 @@ textarea.form-control.is-invalid {
   color: rgb(28 100 242 / var(--tw-text-opacity));
 }
 
+.text-green-700 {
+  --tw-text-opacity: 1;
+  color: rgb(4 108 78 / var(--tw-text-opacity));
+}
+
 .underline {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
@@ -7127,6 +7131,13 @@ textarea.form-control.is-invalid {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
+}
+
+.navi-link[aria-current="page"] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(17 24 39 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 /* CHATBOX
@@ -7857,28 +7868,12 @@ textarea.form-control.is-invalid {
     display: none;
   }
 
+  .sm\:h-9 {
+    height: 2.25rem;
+  }
+
   .sm\:w-1\/2 {
     width: 50%;
-  }
-
-  .sm\:w-8\/12 {
-    width: 66.666667%;
-  }
-
-  .sm\:w-64 {
-    width: 16rem;
-  }
-
-  .sm\:w-80 {
-    width: 20rem;
-  }
-
-  .sm\:w-96 {
-    width: 24rem;
-  }
-
-  .sm\:w-full {
-    width: 100%;
   }
 
   .sm\:grid-cols-3 {
@@ -7930,29 +7925,14 @@ textarea.form-control.is-invalid {
     padding-right: 1.5rem;
   }
 
-  .sm\:py-4 {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-  }
-
-  .sm\:px-12 {
-    padding-left: 3rem;
-    padding-right: 3rem;
-  }
-
   .sm\:px-24 {
     padding-left: 6rem;
     padding-right: 6rem;
   }
 
-  .sm\:px-48 {
-    padding-left: 12rem;
-    padding-right: 12rem;
-  }
-
-  .sm\:px-16 {
-    padding-left: 4rem;
-    padding-right: 4rem;
+  .sm\:py-4 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 
   .sm\:pr-0 {
@@ -8042,16 +8022,16 @@ textarea.form-control.is-invalid {
     width: 24rem;
   }
 
-  .md\:w-9\/12 {
-    width: 75%;
+  .md\:w-full {
+    width: 100%;
   }
 
   .md\:w-8\/12 {
     width: 66.666667%;
   }
 
-  .md\:w-full {
-    width: 100%;
+  .md\:w-9\/12 {
+    width: 75%;
   }
 
   .md\:shrink-0 {
@@ -8122,19 +8102,14 @@ textarea.form-control.is-invalid {
     padding-bottom: 2rem;
   }
 
-  .md\:px-48 {
-    padding-left: 12rem;
-    padding-right: 12rem;
-  }
-
-  .md\:px-36 {
-    padding-left: 9rem;
-    padding-right: 9rem;
-  }
-
   .md\:px-24 {
     padding-left: 6rem;
     padding-right: 6rem;
+  }
+
+  .md\:px-6 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 
   .md\:pt-10 {
@@ -8232,10 +8207,6 @@ textarea.form-control.is-invalid {
     width: 41.666667%;
   }
 
-  .lg\:w-full {
-    width: 100%;
-  }
-
   .lg\:max-w-2xl {
     max-width: 42rem;
   }
@@ -8246,14 +8217,6 @@ textarea.form-control.is-invalid {
 
   .lg\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .lg\:items-start {
-    align-items: flex-start;
-  }
-
-  .lg\:items-center {
-    align-items: center;
   }
 
   .lg\:justify-between {
@@ -8289,19 +8252,6 @@ textarea.form-control.is-invalid {
   .lg\:px-48 {
     padding-left: 12rem;
     padding-right: 12rem;
-  }
-
-  .lg\:py-6 {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-  }
-
-  .lg\:pl-12 {
-    padding-left: 3rem;
-  }
-
-  .lg\:text-left {
-    text-align: left;
   }
 
   .lg\:text-3xl {
