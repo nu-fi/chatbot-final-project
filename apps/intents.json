@@ -23,7 +23,7 @@
             ]
         },
         {
-            "tag": "selamat tinggal",
+            "tag": "selamat_tinggal",
             "patterns": [
                 "Bye bye",
                 "good Bye",
@@ -43,7 +43,7 @@
             ]
         },
         {
-            "tag": "terima kasih",
+            "tag": "terima_kasih",
             "patterns": [
                 "berterima kasih",
                 "terima kasih kembali",
@@ -64,7 +64,7 @@
             ]
         },
         {
-            "tag": "Pengertian Stunting",
+            "tag": "pengertian_stunting",
             "patterns": [
                 "Apa pengertian Stunting?",
                 "Stunting adalah",
@@ -85,7 +85,7 @@
             ]
         },
         {
-            "tag": "Dampak Stunting",
+            "tag": "dampak_stunting",
             "patterns": [
                 "Apakah dampak Stunting pada anak?",
                 "dampak stunting bagi anak apa?",
@@ -106,7 +106,7 @@
             ]
         },
         {
-            "tag": "Pencegahan Stunting",
+            "tag": "pencegahan_stunting",
             "patterns": [
                 "Bagaimana cara agar anak terhindar dari stunting?",
                 "cara mencegah stunting pada anak?",
@@ -125,7 +125,7 @@
             ]
         },
         {
-            "tag": "Penyebab Stunting",
+            "tag": "penyebab_stunting",
             "patterns": [
                 "Apa yang menyebabkan anak mengalami stunting?",
                 "penyebab anak mengalami stunting apa?",
@@ -144,7 +144,7 @@
             ]
         },
         {
-            "tag": "Ciri-ciri Stunting",
+            "tag": "ciri_stunting",
             "patterns": [
                 "Apa ciri-ciri anak yang mengalami stunting?",
                 "cara mengenali ciri fisik anak yang stunting",
@@ -162,7 +162,7 @@
             ]
         },
         {
-            "tag": "Pengertian MPASI",
+            "tag": "pengertian_MPASI",
             "patterns": [
                 "Apa itu MPASI?",
                 "pengertian MPASI",
@@ -180,7 +180,7 @@
             ]
         },
         {
-            "tag": "Waktu Pemberian MPASI",
+            "tag": "waktu_pemberian_MPASI",
             "patterns": [
                 "Kapan waktu yang tepat dalam pemberian MPASI?",
                 "waktu pemberian MPASI yang benar kapan",
@@ -198,7 +198,7 @@
             ]
         },
         {
-            "tag": "MPASI yang Baik",
+            "tag": "MPASI_yang_baik",
             "patterns": [
                 "pemberian MPASI yang baik bagaimana",
                 "bagaimana memberikan MPASI yang benar",
@@ -216,7 +216,7 @@
             ]
         },
         {
-            "tag": "MPASI yang dihindari",
+            "tag": "MPASI_yang_dihindari",
             "patterns": [
                 "makanan pendamping atau MPASI apa yang harus dihindari saat MPASI",
                 "menghindari MPASI yang buruk bagi anak",
@@ -234,7 +234,7 @@
             ]
         },
         {
-            "tag": "Waktu Pemberian ASI",
+            "tag": "waktu_pemberian_ASI",
             "patterns": [
                 "Sampai kapan pemberian ASI?",
                 "kapan pemberian ASI dilakukan ",
@@ -252,7 +252,7 @@
             ]
         },
         {
-            "tag": "Pengertian IMD",
+            "tag": "pengertian_IMD",
             "patterns": [
                 "Apa itu IMD?",
                 "pengertian dari IMD",
@@ -270,7 +270,7 @@
             ]
         },
         {
-            "tag": "Makanan sesuai Gizi Anak",
+            "tag": "makanan_sesuai_gizi_anak",
             "patterns": [
                 "susunan makanan yang sesuai gizi seperti apa",
                 "komposisi makanan dengan gizi sesuai bagaimana",
@@ -288,7 +288,7 @@
             ]
         },
         {
-            "tag": "Indikator kekurangan gizi",
+            "tag": "indikator_kekurangan_gizi",
             "patterns": [
                 "Apa indikator kekurangan gizi?",
                 "indikator dari kekurangan gizi",
@@ -306,7 +306,7 @@
             ]
         },
         {
-            "tag": "Gizi yang Cukup",
+            "tag": "gizi_yang_cukup",
             "patterns": [
                 "Bagaimana cara mengetahui bahwa gizi anak tercukupi?",
                 "apa ciri anak memiliki gizi yang cukup",
@@ -324,7 +324,7 @@
             ]
         },
         {
-            "tag": "Menurunkan angka Stunting",
+            "tag": "menurunkan_angka_stunting",
             "patterns": [
                 "Bagaimana cara menurunkan angka stunting?",
                 "cara menurunkan angka stunting seperti apa",
@@ -342,7 +342,7 @@
             ]
         },
         {
-            "tag": "Pengertian ASI",
+            "tag": "pengertian_ASI",
             "patterns": [
                 "Apa itu ASI?",
                 "pengertian dari ASI adalah",
@@ -361,7 +361,7 @@
             ]
         },
         {
-            "tag": "Manfaat ASI",
+            "tag": "manfaat_ASI",
             "patterns": [
                 "Apa manfaat dari ASI eksklusif?",
                 "Manfaat ASI eksklusif apa?",
@@ -379,7 +379,7 @@
             ]
         },
         {
-            "tag": "Kekurangan Gizi",
+            "tag": "kekurangan_gizi",
             "patterns": [
                 "Kekurangan gizi adalah?",
                 "apa definisi dari kekurangan gizi",

@@ -1,5 +1,3 @@
-import 'tw-elements';
-
 class Chatbox {
     constructor() {
         this.args = {
@@ -56,7 +54,7 @@ class Chatbox {
         let msg1 = { name: "User", message: text1 }
         this.messages.push(msg1);
         // consider changing local host here if required. /predict needs to be there.
-        fetch('https://710e-202-67-34-3.ngrok.io/predict', {
+        fetch('http://127.0.0.1:5000/predict', {
             method: 'POST',
             body: JSON.stringify({ message: text1 }),
             mode: 'cors',

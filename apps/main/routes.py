@@ -17,7 +17,7 @@ def page_not_found(error):
    return render_template('error/404.html', title = '404'), 404
 
 @main.route("/predict", methods=['POST'])
-@cross_origin(origins=['https://710e-202-67-34-3.ngrok.io'])
+@cross_origin(origins=['http://127.0.0.1:5000/'])
 def predict():
     text = request.get_json().get("message")
     # TO DO: check if text is valid
