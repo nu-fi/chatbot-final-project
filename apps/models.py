@@ -153,6 +153,7 @@ class Gallery(db.Model):
     title = db.Column(db.String(100), nullable=False)
     date_posted = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
     slug = db.Column(db.Text, nullable=False, unique=True)
+    description = db.Column(db.String(100))
 
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
 
@@ -164,6 +165,7 @@ class Gallery(db.Model):
 class Images_Gallery(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     image_gallery = db.Column(db.String(20))
+    description = db.Column(db.String(100))
     date_posted = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
 
     gallery_id = db.Column(db.Integer, db.ForeignKey('gallery.id'))
@@ -174,9 +176,10 @@ class Images_Gallery(db.Model):
 class Files_Public(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(100), nullable=False)
+    description = db.Column(db.String(100))
     filename = db.Column(db.String(50), nullable=False)
 
-    slug = db.Column(db.String(200), nullable=False, unique=True)
+    slug = db.Column(db.String(100), nullable=False, unique=True)
 
     def __repr__(self) -> str:
         return super().__repr__()

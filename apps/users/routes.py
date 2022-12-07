@@ -1,5 +1,5 @@
 from flask import Blueprint, render_template, url_for, flash, redirect, request, abort
-from apps.models import User, Roles
+from apps.models import User, Roles, Article, News, DataDokter, User
 from apps.users.utils import save_picture, send_reset_email
 from apps.users.forms import RegistrationForm, LoginForm, UpdateAccountForm, RequestResetForm, ResetPasswordForm
 from apps import db, bcrypt
@@ -11,7 +11,11 @@ users = Blueprint('users', __name__)
 @login_required
 def admin():
     role = Roles.query.filter_by(id=current_user.roles_id).first()
-    return render_template('users/admin/admin_dash.html', current_user=current_user, roles=current_user.role.title, title='Dashboard Admin')
+    num_article = Article.query.all()
+    num_datadok = DataDokter.query.all()
+    num_news = News.query.all()
+    num_dok = User.query.filter_by(roles_id=2).all()
+    return render_template('users/admin/admin_dash.html', current_user=current_user, roles=current_user.role.title, num_article=len(num_article), num_datadok=len(num_datadok), num_news=len(num_news), num_dok=len(num_dok), title='Dashboard Admin')
 
 @users.route("/dokter")
 @login_required

@@ -59,6 +59,10 @@ def home():
 def profile():
     return render_template('main/profile.html')
 
+@main.route("/kata-sambutan")
+def kata_sambutan():
+    return render_template('main/kata_sambutan.html')
+
 @main.route("/kontak", methods=['GET', 'POST'])
 def contact():
     form = ContactForm()

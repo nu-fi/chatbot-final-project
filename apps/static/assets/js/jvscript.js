@@ -42,3 +42,16 @@ document.querySelectorAll('.navi-link').forEach(link => {
         link.setAttribute('aria-current', 'page')
     }
 })
+
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("myDIV");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("stickyy");
+  } else {
+    header.classList.remove("stickyy");
+  }
+}

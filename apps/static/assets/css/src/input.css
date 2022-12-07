@@ -2,9 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+.stickyy {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+  background-color: white;
+}
+
+.stickyy + .content {
+  padding-top: 102px;
+}
+
 .navi-link[aria-current="page"] {
   --tw-bg-opacity: 1;
-  background-color: rgb(17 24 39 / var(--tw-bg-opacity));
+  background-color: rgb(0 178 2 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }

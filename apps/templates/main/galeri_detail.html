@@ -2,24 +2,41 @@
 
 {% block content %}
 
-<h3 class="text-center text-2xl font-bold hover:text-gray-700 pt-4">Galeri {{gall.title}}</h3>
-<p class="text-center">Published on {{gall.date_posted.strftime("%d %B, %Y")}}</p>
+<div class="">
+  <section class="pb-6 text-gray-900">
+    <div class="container flex flex-col items-center justify-center p-4 mx-auto sm:p-10">
+        <h1 class="text-4xl font-bold leading-none text-center sm:text-5xl">Galeri {{gall.title}}</h1>
+        <p class="p-2 text-sm font-medium tracking-wider text-center uppercase">Published on {{gall.date_posted.strftime("%d %B, %Y")}}</p>
 
-<div class="container mx-auto flex items-center flex-wrap pt-1 pb-12">
-    <div class="flex flex-wrap justify-center pt-4 -mx-6">
-        {% for i in imgs %}
-        <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">                
-            <img class="hover:grow hover:shadow-lg" src="{{url_for('static', filename='assets/img/galleries/' + i.image_gallery )}}">
-        </div>
-        {% endfor %}
-
+        <section class="text-gray-600 body-font">
+          <div class="container px-5 pb-24 pt-12 mx-auto">
+            
+            <div class="flex flex-wrap -m-4">
+              {% for i in imgs %}
+              <div class="lg:w-1/3 sm:w-1/2 p-4">
+                <div class="flex relative">
+                  <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="{{url_for('static', filename='assets/img/galleries/' + i.image_gallery )}}">
+                  <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+                    <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
+                    <h1 class="title-font text-lg font-medium text-gray-900 mb-3">{{gall.title}}</h1>
+                    <p class="leading-relaxed">{{i.description}}</p>
+                  </div>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        </section>
+        
     </div>
+  </section>
 </div>
 
-<!-- Container for demo purpose -->
-<div class="container my-24 px-6 mx-auto">
 
-    <!-- Section: Design Block -->
+
+<!-- Container for demo purpose -->
+<!-- <div class="container my-24 px-6 mx-auto">
+
     <section class="mb-32 text-gray-800 text-center">
   
       <h2 class="text-3xl font-bold mb-12 pb-4 text-center">Projects we are proud of</h2>
@@ -29,7 +46,7 @@
           <div class="relative block bg-white rounded-lg shadow-lg">
             <div class="flex">
               <div
-                class="relative overflow-hidden bg-no-repeat bg-cover bg-no-repeat bg-cover shadow-lg rounded-lg mx-4 -mt-4"
+                class="relative overflow-hidden bg-no-repeat bg-cover shadow-lg rounded-lg mx-4 -mt-4"
                 data-mdb-ripple="true" data-mdb-ripple-color="light">
                 <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/002.webp" class="w-full" />
                 <a href="#!">
@@ -41,14 +58,7 @@
             </div>
             <div class="p-6">
               <h5 class="font-bold text-lg mb-3">White city</h5>
-              <p class="mb-4 pb-2">
-                Ut pretium ultricies dignissim. Sed sit amet mi eget urna
-                placerat vulputate. Ut vulputate est non quam dignissim
-                elementum. Donec a ullamcorper diam.
-              </p>
-              <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light"
-                class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Read
-                more</a>
+              
             </div>
           </div>
         </div>
@@ -69,14 +79,6 @@
             </div>
             <div class="p-6">
               <h5 class="font-bold text-lg mb-3">A lonely bench</h5>
-              <p class="mb-4 pb-2">
-                Suspendisse in volutpat massa. Nulla facilisi. Sed aliquet
-                diam orci, nec ornare metus semper sed. Integer volutpat
-                ornare erat sit amet rutrum.
-              </p>
-              <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light"
-                class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Read
-                more</a>
             </div>
           </div>
         </div>
@@ -97,14 +99,7 @@
             </div>
             <div class="p-6">
               <h5 class="font-bold text-lg mb-3">Happy snow</h5>
-              <p class="mb-4 pb-2">
-                Curabitur tristique, mi a mollis sagittis, metus felis mattis
-                arcu, non vehicula nisl dui quis diam. Mauris ut risus eget
-                massa volutpat feugiat. Donec.
-              </p>
-              <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light"
-                class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Read
-                more</a>
+              
             </div>
           </div>
         </div>
@@ -113,54 +108,6 @@
     </section>
     <!-- Section: Design Block -->
   
-  </div>
-  <!-- Container for demo purpose -->
-
-  <section class="">
-    <div class="flex flex-wrap mx-auto md:flex-nowrap p-12">
-  
-      <a href="">
-        <div class="flex w-full">
-          <div class="relative flex flex-col items-start m-1 transition duration-300 ease-in-out delay-150 transform bg-white shadow-2xl rounded-xl md:w-80 md:-ml-16 md:hover:-translate-x-16 md:hover:-translate-y-8">
-            <img class="object-cover object-center w-full rounded-t-xl lg:h-48 md:h-36" src="/assets/images/placeholders/neon-1.jpg" alt="blog">
-            <div class="px-6 py-8">
-              <h4 class="mt-4 text-2xl font-semibold text-neutral-600">
-                <span class="">Entry</span>
-              </h4>
-              <p class="mt-4 text-base font-normal text-gray-500 leading-relax">Install Tailwind CSS without any Javascript Framewrok locally with purgeCSS, enable the dark mode option, prefferences or class is upt to you.</p>
-            </div>
-          </div>
-        </div>
-      </a>
-  
-      <a href="">
-        <div class="flex w-full">
-          <div class="relative flex flex-col items-start m-1 transition duration-300 ease-in-out delay-150 transform bg-white shadow-2xl rounded-xl md:w-80 md:-ml-16 md:hover:-translate-x-16 md:hover:-translate-y-8">
-            <img class="object-cover object-center w-full rounded-t-xl lg:h-48 md:h-36" src="/assets/images/placeholders/neon-4.jpg" alt="blog">
-            <div class="px-6 py-8">
-              <h4 class="mt-4 text-2xl font-semibold text-neutral-600">
-                <span class="">Entry</span>
-              </h4>
-              <p class="mt-4 text-base font-normal text-gray-500 leading-relax">Install Tailwind CSS without any Javascript Framewrok locally with purgeCSS, enable the dark mode option, prefferences or class is upt to you.</p>
-            </div>
-          </div>
-        </div>
-      </a>
-  
-      <a href="">
-        <div class="flex w-full">
-          <div class="relative flex flex-col items-start m-1 transition duration-300 ease-in-out delay-150 transform bg-white shadow-2xl rounded-xl md:w-80 md:-ml-16 md:hover:-translate-x-16 md:hover:-translate-y-8">
-            <img class="object-cover object-center w-full rounded-t-xl lg:h-48 md:h-36" src="/assets/images/placeholders/neon-2.jpg" alt="blog">
-            <div class="px-6 py-8">
-              <h4 class="mt-4 text-2xl font-semibold text-neutral-600">
-                <span class="">Entry</span>
-              </h4>
-              <p class="mt-4 text-base font-normal text-gray-500 leading-relax">Install Tailwind CSS without any Javascript Framewrok locally with purgeCSS, enable the dark mode option, prefferences or class is upt to you.</p>
-            </div>
-          </div>
-        </div>
-      </a>
-  
-    </div>
-  </section>
+  </div> -->
+ 
 {% endblock content%}

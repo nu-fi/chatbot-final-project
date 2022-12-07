@@ -131,3 +131,14 @@ def data_dokter():
     data = DataDokter.query.all()
 
     return render_template('users/doctor/data_dokter.html', title='Data Dokter', legend='Data Dokter', data=data, roles=current_user.role.title)
+
+@doctors.route("/data-verifikasi/<int:id>", methods=['GET', 'POST'])
+@login_required
+def data_verifikasi(id):
+    role = Roles.query.filter_by(id=current_user.roles_id).first()
+    data = DataDokter.query.filter_by(user_id=id).first()
+    data.status_data = True
+    db.session.commit()
+    flash('Your Data has been deleted!', 'danger')
+
+    return redirect(url_for('doctors.data_dokter'))

@@ -28,7 +28,7 @@ class Chatbox {
     }
 
      prompt(chatbox) {
-        this.messages.push({ name: "Bot", message: "Welcome to Bot" });
+        this.messages.push({ name: "Bot", message: "Selamat Datang di StuBot" });
         this.updateChatText(chatbox)
     }
 

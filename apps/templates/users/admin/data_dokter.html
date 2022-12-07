@@ -84,7 +84,11 @@
                             </div>
                         </th>
                         <th>
-                            
+                            {% if d.status_data == false %}
+                                <a class="btn btn-danger" href="{{ url_for('doctors.data_verifikasi', id=d.user_id) }}" role="button">Data Baru</a>
+                            {% else %}
+                                <a class="btn btn-primary" href="#" role="button">Diterima </a>
+                            {% endif %}
                         </th>
                     </tr>
     
