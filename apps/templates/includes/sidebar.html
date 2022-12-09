@@ -20,12 +20,14 @@
             <a href="{{ url_for('doctors.tambah_data')}}" class="nav-link"><i class="fas fa-solid fa-book"></i><span>Data Pribadi</span></a>
         </li>
     </ul>
+    {% if data_valid == True %}
     <ul class="sidebar-menu">
         <li class="menu-header">Data Dokter Terdaftar</li>
         <li class="nav-item dropdown active">
             <a href="{{ url_for('doctors.data_dokter')}}" class="nav-link"><i class="fas fa-solid fa-book"></i><span>Data Dokter</span></a>
         </li>
     </ul>
+    {% endif %}
 
     <!-- admiin -->
     {% else %}
@@ -81,10 +83,9 @@
             <li class="nav-item dropdown active">
                 <a href="{{ url_for('chatbot.dataset')}}" class="nav-link"><i class="fas fa-solid fa-database"></i><span>Dataset</span></a>
             </li>   
-            <li class="nav-item dropdown active">
+            <!-- <li class="nav-item dropdown active">
                 <a href="{{ url_for('chatbot.history')}}" class="nav-link"><i class="fas fa-solid fa-clock-rotate-left"></i><span>History</span></a>
-            </li>
-            
+            </li> -->
             <li class="nav-item dropdown active">
                 <a href="{{ url_for('chatbot.unans_chat')}}" class="nav-link"><i class="fas fa-regular fa-circle-question"></i><span>Unanswered</span></a>
             </li>

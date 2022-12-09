@@ -1,6 +1,6 @@
 import secrets
 from flask import Blueprint, render_template, url_for, flash, redirect, request, abort, current_app
-from apps.models import Files_Public, Message, DataDokter
+from apps.models import Files_Public, Message, DataDokter, Roles
 from apps import db
 from apps.files.forms import FilesForm
 from flask_login import current_user, login_required
@@ -85,3 +85,25 @@ def data_dokter():
     data = DataDokter.query.all()
 
     return render_template('users/admin/data_dokter.html', title='Data Dokter', legend='Data Dokter', data=data)
+
+@files.route("/admin/data-verifikasi/<int:id>", methods=['GET', 'POST'])
+@login_required
+def data_verifikasi(id):
+    role = Roles.query.filter_by(id=current_user.roles_id).first()
+    data = DataDokter.query.filter_by(user_id=id).first()
+    if data.status_data == False:
+        data.status_data = True
+    elif data.status_data == True:
+        data.status_data = False
+    db.session.commit()
+    flash('Your Data has been updated!', 'success')
+
+    return redirect(url_for('files.data_dokter'))
+
+@files.route("/admin/data-detail/<int:id>", methods=['GET', 'POST'])
+@login_required
+def data_detail(id):
+    # role = Roles.query.filter_by(id=current_user.roles_id).first()
+    data = DataDokter.query.filter_by(user_id=id).first()
+
+    return render_template('users/admin/lihat_datadokter.html', title='Detail Data Dokter', legend='Detail Data Dokter', data=data)

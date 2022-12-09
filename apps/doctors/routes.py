@@ -31,6 +31,11 @@ def save_ijazah(form_ijazah):
 @login_required
 def tambah_data():
     role = Roles.query.filter_by(id=current_user.roles_id).first()
+    cekdata = DataDokter.query.filter_by(user_id=current_user.id).first()
+    if cekdata:
+        data_valid=cekdata.status_data
+    else:
+        data_valid=False
 
     data = DataDokter.query.filter_by(user_id=current_user.id).first()
     if data:
@@ -51,12 +56,14 @@ def tambah_data():
 
         return redirect(url_for('doctors.get_data', id=current_user.id))
 
-    return render_template('users/doctor/berkas.html', title='Data Pribadi', legend='Data Pribadi Dokter', form=form, data=data, roles=current_user.role.title)
+    return render_template('users/doctor/berkas.html', title='Data Pribadi', legend='Data Pribadi Dokter', form=form, data=data, roles=current_user.role.title, data_valid = data_valid)
 
 @doctors.route("/data/<int:id>", methods=['GET'])
 @login_required
 def get_data(id):
     data = DataDokter.query.filter_by(user_id=id).first()
+    cekdata = DataDokter.query.filter_by(user_id=current_user.id).first()
+
     form = BerkasForm()
     if request.method == 'GET':
         form.nama.data = data.nama_lengkap
@@ -69,12 +76,13 @@ def get_data(id):
         form.batas_sip.data = data.batas_sip
         # form['hidden_days'] = data.hari_praktik
 
-    return render_template('users/doctor/berkas_done.html', title='Data Pribadi', legend='Data Pribadi', data=data, roles=current_user.role.title)
+    return render_template('users/doctor/berkas_done.html', title='Data Pribadi', legend='Data Pribadi', data=data, roles=current_user.role.title, data_valid = cekdata.status_data)
 
 @doctors.route("/update-data/<int:id>", methods=['GET', 'POST'])
 @login_required
 def berkas_update(id):
     role = Roles.query.filter_by(id=current_user.roles_id).first()
+    cekdata = DataDokter.query.filter_by(user_id=current_user.id).first()
 
     data = DataDokter.query.filter_by(user_id=id).first()
 
@@ -112,7 +120,7 @@ def berkas_update(id):
         form.jam_selesai.data = data.jam_selesai
         form.batas_sip.data = data.batas_sip
 
-    return render_template('users/doctor/berkas.html', title='Data Pribadi', legend='Data Pribadi', form=form, data=data, roles=current_user.role.title)
+    return render_template('users/doctor/berkas.html', title='Data Pribadi', legend='Data Pribadi', form=form, data=data, roles=current_user.role.title, data_valid = cekdata.status_data)
 
 @doctors.route("/delete-data/<int:id>", methods=['POST', 'GET'])
 @login_required
@@ -128,17 +136,7 @@ def berkas_delete(id):
 @login_required
 def data_dokter():
     role = Roles.query.filter_by(id=current_user.roles_id).first()
+    cekdata = DataDokter.query.filter_by(user_id=current_user.id).first()
     data = DataDokter.query.all()
 
-    return render_template('users/doctor/data_dokter.html', title='Data Dokter', legend='Data Dokter', data=data, roles=current_user.role.title)
-
-@doctors.route("/data-verifikasi/<int:id>", methods=['GET', 'POST'])
-@login_required
-def data_verifikasi(id):
-    role = Roles.query.filter_by(id=current_user.roles_id).first()
-    data = DataDokter.query.filter_by(user_id=id).first()
-    data.status_data = True
-    db.session.commit()
-    flash('Your Data has been deleted!', 'danger')
-
-    return redirect(url_for('doctors.data_dokter'))
+    return render_template('users/doctor/data_dokter.html', title='Data Dokter', legend='Data Dokter', data=data, roles=current_user.role.title, data_valid = cekdata.status_data)

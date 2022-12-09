@@ -20,8 +20,18 @@ def admin():
 @users.route("/dokter")
 @login_required
 def dokter():
+    cekdata = DataDokter.query.filter_by(user_id=current_user.id).first()
+    if cekdata:
+        data_valid=cekdata.status_data
+    else:
+        data_valid=False
+
     role = Roles.query.filter_by(id=current_user.roles_id).first()
-    return render_template('users/doctor/dokter_dash.html', current_user=current_user, roles=current_user.role.title, title='Dashboard Dokter')
+    num_article = Article.query.all()
+    num_datadok = DataDokter.query.all()
+    num_news = News.query.all()
+    num_dok = User.query.filter_by(roles_id=2).all()
+    return render_template('users/doctor/dokter_dash.html', current_user=current_user, roles=current_user.role.title, title='Dashboard Dokter', data_valid = data_valid)
 
 @users.route("/register", methods=['GET', 'POST'])
 def register():

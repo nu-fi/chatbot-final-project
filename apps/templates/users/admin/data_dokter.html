@@ -14,7 +14,7 @@
                         <th scope="col">Kota Praktik</th>
                         <th scope="col">Tempat Praktik</th>
                         <th scope="col">Hari Praktik</th>
-                        <th scope="col">File Pendukung</th>
+                        <th scope="col">Aksi</th>
                         <th scope="col">Status</th>
                     </tr>
                     </thead>
@@ -28,10 +28,11 @@
                         <th>{{ d.hari_praktik }}</th>
                         <th>
                             <div>
+                                <a class="btn btn-info" href="{{ url_for('files.data_detail', id=d.user_id) }}" role="button"><i class="fa-solid fa-eye"></i>&nbsp;Lihat Data</a>
                                 <!-- Trigger the modal with a button -->
-                                <button type="button" class="btn btn-md btn-info " data-toggle="modal" data-target="#viewIjazahModal{{d.id}}" title="View File Ijazah">
+                                <!-- <button type="button" class="btn btn-md btn-info " data-toggle="modal" data-target="#viewIjazahModal{{d.id}}" title="View File Ijazah">
                                     <i class="fa-solid fa-eye"></i>
-                                </button>
+                                </button> -->
     
                                 <div class="modal" id="viewIjazahModal{{d.id}}" tabindex="-1" aria-labelledby="viewIjazahModalLabel" aria-hidden="true">
                                     <div class="modal-dialog">
@@ -57,9 +58,9 @@
     
                                 <!-- Trigger the modal with a button -->
     
-                                <button type="button" class="btn btn-md btn-info " data-toggle="modal" data-target="#viewSIPModal{{d.id}}" title="View File SIP">
+                                <!-- <button type="button" class="btn btn-md btn-info " data-toggle="modal" data-target="#viewSIPModal{{d.id}}" title="View File SIP">
                                     <i class="fa-solid fa-eye"></i>
-                                </button>
+                                </button> -->
     
                                 <div class="modal" id="viewSIPModal{{d.id}}" tabindex="-1" aria-labelledby="viewSIPModalLabel" aria-hidden="true">
                                     <div class="modal-dialog">
@@ -85,7 +86,7 @@
                         </th>
                         <th>
                             {% if d.status_data == false %}
-                                <a class="btn btn-danger" href="{{ url_for('doctors.data_verifikasi', id=d.user_id) }}" role="button">Data Baru</a>
+                                <a class="btn btn-danger" href="#" role="button">Data Baru</a>
                             {% else %}
                                 <a class="btn btn-primary" href="#" role="button">Diterima </a>
                             {% endif %}
