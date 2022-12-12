@@ -1,86 +1,60 @@
-#importing ntlk,numpy ,keras lib
-import nltk
-from nltk.stem import WordNetLemmatizer
-lemmatizer = WordNetLemmatizer()
-import pickle
-import numpy as np
-
-from keras.models import load_model
-#importing the model with the weights
-model = load_model('apps/chatbot_model.h5')
-import json
 import random
+import json
 
-data_file = open('apps/intents.json').read()
-intents = json.loads(data_file)
+import torch
 
-words = pickle.load(open('apps/words.pkl','rb'))
-classes = pickle.load(open('apps/classes.pkl','rb'))
+from apps.model import NeuralNet
+from apps.nltk_utils import bag_of_words, tokenize
 
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
-def clean_up_sentence(sentence):
-    # tokenize the pattern - split words into array
-    sentence_words = nltk.word_tokenize(sentence)
-    # stem each word - create short form for word
-    sentence_words = [lemmatizer.lemmatize(word.lower()) for word in sentence_words]
+with open('apps/intents.json', 'r') as json_data:
+    intents = json.load(json_data)
 
-    # sentence_words = [stemmingIndo(w) for w in sentence_words if w not in ignore_words]
+FILE = "apps/data.pth"
+data = torch.load(FILE)
 
-    return sentence_words
+input_size = data["input_size"]
+hidden_size = data["hidden_size"]
+output_size = data["output_size"]
+all_words = data['all_words']
+tags = data['tags']
+model_state = data["model_state"]
 
-# return bag of words array: 0 or 1 for each word in the bag that exists in the sentence
+model = NeuralNet(input_size, hidden_size, output_size).to(device)
+model.load_state_dict(model_state)
+model.eval()
 
-def bow(sentence, words, show_details=True):
-    # tokenize the pattern
-    sentence_words = clean_up_sentence(sentence)
-    # bag of words - matrix of N words, vocabulary matrix
-    bag = [0]*len(words)  
-    for s in sentence_words:
-        for i,w in enumerate(words):
-            if w == s: 
-                # assign 1 if current word is in the vocabulary position
-                bag[i] = 1
-                if show_details:
-                    print ("found in bag: %s" % w)
-    return(np.array(bag))
+bot_name = "Bot"
 
-def predict_class(sentence, model):
-    # filter out predictions below a threshold
-    p = bow(sentence, words, show_details=False)
-    res = model.predict(np.array([p]))[0]
-    ERROR_THRESHOLD = 0.75
-    results = [[i,r] for i,r in enumerate(res) if r>ERROR_THRESHOLD]
-    no_result = [[i,r] for i,r in enumerate(res) if r<ERROR_THRESHOLD]
-    if no_result:
-        ans = "Saya tidak mengerti..."
-    # sort by strength of probability
-    results.sort(key=lambda x: x[1], reverse=True)
-    return_list = []
-    for r in results:
-        return_list.append({"intent": classes[r[0]], "probability": str(r[1])})
+def get_response(msg):
+    sentence = tokenize(msg)
+    X = bag_of_words(sentence, all_words)
+    X = X.reshape(1, X.shape[0])
+    X = torch.from_numpy(X).to(device)
 
-    print(return_list)
+    output = model(X)
+    _, predicted = torch.max(output, dim=1)
 
-    return return_list
+    tag = tags[predicted.item()]
 
-def get_response(ints, intents_json):
-    if len(ints) == 0:
-        return "Saya tidak mengerti..."
-    
-    print(ints)
-    tag = ints[0]['intent']
-    list_of_intents = intents_json['intents']
-    for i in list_of_intents:
-        if(i['tag']== tag):
-            result = random.choice(i['responses'])
-            break
-    return result 
+    probs = torch.softmax(output, dim=1)
+    prob = probs[0][predicted.item()]
+    if prob.item() > 0.75:
+        for intent in intents['intents']:
+            if tag == intent["tag"]:
+                return random.choice(intent['responses'])
+
+    return "I do not understand..."
 
 
-print("GO! Bot is running!")
+# if __name__ == "__main__":
+#     print("Let's chat! (type 'quit' to exit)")
+#     while True:
+#         sentence = "do you use credit cards?"
+#         sentence = input("You: ")
+#         if sentence == "quit":
+#             break
 
-# while True:
-#     message = input("")
-#     ints = predict_class(message, model)
-#     res = get_response(ints, intents)
-#     print(res)
+#         resp = get_response(sentence)
+#         print(resp)

@@ -1,6 +1,6 @@
 from email import message
 from flask import Blueprint, render_template, request, url_for, jsonify, flash, redirect, current_app, send_from_directory, abort
-from apps.chat import get_response, predict_class
+from apps.chat import get_response
 from apps.models import Article, Images_Gallery, News, Gallery, Files_Public, Roles, Category, Categoryn, Message, User
 from apps import db, mail
 from flask_mail import Message as Mess
@@ -28,21 +28,42 @@ def predict():
         db.session.commit()
         return jsonify(message)
 
-    data_file = open('apps/intents.json').read()
-    intents = json.loads(data_file)
-
-    model = load_model('apps/chatbot_model.h5')
-
-    ints = predict_class(text, model)
-
-    response = get_response(ints, intents)
+    response = get_response(text)
     message = {"answer": response}
-    if response == "Saya tidak mengerti...":
+    if response == "I do not understand...":
         mess = Message(question=text)
         db.session.add(mess)
         db.session.commit()
-        
+
     return jsonify(message)
+
+# @main.route("/predict", methods=['POST'])
+# @cross_origin(origins=['http://127.0.0.1:5000/'])
+# def predict():
+#     text = request.get_json().get("message")
+#     # TO DO: check if text is valid
+#     if len(text) > 100:
+#         message = {"answer": "I'm sorry, your query has too many characters for me to process."}
+#         mess = Message(question=text)
+#         db.session.add(mess)
+#         db.session.commit()
+#         return jsonify(message)
+
+#     data_file = open('apps/intents.json').read()
+#     intents = json.loads(data_file)
+
+#     model = load_model('apps/chatbot_model.h5')
+
+#     ints = predict_class(text, model)
+
+#     response = get_response(ints, intents)
+#     message = {"answer": response}
+#     if response == "Saya tidak mengerti...":
+#         mess = Message(question=text)
+#         db.session.add(mess)
+#         db.session.commit()
+        
+#     return jsonify(message)
 
 @main.route("/")
 @main.route("/home")
