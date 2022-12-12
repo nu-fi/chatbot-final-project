@@ -8,3 +8,7 @@ class ContactForm(FlaskForm):
     subject = StringField("Subjek", validators=[DataRequired()])
     message = TextAreaField("Pesan", validators=[DataRequired()])
     submit = SubmitField("Kirim")
+
+class SearchForm(FlaskForm):
+    searched = StringField("Search Doctor by Name, Location...", validators=[DataRequired()])
+    submit = SubmitField("Kirim")

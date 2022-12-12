@@ -1,14 +1,13 @@
-from email import message
 from flask import Blueprint, render_template, request, url_for, jsonify, flash, redirect, current_app, send_from_directory, abort
 from apps.chat import get_response
-from apps.models import Article, Images_Gallery, News, Gallery, Files_Public, Roles, Category, Categoryn, Message, User
+from apps.models import Article, Images_Gallery, News, Gallery, Files_Public, Roles, Category, Categoryn, Message, User, DataDokter
 from apps import db, mail
 from flask_mail import Message as Mess
-from apps.main.forms import ContactForm
+from apps.main.forms import ContactForm, SearchForm
 import os
 import json
-from keras.models import load_model
 from flask_cors import cross_origin
+from sqlalchemy import or_
 
 main = Blueprint('main', __name__)
 
@@ -65,8 +64,8 @@ def predict():
         
 #     return jsonify(message)
 
-@main.route("/")
-@main.route("/home")
+@main.route("/", methods=['GET', 'POST'])
+@main.route("/home", methods=['GET', 'POST'])
 def home():
     artikel_terbaru = Article.query.order_by(Article.date_posted.desc()).first()
     artikel = Article.query.filter(Article.id < artikel_terbaru.id).limit(3)
@@ -74,11 +73,31 @@ def home():
     berita_terbaru = News.query.order_by(News.date_posted.desc()).limit(2)
     gall = Images_Gallery.query.order_by(Images_Gallery.date_posted.desc()).limit(3)
 
-    return render_template('main/home.html', artikel=artikel, artikel_terbaru=artikel_terbaru, berita=berita, berita_terbaru=berita_terbaru, gall=gall)
+    form = SearchForm()
+    dokters = DataDokter.query
+    if form.validate_on_submit():
+        searched = form.searched.data
+        dokters = dokters.filter(or_(DataDokter.nama_lengkap.like('%' + searched + '%'), DataDokter.kota_praktik.like('%' + searched + '%')))
+        dokters = dokters.order_by(DataDokter.nama_lengkap.desc()).all()
+        return redirect(url_for('main.search'))
+        
+
+    return render_template('main/home.html', artikel=artikel, artikel_terbaru=artikel_terbaru, berita=berita, berita_terbaru=berita_terbaru, gall=gall, form=form)
 
 @main.route("/profile")
 def profile():
     return render_template('main/profile.html')
+
+@main.route("/search", methods=['GET', 'POST'])
+def search():
+    form = SearchForm()
+    dokters = DataDokter.query
+    if form.validate_on_submit():
+        searched = form.searched.data
+        dokters = dokters.filter(or_(DataDokter.nama_lengkap.like('%' + searched + '%'), DataDokter.kota_praktik.like('%' + searched + '%')))
+        dokters = dokters.order_by(DataDokter.nama_lengkap.desc()).all()
+        return render_template('main/search.html', dokters=dokters, form=form)
+    return render_template('main/search.html', dokters=dokters, form=form)
 
 @main.route("/kata-sambutan")
 def kata_sambutan():
