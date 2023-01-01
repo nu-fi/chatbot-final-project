@@ -31,7 +31,7 @@ def dokter():
     num_datadok = DataDokter.query.all()
     num_news = News.query.all()
     num_dok = User.query.filter_by(roles_id=2).all()
-    return render_template('users/doctor/dokter_dash.html', current_user=current_user, roles=current_user.role.title, title='Dashboard Dokter', data_valid = data_valid)
+    return render_template('users/doctor/dokter_dash.html', current_user=current_user, roles=current_user.role.title, title='Dashboard Dokter', data_valid = data_valid, num_datadok=len(num_datadok), num_dok=len(num_dok))
 
 @users.route("/register", methods=['GET', 'POST'])
 def register():

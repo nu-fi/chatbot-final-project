@@ -160,6 +160,8 @@
   border-top-right-radius: 20px;
   border-bottom-left-radius: 20px;
   background: var(--primary);
+  --tw-bg-opacity: 1;
+  background-color: rgb(21 128 61 / var(--tw-bg-opacity));
   color: white;
 }
 

@@ -1,5 +1,35 @@
 {% extends "layouts/base_dashboard.html" %}
 
+{% block header %}
+<div class="container">
+    <h1>Manajemen {{ title }}</h1>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#modalll">
+        <i class="fa-solid fa-circle-info"></i>&nbsp;Lihat Petunjuk
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modalll" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Petunjuk Pengelolaan Data {{ title }}</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>          
+          <div class="modal-body">
+            Untuk pengelolaan {{ title }}, verifikasi data dilakukan dengan mengecek data. Pengecekan data dapat dilakukan dengan menekan tombol biru muda. Kemudian Admin memeriksa data yang diinputkan. Kolom Status berisi status dari pengecekan apakah data terverifikasi atau tidak.
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+{% endblock header %}
+
 {% block content %}
 <div class="container">
     <div class="row">
@@ -30,10 +60,7 @@
                             <div>
                                 <a class="btn btn-info" href="{{ url_for('files.data_detail', id=d.user_id) }}" role="button"><i class="fa-solid fa-eye"></i>&nbsp;Lihat Data</a>
                                 <!-- Trigger the modal with a button -->
-                                <!-- <button type="button" class="btn btn-md btn-info " data-toggle="modal" data-target="#viewIjazahModal{{d.id}}" title="View File Ijazah">
-                                    <i class="fa-solid fa-eye"></i>
-                                </button> -->
-    
+                              
                                 <div class="modal" id="viewIjazahModal{{d.id}}" tabindex="-1" aria-labelledby="viewIjazahModalLabel" aria-hidden="true">
                                     <div class="modal-dialog">
                                     <div class="modal-content">
@@ -54,13 +81,6 @@
                                     </div>
                                     </div>
                                 </div>
-                            
-    
-                                <!-- Trigger the modal with a button -->
-    
-                                <!-- <button type="button" class="btn btn-md btn-info " data-toggle="modal" data-target="#viewSIPModal{{d.id}}" title="View File SIP">
-                                    <i class="fa-solid fa-eye"></i>
-                                </button> -->
     
                                 <div class="modal" id="viewSIPModal{{d.id}}" tabindex="-1" aria-labelledby="viewSIPModalLabel" aria-hidden="true">
                                     <div class="modal-dialog">
@@ -69,9 +89,7 @@
                                             <h5 class="modal-title" id="viewSIPModalLabel">file SIP {{ d.nama_lengkap }}</h5>
                                             <button type="button" class="close" data-dismiss="modal">&times;</button>
                                         </div>
-    
                                         <div class="modal-body">
-    
                                             <embed src="{{url_for('static', filename='assets/files/dokter/sip/' + d.file_sip)}}" frameborder="0" width="100%" height="400px">
     
                                         </div>
@@ -86,9 +104,9 @@
                         </th>
                         <th>
                             {% if d.status_data == false %}
-                                <a class="btn btn-danger" href="#" role="button">Data Baru</a>
+                                <a class="btn btn-danger" href="#" role="button">Belum Diverifikasi</a>
                             {% else %}
-                                <a class="btn btn-primary" href="#" role="button">Diterima </a>
+                                <a class="btn btn-primary" href="#" role="button">Terverifikasi </a>
                             {% endif %}
                         </th>
                     </tr>

@@ -5,7 +5,7 @@
       <img class="h-16 " src="/static/assets/img/logo.png" alt="IDAI logo" style="max-width:100%;">
       <p class="text-right pt-6 text-sm font-thin text-green-900">
         <i class="fa-solid fa-envelope"></i> &nbsp;idaikalbar@gmail.com&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <i class="fa-solid fa-phone"></i> &nbsp;(056) 173-2-101&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <i class="fa-solid fa-phone"></i> &nbsp;(0561) 732101&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <i class="fa-solid fa-location-dot"></i> &nbsp;Jl. KHJ. Hasyim No. 249, Kec. Pontianak Kota
       </p>
     </div>
@@ -63,9 +63,9 @@
       
       <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
         {% if current_user.is_authenticated %}
-        <a href="{{ url_for('users.logout') }}" class="text-green-100 bg-green-900 hover:bg-gray-700 hover:text-white px-7 py-2 rounded-md text-sm font-medium">Logout</a>
+        <a href="{{ url_for('users.logout') }}" class="text-white bg-green-900 hover:bg-gray-700 hover:text-white px-7 py-2 rounded-md text-sm font-medium">Logout</a>
         {% else %}
-        <a href="{{ url_for('users.login') }}" class="text-green-100 bg-green-900 hover:bg-gray-700 hover:text-white px-7 py-2 rounded-md text-sm font-medium">Login</a>
+        <a href="{{ url_for('users.login') }}" class="text-white bg-green-900 hover:bg-gray-700 hover:text-white px-7 py-2 rounded-md text-sm font-medium">Login</a>
         {% endif %}
       </div>
     </div>

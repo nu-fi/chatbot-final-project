@@ -1,5 +1,33 @@
 {% extends "layouts/base_dashboard.html" %}
+{% block header %}
+<div class="container">
+    <h1>Manajemen {{ title }}</h1>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#modalll">
+        <i class="fa-solid fa-circle-info"></i>&nbsp;Lihat Petunjuk
+    </button>
 
+    <!-- Modal -->
+    <div class="modal fade" id="modalll" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Petunjuk Pengelolaan Data {{ title }}</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>          
+          <div class="modal-body">
+            Untuk pengelolaan {{ title }}, tombol berwarna kuning untuk menambah kategori baru, tombol berwarna hijau untuk mengubah data dan tombol berwarna merah untuk menghapus data.
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+{% endblock header %}
 {% block content %}
 <div class="container">
     <div class="row">
@@ -8,7 +36,7 @@
             <section class="section m-4">
                 <!-- Button trigger modal -->
                 <div class="container mb-3">
-                    <button type="button" class="btn btn-info btn-md" data-placement="top" title="Add" data-toggle="modal" data-target="#exampleModal">
+                    <button type="button" class="btn btn-warning btn-md" data-placement="top" title="Add" data-toggle="modal" data-target="#exampleModal">
                         <i class="fa-solid fa-plus"></i>
                     </button>
                 </div>
@@ -44,7 +72,7 @@
                         
                                         </fieldset>
                                         <div class="form-group">
-                                            {{ form.submit(class="btn btn-outline-info") }}
+                                            {{ form.submit(class="btn btn-primary") }}
                                         </div>
                                     </form>
                                 </div>

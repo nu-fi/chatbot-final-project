@@ -106,4 +106,4 @@ def data_detail(id):
     # role = Roles.query.filter_by(id=current_user.roles_id).first()
     data = DataDokter.query.filter_by(user_id=id).first()
 
-    return render_template('users/admin/lihat_datadokter.html', title='Detail Data Dokter', legend='Detail Data Dokter', data=data)
+    return render_template('users/admin/lihat_datadokter.html', title='Verifikasi Data Dokter', legend='Verifikasi Data Dokter', data=data)

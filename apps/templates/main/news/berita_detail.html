@@ -17,7 +17,7 @@
                                 <p href="#" class="text-sm pb-3">
                                     By <a href="#" class="font-semibold hover:text-gray-800">{{ berita.author.username }}</a>, Published on {{ berita.date_posted.strftime("%d %B, %Y") }}
                                 </p>
-                                <div class="prose lg:prose-md pb-6 text-justify">
+                                <div class="prose lg:prose-md pb-6 text-justify mb-8">
                                     {{ berita.content | safe }}
                                 </div>
                             </div> 
@@ -32,7 +32,7 @@
                     <div class="p-4 max-w-md bg-white rounded-lg border shadow-md sm:p-8  border-gray-700">
                         <div class="flex justify-between items-center mb-4">
                             <h5 class="text-xl font-bold leading-none text-gray-900 ">Berita Terbaru</h5>
-                            <a href="{{ url_for('main.article') }}" class="text-sm font-medium text-blue-600 hover:underline dark:text-blue-500">
+                            <a href="{{ url_for('main.new') }}" class="text-sm font-medium text-blue-600 hover:underline dark:text-blue-500">
                                 View all
                             </a>
                         </div>

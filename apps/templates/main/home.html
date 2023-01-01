@@ -30,34 +30,34 @@
      
       <div class="carousel-item active relative float-left w-full ">
 
-        <div class="block w-full h-145 bg-fixed bg-center bg-cover bg-no-repeat opacity-90" style=" background-image:linear-gradient(rgba(255, 255, 255, 0.9), rgba(58, 57, 57, 0.9)), url({{url_for('static', filename='assets/img/carousels/2.jpg' )}})">
+        <div class="block w-full h-145 bg-fixed bg-center bg-cover bg-no-repeat" style=" background-image: url({{url_for('static', filename='assets/img/carousels/1.jpg' )}})">
 
         </div>
 
         
-        <div class="carousel-caption hidden md:block absolute text-center bg-green-900 bg-opacity-50 border-b-lime-900">
+        <div class="carousel-caption hidden md:block absolute text-center bg-gray-900 bg-opacity-90 border-b-lime-900">
           <h5 class="text-xl font-bold">Selamat Datang Di Website IDAI Kalimantan Barat</h5>
-          <p class="text-green 200">Memasuki Era Digital dan globalisasi arus informasi maka kami berharap website IDAI Kalimantan Barat ini menjadi portal akses informasi terkait dunia kedokteran pada umumnya dan dunia kesehatan pada khususnya.</p>
+          <p class="">Memasuki Era Digital dan globalisasi arus informasi maka kami berharap website IDAI Kalimantan Barat ini menjadi portal akses informasi terkait dunia kedokteran anak pada umumnya dan dunia kesehatan anak pada khususnya.</p>
         </div>
       </div>
       <div class="carousel-item relative float-left w-full">
-        <div class="block w-full h-145 bg-fixed bg-center bg-cover bg-no-repeat opacity-90" style=" background-image:linear-gradient(rgba(255, 255, 255, 0.9), rgba(58, 57, 57, 0.9)), url({{url_for('static', filename='assets/img/carousels/3.jpg' )}})">
+        <div class="block w-full h-145 bg-fixed bg-center bg-cover bg-no-repeat" style=" background-image: url({{url_for('static', filename='assets/img/carousels/3.jpg' )}})">
 
         </div>
 
-        <div class="carousel-caption hidden md:block absolute text-center bg-green-900 bg-opacity-50 border-b-lime-900">
-          <h5 class="text-xl font-bold">Second slide label</h5>
-          <p>Some representative placeholder content for the second slide.</p>
+        <div class="carousel-caption hidden md:block absolute text-center bg-gray-900 bg-opacity-90 border-b-lime-900">
+          <h5 class="text-xl font-bold">Berita Terkait Kegiatan IDAI Kalimantan Barat</h5>
+          <p>Dalam website ini juga kami menyajikan serangkaian berita terkait kegiatan IDAI baik internal maupun antar lembaga yang bekerjasama dengan IDAI Kalimantan Barat</p>
         </div>
       </div>
       <div class="carousel-item relative float-left w-full">
-        <div class="block w-full h-145 bg-fixed bg-center bg-cover bg-no-repeat opacity-90" style=" background-image:linear-gradient(rgba(255, 255, 255, 0.9), rgba(58, 57, 57, 0.9)), url({{url_for('static', filename='assets/img/carousels/1.jpg' )}})">
+        <div class="block w-full h-145 bg-fixed bg-center bg-cover bg-no-repeat" style=" background-image: url({{url_for('static', filename='assets/img/carousels/2.jpeg' )}})">
 
         </div>
        
-        <div class="carousel-caption hidden md:block absolute text-center bg-green-900 bg-opacity-50 border-b-lime-900">
-          <h5 class="text-xl font-bold">Third slide label</h5>
-          <p>Some representative placeholder content for the third slide.</p>
+        <div class="carousel-caption hidden md:block absolute text-center bg-gray-900 bg-opacity-90 border-b-lime-900">
+          <h5 class="text-xl font-bold">Artikel Umum dan Ilmiah</h5>
+          <p>Berbagai artikel umum mengenai kesehatan anak juga kami sajikan di dalam website ini, selain tentunya berbagai artikel atau jurnal ilmiah kedokteran anak yang dibutuhkan dalam pengembangan dan pelayanan kedokteran.</p>
         </div>
       </div>
     </div>
@@ -92,16 +92,16 @@
     </div>
       <section class="container mx-auto p-10 md:py-10 px-0 md:p-10 md:px-0">
         <section class="relative px-10 md:p-0 transform duration-500 hover:shadow-xl cursor-pointer hover:-translate-y-1 ">
-            <img class="xl:max-w-3xl opacity-20" src="https://images.pexels.com/photos/5990153/pexels-photo-5990153.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1860" alt="">
+            <img class="xl:max-w-3xl " src="{{url_for('static', filename='assets/img/ketua-idaikb.jpg' )}}" alt="Ketua IDAI KALBAR">
             <div class="content bg-white p-2 pt-4 md:p-12 pb-2 lg:max-w-2xl lg:absolute top-10 right-0">
                 <div class="flex justify-between font-bold ">
                     <p class="text-md">Sambutan Ketua IDAI Kalimantan Barat</p>
-                    <p class="text-sm text-gray-600">20 November, 2022</p>
+                    <p class="text-sm text-gray-600">28 Desember, 2022</p>
                 </div>
-                <h2 class="text-2xl font-semibold mt-2 md:mt-5">dr. Muchamad Budi Nugroho, M.Kes., Sp.A</h2>
-                <p class="my-3 text-justify font-medium text-gray-700 leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem aperiam nulla cupiditate saepe sed quis veritatis minus rem adipisci aliquid. Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem aperiam nulla cupiditate saepe sed quis veritatis minus rem adipisci aliquid. Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem aperiam nulla cupiditate saepe sed quis veritatis minus rem adipisci aliquid.</p>
-                <!-- <a href="{{ url_for('main.kata_sambutan') }}" class="mt-2 md:mt-5 p-3 px-5 bg-black text-white font-bold text-sm hover:bg-emerald-800" type="button"></a> -->
-                <button class="mt-2 md:mt-5 p-3 px-5 bg-black text-white font-bold text-sm hover:bg-emerald-800"><a href="{{ url_for('main.kata_sambutan') }}">Read More</a></button>
+                <h2 class="text-2xl font-bold mt-2 md:mt-5">dr. Muchamad Budi Nugroho, M.Kes., Sp.A</h2>
+                <p class="my-3 text-justify font-semibold text-gray-900 leading-relaxed">Salam Hormat,<br><br>
+                  Selamat datang di situs resmi Ikatan Dokter Anak Indonesia Cabang Kalimantan Barat. Sebagai salah satu organisasi profesi yang semakin berkembang, besar harapan kami keberadaan website IDAI Kalimantan Barat ini akan memberikan kontribusi aktif seputar informasi kesehatan anak- anak termasuk informasi seputar seminar dan ...</p>
+                <button class="mt-2 md:mt-5 p-3 px-5 bg-black text-white font-bold text-sm hover:bg-emerald-800"><a href="{{ url_for('main.kata_sambutan') }}">Lanjutkan Membaca</a></button>
             </div>
         </section>
       </section>
@@ -123,7 +123,7 @@
                   <div class="flex flex-col justify-start p-6">
                       <a href="#" class="text-blue-700 text-sm font-bold uppercase pb-4">{{artikel_terbaru.category.name}}</a>
                       <a href="#" class="text-3xl font-bold hover:text-gray-700 pb-4">{{artikel_terbaru.title}}</a>
-                      <p href="#" class="text-sm pb-3">
+                      <p href="#" class="text-sm pb-3 text-gray-500">
                           By <a href="#" class="font-semibold hover:text-gray-800">{{artikel_terbaru.author.username}}</a>, Published on {{ artikel_terbaru.date_posted.strftime("%d %B, %Y") }}
                       </p>
                       <div class="prose max-w-none text-justify line-clamp-2 pb-6">
@@ -131,7 +131,7 @@
                         {{ artikel_terbaru.content | safe }}
                       </div>
               
-                      <button class="flex mx-auto mt-6 mb-6 text-white bg-indigo-500 border-0 py-2 px-5 focus:outline-none hover:bg-indigo-600 rounded"> <a href="{{ url_for('main.article_detail', slug=artikel_terbaru.slug) }}">Continue Reading <i class="fa-solid fa-arrow-right"></i></a></button>
+                      <button class="flex mx-auto mt-6 mb-6 text-white bg-indigo-500 border-0 py-2 px-5 focus:outline-none hover:bg-indigo-600 rounded"> <a href="{{ url_for('main.article_detail', slug=artikel_terbaru.slug) }}">Lanjutkan Membaca <i class="fa-solid fa-arrow-right"></i></a></button>
                   </div>
                 </article>      
           </section>
@@ -158,24 +158,21 @@
               <h2 class="font-bold mb-5 text-gray-800"></h2>
       
               <p class="text-sm leading-relaxed text-white">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Id beatae repellendus nam! Dolor dignissimos unde, dolore laboriosam atque numquam quam.
+                IDAI Cabang Kalimantan Barat merupakan organisasi profesi Dokter Spesialis Anak yang ada di Kalimantan Barat
               </p>
       
               <div class="pt-8">
                 <a href="{{ url_for('main.kata_sambutan') }}" class="p-3  border-2 border-green-900 bg-green-800 rounded-md text-base hover:bg-green-900 hover:border-gray-200 cursor-pointer hover:text-white text-white">
-                  Get to know us
+                  Mengenal Kami
                 </a>
               </div>
             </div>
-
-            
-
 
           </aside>
         </div>
       </section>
 
-      <section class="text-gray-600 body-font">
+      <section class="body-font">
         <div class="container pb-24 mx-auto ">
           <div class="flex flex-wrap -m-4 ">
             {% for a in artikel %}
@@ -183,29 +180,22 @@
               <div class="h-full border-2 border-gray-200 border-opacity-60 overflow-hidden shadow-xl rounded-lg transform duration-500 hover:-translate-y-2 cursor-pointer group">
                 <img class="lg:h-48 md:h-36 w-full object-cover object-center" src="{{url_for('static', filename='assets/img/articles/' + a.image_article )}}" alt="blog">
                 <div class="p-6">
-                  <h2 class="tracking-widest uppercase text-xs title-font font-medium text-gray-400 mb-1">{{a.category.name}}</h2>
-                  <h1 class="title-font text-lg font-medium text-gray-900 mb-3">{{a.title}}</h1>
+                  <h2 class="tracking-widest uppercase title-font text-blue-700 text-sm font-bold  mb-1">{{a.category.name}}</h2>
+                  <h1 class="title-font text-lg font-bold text-gray-900 mb-3">{{a.title}}</h1>
+                  <p href="#" class="text-sm pb-3 text-gray-500">
+                    By <a href="#" class="font-semibold hover:text-gray-800 ">{{a.author.username}}</a>, Published on {{ a.date_posted.strftime("%d %B, %Y") }}
+                  </p>
                   <div class="prose max-w-none text-justify line-clamp-2 pb-6 leading-relaxed mb-3">
                     {{ a.content | safe }}
                   </div>
-                  <div class="flex items-center flex-wrap ">
-                    <a class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0" href="{{ url_for('main.article_detail', slug=a.slug) }}">Continue Reading
+                  <div class="flex items-center flex-wrap mt-12">
+                    <a class="text-white bg-indigo-500 border-0 py-2 px-5 focus:outline-none hover:bg-indigo-600 rounded bottom-4 absolute inline-flex items-center md:mb-2 lg:mb-0" href="{{ url_for('main.article_detail', slug=a.slug) }}">Lanjutkan Membaca
                       <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M5 12h14"></path>
                         <path d="M12 5l7 7-7 7"></path>
                       </svg>
                     </a>
-                    <!-- <span class="text-gray-400 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
-                      <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                        <circle cx="12" cy="12" r="3"></circle>
-                      </svg>1.2K
-                    </span>
-                    <span class="text-gray-400 inline-flex items-center leading-none text-sm">
-                      <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                        <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
-                      </svg>6
-                    </span> -->
+                   
                   </div>
                 </div>
               </div>
@@ -232,12 +222,15 @@
                   <div class="rounded-lg h-64 overflow-hidden">
                     <img alt="content" class="object-cover object-center h-full w-full" src="{{url_for('static', filename='assets/img/news/' + b.image_news )}}">
                   </div>
-                  <h2 class="title-font text-justify text-2xl font-medium text-gray-900 mt-6 mb-3 px-6">{{b.title}}</h2>
-                  <div class="text-justify line-clamp-3 mb-2 text-gray-800 font-semibold text-base px-6 dark:text-gray-400">
+                  <h2 class="tracking-widest text-left ml-7 uppercase title-font text-blue-700 text-sm font-bold mt-5">{{b.categoryn.name}}</h2>
+                  <h1 class="title-font text-justify text-2xl font-bold text-gray-900 mt-6 mb-3 px-6">{{b.title}}</h1>
+                  <p href="#" class="text-sm pb-3 text-gray-500 text-left ml-6">
+                    By <a href="#" class="font-semibold hover:text-gray-800 ">{{b.author.username}}</a>, Published on {{ b.date_posted.strftime("%d %B, %Y") }}
+                  </p>
+                  <div class="text-justify line-clamp-3 mb-2 text-base px-6 ">
                     {{ b.content |safe }}
                   </div>
-                  <!-- <p class="leading-relaxed text-base line-clamp-2">{{ b.content |safe }}</p> -->
-                  <button class="flex mx-auto mt-6 mb-6 text-white bg-indigo-500 border-0 py-2 px-5 focus:outline-none hover:bg-indigo-600 rounded"> <a href="{{ url_for('main.news_detail', slug=b.slug) }}">Continue Reading <i class="fa-solid fa-arrow-right"></i></a></button>
+                  <button class="flex mx-auto mt-6 mb-6 text-white bg-indigo-500 border-0 py-2 px-5 focus:outline-none hover:bg-indigo-600 rounded"> <a href="{{ url_for('main.news_detail', slug=b.slug) }}">Lanjutkan Membaca <i class="fa-solid fa-arrow-right"></i></a></button>
                 </div>
                 {% endfor %}      
               </div>
@@ -254,15 +247,15 @@
     <section class="grid lg:grid-cols-3 2xl:grid-cols-3 grid-cols-1 gap-30 ">
       
       {% for g in gall %}
-        <article class="mx-auto max-w-sm shadow-xl bg-cover bg-center min-h-70 transform duration-500 hover:-translate-y-2 cursor-pointer group" style="background-image: url({{url_for('static', filename='assets/img/galleries/' + g.image_gallery )}});">
+        <article class="mx-auto max-w-sm shadow-xl bg-cover bg-center min-h-70 transform duration-500 hover:-translate-y-2 cursor-pointer group" style="background-image: url( {{url_for('static', filename='assets/img/galleries/' + g.image_gallery ) }} )">
             <div class="bg-black bg-opacity-20 min-h-100 px-10 flex flex-wrap flex-col pt-96 hover:bg-opacity-75 transform duration-300">
                 <h1 class="text-white text-3xl mb-5 transform translate-y-20 group-hover:translate-y-0 duration-300">
                     {{g.gallery.title}}
                 </h1>
-                <div class="w-16 h-2 bg-yellow-500 rounded-full mb-5 transform translate-y-20 group-hover:translate-y-0 duration-300">
+                <div class="w-16 h-2 bg-[#00B202] rounded-full mb-5 transform translate-y-20 group-hover:translate-y-0 duration-300">
                 </div>
                 <p class="opacity-0 text-white text-xl group-hover:opacity-80 transform duration-500 pb-6">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, beatae!
+                    {{g.description}}
                 </p>
             </div>
         </article>
@@ -274,21 +267,21 @@
         <h1 class="text-sm   font-bold leading-none text-center sm:text-5xl text-emerald-900">Pengurus IDAI Kalimantan Barat</h1>
         <hr class="my-4 mx-auto w-48 h-1 bg-[#00B202] rounded border-0 md:my-10 ">
         <div class="flex flex-row flex-wrap justify-center">
-          <img alt="" class="self-center flex-shrink-0 w-16 h-16  bg-center bg-cover rounded-full hover:scale-125 bg-gray-500" src="{{url_for('static', filename='assets/img/profile_pics/doctor.jpg' )}}" title="dr. Muchamad Budi Nugroho, M.Kes., Sp.A">
-          <img alt="" class="self-center flex-shrink-0 w-16 h-16  bg-center bg-cover rounded-full hover:scale-125 bg-gray-500" src="{{url_for('static', filename='assets/img/profile_pics/doctor.jpg' )}}" title="dr. I Nyoman Sudiatmika, Sp.A">
-          <img alt="" class="self-center flex-shrink-0 w-16 h-16  bg-center bg-cover rounded-full hover:scale-125 bg-gray-500" src="{{url_for('static', filename='assets/img/profile_pics/doctorr.jpg' )}}" title="dr. Rini Andriani, Sp.A">
+          <img alt="" class="self-center flex-shrink-0 w-16 h-16  bg-center bg-cover rounded-full hover:scale-125 bg-gray-500" src="{{url_for('static', filename='assets/img/profile_pics/ketua.jpg' )}}" title="dr. Muchamad Budi Nugroho, M.Kes., Sp.A">
+          <img alt="" class="self-center flex-shrink-0 w-16 h-16  bg-center bg-cover rounded-full hover:scale-125 bg-gray-500" src="{{url_for('static', filename='assets/img/profile_pics/sekretaris.jpg' )}}" title="dr. I Nyoman Sudiatmika, Sp.A">
+          <img alt="" class="self-center flex-shrink-0 w-16 h-16  bg-center bg-cover rounded-full hover:scale-125 bg-gray-500" src="{{url_for('static', filename='assets/img/profile_pics/default.jpg' )}}" title="dr. Rini Andriani, Sp.A">
 
-          <img alt="" class="self-center flex-shrink-0 w-16 h-16 mb-4 bg-center bg-cover rounded-full hover:scale-125 bg-gray-500" src="{{url_for('static', filename='assets/img/profile_pics/doctor.jpg' )}}" title="dr. Hilmi K Riskawa, M.Kes., Sp.A">
-          <img alt="" class="self-center flex-shrink-0 w-16 h-16 mb-4 bg-center bg-cover rounded-full hover:scale-125 bg-gray-500" src="{{url_for('static', filename='assets/img/profile_pics/doctorr.jpg' )}}" title="dr. Rista Lestari, MSc., Sp.A">
-          <img alt="" class="self-center flex-shrink-0 w-16 h-16 mb-4 bg-center bg-cover rounded-full hover:scale-125 bg-gray-500" src="{{url_for('static', filename='assets/img/profile_pics/doctor.jpg' )}}" title="dr. Alexander Kurniadi, MSc., Sp.A">
+          <img alt="" class="self-center flex-shrink-0 w-16 h-16 mb-4 bg-center bg-cover rounded-full hover:scale-125 bg-gray-500" src="{{url_for('static', filename='assets/img/profile_pics/default.jpg' )}}" title="dr. Hilmi K Riskawa, M.Kes., Sp.A">
+          <img alt="" class="self-center flex-shrink-0 w-16 h-16 mb-4 bg-center bg-cover rounded-full hover:scale-125 bg-gray-500" src="{{url_for('static', filename='assets/img/profile_pics/default.jpg' )}}" title="dr. Rista Lestari, MSc., Sp.A">
+          <img alt="" class="self-center flex-shrink-0 w-16 h-16 mb-4 bg-center bg-cover rounded-full hover:scale-125 bg-gray-500" src="{{url_for('static', filename='assets/img/profile_pics/default.jpg' )}}" title="dr. Alexander Kurniadi, MSc., Sp.A">
 
-          <img alt="" class="self-center flex-shrink-0 w-16 h-16 mb-4 bg-center bg-cover rounded-full hover:scale-125 bg-gray-500" src="{{url_for('static', filename='assets/img/profile_pics/doctorr.jpg' )}}" title="dr. Suriviana, MSc, Sp.A">
-          <img alt="" class="self-center flex-shrink-0 w-16 h-16 mb-4 bg-center bg-cover rounded-full hover:scale-125 bg-gray-500" src="{{url_for('static', filename='assets/img/profile_pics/doctor.jpg' )}}" title="dr. Rosyadi Akbari, MSc., Sp.A">
-          <img alt="" class="self-center flex-shrink-0 w-16 h-16 mb-4 bg-center bg-cover rounded-full hover:scale-125 bg-gray-500" src="{{url_for('static', filename='assets/img/profile_pics/doctorr.jpg' )}}" title="dr. Evelyn , Sp.A">
+          <img alt="" class="self-center flex-shrink-0 w-16 h-16 mb-4 bg-center bg-cover rounded-full hover:scale-125 bg-gray-500" src="{{url_for('static', filename='assets/img/profile_pics/suriviana.jpg' )}}" title="dr. Suriviana, MSc, Sp.A">
+          <img alt="" class="self-center flex-shrink-0 w-16 h-16 mb-4 bg-center bg-cover rounded-full hover:scale-125 bg-gray-500" src="{{url_for('static', filename='assets/img/profile_pics/default.jpg' )}}" title="dr. Rosyadi Akbari, MSc., Sp.A">
+          <img alt="" class="self-center flex-shrink-0 w-16 h-16 mb-4 bg-center bg-cover rounded-full hover:scale-125 bg-gray-500" src="{{url_for('static', filename='assets/img/profile_pics/default.jpg' )}}" title="dr. Evelyn , Sp.A">
 
-          <img alt="" class="self-center flex-shrink-0 w-16 h-16 mb-4 bg-center bg-cover rounded-full hover:scale-125 bg-gray-500" src="{{url_for('static', filename='assets/img/profile_pics/doctor.jpg' )}}" title="dr. Yuta Inten, Sp.A">
-          <img alt="" class="self-center flex-shrink-0 w-16 h-16 mb-4 bg-center bg-cover rounded-full hover:scale-125 bg-gray-500" src="{{url_for('static', filename='assets/img/profile_pics/doctor.jpg' )}}" title="dr. Reggy Harapan Baringin, Sp.A">
-          <img alt="" class="self-center flex-shrink-0 w-16 h-16 mb-4 bg-center bg-cover rounded-full hover:scale-125 bg-gray-500" src="{{url_for('static', filename='assets/img/profile_pics/doctorr.jpg' )}}" title="dr. Desriani, Sp.A">
+          <img alt="" class="self-center flex-shrink-0 w-16 h-16 mb-4 bg-center bg-cover rounded-full hover:scale-125 bg-gray-500" src="{{url_for('static', filename='assets/img/profile_pics/default.jpg' )}}" title="dr. Yuta Inten, Sp.A">
+          <img alt="" class="self-center flex-shrink-0 w-16 h-16 mb-4 bg-center bg-cover rounded-full hover:scale-125 bg-gray-500" src="{{url_for('static', filename='assets/img/profile_pics/default.jpg' )}}" title="dr. Reggy Harapan Baringin, Sp.A">
+          <img alt="" class="self-center flex-shrink-0 w-16 h-16 mb-4 bg-center bg-cover rounded-full hover:scale-125 bg-gray-500" src="{{url_for('static', filename='assets/img/profile_pics/default.jpg' )}}" title="dr. Desriani, Sp.A">
 
         </div>
       </div>
