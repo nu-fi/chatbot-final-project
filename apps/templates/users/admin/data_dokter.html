@@ -58,7 +58,7 @@
                         <th>{{ d.hari_praktik }}</th>
                         <th>
                             <div>
-                                <a class="btn btn-info" href="{{ url_for('files.data_detail', id=d.user_id) }}" role="button"><i class="fa-solid fa-eye"></i>&nbsp;Lihat Data</a>
+                                <a class="btn btn-info" href="{{ url_for('files.data_detail', id=d.user_id) }}" role="button" title="Lihat Data"><i class="fa-solid fa-eye"></i>&nbsp;</a>
                                 <!-- Trigger the modal with a button -->
                               
                                 <div class="modal" id="viewIjazahModal{{d.id}}" tabindex="-1" aria-labelledby="viewIjazahModalLabel" aria-hidden="true">
@@ -104,9 +104,12 @@
                         </th>
                         <th>
                             {% if d.status_data == false %}
-                                <a class="btn btn-danger" href="#" role="button">Belum Diverifikasi</a>
+                              <div class="p-2 mb-2 bg-danger text-white">Belum Diverifikasi</div>
+
                             {% else %}
-                                <a class="btn btn-primary" href="#" role="button">Terverifikasi </a>
+                              <div class="p-2 mb-2 bg-success text-white">Terverifikasi</div>
+
+                              <!-- <a class="btn btn-primary border-0 shadow-none" >Terverifikasi </a> -->
                             {% endif %}
                         </th>
                     </tr>

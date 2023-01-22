@@ -4,8 +4,9 @@ from wtforms import StringField, SubmitField, SelectField
 from wtforms.validators import DataRequired
 
 class ImageForm(FlaskForm):
-    picture = FileField('Gambar Galeri', validators=[FileAllowed(['jpg', 'png', 'jpeg'])])
+    picture = FileField('File Gambar', validators=[FileAllowed(['jpg', 'png', 'jpeg'])])
     gallery = SelectField('Kategori Galeri', coerce=int)
+    description = StringField('Deskripsi', validators=[DataRequired()])
     submit = SubmitField('Simpan Gambar')
 
 class GalleryForm(FlaskForm):

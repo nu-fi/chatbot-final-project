@@ -176,12 +176,65 @@
             <div class="card">
                   <div class="card-footer text-right">
                     {% if data.status_data == false %}
-                        <a class="btn btn-danger" href="{{ url_for('files.data_verifikasi', id=data.user_id) }}" role="button">Verifikasi Data</a>
+                        <!-- <a class="btn btn-danger" href="{{ url_for('files.data_verifikasi', id=data.user_id) }}" role="button">Verifikasi Data</a> -->
+                        <button type="button" class="btn btn-danger btn-md " data-toggle="modal" data-target="#verifModal" title="Verifikasi Data">
+                          <i class="fa-solid fa-pencil"></i>&nbsp;&nbsp;Verifikasi Data
+                        </button>
                     {% else %}
-                        <a class="btn btn-primary" href="{{ url_for('files.data_verifikasi', id=data.user_id) }}" role="button">Data Telah Diverifikasi </a>
+                        <!-- <a class="btn btn-primary" href="{{ url_for('files.data_verifikasi', id=data.user_id) }}" role="button">Batalkan Verifikasi Data</a> -->
+                        <button type="button" class="btn btn-danger btn-md " data-toggle="modal" data-target="#unverifModal" title="Verifikasi Data">
+                          <i class="fa-solid fa-pencil"></i>&nbsp;Batalkan Verifikasi Data
+                        </button>
                     {% endif %}
-                    <!-- <button class="btn btn-primary mr-1" type="button"><a class="text-decoration-none text-dark" href="{{ url_for('doctors.berkas_update', id=current_user.id)}}">Update Data</a></button> -->
-                    <!-- <button class="btn btn-secondary" type="button"><a class="text-decoration-none text-dark" href="{{ url_for('doctors.berkas_delete', id=current_user.id)}}">Hapus Data</a></button> -->
+
+                      <!-- Verifikasi Modal -->
+                      <div class="modal" id="verifModal" tabindex="-1" aria-labelledby="verifModalLabel" aria-hidden="true">
+                          <div class="modal-dialog">
+                          <div class="modal-content">
+                              <div class="modal-header">
+                                  <h5 class="modal-title" id="verifModalLabel">Verifikasi Data {{ data.nama_lengkap }}</h5>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">&times;</button>
+                              </div>
+
+                              <div class="modal-body">
+                                  <p class="text-justify">Apakah yakin data yang diinputkan oleh {{ data.nama_lengkap }} sudah benar semuanya dan ingin mengubah status data menjadi terverifikasi?</p>
+                              </div>
+
+                              <div class="modal-footer">
+                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                  
+                                  <form action="{{ url_for('files.data_verifikasi', id=data.user_id) }}" method="POST">
+                                      <input type="submit" class="btn btn-danger" value="Verifikasi">
+                                  </form>
+                              </div>
+                          </div>
+                          </div>
+                      </div>
+
+                      <!-- Verifikasi Modal -->
+                      <div class="modal" id="unverifModal" tabindex="-1" aria-labelledby="unverifModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="verifModalLabel">Batalkan Verifikasi Data {{ data.nama_lengkap }}</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">&times;</button>
+                            </div>
+
+                            <div class="modal-body">
+                                <p class="text-justify">Apakah yakin ingin mengubah status data {{ data.nama_lengkap }} menjadi belum terverifikasi?</p>
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                
+                                <form action="{{ url_for('files.data_verifikasi', id=data.user_id) }}" method="POST">
+                                    <input type="submit" class="btn btn-danger" value="Batalkan Verifikasi">
+                                </form>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+
                   </div>
             </div>
         </div>

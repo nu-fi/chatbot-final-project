@@ -27,7 +27,7 @@ def new_files():
         if form.file.data:
             file_name = save_file(form.file.data)
 
-        file = Files_Public(title=form.title.data, filename=file_name, slug = slugify(request.form.get("title")))
+        file = Files_Public(title=form.title.data, description=form.description.data, filename=file_name, slug = slugify(request.form.get("title")))
         db.session.add(file)
         db.session.commit()
     
@@ -44,7 +44,7 @@ def file_update(file_id):
         if form.file.data:
             file_name = save_file(form.file.data)
             
-        f = Files_Public(title=form.title.data, filename=file_name, slug = slugify(request.form.get("title")))
+        f = Files_Public(title=form.title.data, description=form.description.data, filename=file_name, slug = slugify(request.form.get("title")))
         db.session.add(f)
         db.session.commit()
         flash('Your file has been updated!', 'success')
@@ -58,6 +58,7 @@ def file_update(file_id):
             file_name = save_file(form.file.data)
             file.filename = file_name
         file.title = form.title.data
+        file.description = form.description.data
         db.session.commit()
         flash('Your File has been updated!', 'success')
         return redirect(url_for('files.new_files'))

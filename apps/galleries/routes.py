@@ -71,7 +71,7 @@ def new_image():
         if form.picture.data:
             picture_file = save_picture(form.picture.data)
 
-        image = Images_Gallery(image_gallery=picture_file, gallery_id=form.gallery.data)
+        image = Images_Gallery(image_gallery=picture_file, gallery_id=form.gallery.data, description=form.description.data)
         db.session.add(image)
         db.session.commit()
         flash('Image has been added!', 'primary')
@@ -93,15 +93,16 @@ def img_update(img_id):
             picture_file = save_picture(form.picture.data)
             img.image_gallery = picture_file
         img.gallery_id = form.gallery.data
+        img.description = form.description.data
         db.session.commit()
         flash('Your img has been updated!', 'success')
         return redirect(url_for('galleries.new_image'))
     elif request.method == 'GET':
+        form.description.data = img.description
         form.gallery.data = img.gallery.title
         form.picture.data = img.image_gallery
 
-    image_file = url_for('static', filename='assets/img/galleries/' + img.image_gallery)
-    return render_template('users/admin/galleries/upload_image.html', title='Update Gambar', legend='Update Gambar', form=form, image_file=image_file)
+    return redirect(url_for('galleries.new_image'))
 
 @galleries.route("/admin/image/<int:img_id>/delete", methods=['POST'])
 @login_required
