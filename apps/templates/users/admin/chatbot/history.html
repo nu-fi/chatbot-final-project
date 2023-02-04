@@ -19,7 +19,7 @@
             </button>
           </div>          
           <div class="modal-body">
-            ?????
+            Menu ini berisi pertanyaan dari fitur chatbot yang tidak terjawab oleh chatbot. Admin dapat menghapus pertanyaan dengan menekan tombol merah.
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -31,30 +31,69 @@
 {% endblock header %}
 
 {% block content %}
-
 <div class="container">
-  <div class="row">
-    <div class="col-12 col-md-12 col-lg-12">
-      <div class="card">
-        <section class="section m-4">
-          <!-- <p>{{ summary }} </p> -->
-          <table id="data" class="table table-striped table-hover">
-            <thead>
-                <tr>
-                  <th scope="col">Histori Percakapan</th>
-                  <th scope="col">Tanggal Percakapan</th>
-                  <!-- <th scope="col">Responses</th> -->
-                </tr>
-              </thead>
-              <tbody>
-              
-              </tbody>
-                
-          </table>
-        </section>
+    <div class="row">
+      <div class="col-12 col-md-12 col-lg-12">
+        <div class="card">
+          <section class="section m-4">
+            <table id="data" class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">Pertanyaan</th>
+                        <th scope="col">Jawaban</th>
+                        <th scope="col">Tanggal</th>
+                        <th scope="col">Aksi</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for m in messages %}
+                    {% if m.status_data == True %}
+
+                    <tr>
+                        <th>{{ m.question }}</th>
+                        <th>{{ m.response }}</th>
+                        <th>{{ m.date_posted.strftime("%d/%m/%Y, %H:%M") }}</th>
+                        <th>
+                            <div>
+        
+                                <button class="btn btn-danger btn-md rounded-0" type="button" data-placement="top" title="Delete" data-toggle="modal" data-target="#deleteModal{{m.id}}"><i class="fa-solid fa-trash-can"></i></button>
+        
+                                <!-- Delete Modal -->
+                                <div class="modal" id="deleteModal{{m.id}}" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="deleteModalLabel">Hapus Pertanyaan</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">&times;</button>
+                                        </div>
+        
+                                        <div class="modal-body">
+                                            <p>Apakah yakin ingin menghapus {{ m.question }}?</p>
+                                        </div>
+        
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            
+                                            <form action="{{ url_for('chatbot.quest_delete', id=m.id) }}" method="POST">
+                                                <input type="submit" class="btn btn-danger" value="Delete">
+                                            </form>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </th>
+                    </tr>
+
+                    {% endif %}
+                    
+                    {% endfor %}
+                    </tbody>
+            </table>
+          </section>
+        </div>
       </div>
     </div>
-  </div>
 </div>
+    
 {% endblock content%}
-

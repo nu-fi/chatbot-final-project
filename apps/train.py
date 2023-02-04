@@ -1,11 +1,9 @@
 import numpy as np
 import json
-
 import torch
 import torch.nn as nn
 from torch.utils.data import Dataset, DataLoader
-
-from nltk_utils import bag_of_words, tokenize, stem
+from nltk_utils import bag_of_words, tokenize, stem, case_folding, clean_punct, stopwords_removal
 from model import NeuralNet
 
 with open('apps/intents.json', 'r') as f:
@@ -20,15 +18,18 @@ for intent in intents['intents']:
     # add to tag list
     tags.append(tag)
     for pattern in intent['patterns']:
+        pattern = case_folding(pattern)
+        pattern = clean_punct(pattern)
         # tokenize each word in the sentence
-        w = tokenize(pattern)
+        words = tokenize(pattern)
+        w = [stem(w) for w in words]
         # add to our words list
         all_words.extend(w)
         # add to xy pair
         xy.append((w, tag))
 
 # stem and lower each word
-ignore_words = ['?', '.', '!']
+ignore_words = ['?', '.', '!', ',', '-']
 all_words = [stem(w) for w in all_words if w not in ignore_words]
 # remove duplicates and sort
 all_words = sorted(set(all_words))
@@ -53,11 +54,11 @@ X_train = np.array(X_train)
 y_train = np.array(y_train)
 
 # Hyper-parameters
-num_epochs = 1000
-batch_size = 8
-learning_rate = 0.001
+num_epochs = 100
+batch_size = 16
+learning_rate = 0.002
 input_size = len(X_train[0])
-hidden_size = 8
+hidden_size = 16
 output_size = len(tags)
 print(input_size, output_size)
 
@@ -88,7 +89,7 @@ model = NeuralNet(input_size, hidden_size, output_size).to(device)
 
 # Loss and optimizer
 criterion = nn.CrossEntropyLoss()
-optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
+optimizer = torch.optim.RMSprop(model.parameters(), lr=learning_rate)
 
 # Train the model
 for epoch in range(num_epochs):
@@ -99,7 +100,6 @@ for epoch in range(num_epochs):
         # Forward pass
         outputs = model(words)
         # if y would be one-hot, we must apply
-        # labels = torch.max(labels, 1)[1]
         loss = criterion(outputs, labels)
 
         # Backward and optimize
@@ -122,7 +122,7 @@ data = {
 "tags": tags
 }
 
-FILE = "data.pth"
+FILE = "apps/data.pth"
 torch.save(data, FILE)
 
 print(f'training complete. file saved to {FILE}')

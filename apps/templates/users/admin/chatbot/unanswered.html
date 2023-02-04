@@ -40,13 +40,19 @@
                 <thead>
                     <tr>
                         <th scope="col">Pertanyaan</th>
+                        <th scope="col">Jawaban</th>
+                        <th scope="col">Tanggal</th>
                         <th scope="col">Aksi</th>
                     </tr>
                     </thead>
                     <tbody>
                     {% for m in messages %}
+                    {% if m.status_data == False %}
+
                     <tr>
                         <th>{{ m.question }}</th>
+                        <th>{{ m.response }}</th>
+                        <th>{{ m.date_posted.strftime("%d/%m/%Y, %H:%M:%S") }}</th>
                         <th>
                             <div>
         
@@ -78,6 +84,8 @@
                             </div>
                         </th>
                     </tr>
+
+                    {% endif %}
                     
                     {% endfor %}
                     </tbody>

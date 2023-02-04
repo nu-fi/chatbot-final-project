@@ -1,17 +1,15 @@
 import random
 import json
-
 import torch
-
 from apps.model import NeuralNet
-from apps.nltk_utils import bag_of_words, tokenize
+from apps.nltk_utils import bag_of_words, tokenize, stem, case_folding, clean_punct, stopwords_removal, correction
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 with open('apps/intents.json', 'r') as json_data:
     intents = json.load(json_data)
 
-FILE = "apps/data.pth"
+FILE = "data.pth"
 data = torch.load(FILE)
 
 input_size = data["input_size"]
@@ -28,8 +26,26 @@ model.eval()
 bot_name = "Bot"
 
 def get_response(msg):
-    sentence = tokenize(msg)
-    X = bag_of_words(sentence, all_words)
+    sentence = case_folding(msg)
+    sentence = clean_punct(sentence)
+    sentence = tokenize(sentence)
+    sentence = [stem(w) for w in sentence]
+    words = []
+    for word in sentence:
+        word = correction(word)
+        words.append(word)
+
+    # msg = case_folding(msg)
+    # msg = clean_punct(msg)
+    # sentence = tokenize(msg)
+    # sentence = [stem(w) for w in sentence]
+
+    # words = []
+    # for word in sentence:
+    #     word = correction(word)
+    #     words.append(word)
+
+    X = bag_of_words(words, all_words)
     X = X.reshape(1, X.shape[0])
     X = torch.from_numpy(X).to(device)
 
@@ -40,21 +56,10 @@ def get_response(msg):
 
     probs = torch.softmax(output, dim=1)
     prob = probs[0][predicted.item()]
-    if prob.item() > 0.75:
+    print(prob)
+    if prob.item() > 0.5:
         for intent in intents['intents']:
             if tag == intent["tag"]:
                 return random.choice(intent['responses'])
 
-    return "I do not understand..."
-
-
-# if __name__ == "__main__":
-#     print("Let's chat! (type 'quit' to exit)")
-#     while True:
-#         sentence = "do you use credit cards?"
-#         sentence = input("You: ")
-#         if sentence == "quit":
-#             break
-
-#         resp = get_response(sentence)
-#         print(resp)
+    return "Maaf, saya tidak mengerti pertanyaan anda..."

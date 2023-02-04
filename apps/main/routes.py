@@ -19,9 +19,8 @@ def page_not_found(error):
 @cross_origin(origins=['http://127.0.0.1:5000/'])
 def predict():
     text = request.get_json().get("message")
-    # TO DO: check if text is valid
     if len(text) > 100:
-        message = {"answer": "I'm sorry, your query has too many characters for me to process."}
+        message = {"answer": "Maaf, permintaan Anda memiliki terlalu banyak karakter untuk saya proses."}
         mess = Message(question=text)
         db.session.add(mess)
         db.session.commit()
@@ -29,40 +28,18 @@ def predict():
 
     response = get_response(text)
     message = {"answer": response}
-    if response == "I do not understand...":
+
+    if response == "Maaf, saya tidak mengerti pertanyaan anda...":
         mess = Message(question=text)
         db.session.add(mess)
         db.session.commit()
+    else:
+        mess = Message(question=text, status_data=True, response=response)
+        db.session.add(mess)
+        db.session.commit()
+
 
     return jsonify(message)
-
-# @main.route("/predict", methods=['POST'])
-# @cross_origin(origins=['http://127.0.0.1:5000/'])
-# def predict():
-#     text = request.get_json().get("message")
-#     # TO DO: check if text is valid
-#     if len(text) > 100:
-#         message = {"answer": "I'm sorry, your query has too many characters for me to process."}
-#         mess = Message(question=text)
-#         db.session.add(mess)
-#         db.session.commit()
-#         return jsonify(message)
-
-#     data_file = open('apps/intents.json').read()
-#     intents = json.loads(data_file)
-
-#     model = load_model('apps/chatbot_model.h5')
-
-#     ints = predict_class(text, model)
-
-#     response = get_response(ints, intents)
-#     message = {"answer": response}
-#     if response == "Saya tidak mengerti...":
-#         mess = Message(question=text)
-#         db.session.add(mess)
-#         db.session.commit()
-        
-#     return jsonify(message)
 
 @main.route("/", methods=['GET', 'POST'])
 @main.route("/home", methods=['GET', 'POST'])

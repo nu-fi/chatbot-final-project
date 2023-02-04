@@ -51,6 +51,7 @@ def gal_update(gal_id):
     form = GalleryForm()
     if form.validate_on_submit():
         gal.title = form.title.data
+        gal.slug = slugify(request.form.get("title"))
         db.session.commit()
         flash('Your Gallery has been updated!', 'success')
         return redirect(url_for('galleries.new_gallery', gal_id=gal.id))
@@ -71,7 +72,7 @@ def new_image():
         if form.picture.data:
             picture_file = save_picture(form.picture.data)
 
-        image = Images_Gallery(image_gallery=picture_file, gallery_id=form.gallery.data, description=form.description.data)
+        image = Images_Gallery(image_gallery=picture_file, gallery_id=form.gallery.data, author=current_user, description=form.description.data)
         db.session.add(image)
         db.session.commit()
         flash('Image has been added!', 'primary')

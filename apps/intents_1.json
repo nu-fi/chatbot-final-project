@@ -87,7 +87,6 @@
         {
             "tag": "dampak_stunting",
             "patterns": [
-                "Apa efek stunting pada anak?",
                 "Apakah dampak Stunting pada anak?",
                 "dampak stunting bagi anak apa?",
                 "Bagaimana stunting dapat mempengaruhi perkembangan pada anak?",
@@ -109,7 +108,6 @@
         {
             "tag": "pencegahan_stunting",
             "patterns": [
-                "Bagaimana mengatasi stunting?",
                 "Bagaimana cara agar anak terhindar dari stunting?",
                 "cara mencegah stunting pada anak?",
                 "bagaimana pencegahan stunting pada anak?",
@@ -148,7 +146,6 @@
         {
             "tag": "ciri_stunting",
             "patterns": [
-                "Apa saja gejala pada anak yang mengalami stunting?",
                 "Apa ciri-ciri anak yang mengalami stunting?",
                 "cara mengenali ciri fisik anak yang stunting",
                 "tanda yang menunjukkan anak mengalami stunting",
@@ -185,7 +182,6 @@
         {
             "tag": "waktu_pemberian_MPASI",
             "patterns": [
-                "Kapan anak boleh makan selain asi?",
                 "Kapan waktu yang tepat dalam pemberian MPASI?",
                 "waktu pemberian MPASI yang benar kapan",
                 "waktu pemberian makanan pendamping atau MPASI",
@@ -204,7 +200,6 @@
         {
             "tag": "MPASI_yang_baik",
             "patterns": [
-                "Apa saja saran makanan pendamping ASI yang baik untuk anak?",
                 "pemberian MPASI yang baik bagaimana",
                 "bagaimana memberikan MPASI yang benar",
                 "MPASI atau makanan pendamping yang baik, benar dan sesuai seperti apa",
@@ -277,7 +272,6 @@
         {
             "tag": "makanan_sesuai_gizi_anak",
             "patterns": [
-                "Apa yang bergizi baik bagi anak?",
                 "susunan makanan yang sesuai gizi seperti apa",
                 "komposisi makanan dengan gizi sesuai bagaimana",
                 "makanan apa yang sesuai dengan gizi anak",
@@ -296,9 +290,7 @@
         {
             "tag": "indikator_kekurangan_gizi",
             "patterns": [
-                "Apakah gejala anak kurang nutrisi?",
                 "Apa indikator kekurangan gizi?",
-                "Kekurangan gizi dipengaruhi oleh",
                 "indikator dari kekurangan gizi",
                 "tanda dari kekurangan gizi",
                 "apa kondisi fisik anak kekurangan gizi",
@@ -316,8 +308,6 @@
         {
             "tag": "gizi_yang_cukup",
             "patterns": [
-                "Bagaimana ciri anak bergizi seimbang?",
-                "Tanda-tanda gizi anak terpenuhi bisa terlihat dari apa?",
                 "Bagaimana cara mengetahui bahwa gizi anak tercukupi?",
                 "apa ciri anak memiliki gizi yang cukup",
                 "bagaimana tanda anak memiliki gizi yang baik",
@@ -336,8 +326,6 @@
         {
             "tag": "menurunkan_angka_stunting",
             "patterns": [
-                "Bagaimana cara menangani stunting agar tidak menyebar ke masyarakat?",
-                "Bagaimana mengatasi stunting pada masyarakat?",
                 "Bagaimana cara menurunkan angka stunting?",
                 "cara menurunkan angka stunting seperti apa",
                 "solusi untuk menurunkan angka stunting",
@@ -375,7 +363,6 @@
         {
             "tag": "manfaat_ASI",
             "patterns": [
-                "Kegunaan ASI untuk anak apa",
                 "Apa manfaat dari ASI eksklusif?",
                 "Manfaat ASI eksklusif apa?",
                 "kegunaan dan manfaat dari ASI eksklusif adalah",

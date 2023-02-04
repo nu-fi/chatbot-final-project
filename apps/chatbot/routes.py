@@ -60,7 +60,8 @@ def add_dataset():
 @chatbot.route("/admin/history")
 @login_required
 def history():
-    return render_template('users/admin/chatbot/history.html', title='History Chatbot')
+    messages = Message.query.all()
+    return render_template('users/admin/chatbot/history.html', messages=messages, title='History Chatbot')
 
 @chatbot.route("/admin/chatbot")
 @login_required
@@ -75,4 +76,4 @@ def quest_delete(id):
     db.session.delete(message)
     db.session.commit()
     
-    return redirect(url_for('chatbot.unans_chat'))
+    return redirect(url_for('chatbot.history'))

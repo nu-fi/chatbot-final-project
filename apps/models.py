@@ -20,7 +20,9 @@ class User(db.Model, UserMixin):
 
     articles = db.relationship('Article', backref='author', lazy=True)
     news = db.relationship('News', backref='author', lazy=True)
+
     galleries = db.relationship('Gallery', backref='author', lazy=True)
+    image_galleries = db.relationship('Images_Gallery', backref='author', lazy=True)
 
     berkas = db.relationship('DataDokter', backref='owner', lazy=True, uselist=False)
 
@@ -168,6 +170,8 @@ class Images_Gallery(db.Model):
     description = db.Column(db.String(100))
     date_posted = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
 
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+
     gallery_id = db.Column(db.Integer, db.ForeignKey('gallery.id'))
 
     def __repr__(self) -> str:
@@ -185,8 +189,11 @@ class Files_Public(db.Model):
         return super().__repr__()
 
 class Message(db.Model):
-	id = db.Column(db.Integer, primary_key=True)
-	question = db.Column(db.String(300))
-	
-	def __repr__(self):
-		return '<Message %r>' % self.username
+    id = db.Column(db.Integer, primary_key=True)
+    question = db.Column(db.String(300))
+    status_data = db.Column(db.Boolean, default=False)
+    response = db.Column(db.String(300), default="No Answer")
+    date_posted = db.Column(db.DateTime, default=datetime.now())
+    
+    def __repr__(self):
+        return '<Message %r>' % self.username
