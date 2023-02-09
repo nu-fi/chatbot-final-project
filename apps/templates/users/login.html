@@ -39,13 +39,26 @@
               />
             </div>
             <div class="xl:ml-20 xl:w-5/12 lg:w-5/12 md:w-8/12 mb-12 md:mb-0">
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                    {% if messages %}
+                    {% for category, message in messages %}
+                    <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
+                        <strong>Info!&nbsp; </strong> 
+                        <span class="block sm:inline">{{ message }}</span>
+                        <span class="absolute top-0 bottom-0 right-0 px-4 py-3">
+                            <svg class="fill-current h-6 w-6 text-red-500" role="button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><title>Close</title><path d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z"/></svg>
+                        </span>
+                    </div>
+                    {% endfor %}
+                    {% endif %}
+                {% endwith %}
                 <form class="flex flex-col" method="POST" action="#">
                     {{ form.hidden_tag() }}
                     
                     <div class="mb-6 pt-3 rounded bg-gray-200">
                         {{ form.email.label(class="block text-gray-700 text-sm font-bold mb-2 ml-3") }}
                             {% if form.email.errors %}
-                            {{ form.email(class="bg-gray-200 rounded w-full text-gray-700 focus:outline-none border-b-4 border-gray-300 focus:border-purple-600 transition duration-500 px-3 pb-3 is-invalid") }}
+                            {{ form.email(class="bg-gray-200 rounded w-full text-red-700 focus:outline-none border-b-4 border-gray-300 focus:border-purple-600 transition duration-500 px-3 pb-3 is-invalid") }}
                             <div class="invalid-feedback">
                                 {% for error in form.email.errors %}
                                 <span>{{ error }}</span>
@@ -58,7 +71,7 @@
                     <div class="mb-6 pt-3 rounded bg-gray-200">
                         {{ form.password.label(class="block text-gray-700 text-sm font-bold mb-2 ml-3") }}
                         {% if form.password.errors %}
-                        {{ form.password(class="bg-gray-200 rounded w-full text-gray-700 focus:outline-none border-b-4 border-gray-300 focus:border-purple-600 transition duration-500 px-3 pb-3 is-invalid") }}
+                        {{ form.password(class="bg-gray-200 rounded w-full text-red-700 focus:outline-none border-b-4 border-gray-300 focus:border-purple-600 transition duration-500 px-3 pb-3 is-invalid") }}
                         <div class="invalid-feedback">
                             {% for error in form.password.errors %}
                             <span>{{ error }}</span>

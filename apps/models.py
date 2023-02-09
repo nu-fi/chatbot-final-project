@@ -52,27 +52,38 @@ class DataDokter(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     nama_lengkap = db.Column(db.String(100), unique=True, nullable=False)
     no_hp = db.Column(db.String(100), unique=True, nullable=False)
-    
-    alamat_praktik = db.Column(db.String(200), nullable=False)
+    batas_sip = db.Column(db.Date, nullable=False)
+    status_data = db.Column(db.Boolean, default=False, nullable=False)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)    
+
+    def __repr__(self) -> str:
+        return super().__repr__()
+
+class TempatPraktik(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
     tempat_praktik = db.Column(db.String(100), nullable=False)
-    
+    alamat_praktik = db.Column(db.String(200), nullable=False)    
     kota_praktik = db.Column(db.String(50), nullable=False)
     hari_praktik = db.Column(db.String(50), nullable=False)
     jam_mulai = db.Column(db.Time, nullable=False)
     jam_selesai = db.Column(db.Time, nullable=False)
-
-    batas_sip = db.Column(db.Date, nullable=False)
-
-    file_sip = db.Column(db.String(50), nullable=False)
-    file_ijazah = db.Column(db.String(50), nullable=False)
-
-    status_data = db.Column(db.Boolean, default=False, nullable=False)
-
-    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
-
-    def __repr__(self) -> str:
-        return super().__repr__()
     
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+    user = db.relationship('User', backref=db.backref('tempatpraktiks', lazy=True))
+
+# class TempatPraktik(db.Model):
+#     id = db.Column(db.Integer, primary_key=True)
+#     tempat_praktik = db.Column(db.String(100), nullable=False)
+#     alamat_praktik = db.Column(db.String(200), nullable=False)    
+#     kota_praktik = db.Column(db.String(50), nullable=False)
+#     hari_praktik = db.Column(db.String(50), nullable=False)
+#     jam_mulai = db.Column(db.Time, nullable=False)
+#     jam_selesai = db.Column(db.Time, nullable=False)
+
+#     datadokter_id = db.Column(db.Integer, db.ForeignKey('data_dokter.id'), nullable=False)
+
+#     def __repr__(self) -> str:
+#         return super().__repr__()
 
 class Roles(db.Model, RoleMixin):
     id = db.Column(db.Integer, primary_key=True)

@@ -1,6 +1,6 @@
 from flask import Blueprint, render_template, request, url_for, jsonify, flash, redirect, current_app, send_from_directory, abort
 from apps.chat import get_response
-from apps.models import Article, Images_Gallery, News, Gallery, Files_Public, Roles, Category, Categoryn, Message, User, DataDokter
+from apps.models import Article, Images_Gallery, News, Gallery, Files_Public, Category, Categoryn, Message, User, DataDokter, TempatPraktik
 from apps import db, mail
 from flask_mail import Message as Mess
 from apps.main.forms import ContactForm, SearchForm
@@ -52,14 +52,16 @@ def home():
 
     form = SearchForm()
     dokters = DataDokter.query
+
+    data_tp = TempatPraktik.query
     if form.validate_on_submit():
         searched = form.searched.data
-        dokters = dokters.filter(or_(DataDokter.nama_lengkap.like('%' + searched + '%'), DataDokter.kota_praktik.like('%' + searched + '%')))
+        dokters = dokters.filter(or_(DataDokter.nama_lengkap.like('%' + searched + '%'), TempatPraktik.kota_praktik.like('%' + searched + '%')))
         dokters = dokters.order_by(DataDokter.nama_lengkap.desc()).all()
         return redirect(url_for('main.search'))
         
 
-    return render_template('main/home.html', artikel=artikel, artikel_terbaru=artikel_terbaru, berita=berita, berita_terbaru=berita_terbaru, gall=gall, form=form)
+    return render_template('main/home.html', artikel=artikel, artikel_terbaru=artikel_terbaru, berita=berita, berita_terbaru=berita_terbaru, gall=gall, form=form, data_tp=data_tp)
 
 @main.route("/profile")
 def profile():
@@ -69,12 +71,13 @@ def profile():
 def search():
     form = SearchForm()
     dokters = DataDokter.query
+    data_tp = TempatPraktik.query
     if form.validate_on_submit():
         searched = form.searched.data
-        dokters = dokters.filter(or_(DataDokter.nama_lengkap.like('%' + searched + '%'), DataDokter.kota_praktik.like('%' + searched + '%')))
+        dokters = dokters.filter(or_(DataDokter.nama_lengkap.like('%' + searched + '%'), TempatPraktik.kota_praktik.like('%' + searched + '%')))
         dokters = dokters.order_by(DataDokter.nama_lengkap.desc()).all()
-        return render_template('main/search.html', dokters=dokters, form=form)
-    return render_template('main/search.html', dokters=dokters, form=form)
+        return render_template('main/search.html', dokters=dokters, form=form, data_tp=data_tp)
+    return render_template('main/search.html', dokters=dokters, form=form, data_tp=data_tp)
 
 @main.route("/kata-sambutan")
 def kata_sambutan():

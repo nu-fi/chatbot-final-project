@@ -19,7 +19,7 @@
             </button>
           </div>          
           <div class="modal-body">
-            Isi semua data yang ada, kemudian klik simpan data atau reset data jika ingin mengubah seluruh data.
+            Isi semua data yang ada, kemudian klik simpan data untuk menyimpan atau reset data jika ingin mengubah seluruh data.
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -73,107 +73,9 @@
 
             <div class="card">
                 <div class="card-header">
-                    <h4>Informasi Tempat Praktik</h4>
+                    <h4>Informasi Lainnya</h4>
                 </div>
                 <div class="card-body">
-
-                    <div class="form-group">    
-                    <label>{{form.tempat_praktik.label}}</label>
-                    {% if form.tempat_praktik.errors %}
-                        <input type="text" class="form-control is-invalid" id="tempat_praktik" name="tempat_praktik">
-                        <div class="invalid-feedback">
-                            {% for error in form.tempat_praktik.errors %}
-                                <span>{{ error }}</span>
-                            {% endfor %}
-                        </div>
-                        {% else %}
-                        <input type="text" class="form-control" id="tempat_praktik" name="tempat_praktik" value="{{ data.tempat_praktik }}">
-                        {% endif %}
-                    </div>
-
-                    <div class="form-group">    
-                        <label>{{form.alamat_praktik.label}}</label>
-                        {% if form.alamat_praktik.errors %}
-                        <textarea class="form-control is-invalid" name="alamat_praktik" id="alamat_praktik" cols="30" rows="10">{{ data.alamat_praktik }}</textarea>
-                        <div class="invalid-feedback">
-                            {% for error in form.alamat_praktik.errors %}
-                                <span>{{ error }}</span>
-                            {% endfor %}
-                        </div>
-                        {% else %}
-                        <textarea class="form-control" name="alamat_praktik" id="alamat_praktik" cols="30" rows="10" value="{{ data.alamat_praktik }}">{{ data.alamat_praktik }}</textarea>
-                        {% endif %}
-                    </div>
-
-                    <div class="form-group">
-                            <label for="kota_praktik" class="">Hari Praktik</label>
-                            <div class="multi_select_box">
-                                <select id="days" class="form-control multi_select selectpicker" multiple="">
-                                    <option value="Senin">Senin</option>
-                                    <option value="Selasa">Selasa</option>
-                                    <option value="Rabu">Rabu</option>
-                                    <option value="Kamis">Kamis</option>
-                                    <option value="Jumat">Jumat</option>
-                                    <option value="Sabtu">Sabtu</option>
-                                    <option value="Minggu">Minggu</option>
-                                </select>
-    
-                                <input type="hidden" name="hidden_days" id="hidden_days" name="hari_praktik" value="{{ data.hari_praktik }}">
-                            </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label>{{form.kota_praktik.label}}</label>
-                        {% if form.kota_praktik.errors %}
-                        <select class="form-control" name="kota_praktik" id="kota_praktik">
-                            {% for choice in form.kota_praktik %}
-                                {{choice}}
-                            {% endfor %}
-                        </select>
-                        <div class="invalid-feedback">
-                            {% for error in form.kota_praktik.errors %}
-                            <span>{{ error }}</span>
-                            {% endfor %}
-                        </div>
-                        {% else %}
-                        <select class="form-control" name="kota_praktik" id="kota_praktik">
-                            {% for choice in form.kota_praktik %}
-                                {{choice}}
-                            {% endfor %}
-                        </select>                         
-                        {% endif %}
-                    </div>
-
-
-                    
-
-                    <div class="form-group">    
-                        <label>{{form.jam_mulai.label}}</label>
-                        {% if form.jam_mulai.errors %}
-                            <input type="time" class="form-control is-invalid" id="jam_mulai" name="jam_mulai">
-                            <div class="invalid-feedback">
-                                {% for error in form.jam_mulai.errors %}
-                                    <span>{{ error }}</span>
-                                {% endfor %}
-                            </div>
-                        {% else %}
-                            <input type="time" class="form-control" id="jam_mulai" name="jam_mulai" value="{{ data.jam_mulai }}">
-                        {% endif %}
-                    </div>
-
-                    <div class="form-group">    
-                        <label>{{form.jam_selesai.label}}</label>
-                        {% if form.jam_selesai.errors %}
-                            <input type="time" class="form-control is-invalid" id="jam_selesai" name="jam_selesai">
-                            <div class="invalid-feedback">
-                                {% for error in form.jam_selesai.errors %}
-                                    <span>{{ error }}</span>
-                                {% endfor %}
-                            </div>
-                        {% else %}
-                            <input type="time" class="form-control" id="jam_selesai" name="jam_selesai" value="{{ data.jam_selesai }}">
-                        {% endif %}
-                    </div>
 
                     <div class="form-group">
                         <label>{{form.batas_sip.label}}</label>
@@ -199,38 +101,6 @@
 
         <div class="col-12 col-md-6 col-lg-6">
             <div class="card">
-                <div class="card-header">
-                    <h4>File Pendukung</h4>
-                </div>
-
-                <div class="card-body">
-                    <div class="form-group">
-                        <label>{{form.file_sip.label}}</label>
-                        {% if form.file_sip.errors %}
-                        <input type="file" class="form-control" name="file_sip">
-                        <div class="invalid-feedback">
-                            {% for error in form.file_sip.errors %}
-                            <span>{{ error }}</span>
-                            {% endfor %}
-                        </div>
-                        {% else %}
-                        <input type="file" class="form-control" name="file_sip" value="{{ data.file_sip }}">                                                        
-                        {% endif %}
-                    </div>
-                    <div class="form-group">
-                        <label>{{form.file_ijazah.label}}</label>
-                        {% if form.file_ijazah.errors %}
-                        <input type="file" class="form-control" name="file_ijazah">
-                        <div class="invalid-feedback">
-                            {% for error in form.file_ijazah.errors %}
-                            <span>{{ error }}</span>
-                            {% endfor %}
-                        </div>
-                        {% else %}
-                        <input type="file" class="form-control" name="file_ijazah" value="{{ data.file_ijazah }}">                                                        
-                        {% endif %}
-                    </div>
-                </div>
 
                 <div class="card-footer text-right">
                     {{ form.submit(class="btn btn-primary mr-1") }} 
@@ -241,6 +111,7 @@
         </div>
     </div>
 </form>
+
 
 {% endblock content%}
 

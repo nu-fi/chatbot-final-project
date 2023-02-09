@@ -1,6 +1,6 @@
 import secrets
 from flask import Blueprint, render_template, url_for, flash, redirect, request, abort, current_app
-from apps.models import Files_Public, Message, DataDokter, Roles
+from apps.models import Files_Public, Message, DataDokter, Roles, TempatPraktik
 from apps import db
 from apps.files.forms import FilesForm
 from flask_login import current_user, login_required
@@ -84,8 +84,9 @@ def file_delete(file_id):
 def data_dokter():
     # role = Roles.query.filter_by(id=current_user.roles_id).first()
     data = DataDokter.query.all()
+    data_tp = TempatPraktik.query.all()
 
-    return render_template('users/admin/data_dokter.html', title='Data Dokter', legend='Data Dokter', data=data)
+    return render_template('users/admin/data_dokter.html', title='Data Dokter', legend='Data Dokter', data=data, data_tp=data_tp)
 
 @files.route("/admin/data-verifikasi/<int:id>", methods=['GET', 'POST'])
 @login_required
@@ -106,5 +107,6 @@ def data_verifikasi(id):
 def data_detail(id):
     # role = Roles.query.filter_by(id=current_user.roles_id).first()
     data = DataDokter.query.filter_by(user_id=id).first()
+    data_tp = TempatPraktik.query.filter_by(user_id=id)
 
-    return render_template('users/admin/lihat_datadokter.html', title='Verifikasi Data Dokter', legend='Verifikasi Data Dokter', data=data)
+    return render_template('users/admin/lihat_datadokter.html', title='Verifikasi Data Dokter', legend='Verifikasi Data Dokter', data=data, data_tp=data_tp)

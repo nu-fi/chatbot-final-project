@@ -68,7 +68,7 @@ def login():
                 return redirect(next_page) if next_page else redirect(url_for('users.dokter'))
 
         else:
-            flash('Login Unsuccessful. Please check email and password again', 'deleted')
+            flash('Login Unsuccessful. Please check email and password again or Sign up!', 'deleted')
 
     return render_template('users/login.html', title='Login', form=form)
 
