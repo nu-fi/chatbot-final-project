@@ -3,63 +3,67 @@ import json
 import torch
 import torch.nn as nn
 from torch.utils.data import Dataset, DataLoader
-from nltk_utils import bag_of_words, tokenize, stem, case_folding, clean_punct, stopwords_removal
-from model import NeuralNet
+from apps.nltk_utils import bag_of_words, tokenize, stemmingIndo, case_folding, clean_punct, stopwords_removal
+from apps.model import NeuralNet
+from sklearn.feature_extraction.text import CountVectorizer
 
 with open('apps/intents.json', 'r') as f:
     intents = json.load(f)
 
-all_words = []
-tags = []
-xy = []
-# loop through each sentence in our intents patterns
+all_words = [] # Semua Kata 
+tags = [] # Tag 
+patternresponse = [] # udh tokenize sm label
+all_pattern_done = [] # semua kalimat udh di preprocessing
+
+# loop through the tags (classes)
 for intent in intents['intents']:
     tag = intent['tag']
-    # add to tag list
     tags.append(tag)
     for pattern in intent['patterns']:
         pattern = case_folding(pattern)
         pattern = clean_punct(pattern)
-        # tokenize each word in the sentence
         words = tokenize(pattern)
-        w = [stem(w) for w in words]
-        # add to our words list
+        words = stopwords_removal(words)
+        w = [stemmingIndo(w) for w in words]
         all_words.extend(w)
-        # add to xy pair
-        xy.append((w, tag))
+        patternresponse.append((w, tag))
+        all_pattern_done.append(w)
 
 # stem and lower each word
 ignore_words = ['?', '.', '!', ',', '-']
-all_words = [stem(w) for w in all_words if w not in ignore_words]
+# all_words = [stemmingIndo(w) for w in all_words if w not in ignore_words]
 # remove duplicates and sort
 all_words = sorted(set(all_words))
 tags = sorted(set(tags))
+all_pattern_done = [ ' '.join(lst) for lst in all_pattern_done ]
 
-print(len(xy), "patterns")
+print(len(all_pattern_done), "patterns")
 print(len(tags), "tags:", tags)
 print(len(all_words), "unique stemmed words:", all_words)
 
 # create training data
 X_train = []
-y_train = []
-for (pattern_sentence, tag) in xy:
-    # X: bag of words for each pattern_sentence
-    bag = bag_of_words(pattern_sentence, all_words)
-    X_train.append(bag)
-    # y: PyTorch CrossEntropyLoss needs only class labels, not one-hot
-    label = tags.index(tag)
-    y_train.append(label)
+Y_train = []
 
-X_train = np.array(X_train)
-y_train = np.array(y_train)
+for (pattern_sentence, tag) in patternresponse:
+        label = tags.index(tag)
+        Y_train.append(label)
+
+vectorizer = CountVectorizer(max_features = 1000, dtype=np.float32)
+X = vectorizer.fit_transform(all_pattern_done)
+
+X_train = X.toarray()
+Y_train = np.array(Y_train)
 
 # Hyper-parameters
-num_epochs = 100
+num_epochs = 400
 batch_size = 16
-learning_rate = 0.002
+learning_rate = 0.004
 input_size = len(X_train[0])
-hidden_size = 16
+hidden_size = 22
 output_size = len(tags)
+dropout = 0.1
+
 print(input_size, output_size)
 
 class ChatDataset(Dataset):
@@ -67,7 +71,7 @@ class ChatDataset(Dataset):
     def __init__(self):
         self.n_samples = len(X_train)
         self.x_data = X_train
-        self.y_data = y_train
+        self.y_data = Y_train
 
     # support indexing such that dataset[i] can be used to get i-th sample
     def __getitem__(self, index):
@@ -89,7 +93,7 @@ model = NeuralNet(input_size, hidden_size, output_size).to(device)
 
 # Loss and optimizer
 criterion = nn.CrossEntropyLoss()
-optimizer = torch.optim.RMSprop(model.parameters(), lr=learning_rate)
+optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
 
 # Train the model
 for epoch in range(num_epochs):
@@ -124,5 +128,4 @@ data = {
 
 FILE = "apps/data.pth"
 torch.save(data, FILE)
-
 print(f'training complete. file saved to {FILE}')

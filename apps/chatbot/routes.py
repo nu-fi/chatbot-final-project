@@ -5,6 +5,8 @@ from flask_login import current_user, login_required
 import json
 import pandas as pd
 import subprocess
+from io import StringIO
+
 
 chatbot = Blueprint('chatbot', __name__)
 
@@ -24,7 +26,8 @@ def write_json(new_data, filename='apps/intents.json'):
 def dataset():
     data_file = open('apps/intents.json').read()
     intents = json.loads(data_file)
-    df = pd.read_json(json.dumps(intents))
+    intents = json.dumps(intents)
+    df = pd.read_json(StringIO(intents))
     
     return render_template('users/admin/chatbot/dataset.html', title='Dataset', data=df)
 

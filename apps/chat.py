@@ -2,14 +2,15 @@ import random
 import json
 import torch
 from apps.model import NeuralNet
-from apps.nltk_utils import bag_of_words, tokenize, stem, case_folding, clean_punct, stopwords_removal, correction
+from apps.nltk_utils import bag_of_words, tokenize, case_folding, clean_punct, stopwords_removal, correction, de_tokenize, stemmingIndo
+from apps.train import vectorizer
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 with open('apps/intents.json', 'r') as json_data:
     intents = json.load(json_data)
 
-FILE = "data.pth"
+FILE = "apps/data.pth"
 data = torch.load(FILE)
 
 input_size = data["input_size"]
@@ -28,36 +29,29 @@ bot_name = "Bot"
 def get_response(msg):
     sentence = case_folding(msg)
     sentence = clean_punct(sentence)
-    sentence = tokenize(sentence)
-    sentence = [stem(w) for w in sentence]
-    words = []
-    for word in sentence:
-        word = correction(word)
-        words.append(word)
+    words = tokenize(sentence)
+    words = stopwords_removal(words)
 
-    # msg = case_folding(msg)
-    # msg = clean_punct(msg)
-    # sentence = tokenize(msg)
-    # sentence = [stem(w) for w in sentence]
+    wordss = []
+    for w in words:
+        w = correction(w)
+        wordss.append(w)
 
-    # words = []
-    # for word in sentence:
-    #     word = correction(word)
-    #     words.append(word)
+    w = [stemmingIndo(w) for w in wordss]    
 
-    X = bag_of_words(words, all_words)
-    X = X.reshape(1, X.shape[0])
+    X = vectorizer.transform([de_tokenize(w)])
+    X = X.toarray()
     X = torch.from_numpy(X).to(device)
 
     output = model(X)
     _, predicted = torch.max(output, dim=1)
 
     tag = tags[predicted.item()]
-
     probs = torch.softmax(output, dim=1)
-    prob = probs[0][predicted.item()]
+    prob = probs[0][predicted.item()]   
+
     print(prob)
-    if prob.item() > 0.5:
+    if prob.item() > 0.8:
         for intent in intents['intents']:
             if tag == intent["tag"]:
                 return random.choice(intent['responses'])

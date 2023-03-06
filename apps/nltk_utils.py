@@ -1,9 +1,7 @@
 import numpy as np
-import nltk
 from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
-import re
-import nltk
-import torch
+import re, nltk
+from collections import Counter
 
 # Case Folding
 def case_folding(sentence):
@@ -12,9 +10,9 @@ def case_folding(sentence):
 
 # Remove Puncutuation and Number
 clean_spcl = re.compile('[/(){}\[\]\|@,;]')
-clean_symbol = re.compile('[^0-9a-z]')
+clean_symbol = re.compile('[^a-z]')
 def clean_punct(sentence):
-    sentence = clean_spcl.sub('', sentence)
+    sentence = clean_spcl.sub(' ', sentence)
     sentence = clean_symbol.sub(' ', sentence)
     return sentence
     
@@ -24,15 +22,15 @@ def tokenize(sentence):
 
 # Filtering (stopword removal)
 def stopwords_removal(word):
-  listStopword = ["ya", "sih"]
-  words = []
-  for t in word:
-    if t not in listStopword:
-        words.append(t)
-  return words
+    listStopword = ["yang", "apa", "untuk", "pada", "dengan", "saja", "itu", "ya", "dari", "anda", "kamu", "saya", "ini"]
+    words = []
+    for t in word:
+        if t not in listStopword:
+            words.append(t)
+    return words
 
 # Stemming Indo
-def stem(word):
+def stemmingIndo(word):
     factory = StemmerFactory()
     stemmer = factory.create_stemmer()
     return stemmer.stem(word)
@@ -50,7 +48,7 @@ def bag_of_words(tokenized_sentence, words):
     bog   = [  0 ,    1 ,    0 ,   1 ,    0 ,    0 ,      0]
     """
     # stem each word
-    sentence_words = [stem(word) for word in tokenized_sentence]
+    sentence_words = [stemmingIndo(word) for word in tokenized_sentence]
     # initialize bag with 0 for each word
     bag = np.zeros(len(words), dtype=np.float32)
     for idx, w in enumerate(words):
@@ -59,14 +57,10 @@ def bag_of_words(tokenized_sentence, words):
 
     return bag
 
-FILE = "apps/data.pth"
-data = torch.load(FILE)
 
-all_words = data['all_words']
-
-from collections import Counter
-
-WORDS = Counter(all_words)
+def words(text): return re.findall(r'\w+', text.lower())
+path_corpus = "apps/indonesian-words.txt"
+WORDS = Counter(words(open(path_corpus).read()))
 
 def P(word, N=sum(WORDS.values())):
     # "Probability of `word`."
