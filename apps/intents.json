@@ -2,7 +2,7 @@
     "intents": [
         {
             "tag": "pengertian_stunting",
-            "patterns": [
+            "patterns": [                
                 "Apa Pengertian Stunting?",
                 "Dapatkah Anda menjelaskan arti dari stunting?",
                 "Definisi apa yang terkait dengan stunting?",
@@ -31,7 +31,7 @@
             ],
             "responses": [
                 "Wah, kamu tahu apa itu stunting? Stunting adalah kondisi di mana anak balita tidak bisa tumbuh seperti layaknya anak seusianya karena kekurangan gizi yang terjadi secara kronis. Ini membuat anak terlihat terlalu pendek dibandingkan dengan usianya.",
-                "Jadi stunting didefinisikan sebagai kondisi di mana tinggi badan anak terlalu pendek atau sangat pendek dibandingkan dengan usianya. Ini dapat ditentukan dengan melihat jarak antara tinggi badan anak dengan median tinggi badan pada usianya, dan jika anak tersebut melampaui -2 SD (deviasi standar), maka dapat dikatakan bahwa anak tersebut mengalami stunting.",
+                "Stunting didefinisikan sebagai kondisi di mana tinggi badan anak terlalu pendek atau sangat pendek dibandingkan dengan usianya. Ini dapat ditentukan dengan melihat jarak antara tinggi badan anak dengan median tinggi badan pada usianya, dan jika anak tersebut melampaui -2 SD (deviasi standar), maka dapat dikatakan bahwa anak tersebut mengalami stunting.",
                 "Stunting didefinisikan sebagai kondisi tinggi badan anak yang pendek atau sangat pendek dibandingkan dengan usianya. Ini dapat ditentukan dengan membandingkan tinggi badan anak dengan median tinggi badan pada usianya dan jika anak tersebut melampaui -2 SD (deviasi standar), maka bisa dikatakan bahwa anak tersebut mengalami stunting.",
                 "Stunting adalah kondisi ketika anak balita gagal tumbuh karena kekurangan gizi yang berlangsung dalam jangka waktu lama, sehingga anak terlihat terlalu pendek dibandingkan dengan usia dan jenis kelaminnya. Kekurangan gizi dapat terjadi sejak bayi masih dalam kandungan atau setelah anak lahir, tetapi stunting biasanya baru terlihat ketika anak sudah berusia 2 tahun.",
                 "Stunting adalah kondisi di mana seseorang memiliki tinggi badan yang lebih pendek dari yang seharusnya sesuai dengan umur dan jenis kelaminnya, disebabkan oleh kekurangan gizi yang berlangsung lama atau kekurangan nutrisi kronis yang terus-menerus. "
@@ -40,20 +40,16 @@
         {
             "tag": "dampak_stunting",
             "patterns": [
+                "Apa dampak yang ditimbulkan akibat terjadinya stunting?",
+                "Apakah dampak stunting bagi anak?",
                 "Apa efek stunting pada anak?",
-                "Apakah dampak Stunting pada anak?",
-                "dampak stunting bagi anak apa?",
                 "Bagaimana stunting dapat mempengaruhi perkembangan pada anak?",
                 "Masalah apa yang akan dihadapi jika anak mengalami stunting?",
-                "Apa dampak stunting bagi anak?",
+                "Pengaruh apa yang akan dihadapi apabila anak mengalami stunting?",
                 "Jika anak mengalami stunting dampak apa yang terjadi",
                 "Contoh dampak pada stunting apa",
-                "Apa saja dampak negatif stunting pada anak?",
-                "Apakah ada dampak jangka panjang dari stunting pada anak?",
+                "Apa dampak yang terjadi apabila anak stunting",
                 "Dampak apa yang terjadi jika anak mengalami stunting",
-                "Pengaruh apa yang akan dihadapi apabila anak mengalami stunting?",
-                "Apa dampak yang ditimbulkan akibat terjadinya stunting?",
-                "apa dampak yang terjadi apabila anak stunting",
                 "Apakah stunting berdampak pada kesehatan fisik anak?",
                 "Apa efek yang didapat jika anak mengalami stunting?",
                 "Apa akibat yang dapat terjadi jika anak mengalami stunting?",
@@ -64,11 +60,11 @@
                 "Apa saja dampak stunting pada masa dewasa?",
                 "Bagaimana stunting berdampak pada perkembangan anak?",
                 "Apa akibat yang muncul akibat terjadinya stunting?",
+                "Apakah ada dampak jangka panjang dari stunting pada anak?",
+                "Apa saja dampak negatif stunting pada anak?",                
                 "Apa saja masalah yang dihadapi oleh anak yang mengalami stunting?",
-                "Apa contoh dampak dari stunting?",
                 "Bagaimana pengaruh stunting terhadap anak?",
-                "Apakah dampak stunting terhadap anak?"
-
+                "Apa contoh dampak dari stunting?"
             ],
             "responses": [
                 "Banyak sekali kerugian yang dialami anak, kalau mengalami stunting. Salah satunya adalah dapat menurunkan kemampuan belajar dan anak menjadi mudah sakit.",
@@ -82,18 +78,16 @@
         {
             "tag": "pencegahan_stunting",
             "patterns": [
-                "Bagaimana mengatasi stunting?",
                 "Bagaimana cara agar anak terhindar dari stunting?",
-                "Bagaimana caranya agar anak tidak mengalami Stunting?",
-                "bagaimana pencegahan stunting pada anak?",
-                "Upaya yang dapat dilakukan untuk mencegah terjadi stunting adalah?",
-                "apa upaya yang dapat dilakukan untuk menghindar dari stunting",
-                "peran apa yang dapat dilakukan orang tua untuk mencegah stunting",
-                "Untuk menghindari stunting, orang tua harus apa?",
-                "pencegahan stunting pada anak dapat dilakukan dengan cara",
-                "apakah hal yang dilakukan untuk mencegah stunting",
                 "Apakah ada langkah-langkah untuk mencegah Stunting pada anak?",
-                "Apa saja yang dapat dilakukan oleh orang tua dalam menghindari stunting?",
+                "Upaya yang dapat dilakukan untuk mencegah terjadi stunting adalah?",
+                "bagaimana pencegahan stunting pada anak?",
+                "Apa saja yang dapat dilakukan oleh orang tua dalam menghindari stunting?",                
+                "apa upaya yang dapat dilakukan untuk menghindar dari stunting",
+                "Peran apa yang dapat dilakukan orang tua untuk mencegah stunting?",
+                "untuk menghindari stunting, orang tua harus apa",
+                "Pencegahan stunting pada anak dapat dilakukan dengan cara?",
+                "Apakah hal yang dilakukan untuk mencegah stunting?",
                 "Apa upaya yang bisa dilakukan untuk mencegah stunting pada balita?",
                 "Apa langkah-langkah yang dapat diambil untuk mencegah stunting pada anak?",
                 "Bagaimana cara mencegah terjadinya stunting pada anak?",
@@ -120,21 +114,14 @@
             "tag": "penyebab_stunting",
             "patterns": [
                 "Apa yang menyebabkan anak mengalami stunting?",
-                "Faktor apa yang menyebabkan stunting pada anak",
-                "penyebab anak mengalami stunting apa?",
                 "apa penyebab terjadi stunting pada anak?",
-                "Mengapa anak dapat mengalami stunting?",
-                "apa penyebab anak mengalami stunting",
-                "apa penyebab anak stunting",
-                "mengapa anak menjadi stunting?",
-                "stunting terjadi pada anak karena apa",
-                "karena apa stunting bisa terjadi",
-                "Bagaimana stunting bisa terjadi?",
                 "Apa saja faktor penyebab terjadinya stunting?",
-                "Apa saja faktor-faktor yang dapat menyebabkan terjadinya stunting pada anak?",
-                "Apa komponen yang menyebabkan stunting",
-                "Sebutkan faktor dari penyebab stunting",
+                "Mengapa anak dapat mengalami stunting?",
+                "Bagaimana stunting bisa terjadi?",
+                "apa penyebab anak mengalami stunting",
                 "Apa yang dapat memicu terjadinya stunting",
+                "mengapa anak menjadi stunting?",                
+                "stunting terjadi pada anak karena apa",
                 "Apa yang menyebabkan anak mengalami keterlambatan pertumbuhan atau stunting?",
                 "Mengapa stunting bisa terjadi pada anak?",
                 "Bagaimana stunting dapat terjadi pada anak?",
@@ -150,10 +137,9 @@
                 "Mengapa terjadi keterlambatan pertumbuhan atau stunting pada anak?",
                 "Apa saja kondisi atau faktor yang bisa memicu terjadinya stunting pada anak?",
                 "Apa yang menjadi pemicu utama stunting pada anak?",
-                "Apa saja faktor penyebab terjadinya stunting?"
+                "Apa saja faktor-faktor yang dapat menyebabkan terjadinya stunting pada anak?"
             ],
             "responses": [
-                "Stunting disebabkan oleh faktor yang sangat kompleks dan tidak hanya dipengaruhi oleh masalah gizi saja. Oleh karena itu, intervensi yang efektif untuk mengurangi prevalensi stunting harus dilakukan sejak 1.000 Hari Pertama Kehidupan (HPK) dari anak balita. Ini membantu memastikan bahwa anak mendapatkan semua nutrisi dan perlindungan yang dibutuhkan untuk tumbuh dan berkembang dengan baik.",
                 "Penyebab stunting bersifat kompleks dan melibatkan beberapa faktor seperti gizi buruk pada ibu hamil dan anak balita, infeksi berulang, air yang tidak bersih, lingkungan yang tidak sehat, dan keterbatasan akses terhadap layanan kesehatan yang baik. Oleh karena itu, intervensi untuk mengurangi prevalensi stunting harus dilakukan sejak 1.000 Hari Pertama Kehidupan (HPK) dari anak balita untuk memastikan bahwa anak mendapatkan semua nutrisi dan perlindungan yang dibutuhkan untuk tumbuh dan berkembang dengan baik.",
                 "Stunting disebabkan oleh beberapa faktor, di antaranya adalah gizi buruk yang dialami oleh ibu hamil maupun balita, kurangnya pengetahuan ibu tentang kesehatan dan gizi sebelum dan selama kehamilan serta setelah melahirkan, keterbatasan layanan kesehatan termasuk pelayanan kesehatan selama kehamilan, pasca melahirkan dan pendidikan awal yang berkualitas, akses terhadap makanan yang bergizi yang masih kurang, serta kurangnya akses ke air bersih dan sanitasi.",
                 "Penyebabnya bisa bermacam-macam, seperti kurangnya pengetahuan orang tua tentang pemberian ASI dan makanan pendamping ASI yang benar, kondisi kemiskinan, dan faktor lainnya yang memengaruhi asupan nutrisi, atau kebutuhan nutrisi yang meningkat akibat kondisi kesehatan yang suboptimal akibat penyakit, seperti diare akibat sanitasi lingkungan yang buruk atau infeksi saluran pernapasan akibat tidak diimunisasi.",
@@ -165,7 +151,6 @@
             "patterns": [
                 "Apa saja gejala pada anak yang mengalami stunting?",
                 "Apa ciri-ciri anak yang mengalami stunting?",
-                "cara mengenali ciri fisik anak yang stunting",
                 "tanda yang menunjukkan anak mengalami stunting",
                 "Bagaimana mengenali stunting pada anak?",
                 "ciri anak yang mengalami stunting apa",
@@ -191,9 +176,7 @@
                 "Sebutkan ciri atau tanda dari anak yang alami stunting"
             ],
             "responses": [
-                "Seorang anak dapat dikatakan pendek (stunting) jika tingginya berada dibawah -2 SD dari standar WHO",
-                "Ciri-ciri fisik yang tampak pada balita stunting yaitu, tinggi badan tidak sesuai dengan standar usianya atau anak tampak lebih pendek dibandingkan anak seusianya.",
-                "Stunting adalah bentuk kekurangan gizi yang disebabkan oleh gizi kurang kronis. Ini ditandai dengan: 1. Tinggi badan kurang untuk usia: Anak yang mengalami stunting lebih pendek dari yang diharapkan berdasarkan standar pertumbuhan internasional. 2. Gangguan perkembangan fisik dan kognitif: Stunting dapat menyebabkan otot lemah, daya tahan yang berkurang, dan IQ yang lebih rendah. 3. Peningkatan risiko penyakit dan kematian: Anak yang mengalami stunting lebih rentan terhadap infeksi dan memiliki risiko lebih tinggi terkena penyakit yang dapat dicegah. 4. Persistensi dalam waktu: Dampak stunting berlangsung lama dan dapat bertahan hingga dewasa, mempengaruhi kesehatan, prestasi pendidikan, dan produktivitas ekonomi. 5. Transmisi intergenerasi: Stunting juga dapat diteruskan dari satu generasi ke generasi berikutnya, memperpanjang siklus gizi kurang.",
+                "Stunting ditandai dengan: 1. Tinggi badan kurang untuk usia: Anak yang mengalami stunting lebih pendek dari yang diharapkan berdasarkan standar pertumbuhan internasional. 2. Gangguan perkembangan fisik dan kognitif: Stunting dapat menyebabkan otot lemah, daya tahan yang berkurang, dan IQ yang lebih rendah. 3. Peningkatan risiko penyakit dan kematian: Anak yang mengalami stunting lebih rentan terhadap infeksi dan memiliki risiko lebih tinggi terkena penyakit yang dapat dicegah. 4. Persistensi dalam waktu: Dampak stunting berlangsung lama dan dapat bertahan hingga dewasa, mempengaruhi kesehatan, prestasi pendidikan, dan produktivitas ekonomi. 5. Transmisi intergenerasi: Stunting juga dapat diteruskan dari satu generasi ke generasi berikutnya, memperpanjang siklus gizi kurang.",
                 "Anak yang mengalami stunting memiliki beberapa ciri-ciri, antara lain pertumbuhan gigi yang terlambat, wajah terlihat lebih kecil atau lebih muda dibandingkan dengan teman sebayanya, pertumbuhan tubuh yang melambat, serta performa yang buruk dalam tes perhatian dan daya ingat. Selain itu, anak yang mengalami stunting juga dapat mengalami tanda-tanda pubertas yang lebih lambat muncul, serta pada usia 8-10 tahun, cenderung menjadi lebih pendiam dan kurang melakukan kontak mata dengan orang lain."
             ]
         },
@@ -359,9 +342,6 @@
                 "Nutrisi apa yang dapat memberikan perlindungan terhadap stunting pada anak?",
                 "Bagaimana pemberian nutrisi dapat dilakukan untuk menghindari stunting pada anak?",
                 "Makanan dan nutrisi seperti apa yang direkomendasikan untuk mencegah stunting pada anak?",
-                "Nutrisi apa yang diperlukan untuk menghindari stunting pada anak?",
-                "Bagaimana cara memberikan nutrisi yang tepat untuk mencegah stunting pada anak?",
-                "Jenis nutrisi apa yang dapat membantu mencegah stunting pada anak?",
                 "Nutrisi apa yang diperlukan untuk menghindari stunting pada anak?"
             ],
             "responses": [
@@ -464,8 +444,7 @@
                 "Apa saja yang harus diperhatikan untuk mengevaluasi keberhasilan pemberian ASI pada bayi?",
                 "Apa yang harus dipantau untuk mengetahui keberhasilan dalam pemberian ASI pada bayi?",
                 "Apa saja yang dapat menjadi tanda keberhasilan dalam memberikan ASI pada bayi?",
-                "Apa saja indikator keberhasilan pemberian ASI eksklusif pada bayi yang perlu diketahui?",
-                "Bagaimana cara menilai keberhasilan memberikan ASI pada bayi dengan memperhatikan tanda-tanda yang muncul?"
+                "Apa saja indikator keberhasilan pemberian ASI eksklusif pada bayi yang perlu diketahui?"
             ],
             "responses": [
                 "Beberapa hal untuk mengindentifikasi keberhasilan menyusui adalah: posisi menyusui dan perlekatan bayi pada payudara sudah benar dan efektif agar bayi dapat menghisap ASI dengan baik. Menjadwalkan pemberian ASI yang cukup, terutama pada awal-awal kelahiran saat bayi masih memerlukan frekuensi pemberian yang lebih sering. Mengenali tanda-tanda lapar bayi seperti mencari puting, menggeliat, dan menangis, sehingga dapat memberikan ASI dengan tepat waktu. Mengosongkan payudara secara teratur untuk merangsang produksi ASI dan memastikan kecukupan pasokan ASI. Memastikan kecukupan ASI yang diberikan, baik dari segi jumlah maupun kandungan nutrisinya, dengan memperhatikan tanda-tanda bahwa bayi sudah merasa kenyang setelah disusui. Serta didukungan oleh keluarga, pemerintah, dan tempat kerja, misalnya dengan memberikan cuti melahirkan yang cukup, ruang laktasi, dan fasilitas pendukung lainnya untuk memudahkan ibu dalam memberikan ASI."
@@ -498,8 +477,7 @@
                 "Apa saja tanda yang menunjukkan bahwa bayi membutuhkan ASI segera?",
                 "Bagaimana mengetahui kapan waktu yang tepat untuk memberikan ASI pada bayi yang lapar?",
                 "Apa petunjuk yang diberikan bayi ketika ingin diberi ASI karena merasa lapar?",
-                "Bagaimana cara mengenali tanda-tanda bayi lapar sejak dini?",
-                "Apa indikator yang harus diperhatikan untuk mengetahui apakah bayi memerlukan ASI atau tidak?"
+                "Bagaimana cara mengenali tanda-tanda bayi lapar sejak dini?"
             ],
             "responses": [
                 "Bayi memberikan tanda-tanda ketika mereka merasa lapar. Tanda-tandanya dapat dibagi menjadi tiga kategori. Pertama, ketika bayi merasa lapar, mereka akan menggerak-gerakkan kepala, membuka mulut, dan mencari payudara dengan kepala yang menengok ke kiri-kanan. Kedua, ketika bayi merasa sangat lapar, mereka akan meregangkan badan, bergerak dengan lebih intensif, dan memasukkan jari atau tangan ke mulut. Ketiga, ketika bayi merasa super lapar, mereka akan menangis, menjadi gelisah, dan wajahnya bisa memerah. Penting untuk mengetahui tanda-tanda ini agar bisa memberi ASI atau makanan yang cukup pada bayi dan mencegah mereka menjadi terlalu lapar."
@@ -550,7 +528,6 @@
                 "Apa kepanjangan dari MPASI dan mengapa harus diberikan?",
                 "Maksud dan tujuan dari MPASI itu apa?",
                 "Apakah manfaat dari pemberian MPASI?",
-                "MPASI adalah",
                 "Definisi serta keuntungan apa yang terkandung dalam pemberian MPASI?",
                 "Mengapa penting untuk memberikan MPASI pada bayi dan apa tujuan utamanya?",
                 "Manfaat apa yang bisa didapatkan dari memberikan makanan pendamping ASI (MPASI) pada bayi?",
@@ -562,17 +539,11 @@
                 "Apa manfaat yang bisa diperoleh dengan memberikan MPASI?",
                 "MPASI dapat dijelaskan sebagai…",
                 "MPASI memiliki arti apa",
-                "Apa itu MPASI?",
-                "MPASI artinya apa",
                 "MPASI kepanjangan dari",
-                "pengertian MPASI yaitu",
                 "apa kepanjangan dari MPASI",
                 "apakah MPASI itu",
-                "MPASI merupakan",
                 "apa definisi dari MPASI",
-                "Pengertian MPASI adalah",
-                "Kenapa MPASI itu penting?",
-                "Apa Tujuan dari MPASI?"
+                "Pengertian MPASI adalah"
             ],
             "responses": [
                 "Pemberian MPASI (Makanan Pendamping ASI) pada bayi didefinisikan sebagai pemberian makanan lain selain ASI untuk memenuhi kebutuhan nutrisi yang diperlukan bayi. Pada usia 6 bulan, bayi membutuhkan makanan pendamping ASI, namun ASI tetap diberikan sebagai makanan utama hingga bayi berusia 2 tahun. Sebelum memberikan makanan lain, sebaiknya berikan ASI terlebih dahulu. Selain itu, pada usia 6 bulan, bayi juga perlu mendapatkan asupan vitamin A.",
@@ -606,8 +577,7 @@
                 "Bagaimana memastikan bahwa makanan pendamping yang diberikan sesuai dengan anjuran dan kebutuhan bayi?",
                 "Apakah ada strategi khusus yang dapat diterapkan dalam memberikan makanan pendamping ASI pada bayi?",
                 "Bagaimana cara memilih dan mengkombinasikan makanan dalam MPASI agar bayi mendapatkan nutrisi yang cukup?",
-                "Bagaimana cara menyiapkan makanan pendamping ASI (MPASI) yang mudah dicerna untuk bayi?",
-                "Bagaimana cara memilih makanan yang aman dan sehat untuk dijadikan sebagai makanan pendamping ASI pada bayi?"
+                "Bagaimana cara menyiapkan makanan pendamping ASI (MPASI) yang mudah dicerna untuk bayi?"
             ],
             "responses": [
                 "Ada 4 yang menjadi strategi dalam pemberian MPASI yaitu Tepat Waktu artinya berikan MPASI ketika ASI saja tidak cukup untuk memenuhi kebutuhan bayi (usia bayi sekitar 6 bulan). Adekuat berarti MPASI yang diberikan memenuhi kebutuhan energi, protein dan mikronutrien anak. Aman dan Higienis artinya proses persiapan dan pembuatan MPASI menggunakan cara, bahan, dan alat yang aman serta higienis. Responsif berarti MPASI diberikan secara konsisten sesuai dengan sinyal lapar atau kenyang dari anak.",
@@ -627,17 +597,7 @@
                 "Peraturan apa yang dapat diterapkan pada pemberian makan anak?",
                 "Aturan dari pemberian makan anak adalah",
                 "Apa petunjuk yang dapat dilakukan saat anak makan?",
-                "Apa saja saran makanan pendamping ASI yang baik untuk anak?",
-                "pemberian MPASI yang baik bagaimana",
-                "bagaimana memberikan MPASI yang benar",
-                "MPASI atau makanan pendamping yang baik, benar dan sesuai seperti apa",
-                "cara memberikan makanan pendamping yang baik bagaimana?",
-                "bagaimana cara memberikan MPASI yang benar",
-                "bagaimana cara memberikan makanan pendamping ASI yang baik",
-                "contoh makanan pendamping ASI yang baik dan sesuai seperti apa",
-                "bagaimana MPASI dikatakan baik",
-                "MPASI seperti apa yang sesuai dengan gizi anak",
-                "Contoh pemberian MPASI yang sesuai dan benar",
+                "Apa saja panduan untuk mengatur makanan bayi ?",
                 "Berapa jumlah dan frekuensi pemberian makanan yang ideal untuk bayi?",
                 "Apa prinsip dasar dalam pengaturan makanan bayi?",
                 "Apa peraturan makanan yang perlu diikuti saat memberikan MPASI pada bayi?",
@@ -651,7 +611,7 @@
                 "Apa saja pedoman yang perlu diperhatikan saat memberikan makanan pada bayi?",
                 "Bagaimana cara mengatur pola makan bayi agar teratur dan seimbang?",
                 "Apa saja peraturan makanan yang harus diikuti saat memberikan MPASI pada bayi?",
-                "Apa petunjuk yang dapat diikuti saat memberikan makanan pada anak?"
+                "MPASI atau makanan pendamping yang baik, benar dan sesuai seperti apa"
             ],
             "responses": [
                 "Berikut adalah beberapa hal yang perlu diperhatikan saat memberi makan anak: Jadwal: Berikan makan pada waktu yang teratur, dan jangan menawarkan camilan atau makanan lain selain makanan utama. Usahakan makanan diberikan tidak lebih dari 30 menit. Lingkungan: Buat suasana makan yang menyenangkan dan siapkan serbet agar tidak berantakan. Pastikan tidak ada distraksi, seperti televisi atau mainan, dan jangan memberikan makanan sebagai hadiah. Prosedur: Berikan makanan dalam porsi kecil dan prioritaskan makanan utama sebelum minuman. Dorong anak untuk makan sendiri dan tawarkan kembali makanan secara netral jika anak menunjukkan tanda tidak mau makan. Jika setelah 10-15 menit anak tetap tidak mau makan, hentikan proses makan dan bersihkan mulut anak. Dengan memperhatikan hal-hal tersebut, proses memberi makan anak dapat lebih mudah dan menyenangkan bagi orang tua dan anak. Jangan lupa untuk memberikan makanan yang sehat dan bergizi untuk mendukung tumbuh kembang anak."
