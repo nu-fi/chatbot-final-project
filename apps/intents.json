@@ -2,7 +2,7 @@
     "intents": [
         {
             "tag": "pengertian_stunting",
-            "patterns": [                
+            "patterns": [
                 "Apa Pengertian Stunting?",
                 "Dapatkah Anda menjelaskan arti dari stunting?",
                 "Definisi apa yang terkait dengan stunting?",
@@ -61,13 +61,12 @@
                 "Bagaimana stunting berdampak pada perkembangan anak?",
                 "Apa akibat yang muncul akibat terjadinya stunting?",
                 "Apakah ada dampak jangka panjang dari stunting pada anak?",
-                "Apa saja dampak negatif stunting pada anak?",                
+                "Apa saja dampak negatif stunting pada anak?",
                 "Apa saja masalah yang dihadapi oleh anak yang mengalami stunting?",
                 "Bagaimana pengaruh stunting terhadap anak?",
                 "Apa contoh dampak dari stunting?"
             ],
             "responses": [
-                "Banyak sekali kerugian yang dialami anak, kalau mengalami stunting. Salah satunya adalah dapat menurunkan kemampuan belajar dan anak menjadi mudah sakit.",
                 "Dampak jangka pendek stunting pada anak usia 0-balita adalah: (1) Anak mudah sakit, (2) Tumbuh kembang anak terhambat, contohnya anak terlambat bicara atau berjalan. Selain itu, stunting juga memiliki dampak jangka panjang, yaitu (1) Ketika sekolah, mengalami penurunan kemampuan belajar, sehingga berdampak buruk pada prestasi belajar; (2) Obesitas/kegemukan; (3) Ketika dewasa, menurunkan kesempatan untuk mendapat pekerjaan yang layak; (4) Memiliki risiko lebih tinggi untuk terkena penyakit tidak menular, seperti diabetes melitus, penyakit jantung, dll.",
                 "Stunting memiliki beberapa konsekuensi yang sangat buruk terhadap kesehatan anak, termasuk penurunan perkembangan kognitif dan fisik, rendahnya kapasitas produktif dan kesehatan, dan peningkatan risiko penyakit degeneratif seperti diabetes. Kemiskinan, prevalensi pernikahan anak, dan rendahnya tingkat pendidikan memperparah masalah stunting dan membuat dampaknya terus berlanjut dari generasi ke generasi.",
                 "Stunting dapat memiliki dampak yang signifikan pada kesehatan dan kesejahteraan anak. Anak-anak yang mengalami stunting lebih rentan terkena penyakit, karena sistem kekebalan tubuh mereka lebih lemah. Stunting juga dapat menyebabkan penurunan kemampuan kognitif dan kecerdasan, serta kesulitan dalam belajar. Selain itu, orang yang mengalami stunting di masa kecil berisiko lebih tinggi untuk mengalami masalah kesehatan yang terkait dengan pola makan tidak sehat ketika mereka dewasa. Postur tubuh juga dapat terganggu dan tidak maksimal saat dewasa, yang dapat memengaruhi kualitas hidup dan produktivitas di kemudian hari. Dalam jangka panjang, stunting dapat mengakibatkan kerugian ekonomi karena dampaknya pada produktivitas dan kesejahteraan ekonomi masyarakat.",
@@ -82,7 +81,7 @@
                 "Apakah ada langkah-langkah untuk mencegah Stunting pada anak?",
                 "Upaya yang dapat dilakukan untuk mencegah terjadi stunting adalah?",
                 "bagaimana pencegahan stunting pada anak?",
-                "Apa saja yang dapat dilakukan oleh orang tua dalam menghindari stunting?",                
+                "Apa saja yang dapat dilakukan oleh orang tua dalam menghindari stunting?",
                 "apa upaya yang dapat dilakukan untuk menghindar dari stunting",
                 "Peran apa yang dapat dilakukan orang tua untuk mencegah stunting?",
                 "untuk menghindari stunting, orang tua harus apa",
@@ -107,7 +106,7 @@
             "responses": [
                 "Hal yang dapat dilakukan untuk mencegah stunting pada anak yaitu dengan memeriksa kehamilan secara rutin, memastikan kecukupan nutrisi bagi ibu dan bayi, deteksi dini penyakit, melahirkan di fasilitas kesehatan yang memadai, inisiasi menyusui dini (IMD) dan pemberian ASI Ekslusif, pemberian makanan tambahan dan imunisasi lengkap, dan pemantauan pertumbuhan balita.",
                 "Untuk mencegah stunting pada anak, beberapa hal yang dapat dilakukan antara lain: memeriksa kehamilan secara rutin, memastikan kecukupan nutrisi bagi ibu dan bayi, melakukan deteksi dini penyakit, melahirkan di fasilitas kesehatan yang memadai, memberikan ASI Eksklusif sejak dini, memberikan makanan tambahan dan imunisasi yang lengkap, dan melakukan pemantauan pertumbuhan balita.",
-                "Stunting adalah kondisi yang dapat dicegah, oleh karena itu pencegahannya dapat dilakukan oleh masyarakat umum dengan beberapa cara, antara lain: Memberikan ASI eksklusif pada bayi selama 6 bulan pertama kehidupannya, dan setelah itu tetap memberikan ASI ditambah dengan MPASI hingga usia 2 tahun atau lebih. Memberikan makanan yang bergizi dan seimbang, termasuk sumber protein hewani dan nabati, sayuran, buah-buahan, biji-bijian, dan kacang-kacangan. Menghindari memberikan makanan dengan kandungan gula dan lemak yang tinggi, serta makanan cepat saji dan junk food. Menjaga kebersihan dan kesehatan lingkungan sekitar, termasuk sanitasi yang baik dan penyediaan air bersih. Memberikan perhatian yang cukup terhadap tumbuh kembang anak, termasuk kunjungan rutin ke dokter atau klinik kesehatan, dan mengikuti imunisasi secara teratur. Memastikan anak mendapat istirahat yang cukup dan aktivitas fisik yang memadai untuk mendukung pertumbuhannya. Dengan melakukan hal-hal tersebut, masyarakat umum dapat membantu mencegah stunting pada anak dan memastikan anak-anak tumbuh kembang dengan optimal."
+                "Stunting dapat dicegah oleh masyarakat umum dengan beberapa cara, antara lain: Memberikan ASI eksklusif pada bayi selama 6 bulan pertama kehidupannya, dan setelah itu tetap memberikan ASI ditambah dengan MPASI hingga usia 2 tahun atau lebih. Memberikan makanan yang bergizi dan seimbang, termasuk sumber protein hewani dan nabati, sayuran, buah-buahan, biji-bijian, dan kacang-kacangan. Menghindari memberikan makanan dengan kandungan gula dan lemak yang tinggi, serta makanan cepat saji dan junk food. Menjaga kebersihan dan kesehatan lingkungan sekitar, termasuk sanitasi yang baik dan penyediaan air bersih. Memberikan perhatian yang cukup terhadap tumbuh kembang anak, termasuk kunjungan rutin ke dokter atau klinik kesehatan, dan mengikuti imunisasi secara teratur. Memastikan anak mendapat istirahat yang cukup dan aktivitas fisik yang memadai untuk mendukung pertumbuhannya. Dengan melakukan hal-hal tersebut, masyarakat umum dapat membantu mencegah stunting pada anak dan memastikan anak-anak tumbuh kembang dengan optimal."
             ]
         },
         {
@@ -120,7 +119,7 @@
                 "Bagaimana stunting bisa terjadi?",
                 "apa penyebab anak mengalami stunting",
                 "Apa yang dapat memicu terjadinya stunting",
-                "mengapa anak menjadi stunting?",                
+                "mengapa anak menjadi stunting?",
                 "stunting terjadi pada anak karena apa",
                 "Apa yang menyebabkan anak mengalami keterlambatan pertumbuhan atau stunting?",
                 "Mengapa stunting bisa terjadi pada anak?",
@@ -142,23 +141,23 @@
             "responses": [
                 "Penyebab stunting bersifat kompleks dan melibatkan beberapa faktor seperti gizi buruk pada ibu hamil dan anak balita, infeksi berulang, air yang tidak bersih, lingkungan yang tidak sehat, dan keterbatasan akses terhadap layanan kesehatan yang baik. Oleh karena itu, intervensi untuk mengurangi prevalensi stunting harus dilakukan sejak 1.000 Hari Pertama Kehidupan (HPK) dari anak balita untuk memastikan bahwa anak mendapatkan semua nutrisi dan perlindungan yang dibutuhkan untuk tumbuh dan berkembang dengan baik.",
                 "Stunting disebabkan oleh beberapa faktor, di antaranya adalah gizi buruk yang dialami oleh ibu hamil maupun balita, kurangnya pengetahuan ibu tentang kesehatan dan gizi sebelum dan selama kehamilan serta setelah melahirkan, keterbatasan layanan kesehatan termasuk pelayanan kesehatan selama kehamilan, pasca melahirkan dan pendidikan awal yang berkualitas, akses terhadap makanan yang bergizi yang masih kurang, serta kurangnya akses ke air bersih dan sanitasi.",
-                "Penyebabnya bisa bermacam-macam, seperti kurangnya pengetahuan orang tua tentang pemberian ASI dan makanan pendamping ASI yang benar, kondisi kemiskinan, dan faktor lainnya yang memengaruhi asupan nutrisi, atau kebutuhan nutrisi yang meningkat akibat kondisi kesehatan yang suboptimal akibat penyakit, seperti diare akibat sanitasi lingkungan yang buruk atau infeksi saluran pernapasan akibat tidak diimunisasi.",
+                "Penyebab dari stunting bisa bermacam-macam, seperti kurangnya pengetahuan orang tua tentang pemberian ASI dan makanan pendamping ASI yang benar, kondisi kemiskinan, dan faktor lainnya yang memengaruhi asupan nutrisi, atau kebutuhan nutrisi yang meningkat akibat kondisi kesehatan yang suboptimal akibat penyakit, seperti diare akibat sanitasi lingkungan yang buruk atau infeksi saluran pernapasan akibat tidak diimunisasi.",
                 "Stunting dapat terjadi karena beberapa faktor, seperti gizi ibu selama hamil yang kurang baik, kehamilan pada usia remaja atau jarak kelahiran yang terlalu dekat, bayi lahir prematur atau dengan berat badan lahir rendah, makanan pendamping ASI yang tidak cukup baik, sering terkena infeksi, serta kondisi lingkungan yang kurang sehat. Semua faktor ini dapat memperlambat pertumbuhan dan perkembangan anak, sehingga terjadi stunting."
             ]
         },
         {
             "tag": "ciri_stunting",
             "patterns": [
-                "Apa saja gejala pada anak yang mengalami stunting?",
                 "Apa ciri-ciri anak yang mengalami stunting?",
+                "Apa saja gejala pada anak yang mengalami stunting?",
                 "tanda yang menunjukkan anak mengalami stunting",
                 "Bagaimana mengenali stunting pada anak?",
+                "Apa kondisi fisik yang ditunjukkan apabila anak mengalami stunting?",
                 "ciri anak yang mengalami stunting apa",
                 "anak yang mengalami stunting memiliki tanda seperti apa",
                 "apakah tanda dari anak stunting",
                 "apakah ciri dari anak stunting",
                 "stunting dapat dikenali dengan ciri fisik seperti apa",
-                "Apa kondisi fisik yang ditunjukkan apabila anak mengalami stunting?",
                 "Bagaimana cara mengenali ciri-ciri anak yang mengalami stunting?",
                 "Bagaimana cara mengidentifikasi stunting pada anak?",
                 "Bagaimana cara membedakan anak yang mengalami stunting dengan anak yang tidak mengalami stunting?",
@@ -177,7 +176,9 @@
             ],
             "responses": [
                 "Stunting ditandai dengan: 1. Tinggi badan kurang untuk usia: Anak yang mengalami stunting lebih pendek dari yang diharapkan berdasarkan standar pertumbuhan internasional. 2. Gangguan perkembangan fisik dan kognitif: Stunting dapat menyebabkan otot lemah, daya tahan yang berkurang, dan IQ yang lebih rendah. 3. Peningkatan risiko penyakit dan kematian: Anak yang mengalami stunting lebih rentan terhadap infeksi dan memiliki risiko lebih tinggi terkena penyakit yang dapat dicegah. 4. Persistensi dalam waktu: Dampak stunting berlangsung lama dan dapat bertahan hingga dewasa, mempengaruhi kesehatan, prestasi pendidikan, dan produktivitas ekonomi. 5. Transmisi intergenerasi: Stunting juga dapat diteruskan dari satu generasi ke generasi berikutnya, memperpanjang siklus gizi kurang.",
-                "Anak yang mengalami stunting memiliki beberapa ciri-ciri, antara lain pertumbuhan gigi yang terlambat, wajah terlihat lebih kecil atau lebih muda dibandingkan dengan teman sebayanya, pertumbuhan tubuh yang melambat, serta performa yang buruk dalam tes perhatian dan daya ingat. Selain itu, anak yang mengalami stunting juga dapat mengalami tanda-tanda pubertas yang lebih lambat muncul, serta pada usia 8-10 tahun, cenderung menjadi lebih pendiam dan kurang melakukan kontak mata dengan orang lain."
+                "Anak yang mengalami stunting memiliki beberapa ciri-ciri, antara lain pertumbuhan gigi yang terlambat, wajah terlihat lebih kecil atau lebih muda dibandingkan dengan teman sebayanya, pertumbuhan tubuh yang melambat, serta performa yang buruk dalam tes perhatian dan daya ingat. Selain itu, anak yang mengalami stunting juga dapat mengalami tanda-tanda pubertas yang lebih lambat muncul, serta pada usia 8-10 tahun, cenderung menjadi lebih pendiam dan kurang melakukan kontak mata dengan orang lain.",
+                "Gejala stunting pada anak antara lain bertubuh pendek, sering sakit, menurunnya kemampuan kognitif, gangguan endokrin, berat badan cenderung berkurang, wajah lebih muda dari anak seusianya, anak lebih pendiam, telat menstruasi, dan pertumbuhan gigi terlambat.",
+                "Berikut ini ciri-ciri stunting pada anak: Tinggi dan berat badan lebih kecil dibandingkan dengan anak seusianya. Anak rentan mengalami gangguan pada tulang. Mengalami gangguan tumbuh kembang. Rentan mengalami gangguan kesehatan. Terlihat lemas terus menerus. Kurang aktif. Itulah yang perlu diwaspadai terkait dengan ciri stunting pada anak. Pastikan melakukan pemeriksaan kesehatan anak setiap 1 hingga 2 bulan sekali."
             ]
         },
         {
@@ -212,41 +213,7 @@
             "responses": [
                 "Anak stunting dan anak yang pendek tidak sama. Anak pendek memiliki tinggi badan yang lebih rendah dari rata-rata anak sebaya yang sejenis kelaminnya, tetapi tetap memiliki proporsi tubuh yang seimbang. Sementara itu, anak stunting memiliki tinggi badan yang lebih rendah dari rata-rata anak sebaya yang sejenis kelaminnya dan juga memiliki proporsi tubuh yang tidak seimbang atau lebih kecil dari normal.",
                 "Anak yang pendek memiliki tinggi badan lebih rendah dari anak-anak sebaya sejenis kelaminnya, tetapi proporsi tubuhnya tetap seimbang. Sementara itu, anak stunting juga memiliki tinggi badan yang lebih rendah dari anak-anak sebaya sejenis kelaminnya, namun proporsi tubuhnya lebih kecil dari yang seharusnya dan tidak seimbang. Jadi, meskipun keduanya memiliki perbedaan dalam tinggi badan, anak stunting juga mengalami masalah proporsi tubuh yang tidak normal.",
-                "Perawakan pendek (klinis-individu) mengacu pada anak yang memiliki tinggi badan ≤ 2 standar deviasi (SD) dari rata-rata tinggi badan anak sebaya dengan jenis kelamin dan usia yang sama. Sementara stunting (kesehatan masyarakat-komunitas) merujuk pada penurunan tingkat pertumbuhan tubuh yang terjadi pada anak akibat kondisi kesehatan atau gizi yang kurang optimal. Hal ini dapat dilihat dari nilai tinggi badan anak yang ≤ 2SD dari standar pertumbuhan WHO, yang menunjukkan bahwa anak tersebut belum mencapai potensi pertumbuhan linier yang optimal."
-            ]
-        },
-        {
-            "tag": "1000_hpk",
-            "patterns": [
-                "Apa yang dimaksud dengan program 1000 HPK?",
-                "Apa definisi dari 1000 HPK?",
-                "Bagaimana pengertian 1000 HPK?",
-                "Apa itu Program 1000 HPK?",
-                "Apa arti dari 1000 HPK?",
-                "1000 HPK mempunyai maksud apa?",
-                "apakah yang dimaksud dengan 1000 HPK",
-                "Jelaskan apa pengertian dari 1000 hpk",
-                "sebutkan definisi dari 1000 HPK",
-                "Apakah makna dari 1000 HPK?",
-                "Apa saja yang perlu diketahui tentang Program 1000 HPK untuk mewujudkan pertumbuhan anak yang sehat?",
-                "Apa tujuan dilakukannya Program 1000 HPK?",
-                "Sebutkan pengertian Program 1000 HPK ",
-                "Definisi dari Program 1000 HPK adalah apa dan bagaimana cara kerjanya?",
-                "Apa konsep dasar dari Program 1000 HPK?",
-                "Jelaskan apa yang dimaksud dengan Program 1000 HPK",
-                "Apa itu Program 1000 HPK dan apa fungsinya?",
-                "Program 1000 HPK memiliki tujuan apa?",
-                "Apa itu Program 1000 HPK dan apa fungsinya?",
-                "Bagaimana pengertian Program 1000 HPK dalam konteks kesehatan anak?",
-                "Program 1000 HPK merujuk kepada apa?",
-                "Apa yang dimaksud dengan Program 1000 Hari Pertama Kehidupan (1000 HPK)?",
-                "Definisi Program 1000 HPK adalah apa?",
-                "Apa yang menjadi arti dari Program 1000 HPK?",
-                "Bagaimana penjelasan dari 1000 HPK?"
-            ],
-            "responses": [
-                "1000 HPK adalah kependekan dari 1000 Hari Pertama Kehidupan, yang merujuk pada periode waktu kritis dalam hidup seorang bayi, yaitu 24 jam pertama setelah kelahiran. Beberapa upaya penting yang dilakukan selama 1000 HPK antara lain: penilaian awal kondisi bayi, memberikan perawatan dasar bayi yang baik, inisiasi menyusui dini, serta deteksi dan penanganan dini komplikasi yang mungkin terjadi. Semua upaya ini dapat memainkan peran penting dalam membantu bayi melewati periode yang sangat penting ini dan memastikan pertumbuhannya yang sehat dan berkualitas.",
-                "Kegiatan 1000 HPK adalah serangkaian upaya penting yang dilakukan selama 24 jam pertama setelah kelahiran bayi untuk membantu bayi bertahan hidup dan tumbuh dengan sehat. Beberapa kegiatan penting dalam 1000 HPK antara lain: penilaian awal kondisi bayi, memberikan perawatan dasar yang baik, inisiasi menyusui dini, serta deteksi dan penanganan dini komplikasi yang mungkin terjadi."
+                "Perawakan pendek (klinis-individu) mengacu pada anak yang memiliki tinggi badan \u00e2\u2030\u00a4 2 standar deviasi (SD) dari rata-rata tinggi badan anak sebaya dengan jenis kelamin dan usia yang sama. Sementara stunting (kesehatan masyarakat-komunitas) merujuk pada penurunan tingkat pertumbuhan tubuh yang terjadi pada anak akibat kondisi kesehatan atau gizi yang kurang optimal. Hal ini dapat dilihat dari nilai tinggi badan anak yang \u00e2\u2030\u00a4 2SD dari standar pertumbuhan WHO, yang menunjukkan bahwa anak tersebut belum mencapai potensi pertumbuhan linier yang optimal."
             ]
         },
         {
@@ -263,9 +230,9 @@
                 "Bagaimana menciptakan sanitasi yang baik untuk menghindari stunting?",
                 "apa usaha dari sanitasi atau kebersihan yang dapat dilakukan untuk terhindar dari stunting?",
                 "Bagaimana sanitasi berperan dalam pencegahan stunting pada anak?",
-                "Apa manfaat sanitasi dalam mencegah stunting pada anak?",
+                "Apa contoh sanitasi untuk mencegah stunting pada anak?",
                 "Bagaimana pentingnya sanitasi dalam upaya mencegah stunting pada anak?",
-                "Apa dampak sanitasi yang baik terhadap pencegahan stunting pada anak?",
+                "Bagaimana sanitasi yang baik terhadap pencegahan stunting pada anak?",
                 "Bagaimana sanitasi membantu mengurangi risiko stunting pada anak?",
                 "Apa kaitan antara sanitasi dan pencegahan stunting pada anak?",
                 "Apa peran kebersihan lingkungan dalam mencegah stunting pada anak?",
@@ -276,10 +243,12 @@
                 "Apa saja hal-hal yang harus diperhatikan dalam upaya meningkatkan sanitasi untuk mencegah stunting pada anak?",
                 "Bagaimana peran masyarakat dalam meningkatkan sanitasi dan mencegah stunting pada anak?",
                 "Bagaimana cara menciptakan lingkungan yang sehat dan higienis untuk mencegah stunting pada anak?",
-                "Bagaimana sanitasi yang buruk dapat menyebabkan terjadinya stunting pada anak?"
+                "Bagaimana sanitasi yang baik yang dapat mencegah terjadinya stunting pada anak?"
             ],
             "responses": [
-                "Sulitnya akses air bersih dan sanitasi yang buruk dapat memicu terjadinya stunting. Sanitasi Total Berbasis Lingkungan dicanangkan pemerintah untuk mengurangi penyakit stunting. 5 pilar dari sanitasi berbasis lingkungan yaitu cuci tangan menggunakan sabun, pengelolaan air minum dan makanan rumah tangga, pengelolaan sampah rumah tangga, pengelolaan limbah cair rumah tangga, dan berhenti buang air sembarangan."
+                "Sulitnya akses air bersih dan sanitasi yang buruk dapat memicu terjadinya stunting. Terdapat pencegahan Sanitasi Total Berbasis Lingkungan dicanangkan pemerintah untuk mengurangi penyakit stunting. 5 pilar dari sanitasi berbasis lingkungan yaitu cuci tangan menggunakan sabun, pengelolaan air minum dan makanan rumah tangga, pengelolaan sampah rumah tangga, pengelolaan limbah cair rumah tangga, dan berhenti buang air sembarangan.",
+                "Sulitnya mendapatkan air bersih dan sanitasi yang buruk dapat menyebabkan anak mengalami stunting. Untuk mencegah stunting dengan perbaikan sanitasi, pemerintah menerapkan program Sanitasi Total Berbasis Lingkungan. Program ini terdiri dari 5 kegiatan, yaitu mencuci tangan dengan sabun, mengelola air minum dan makanan di rumah, mengelola sampah rumah tangga, mengelola limbah cair rumah tangga, dan tidak buang air sembarangan.",
+                "Keterbatasan air bersih dan sanitasi yang buruk dapat mengakibatkan terjadinya stunting pada anak. Untuk mengurangi stunting, pemerintah telah meluncurkan Sanitasi Total Berbasis Lingkungan yang terdiri dari lima kegiatan, yakni mencuci tangan dengan sabun, mengelola air minum dan makanan di rumah, mengelola sampah rumah tangga, mengelola limbah cair rumah tangga, dan tidak buang air sembarangan."
             ]
         },
         {
@@ -312,7 +281,9 @@
                 "Apa program atau kegiatan yang dapat dilakukan untuk mengatasi stunting pada anak?"
             ],
             "responses": [
-                "Stunting adalah masalah yang kompleks dan memerlukan pendekatan yang holistik. Ada beberapa langkah dan strategi yang dapat diambil untuk menanggulangi stunting, antara lain: Meningkatkan akses terhadap nutrisi yang tepat: Makanan yang seimbang dan bernutrisi harus tersedia dan terjangkau bagi semua orang. Hal ini dapat dilakukan dengan memperbaiki produksi dan distribusi makanan, serta menggalakkan kebijakan untuk memberi subsidi dan insentif pada petani untuk memproduksi makanan yang lebih sehat. Memperkuat kesehatan ibu dan anak: Memperkuat kesehatan ibu selama kehamilan dan persalinan serta memperkuat kesehatan anak selama tahun-tahun pertama kehidupan sangat penting dalam mencegah stunting. Program-program kesehatan seperti pemeriksaan kesehatan ibu dan anak secara berkala, penanganan penyakit dan gangguan kesehatan yang terkait dengan kekurangan gizi, dan imunisasi dapat membantu mencegah stunting. Peningkatan sanitasi dan akses terhadap air bersih: Penyakit yang disebabkan oleh sanitasi yang buruk dapat mempengaruhi penyerapan nutrisi dalam tubuh. Oleh karena itu, peningkatan sanitasi dan akses terhadap air bersih dapat membantu mencegah stunting. Pendidikan dan kesadaran gizi: Meningkatkan pendidikan dan kesadaran tentang gizi yang baik dapat membantu masyarakat untuk memahami pentingnya makanan yang seimbang dan bernutrisi untuk kesehatan anak-anak. Ini dapat dilakukan melalui kampanye edukasi, pelatihan, dan media sosial. Pendekatan multisektoral: Stunting memerlukan pendekatan yang holistik, yang melibatkan berbagai sektor seperti kesehatan, pendidikan, pertanian, sanitasi, dan lain-lain. Oleh karena itu, kolaborasi antara berbagai sektor dan pemangku kepentingan harus ditingkatkan untuk memperkuat tindakan penanggulangan stunting. Monitoring dan evaluasi: Monitoring dan evaluasi harus dilakukan secara terus-menerus untuk mengetahui efektivitas program-program dan tindakan penanggulangan stunting. Hal ini dapat membantu untuk memperbaiki program yang sudah ada dan memperkuat tindakan penanggulangan stunting yang lebih efektif di masa depan. Dalam mengatasi stunting, perlu diingat bahwa upaya pencegahan dan penanggulangan stunting harus dilakukan secara berkelanjutan dan berkesinambungan."
+                "Stunting adalah masalah yang kompleks dan memerlukan pendekatan yang holistik. Ada beberapa langkah dan strategi yang dapat diambil untuk menanggulangi stunting, antara lain: Meningkatkan akses terhadap nutrisi yang tepat: Makanan yang seimbang dan bernutrisi harus tersedia dan terjangkau bagi semua orang. Hal ini dapat dilakukan dengan memperbaiki produksi dan distribusi makanan, serta menggalakkan kebijakan untuk memberi subsidi dan insentif pada petani untuk memproduksi makanan yang lebih sehat. Memperkuat kesehatan ibu dan anak: Memperkuat kesehatan ibu selama kehamilan dan persalinan serta memperkuat kesehatan anak selama tahun-tahun pertama kehidupan sangat penting dalam mencegah stunting. Program-program kesehatan seperti pemeriksaan kesehatan ibu dan anak secara berkala, penanganan penyakit dan gangguan kesehatan yang terkait dengan kekurangan gizi, dan imunisasi dapat membantu mencegah stunting. Peningkatan sanitasi dan akses terhadap air bersih: Penyakit yang disebabkan oleh sanitasi yang buruk dapat mempengaruhi penyerapan nutrisi dalam tubuh. Oleh karena itu, peningkatan sanitasi dan akses terhadap air bersih dapat membantu mencegah stunting. Pendidikan dan kesadaran gizi: Meningkatkan pendidikan dan kesadaran tentang gizi yang baik dapat membantu masyarakat untuk memahami pentingnya makanan yang seimbang dan bernutrisi untuk kesehatan anak-anak. Ini dapat dilakukan melalui kampanye edukasi, pelatihan, dan media sosial. Pendekatan multisektoral: Stunting memerlukan pendekatan yang holistik, yang melibatkan berbagai sektor seperti kesehatan, pendidikan, pertanian, sanitasi, dan lain-lain. Oleh karena itu, kolaborasi antara berbagai sektor dan pemangku kepentingan harus ditingkatkan untuk memperkuat tindakan penanggulangan stunting. Monitoring dan evaluasi: Monitoring dan evaluasi harus dilakukan secara terus-menerus untuk mengetahui efektivitas program-program dan tindakan penanggulangan stunting. Hal ini dapat membantu untuk memperbaiki program yang sudah ada dan memperkuat tindakan penanggulangan stunting yang lebih efektif di masa depan. Dalam mengatasi stunting, perlu diingat bahwa upaya pencegahan dan penanggulangan stunting harus dilakukan secara berkelanjutan dan berkesinambungan.",
+                "Stunting merupakan masalah yang kompleks dan memerlukan pendekatan yang komprehensif. Ada beberapa langkah dan strategi yang dapat diambil untuk mengatasi stunting, seperti meningkatkan akses terhadap nutrisi yang tepat, memperkuat kesehatan ibu dan anak, meningkatkan sanitasi dan akses terhadap air bersih, meningkatkan kesadaran gizi dan pendidikan, menerapkan pendekatan multisektoral, dan melakukan monitoring dan evaluasi secara terus-menerus. Penting untuk memastikan bahwa upaya pencegahan dan penanggulangan stunting dilakukan secara berkelanjutan dan berkesinambungan.",
+                "Stunting merupakan masalah yang kompleks dan membutuhkan pendekatan yang komprehensif. Beberapa strategi dan langkah dapat diambil untuk menanggulangi stunting, termasuk meningkatkan akses terhadap nutrisi yang tepat dengan memperbaiki produksi dan distribusi makanan serta memberikan subsidi pada petani untuk memproduksi makanan yang lebih sehat. Selain itu, memperkuat kesehatan ibu dan anak selama kehamilan dan persalinan, meningkatkan sanitasi dan akses terhadap air bersih, dan meningkatkan kesadaran gizi dan pendidikan juga penting dalam mencegah stunting. Untuk mencapai hasil yang lebih efektif, diperlukan pendekatan multisektoral dan kolaborasi antara berbagai sektor dan pemangku kepentingan. Monitoring dan evaluasi juga harus dilakukan secara berkesinambungan untuk memperbaiki program yang sudah ada dan mengembangkan tindakan penanggulangan stunting yang lebih efektif di masa depan. Penting untuk diingat bahwa penanggulangan stunting harus dilakukan secara berkelanjutan."
             ]
         },
         {
@@ -321,12 +292,12 @@
                 "Nutrisi apa yang bisa diberikan untuk mencegah stunting?",
                 "bagaimana nutrisi yang diberikan pada anak untuk menghindari stunting?",
                 "Bagaimana nutrisi yang dapat mencegah stunting",
-                "Apakah nutrisi yang cukup dapat mencegah terjadinya stunting?",
+                "Apa nutrisi yang diberikan agar dapat mencegah terjadinya stunting?",
                 "Nutrisi seperti apa yang baik dan dapat mencegah stunting?",
-                "Mengapa anak-anak perlu makan makanan bernutrisi untuk mencegah stunting?",
-                "Apa makan yang baik untuk pencegahan stunting?",
+                "Bagaimana makanan bernutrisi untuk mencegah stunting pada anak-anak?",
+                "Apa makanan yang baik untuk pencegahan stunting?",
                 "Bagaimana nutrisi diberikan dalam menghindari stunting pada anak?",
-                "Makan dengan nutrisi seperti apa yang bisa melindungi anak dari stunting?",
+                "Makanan dengan nutrisi seperti apa yang bisa melindungi anak dari stunting?",
                 "Apa usaha dari pemberian nutrisi untuk mencegah stunting?",
                 "Bagaimana manajemen nutrisi yang bagus untuk mencegah stunting?",
                 "Jenis nutrisi apa yang dapat membantu mencegah stunting pada anak?",
@@ -334,7 +305,7 @@
                 "Apa saja asupan gizi yang diperlukan untuk mencegah stunting pada anak?",
                 "Apa saja nutrisi yang harus diperhatikan dalam pencegahan stunting pada anak?",
                 "Bagaimana cara memberikan nutrisi yang memadai untuk mencegah stunting pada anak?",
-                "Apa saja jenis makanan yang harus dikonsumsi untuk mencegah terjadinya stunting pada anak?",
+                "Apa saja rekomendasi pemberian nutrisi untuk mencegah terjadinya stunting pada anak?",
                 "Apa yang dapat dilakukan untuk memastikan anak mendapatkan nutrisi yang cukup dan mencegah stunting?",
                 "Nutrisi seperti apa yang dapat membantu anak tumbuh dengan normal dan mencegah stunting?",
                 "Bagaimana manajemen nutrisi yang efektif dalam mencegah stunting pada anak?",
@@ -345,14 +316,16 @@
                 "Nutrisi apa yang diperlukan untuk menghindari stunting pada anak?"
             ],
             "responses": [
-                "WHO merekomendasikan beberapa hal yang dapat dilakukan untuk memberikan gizi yang cukup bagi bayi dan anak, antara lain: Memberikan inisiasi menyusu dini kepada bayi yang dilahirkan, yaitu memberikan ASI pada bayi dalam waktu kurang dari 1 jam setelah lahir. Memberikan ASI secara eksklusif selama 6 bulan pertama kehidupan bayi, artinya bayi hanya diberikan ASI tanpa makanan atau minuman lain. Memberikan makanan pendamping ASI pada usia 6 bulan sambil tetap memberikan ASI, kemudian memberikan makanan pendamping ASI secara teratur. Memberikan makanan pendamping ASI yang tepat waktu dan dengan kandungan nutrisi yang cukup dan seimbang. Memberikan makanan pendamping ASI yang aman dan dengan cara yang benar."
+                "WHO merekomendasikan beberapa hal yang dapat dilakukan untuk memberikan gizi yang cukup bagi bayi dan anak, antara lain: Memberikan inisiasi menyusu dini kepada bayi yang dilahirkan, yaitu memberikan ASI pada bayi dalam waktu kurang dari 1 jam setelah lahir. Memberikan ASI secara eksklusif selama 6 bulan pertama kehidupan bayi, artinya bayi hanya diberikan ASI tanpa makanan atau minuman lain. Memberikan makanan pendamping ASI pada usia 6 bulan sambil tetap memberikan ASI, kemudian memberikan makanan pendamping ASI secara teratur. Memberikan makanan pendamping ASI yang tepat waktu dan dengan kandungan nutrisi yang cukup dan seimbang. Memberikan makanan pendamping ASI yang aman dan dengan cara yang benar.",
+                "Menurut rekomendasi dari WHO, ada beberapa cara untuk memastikan bayi dan anak-anak mendapatkan asupan gizi atau nutrisi yang cukup dan agar stunting dapat dihindari. Pertama, memberikan ASI pada bayi dalam waktu kurang dari satu jam setelah lahir. Kedua, memberikan ASI secara eksklusif selama enam bulan pertama kehidupan bayi, artinya bayi hanya diberikan ASI tanpa makanan atau minuman lain. Ketiga, memberikan makanan pendamping ASI pada usia enam bulan sambil tetap memberikan ASI, dan terus memberikan makanan pendamping ASI secara rutin. Keempat, pastikan makanan pendamping ASI yang diberikan tepat waktu dan mengandung nutrisi yang cukup dan seimbang. Terakhir, pastikan makanan pendamping ASI yang diberikan aman dan disiapkan dengan cara yang benar.",
+                "WHO merekomendasikan beberapa cara untuk memastikan bayi dan anak-anak menerima nutrisi yang cukup. Pertama, memberikan ASI dalam satu jam setelah bayi lahir. Kedua, memberikan ASI eksklusif selama enam bulan pertama. Ketiga, memberikan makanan pendamping ASI pada usia enam bulan sambil terus memberikan ASI dan secara rutin. Keempat, pastikan makanan pendamping ASI tepat waktu dan mengandung nutrisi yang seimbang. Terakhir, pastikan makanan pendamping ASI aman dan disiapkan dengan benar."
             ]
         },
         {
             "tag": "intervensi_gizi",
             "patterns": [
-                "Bagaimana intervensi gizi yang dapat dilakukan?",
-                "Bagaimana contoh intervensi gizi yang dapat dilakukan?",
+                "Bagaimana intervensi gizi yang dapat dilakukan untuk stunting?",
+                "Bagaimana contoh intervensi gizi yang dapat dilakukan untuk stunting?",
                 "Apa saja jenis-jenis intervensi gizi yang dapat diterapkan untuk mencegah stunting pada anak?",
                 "Bagaimana intervensi gizi dapat membantu memperbaiki kondisi anak yang mengalami stunting?",
                 "Apa saja program intervensi gizi yang dapat dilakukan untuk mencegah stunting pada anak?",
@@ -378,7 +351,9 @@
                 "Apa intervensi gizi yang dapat dilakukan pada anak stunting?"
             ],
             "responses": [
-                "Intervensi gizi spesifik adalah intervensi yang fokus pada penanganan masalah gizi yang spesifik, seperti pemberian makanan tambahan atau suplemen gizi pada anak-anak yang mengalami malnutrisi, serta penanganan masalah kesehatan terkait gizi seperti anemia, kekurangan vitamin A atau kurangnya asupan zat besi. Sedangkan intervensi gizi sensitif adalah intervensi yang berfokus pada pendekatan yang lebih holistik dalam meningkatkan kualitas gizi individu dan masyarakat. Intervensi gizi sensitif bertujuan untuk meningkatkan pemahaman, sikap, dan perilaku terkait gizi, seperti mempromosikan pemberian ASI eksklusif, pemberian makanan seimbang dan bergizi untuk keluarga, serta peningkatan sanitasi dan kesehatan lingkungan. Dalam pencegahan stunting, intervensi gizi sensitif memiliki peran yang penting karena stunting disebabkan oleh faktor-faktor yang kompleks, termasuk asupan gizi yang tidak memadai, kurangnya akses terhadap air bersih dan sanitasi, serta praktik kesehatan yang buruk. Oleh karena itu, intervensi gizi sensitif seperti pendidikan gizi, promosi ASI eksklusif, dan perbaikan sanitasi dan lingkungan menjadi sangat penting dalam mencegah stunting. Namun, pada kasus stunting yang parah, intervensi gizi spesifik seperti pemberian makanan tambahan atau suplemen gizi mungkin juga diperlukan untuk mempercepat pemulihan dan mencegah komplikasi lainnya."
+                "Terdapat 2 jenis intervensi gizi untuk stunting yang dapat dilakukan yaitu intervensi gizi spesifik dan sensitif. Intervensi gizi spesifik adalah intervensi yang fokus pada penanganan masalah gizi yang spesifik, seperti pemberian makanan tambahan atau suplemen gizi pada anak-anak yang mengalami malnutrisi, serta penanganan masalah kesehatan terkait gizi seperti anemia, kekurangan vitamin A atau kurangnya asupan zat besi. Sedangkan intervensi gizi sensitif adalah intervensi yang berfokus pada pendekatan yang lebih holistik dalam meningkatkan kualitas gizi individu dan masyarakat. Intervensi gizi sensitif bertujuan untuk meningkatkan pemahaman, sikap, dan perilaku terkait gizi, seperti mempromosikan pemberian ASI eksklusif, pemberian makanan seimbang dan bergizi untuk keluarga, serta peningkatan sanitasi dan kesehatan lingkungan. Dalam pencegahan stunting, intervensi gizi sensitif memiliki peran yang penting karena stunting disebabkan oleh faktor-faktor yang kompleks, termasuk asupan gizi yang tidak memadai, kurangnya akses terhadap air bersih dan sanitasi, serta praktik kesehatan yang buruk. Oleh karena itu, intervensi gizi sensitif seperti pendidikan gizi, promosi ASI eksklusif, dan perbaikan sanitasi dan lingkungan menjadi sangat penting dalam mencegah stunting. Namun, pada kasus stunting yang parah, intervensi gizi spesifik seperti pemberian makanan tambahan atau suplemen gizi mungkin juga diperlukan untuk mempercepat pemulihan dan mencegah komplikasi lainnya.",
+                "Ada 2 jenis intervensi gizi untuk mengatasi stunting, yaitu intervensi gizi spesifik dan sensitif. Intervensi gizi spesifik berfokus pada masalah gizi spesifik seperti pemberian makanan tambahan atau suplemen pada anak-anak yang mengalami malnutrisi dan penanganan masalah kesehatan terkait gizi. Sedangkan intervensi gizi sensitif bertujuan untuk meningkatkan pemahaman, sikap, dan perilaku terkait gizi, seperti mempromosikan pemberian ASI eksklusif, pemberian makanan bergizi untuk keluarga, dan meningkatkan sanitasi dan kesehatan lingkungan. Intervensi gizi sensitif sangat penting dalam pencegahan stunting karena stunting disebabkan oleh faktor-faktor yang kompleks. Namun, pada kasus stunting yang parah, intervensi gizi spesifik seperti pemberian makanan tambahan atau suplemen gizi juga dapat diperlukan untuk mempercepat pemulihan dan mencegah komplikasi.",
+                "Untuk mengatasi stunting, terdapat 2 jenis intervensi gizi, yakni intervensi gizi spesifik dan sensitif. Intervensi gizi spesifik memfokuskan pada masalah gizi khusus seperti memberikan makanan tambahan atau suplemen gizi pada anak-anak yang mengalami malnutrisi dan mengatasi masalah kesehatan terkait gizi. Sementara itu, intervensi gizi sensitif bertujuan untuk meningkatkan pemahaman, sikap, dan perilaku terkait gizi, seperti mendorong pemberian ASI eksklusif, memberikan makanan bergizi kepada keluarga, dan memperbaiki sanitasi dan kesehatan lingkungan. Intervensi gizi sensitif sangat penting dalam mencegah stunting karena stunting disebabkan oleh faktor-faktor kompleks. Namun, jika stunting sudah parah, maka intervensi gizi spesifik seperti memberikan makanan tambahan atau suplemen gizi mungkin diperlukan untuk mempercepat pemulihan dan mencegah komplikasi."
             ]
         },
         {
@@ -391,7 +366,7 @@
                 "Mengapa ASI sangat berharga dan direkomendasikan sebagai makanan eksklusif selama 6 bulan pertama kehidupan bayi?",
                 "Apa tujuan utama dari memberikan ASI eksklusif pada bayi?",
                 "Bagaimana ASI dapat memberikan manfaat bagi tumbuh kembang bayi?",
-                "Apakah ada kegunaan jika bayi diberikan ASI yang tidak cukup?",
+                "Apakah ada kegunaan jika bayi diberikan ASI yang cukup?",
                 "Sebutkan kegunaan dan manfaat dari ASI",
                 "Apa itu ASI dan apa perannya untuk bayi?",
                 "Apa arti dan faedah dari memberikan Air Susu Ibu (ASI)?",
@@ -421,13 +396,13 @@
             "tag": "keberhasilan_menyusui",
             "patterns": [
                 "Apa saja yang harus dilakukan untuk mengetahui keberhasilan menyusui?",
-                "Bagaimana cara mengetahui keberhasilan menyusui saat bayi sudah mulai tumbuh?",
+                "Bagaimana cara mengetahui keberhasilan menyusui?",
                 "Apa yang harus diperhatikan untuk mengetahui apakah pemberian ASI pada bayi sudah berhasil atau belum?",
                 "Bagaimana cara mengevaluasi keberhasilan pemberian ASI pada bayi?",
                 "Apa yang harus diperhatikan untuk mengetahui keberhasilan dalam memberikan ASI eksklusif pada bayi?",
                 "Bagaimana cara mengevaluasi keberhasilan pemberian ASI pada bayi?",
                 "Apa saja indikator keberhasilan dalam memberikan ASI pada bayi yang perlu diketahui?",
-                "Apa saja tanda-tanda bahwa ASI yang diberikan pada bayi sudah mencukupi kebutuhannya?",
+                "Apa saja tanda-tanda bahwa proses menyusui dikatakan berhasil?",
                 "Keberhasilan menyusui dapat dilihat dari mana saja?",
                 "Apa saja yang menjadi indikator bahwa ibu berhasil menyusui bayi?",
                 "Bagaimana cara mengevaluasi keberhasilan menyusui bayi?",
@@ -447,7 +422,9 @@
                 "Apa saja indikator keberhasilan pemberian ASI eksklusif pada bayi yang perlu diketahui?"
             ],
             "responses": [
-                "Beberapa hal untuk mengindentifikasi keberhasilan menyusui adalah: posisi menyusui dan perlekatan bayi pada payudara sudah benar dan efektif agar bayi dapat menghisap ASI dengan baik. Menjadwalkan pemberian ASI yang cukup, terutama pada awal-awal kelahiran saat bayi masih memerlukan frekuensi pemberian yang lebih sering. Mengenali tanda-tanda lapar bayi seperti mencari puting, menggeliat, dan menangis, sehingga dapat memberikan ASI dengan tepat waktu. Mengosongkan payudara secara teratur untuk merangsang produksi ASI dan memastikan kecukupan pasokan ASI. Memastikan kecukupan ASI yang diberikan, baik dari segi jumlah maupun kandungan nutrisinya, dengan memperhatikan tanda-tanda bahwa bayi sudah merasa kenyang setelah disusui. Serta didukungan oleh keluarga, pemerintah, dan tempat kerja, misalnya dengan memberikan cuti melahirkan yang cukup, ruang laktasi, dan fasilitas pendukung lainnya untuk memudahkan ibu dalam memberikan ASI."
+                "Beberapa hal untuk mengindentifikasi keberhasilan menyusui adalah: posisi menyusui dan perlekatan bayi pada payudara sudah benar dan efektif agar bayi dapat menghisap ASI dengan baik. Menjadwalkan pemberian ASI yang cukup, terutama pada awal-awal kelahiran saat bayi masih memerlukan frekuensi pemberian yang lebih sering. Mengenali tanda-tanda lapar bayi seperti mencari puting, menggeliat, dan menangis, sehingga dapat memberikan ASI dengan tepat waktu. Mengosongkan payudara secara teratur untuk merangsang produksi ASI dan memastikan kecukupan pasokan ASI. Memastikan kecukupan ASI yang diberikan, baik dari segi jumlah maupun kandungan nutrisinya, dengan memperhatikan tanda-tanda bahwa bayi sudah merasa kenyang setelah disusui. Serta didukungan oleh keluarga, pemerintah, dan tempat kerja, misalnya dengan memberikan cuti melahirkan yang cukup, ruang laktasi, dan fasilitas pendukung lainnya untuk memudahkan ibu dalam memberikan ASI.",
+                "Beberapa cara untuk mengetahui apakah menyusui berhasil atau tidak adalah dengan memerhatikan posisi dan perlekatan bayi saat menyusui agar bayi dapat menyusu dengan baik. Menjadwalkan pemberian ASI dengan cukup terutama pada periode awal kelahiran saat bayi membutuhkan frekuensi pemberian yang lebih sering. Mengenali tanda-tanda lapar bayi seperti mencari puting, menggeliat, dan menangis agar ASI bisa diberikan tepat waktu. Mengosongkan payudara secara teratur untuk merangsang produksi ASI dan memastikan pasokan ASI mencukupi. Memastikan jumlah dan kualitas ASI yang cukup dengan memperhatikan tanda-tanda bahwa bayi sudah merasa kenyang setelah disusui. Selain itu, dukungan dari keluarga, pemerintah, dan tempat kerja sangat penting, seperti memberikan cuti melahirkan yang cukup, ruang laktasi, dan fasilitas lain untuk membantu ibu dalam memberikan ASI.",
+                "Untuk menilai keberhasilan menyusui, perlu diperhatikan posisi dan perlekatan bayi saat menyusu agar bayi bisa menyusu dengan baik. Selain itu, penting untuk menjadwalkan pemberian ASI dengan cukup terutama pada periode awal kelahiran saat bayi membutuhkan frekuensi pemberian yang lebih sering. Juga, mengenali tanda-tanda lapar bayi seperti mencari puting, menggeliat, dan menangis agar ASI bisa diberikan tepat waktu. Penting juga untuk mengosongkan payudara secara teratur dan memastikan jumlah dan kualitas ASI yang cukup. Dukungan dari keluarga, pemerintah, dan tempat kerja sangat penting dalam membantu ibu memberikan ASI, seperti memberikan cuti melahirkan yang cukup, ruang laktasi, dan fasilitas lainnya."
             ]
         },
         {
@@ -480,7 +457,9 @@
                 "Bagaimana cara mengenali tanda-tanda bayi lapar sejak dini?"
             ],
             "responses": [
-                "Bayi memberikan tanda-tanda ketika mereka merasa lapar. Tanda-tandanya dapat dibagi menjadi tiga kategori. Pertama, ketika bayi merasa lapar, mereka akan menggerak-gerakkan kepala, membuka mulut, dan mencari payudara dengan kepala yang menengok ke kiri-kanan. Kedua, ketika bayi merasa sangat lapar, mereka akan meregangkan badan, bergerak dengan lebih intensif, dan memasukkan jari atau tangan ke mulut. Ketiga, ketika bayi merasa super lapar, mereka akan menangis, menjadi gelisah, dan wajahnya bisa memerah. Penting untuk mengetahui tanda-tanda ini agar bisa memberi ASI atau makanan yang cukup pada bayi dan mencegah mereka menjadi terlalu lapar."
+                "Bayi memberikan tanda-tanda ketika mereka merasa lapar. Tanda-tandanya dapat dibagi menjadi tiga kategori. Pertama, ketika bayi merasa lapar, mereka akan menggerak-gerakkan kepala, membuka mulut, dan mencari payudara dengan kepala yang menengok ke kiri-kanan. Kedua, ketika bayi merasa sangat lapar, mereka akan meregangkan badan, bergerak dengan lebih intensif, dan memasukkan jari atau tangan ke mulut. Ketiga, ketika bayi merasa super lapar, mereka akan menangis, menjadi gelisah, dan wajahnya bisa memerah. Penting untuk mengetahui tanda-tanda ini agar bisa memberi ASI atau makanan yang cukup pada bayi dan mencegah mereka menjadi terlalu lapar.",
+                "Bayi memberikan sinyal ketika mereka merasa lapar dan sinyal tersebut dapat dikenali dengan tiga cara. Pertama, bayi akan menggerakkan kepala, membuka mulut, dan mencari payudara dengan kepala yang menengok ke kiri-kanan. Kedua, jika bayi merasa sangat lapar, mereka akan meregangkan badan, bergerak dengan lebih intensif, dan memasukkan jari atau tangan ke mulut. Ketiga, jika bayi merasa sangat lapar, mereka akan menangis, menjadi gelisah, dan wajahnya bisa memerah. Penting bagi ibu untuk memperhatikan tanda-tanda ini agar dapat memberikan ASI atau makanan yang cukup kepada bayi dan mencegah mereka menjadi terlalu lapar.",
+                "Bayi memberikan tanda ketika mereka lapar, dan ada tiga jenis tanda yang dapat dikenali. Pertama, bayi akan menggerakkan kepala, membuka mulut, dan mencari payudara dengan kepala yang menengok ke kiri dan kanan. Kedua, jika bayi sangat lapar, mereka akan meregangkan badan, bergerak dengan lebih intensif, dan memasukkan jari atau tangan ke mulut. Ketiga, jika bayi merasa sangat lapar, mereka akan menangis, menjadi gelisah, dan wajahnya bisa memerah. Penting bagi ibu untuk mengetahui tanda-tanda ini agar dapat memberi ASI atau makanan yang cukup pada bayi dan mencegah mereka menjadi terlalu lapar."
             ]
         },
         {
@@ -490,13 +469,13 @@
                 "Bagaimana cara menilai apakah bayi mendapatkan cukup ASI?",
                 "Apa saja yang harus diperhatikan saat menilai kecukupan ASI pada bayi?",
                 "Apa tanda-tanda bahwa bayi mendapatkan cukup ASI?",
+                "Bagaimana cara memastikan bahwa bayi mendapatkan cukup ASI saat menyusui?",
                 "Bagaimana menilai apakah bayi mendapatkan ASI yang cukup?",
                 "Apa saja tanda yang menunjukkan bahwa bayi mendapatkan cukup ASI?",
                 "Bagaimana cara menilai apakah ASI yang diberikan sudah cukup untuk bayi yang baru lahir?",
                 "Bagaimana memperkirakan jika kecukupan ASI bayi sudah terpenuhi?",
                 "Adakah pengukuran untuk memastikan ASI pada bayi cukup?",
                 "Berapa lama waktu yang diperlukan untuk mengevaluasi kecukupan ASI pada bayi?",
-                "Bagaimana cara memastikan bahwa bayi mendapatkan cukup ASI saat menyusui?",
                 "Bagaimana mengukur kecukupan ASI yang diterima bayi?",
                 "Apa saja yang perlu dipertimbangkan saat mengevaluasi kecukupan ASI pada bayi?",
                 "Apa indikator bahwa bayi sudah mendapatkan cukup ASI?",
@@ -513,7 +492,9 @@
                 "Apakah ada kriteria yang digunakan untuk menilai kecukupan ASI yang diberikan pada bayi?"
             ],
             "responses": [
-                "Berikut adalah beberapa cara untuk menilai apakah bayi mendapatkan cukup ASI: Perhatikan frekuensi buang air kecil bayi. Jika bayi buang air kecil 6-8 kali dalam sehari, itu menunjukkan bahwa bayi mendapatkan cukup ASI. Perhatikan juga frekuensi buang air besar bayi. Bayi yang mendapatkan ASI cenderung buang air besar lebih sering dibandingkan dengan bayi yang mendapat susu formula. Pastikan bayi menyusu sesuai dengan kebutuhannya, yaitu on demand setiap 1-3 jam, sekitar 8-12 kali sehari. Jangan menunda-nunda memberikan ASI pada bayi ketika mereka menunjukkan tanda-tanda lapar. Pastikan bayi menyusu minimal 10 menit setiap payudara untuk memastikan mereka mendapatkan hindmilk, yaitu susu ASI yang mengandung lemak dan nutrisi penting lainnya. Perhatikan kenaikan berat badan bayi. Jika berat badan bayi terus bertambah sesuai dengan kisaran yang normal, itu menunjukkan bahwa bayi mendapatkan cukup ASI. Dengan memperhatikan hal-hal di atas, kita bisa menilai apakah bayi mendapatkan cukup ASI atau tidak. Jika masih ada kekhawatiran, konsultasikan dengan dokter atau konselor laktasi untuk mendapatkan saran lebih lanjut."
+                "Berikut adalah beberapa cara untuk menilai apakah bayi mendapatkan cukup ASI: Perhatikan frekuensi buang air kecil bayi. Jika bayi buang air kecil 6-8 kali dalam sehari, itu menunjukkan bahwa bayi mendapatkan cukup ASI. Perhatikan juga frekuensi buang air besar bayi. Bayi yang mendapatkan ASI cenderung buang air besar lebih sering dibandingkan dengan bayi yang mendapat susu formula. Pastikan bayi menyusu sesuai dengan kebutuhannya, yaitu on demand setiap 1-3 jam, sekitar 8-12 kali sehari. Jangan menunda-nunda memberikan ASI pada bayi ketika mereka menunjukkan tanda-tanda lapar. Pastikan bayi menyusu minimal 10 menit setiap payudara untuk memastikan mereka mendapatkan hindmilk, yaitu susu ASI yang mengandung lemak dan nutrisi penting lainnya. Perhatikan kenaikan berat badan bayi. Jika berat badan bayi terus bertambah sesuai dengan kisaran yang normal, itu menunjukkan bahwa bayi mendapatkan cukup ASI. Dengan memperhatikan hal-hal di atas, kita bisa menilai apakah bayi mendapatkan cukup ASI atau tidak. Jika masih ada kekhawatiran, konsultasikan dengan dokter atau konselor laktasi untuk mendapatkan saran lebih lanjut.",
+                "Ada beberapa cara untuk menilai apakah bayi mendapatkan cukup ASI. Pertama, perhatikan berapa kali bayi buang air kecil dalam sehari. Jika bayi buang air kecil sebanyak 6-8 kali, itu menandakan bahwa bayi mendapatkan cukup ASI. Kedua, perhatikan berapa kali bayi buang air besar. Bayi yang mendapatkan ASI biasanya buang air besar lebih sering daripada bayi yang mendapat susu formula. Ketiga, pastikan bayi menyusu sesuai dengan kebutuhannya, yaitu setiap 1-3 jam, sekitar 8-12 kali sehari. Jangan menunda memberikan ASI ketika bayi menunjukkan tanda-tanda lapar. Keempat, pastikan bayi menyusu minimal 10 menit setiap payudara untuk mendapatkan hindmilk, yaitu susu ASI yang kaya lemak dan nutrisi penting lainnya. Kelima, perhatikan kenaikan berat badan bayi. Jika berat badan bayi terus meningkat sesuai dengan kisaran yang normal, itu menandakan bahwa bayi mendapatkan cukup ASI. Dengan mengamati hal-hal ini, kita bisa mengetahui apakah bayi mendapatkan cukup ASI atau tidak. Jika masih khawatir, bisa konsultasi dengan dokter atau konselor laktasi untuk mendapatkan saran lebih lanjut.",
+                "Untuk mengevaluasi apakah bayi mendapatkan cukup ASI, ada beberapa cara yang dapat dilakukan. Pertama, perhatikan berapa kali bayi buang air kecil dalam sehari. Jika bayi buang air kecil sebanyak 6-8 kali, itu menunjukkan bahwa bayi mendapatkan cukup ASI. Kedua, perhatikan berapa kali bayi buang air besar. Bayi yang mendapatkan ASI biasanya buang air besar lebih sering daripada bayi yang diberi susu formula. Ketiga, pastikan bayi menyusu sesuai kebutuhan, yaitu setiap 1-3 jam, sekitar 8-12 kali sehari. Jangan menunda memberikan ASI ketika bayi menunjukkan tanda-tanda lapar. Keempat, pastikan bayi menyusu minimal 10 menit setiap payudara untuk mendapatkan hindmilk, yaitu susu ASI yang kaya lemak dan nutrisi penting lainnya. Kelima, perhatikan kenaikan berat badan bayi. Jika berat badan bayi terus meningkat sesuai dengan kisaran yang normal, itu menandakan bahwa bayi mendapatkan cukup ASI. Dengan memperhatikan hal-hal ini, kita dapat mengevaluasi apakah bayi mendapatkan cukup ASI atau tidak. Jika masih ada kekhawatiran, sebaiknya berkonsultasi dengan dokter atau konselor laktasi untuk mendapatkan saran lebih lanjut."
             ]
         },
         {
@@ -537,51 +518,18 @@
                 "Kepanjangan dari istilah MPASI dan mengapa pemberiannya perlu dilakukan?",
                 "Apa yang dimaksud dengan MPASI dan apa tujuannya?",
                 "Apa manfaat yang bisa diperoleh dengan memberikan MPASI?",
-                "MPASI dapat dijelaskan sebagai…",
+                "MPASI dapat dijelaskan sebagai\u00e2\u20ac\u00a6",
                 "MPASI memiliki arti apa",
+                "Pengertian MPASI adalah",
                 "MPASI kepanjangan dari",
-                "apa kepanjangan dari MPASI",
                 "apakah MPASI itu",
-                "apa definisi dari MPASI",
-                "Pengertian MPASI adalah"
+                "apa kepanjangan dari MPASI",
+                "apa definisi dari MPASI"
             ],
             "responses": [
-                "Pemberian MPASI (Makanan Pendamping ASI) pada bayi didefinisikan sebagai pemberian makanan lain selain ASI untuk memenuhi kebutuhan nutrisi yang diperlukan bayi. Pada usia 6 bulan, bayi membutuhkan makanan pendamping ASI, namun ASI tetap diberikan sebagai makanan utama hingga bayi berusia 2 tahun. Sebelum memberikan makanan lain, sebaiknya berikan ASI terlebih dahulu. Selain itu, pada usia 6 bulan, bayi juga perlu mendapatkan asupan vitamin A.",
-                "Definisi pemberian MPASI adalah memberikan makanan pendamping ASI pada bayi yang usianya sudah mencapai 6 bulan. Keuntungannya adalah untuk memenuhi kebutuhan nutrisi bayi, meningkatkan keterampilan motorik, dan memperkenalkan variasi rasa dan tekstur makanan pada bayi. MPASI yang tepat dapat mencegah terjadinya stunting dan gangguan pertumbuhan lainnya pada anak."
-            ]
-        },
-        {
-            "tag": "anjuran_MPASI",
-            "patterns": [
-                "Apa saja jenis makanan yang dapat diberikan sebagai MPASI dan bagaimana cara mempersiapkannya?",
-                "Bagaimana cara mempersiapkan makanan MPASI yang sehat dan bergizi untuk bayi?",
-                "Apa saja yang perlu diperhatikan saat memberikan MPASI pada bayi?",
-                "Bagaimana anjuran dalam pemberian makanan pendamping pada bayi?",
-                "Apakah terdapat saran saat memberikan MPASI pada anak?",
-                "Rekomendasi dalam pemberian makanan pendamping atau MPASI apa?",
-                "Bagaimana cara menyajikan makanan pendamping ASI yang tepat untuk bayi?",
-                "Apa saja tips dalam memilih bahan makanan untuk membuat MPASI yang baik untuk bayi?",
-                "Apa saja makanan yang direkomendasikan untuk diberikan sebagai MPASI pada bayi usia 6 bulan ke atas?",
-                "Bagaimana cara memastikan bahwa makanan pendamping yang diberikan kepada bayi sesuai anjuran",
-                "Apakah terdapat strategi dalam pemberian MPASI?",
-                "Apa saja strategi yang dapat diterapkan dalam pemberian MPASI pada bayi?",
-                "Bagaimana cara menyiapkan makanan pendamping ASI (MPASI) yang tepat dan sehat untuk bayi?",
-                "Apa saja jenis makanan yang sebaiknya diberikan sebagai MPASI?",
-                "Apa saja yang perlu diperhatikan saat memberikan makanan pendamping ASI pada bayi?",
-                "Bagaimana panduan dalam memberikan makanan pendamping ASI (MPASI) pada bayi?",
-                "Adakah saran khusus dalam memberikan makanan pendamping pada bayi?",
-                "Apa rekomendasi dalam memberikan makanan pendamping ASI untuk bayi?",
-                "Bagaimana cara menyajikan makanan pendamping yang tepat untuk bayi?",
-                "Apa saja tips dalam memilih bahan makanan untuk membuat MPASI yang sehat dan bergizi untuk bayi?",
-                "Apa saja jenis makanan yang disarankan sebagai MPASI untuk bayi yang sudah berusia 6 bulan ke atas?",
-                "Bagaimana memastikan bahwa makanan pendamping yang diberikan sesuai dengan anjuran dan kebutuhan bayi?",
-                "Apakah ada strategi khusus yang dapat diterapkan dalam memberikan makanan pendamping ASI pada bayi?",
-                "Bagaimana cara memilih dan mengkombinasikan makanan dalam MPASI agar bayi mendapatkan nutrisi yang cukup?",
-                "Bagaimana cara menyiapkan makanan pendamping ASI (MPASI) yang mudah dicerna untuk bayi?"
-            ],
-            "responses": [
-                "Ada 4 yang menjadi strategi dalam pemberian MPASI yaitu Tepat Waktu artinya berikan MPASI ketika ASI saja tidak cukup untuk memenuhi kebutuhan bayi (usia bayi sekitar 6 bulan). Adekuat berarti MPASI yang diberikan memenuhi kebutuhan energi, protein dan mikronutrien anak. Aman dan Higienis artinya proses persiapan dan pembuatan MPASI menggunakan cara, bahan, dan alat yang aman serta higienis. Responsif berarti MPASI diberikan secara konsisten sesuai dengan sinyal lapar atau kenyang dari anak.",
-                "Ketika memberikan makanan pendamping ASI (MPASI) pada bayi, ada empat strategi penting yang harus diperhatikan: Tepat waktu: MPASI harus diberikan pada waktu yang tepat, yaitu ketika ASI saja tidak cukup untuk memenuhi kebutuhan bayi (biasanya sekitar usia 6 bulan). Jangan terlalu terburu-buru memberikan MPASI sebelum waktunya, karena ASI tetap menjadi makanan utama yang paling baik bagi bayi. Adekuat: MPASI yang diberikan harus memenuhi kebutuhan energi, protein, dan nutrisi penting lainnya yang diperlukan oleh bayi untuk pertumbuhan dan perkembangan yang sehat. Aman dan Higienis: Persiapan dan pembuatan MPASI harus dilakukan dengan menggunakan cara, bahan, dan alat yang aman dan higienis. Hal ini akan membantu menghindari risiko terjadinya infeksi dan penyakit pada bayi. Responsif: MPASI harus diberikan secara konsisten sesuai dengan sinyal lapar atau kenyang yang diberikan oleh bayi. Ini berarti perlu memperhatikan tanda-tanda bayi yang lapar atau kenyang, dan memberikan makanan yang cukup atau tidak berlebihan. Dengan memperhatikan keempat strategi tersebut, orang tua dapat memberikan MPASI dengan tepat dan aman untuk mendukung pertumbuhan dan perkembangan bayi yang sehat. Jangan ragu untuk berkonsultasi dengan dokter atau konselor gizi jika ada kekhawatiran atau pertanyaan tentang pemberian MPASI."
+                "MPASI atau Makanan Pendamping ASI adalah jenis makanan yang diberikan pada bayi untuk melengkapi asupan nutrisi yang didapatkan bayi sebelum menginjak usia 1 tahun. Pemberian MP ASI bertujuan untuk melatih dan membiasakan bayi mengonsumsi makanan yang mengandung zat-zat gizi yang dibutuhkan oleh tubuhnya seiring dengan pertambahan usianya. Selain itu, MP ASI juga membantu mengembangkan kemampuan bayi dalam mengunyah dan menelan makanan. Pada usia 6 bulan, bayi membutuhkan makanan pendamping ASI, namun ASI tetap diberikan sebagai makanan utama hingga bayi berusia 2 tahun. Sebelum memberikan makanan lain, sebaiknya berikan ASI terlebih dahulu.",
+                "MPASI atau Makanan Pendamping ASI adalah jenis makanan yang diberikan pada bayi yang sudah berusia 6 bulan untuk memberikan nutrisi yang lebih banyak selain ASI. Tujuannya adalah untuk membiasakan bayi dengan makanan yang mengandung zat gizi yang dibutuhkan dan membantu mengembangkan kemampuan makan bayi. Namun, ASI masih harus menjadi makanan utama bagi bayi hingga usia 2 tahun. Jadi, sebelum memberikan makanan lain, pastikan memberikan ASI terlebih dahulu.",
+                "Makanan Pendamping ASI MPASI adalah jenis makanan yang diperlukan bayi saat mencapai usia 6 bulan untuk memenuhi kebutuhan nutrisinya selain ASI. Tujuan dari MPASI adalah membiasakan bayi dengan makanan yang mengandung nutrisi penting dan membantu bayi mengembangkan kemampuan mengunyah dan menelan. ASI tetap menjadi makanan utama bayi hingga usia 2 tahun. Oleh karena itu, sebelum memberikan makanan lain, ASI harus tetap menjadi prioritas utama."
             ]
         },
         {
@@ -590,7 +538,7 @@
                 "Apa saja aturan makan yang perlu diperhatikan untuk makan bayi?",
                 "Bagaimana pengaturan makanan MPASI yang sesuai?",
                 "Bagaimana cara menentukan jumlah dan frekuensi pemberian makanan pada bayi?",
-                "Apa saja prinsip-prinsip penting dalam pengaturan makanan bayi yang sehat dan bergizi?",
+                "Apa saja prinsip-prinsip penting dalam pengaturan makan pada bayi yang baik?",
                 "Apa aturan makan yang sesuai untuk bayi?",
                 "Sebutkan aturan makan untuk bayi saat pemberian MPASI",
                 "Bagaimana tata cara pemberian MPASI yang baik?",
@@ -598,7 +546,7 @@
                 "Aturan dari pemberian makan anak adalah",
                 "Apa petunjuk yang dapat dilakukan saat anak makan?",
                 "Apa saja panduan untuk mengatur makanan bayi ?",
-                "Berapa jumlah dan frekuensi pemberian makanan yang ideal untuk bayi?",
+                "Berapa frekuensi pemberian makanan yang ideal untuk bayi?",
                 "Apa prinsip dasar dalam pengaturan makanan bayi?",
                 "Apa peraturan makanan yang perlu diikuti saat memberikan MPASI pada bayi?",
                 "Bagaimana cara memberikan MPASI dengan benar sesuai aturan makan?",
@@ -614,7 +562,9 @@
                 "MPASI atau makanan pendamping yang baik, benar dan sesuai seperti apa"
             ],
             "responses": [
-                "Berikut adalah beberapa hal yang perlu diperhatikan saat memberi makan anak: Jadwal: Berikan makan pada waktu yang teratur, dan jangan menawarkan camilan atau makanan lain selain makanan utama. Usahakan makanan diberikan tidak lebih dari 30 menit. Lingkungan: Buat suasana makan yang menyenangkan dan siapkan serbet agar tidak berantakan. Pastikan tidak ada distraksi, seperti televisi atau mainan, dan jangan memberikan makanan sebagai hadiah. Prosedur: Berikan makanan dalam porsi kecil dan prioritaskan makanan utama sebelum minuman. Dorong anak untuk makan sendiri dan tawarkan kembali makanan secara netral jika anak menunjukkan tanda tidak mau makan. Jika setelah 10-15 menit anak tetap tidak mau makan, hentikan proses makan dan bersihkan mulut anak. Dengan memperhatikan hal-hal tersebut, proses memberi makan anak dapat lebih mudah dan menyenangkan bagi orang tua dan anak. Jangan lupa untuk memberikan makanan yang sehat dan bergizi untuk mendukung tumbuh kembang anak."
+                "Berikut adalah beberapa hal yang perlu diperhatikan saat memberi makan anak: Jadwal: Berikan makan pada waktu yang teratur, dan jangan menawarkan camilan atau makanan lain selain makanan utama. Usahakan makanan diberikan tidak lebih dari 30 menit. Lingkungan: Buat suasana makan yang menyenangkan dan siapkan serbet agar tidak berantakan. Pastikan tidak ada distraksi, seperti televisi atau mainan, dan jangan memberikan makanan sebagai hadiah. Prosedur: Berikan makanan dalam porsi kecil dan prioritaskan makanan utama sebelum minuman. Dorong anak untuk makan sendiri dan tawarkan kembali makanan secara netral jika anak menunjukkan tanda tidak mau makan. Jika setelah 10-15 menit anak tetap tidak mau makan, hentikan proses makan dan bersihkan mulut anak. Dengan memperhatikan hal-hal tersebut, proses memberi makan anak dapat lebih mudah dan menyenangkan bagi orang tua dan anak. Jangan lupa untuk memberikan makanan yang sehat dan bergizi untuk mendukung tumbuh kembang anak.",
+                "Beberapa hal yang perlu diperhatikan saat memberi makan anak adalah: menjadwalkan waktu makan secara teratur, menciptakan lingkungan makan yang menyenangkan, memberikan makanan utama sebelum minuman, dan mendorong anak untuk makan sendiri. Orang tua harus menghindari distraksi dan memberikan makanan dalam porsi kecil. Jika anak menunjukkan tanda-tanda tidak mau makan, maka tawarkan kembali makanan secara netral dan berhenti memberi makan jika anak tetap menolak. Pastikan makanan yang diberikan sehat dan bergizi untuk mendukung pertumbuhan dan perkembangan anak.",
+                "Terdapat beberapa aturan dalam pemberian makan MPASI diantaranya: Berikan makan pada jadwal yang tetap dan hindari memberikan camilan atau makanan lain selain makanan utama. Pastikan makanan diberikan dalam waktu tidak lebih dari 30 menit dan suasana makan yang menyenangkan dengan serbet agar tidak berantakan. Tidak ada distraksi seperti televisi atau mainan, dan jangan berikan makanan sebagai hadiah. Berikan makanan dalam porsi kecil dan utama sebelum minuman serta dorong anak untuk makan sendiri. Jika anak menunjukkan tanda tidak mau makan, tawarkan kembali makanan secara netral dan hentikan proses makan jika setelah 10-15 menit anak tetap tidak mau makan. Dengan memperhatikan hal-hal tersebut, proses memberi makan anak bisa lebih mudah dan menyenangkan untuk orang tua dan anak. Pastikan untuk memberikan makanan yang sehat dan bergizi untuk mendukung pertumbuhan dan perkembangan anak."
             ]
         },
         {
@@ -627,7 +577,7 @@
                 "Permisalan jadwal pemberian makanan pada bayi bagaimana",
                 "Bagaimana contoh jadwal pemberian MPASI yang memperhatikan kebutuhan nutrisi bayi dan pola makan keluarga?",
                 "Bagaimana contoh jadwal pemberian MPASI yang tepat untuk bayi usia 6 bulan?",
-                "Apa saja yang perlu diperhatikan dalam menyusun jadwal pemberian MPASI?",
+                "Apa ada contoh dalam menyusun jadwal pemberian MPASI?",
                 "Adakah contoh jadwal pemberian MPASI yang fleksibel dan mudah diikuti oleh orang tua?",
                 "Bagaimana contoh susunan waktu pemberian makan pada bayi?",
                 "Contoh bagaimana jadwal pemberian MPASI yang direkomendasikan untuk bayi?",
@@ -662,16 +612,16 @@
                 "Bagaimana cara menentukan jenis makanan MPASI yang sesuai dengan bulan keberadaan bayi?",
                 "Bagaimana pemberian makanan pendamping ASI yang tepat berdasarkan bulan keberadaan bayi?",
                 "Jelaskan pemberian MPASI yang sesuai dengan bulan bayi",
-                "Bagaimana cara menyusun menu makanan pendamping ASI yang bervariasi dan sehat untuk bayi dengan berbagai usia?",
+                "Bagaimana makanan pendamping ASI untuk bayi dengan berbagai usia?",
                 "Bagaimana cara menyusun rencana pemberian MPASI yang sesuai dengan bulan keberadaan bayi?",
-                "Apa saja jenis makanan MPASI yang perlu diperhatikan berdasarkan usia bayi agar asupan nutrisinya cukup?",
+                "Bagaimana frekuensi dan tekstur MPASI yang perlu diperhatikan berdasarkan usia bayi?",
                 "Bagaimana cara menyajikan makanan MPASI yang cocok dengan bulan atau usia bayi?",
-                "Apakah ada perbedaan dalam jenis makanan MPASI yang diberikan pada bayi usia 6 bulan dan 8 bulan?",
-                "Apa saja jenis makanan MPASI yang baik untuk bayi usia 9 bulan dan bagaimana cara mempersiapkannya dengan baik?",
+                "Apakah ada perbedaan dalam jenis makanan MPASI yang diberikan pada bayi usia 6 bulan dan 11 bulan?",
+                "Bagaimana tekstur MPASI yang baik untuk bayi usia 9 bulan dan bagaimana cara mempersiapkannya dengan baik?",
                 "Bagaimana cara menentukan jenis makanan MPASI yang sesuai dengan bulan atau usia bayi?",
                 "Bagaimana pemberian makanan pendamping ASI yang tepat berdasarkan bulan keberadaan bayi?",
                 "Jelaskan pedoman pemberian MPASI yang sesuai dengan bulan bayi",
-                "Bagaimana cara menyusun menu makanan pendamping ASI yang sehat dan bervariasi untuk bayi pada berbagai usia?",
+                "Bagaimana tekstur serta jumlah makanan pendamping ASI untuk bayi pada berbagai usia?",
                 "Apa saja yang perlu diperhatikan dalam membuat rencana pemberian MPASI yang sesuai dengan bulan bayi?",
                 "Bagaimana cara menyiapkan makanan pendamping ASI yang sehat dan bergizi untuk bayi berdasarkan bulan atau usianya?",
                 "Apa saja perbedaan dalam jenis makanan pendamping ASI yang diberikan pada bayi usia 6 bulan dan 10 bulan?",
@@ -680,7 +630,9 @@
                 "Apa saja rekomendasi dalam pemberian MPASI yang sesuai dengan usia bayi?"
             ],
             "responses": [
-                "MPASI 6-9 bulan: Frekuensi: berikan makanan pendamping ASI 2 kali sehari pada bayi berusia 6 bulan, Jumlah: berikan 2-3 sendok makanan pendamping ASI dalam sekali makan sebagai awalan, Tekstur: Mulai MPASI dengan makanan yang dihaluskan sehingga menjadi bubur kental (puree), aktif/responsif: bayi masih dalam tahap adaptasi dengan makanan pendamping ASI, sehingga ibu harus sabar dan memberi dorongan kepada bayi untuk makan, jangan memaksa bayi untuk menghabiskan makanan. MPASI 9-12 bulan: Frekuensi: berikan 3 hingga 4 kali makan dan 1 sampai 2 kali selingan setiap harinya, Jumlah: berikan makanan pendamping ASI sebanyak setengah mangkuk berukuran 250ml, Tekstur: berikan makanan yang dicincang halus (minced), dicincang kasar (chopped) atau makanan yang dapat dipegang oleh anak (finger food), aktif/responsif: ibu hendaknya bersabar dan selalu memberikan dorongan agar bayi mau makan, jangan memaksa nayi untuk makan, gunakan mangkuk tersendiri berukuran 250ml untuk memastikan jumlah asupan bayi. Sedangkan MPASI 12-23 bulan:  Frekuensi: berikan 3 hingga 4 kali makan dan 1 sampai 2 kali selingan setiap harinya, Jumlah: tingkatkan jumlah MPASI secara perlahan menjadi tiga perempat mangkuk berukuran 250ml sekali makan, Tekstur: berikan makanan keluarga yang dihaluskan atau dicincang seperlunya, aktif/responsif: ibu hendaknya bersabar dan selalu memberikan dorongan agar bayi mau makan, jangan memaksa nayi untuk makan, gunakan mangkuk tersendiri berukuran 250ml untuk memastikan jumlah asupan bayi."
+                "MPASI 6-9 bulan: Frekuensi: berikan makanan pendamping ASI 2 kali sehari pada bayi berusia 6 bulan, Jumlah: berikan 2-3 sendok makanan pendamping ASI dalam sekali makan sebagai awalan, Tekstur: Mulai MPASI dengan makanan yang dihaluskan sehingga menjadi bubur kental (puree), aktif/responsif: bayi masih dalam tahap adaptasi dengan makanan pendamping ASI, sehingga ibu harus sabar dan memberi dorongan kepada bayi untuk makan, jangan memaksa bayi untuk menghabiskan makanan. MPASI 9-12 bulan: Frekuensi: berikan 3 hingga 4 kali makan dan 1 sampai 2 kali selingan setiap harinya, Jumlah: berikan makanan pendamping ASI sebanyak setengah mangkuk berukuran 250ml, Tekstur: berikan makanan yang dicincang halus (minced), dicincang kasar (chopped) atau makanan yang dapat dipegang oleh anak (finger food), aktif/responsif: ibu hendaknya bersabar dan selalu memberikan dorongan agar bayi mau makan, jangan memaksa nayi untuk makan, gunakan mangkuk tersendiri berukuran 250ml untuk memastikan jumlah asupan bayi. Sedangkan MPASI 12-23 bulan:  Frekuensi: berikan 3 hingga 4 kali makan dan 1 sampai 2 kali selingan setiap harinya, Jumlah: tingkatkan jumlah MPASI secara perlahan menjadi tiga perempat mangkuk berukuran 250ml sekali makan, Tekstur: berikan makanan keluarga yang dihaluskan atau dicincang seperlunya, aktif/responsif: ibu hendaknya bersabar dan selalu memberikan dorongan agar bayi mau makan, jangan memaksa nayi untuk makan, gunakan mangkuk tersendiri berukuran 250ml untuk memastikan jumlah asupan bayi.",
+                "Untuk bayi berusia 6-9 bulan, berikan makanan pendamping ASI sebanyak 2 kali sehari dalam jumlah 2-3 sendok makanan pendamping ASI per makanan, dengan tekstur makanan yang dihaluskan menjadi bubur kental (puree). Ibu harus memberi dorongan kepada bayi untuk makan dan tidak memaksanya untuk menghabiskan makanan. Untuk bayi berusia 9-12 bulan, berikan makanan pendamping ASI sebanyak 3-4 kali makan dan 1-2 kali selingan per hari dengan jumlah sebanyak setengah mangkuk berukuran 250ml. Makanan harus dihaluskan atau dicincang halus (minced), dicincang kasar (chopped) atau berupa finger food. Ibu harus sabar dan memberikan dorongan kepada bayi untuk makan dan tidak memaksanya untuk makan. Untuk bayi berusia 12-23 bulan, frekuensi makanan sama dengan bayi usia 9-12 bulan, namun jumlah makanan harus ditingkatkan secara perlahan menjadi tiga perempat mangkuk berukuran 250ml per makanan. Makanan harus berasal dari makanan keluarga yang dihaluskan atau dicincang seperlunya. Ibu harus sabar dan memberikan dorongan kepada bayi untuk makan dan tidak memaksanya untuk makan.",
+                "Bayi berusia 6-9 bulan harus diberikan makanan pendamping ASI 2 kali sehari dengan jumlah 2-3 sendok makanan pendamping ASI per makanan. Makanan harus dihaluskan menjadi bubur kental dan ibu harus memberikan dorongan kepada bayi untuk makan. Bayi berusia 9-12 bulan harus diberikan makanan pendamping ASI sebanyak 3-4 kali makan dan 1-2 kali selingan per hari dengan jumlah setengah mangkuk berukuran 250ml. Makanan harus dihaluskan atau dicincang halus, dicincang kasar atau berupa finger food. Ibu harus sabar dan memberikan dorongan kepada bayi untuk makan. Bayi berusia 12-23 bulan harus diberikan makanan pendamping ASI dengan frekuensi yang sama dengan bayi usia 9-12 bulan, namun jumlah makanan harus ditingkatkan secara perlahan menjadi tiga perempat mangkuk berukuran 250ml per makanan. Makanan harus berasal dari makanan keluarga yang dihaluskan atau dicincang seperlunya. Ibu harus sabar dan memberikan dorongan kepada bayi untuk makan."
             ]
         },
         {
@@ -689,7 +641,7 @@
                 "Apa fakta tentang MPASI?",
                 "Sebutkan fakta yang harus diketahui tentang MPASI!",
                 "Apa saja pengetahuan yang perlu diketahui mengenai MPASI?",
-                "Apa saja mitos tentang MPASI yang perlu diketahui dan dihindari?",
+                "Apa saja ilmu tentang MPASI yang perlu diketahui dan dihindari?",
                 "Apa fakta-fakta penting yang harus diketahui tentang pemberian MPASI pada bayi?",
                 "Bisakah Anda memberikan beberapa fakta yang menarik tentang MPASI?",
                 "Apa saja hal-hal yang harus dipertimbangkan sebelum memberikan MPASI pada bayi?",
@@ -699,7 +651,7 @@
                 "Apa saja informasi yang perlu diketahui tentang pemberian MPASI pada bayi?",
                 "Sebutkan beberapa fakta penting terkait MPASI yang perlu dipahami.",
                 "Apa yang perlu diketahui tentang pengenalan makanan padat pada bayi?",
-                "Bagaimana cara menghindari mitos yang berkaitan dengan pemberian MPASI pada bayi?",
+                "Apa saja informasi untuk menghindari mitos yang berkaitan dengan pemberian MPASI pada bayi?",
                 "Apa saja hal yang perlu diperhatikan sebelum memulai pemberian MPASI pada bayi?",
                 "Bisakah Anda memberikan beberapa fakta menarik seputar makanan pendamping ASI?",
                 "Apa yang harus diperhatikan sebelum memberikan makanan pendamping ASI pada bayi?",
@@ -728,7 +680,7 @@
                 "Adakah data mengenai stunting di kalimantan barat?",
                 "Bagaimana prevelensi stunting di kalimantan barat?",
                 "Bagaimana keadaan stunting di wilayah Kalimantan Barat?",
-                "Bagaimana perbandingan angka stunting di Kalimantan Barat dengan wilayah lain di Indonesia?",
+                "Bagaimana Bagaimana angka stunting di Kalimantan Barat?",
                 "Berapa persentase anak yang mengalami stunting di Kalimantan Barat?",
                 "Sebutkan mengenai stunting di kalbar",
                 "Kondisi stunting kalimantan barat bagaimana?",
@@ -749,7 +701,9 @@
                 "Bagaimana situasi gizi anak di Kalimantan Barat?"
             ],
             "responses": [
-                "Menurut data Riskesdas tahun 2018, prevalensi stunting di Provinsi Kalimantan Barat adalah sebesar 31,8% di mana lebih tinggi dibandingkan angka prevalensi nasional."
+                "Menurut data Riskesdas 2018, prevalensi stunting di Kalimantan Barat sebesar 33,29%. Hal ini menunjukkan bahwa sekitar 1 dari 3 anak di Kalimantan Barat mengalami stunting atau pertumbuhan terhambat. Prevalensi stunting ini cukup tinggi dan perlu adanya perhatian serta tindakan untuk mengatasi masalah ini.",
+                "Data Riskesdas 2018 menunjukkan bahwa prevalensi stunting di Kalimantan Barat adalah sebesar 33,29%, yang berarti sekitar 1 dari 3 anak di wilayah tersebut mengalami pertumbuhan terhambat. Oleh karena itu, perlu diambil tindakan untuk mengatasi masalah ini karena prevalensi yang cukup tinggi.",
+                "Berdasarkan data Riskesdas 2018, sekitar 33,29% anak di Kalimantan Barat mengalami stunting atau pertumbuhan terhambat. Angka ini menunjukkan bahwa hampir 1 dari 3 anak di Kalimantan Barat mengalami stunting. Prevalensi stunting yang cukup tinggi ini memerlukan tindakan dan perhatian serius untuk mengatasi masalah ini."
             ]
         },
         {
@@ -757,7 +711,7 @@
             "patterns": [
                 "Bagaimana kondisi stunting di Indonesia?",
                 "Berapa tingkat prevelensi stunting nasional?",
-                "Apakah kondisi stunting di indonesia sudah sesuai WHO?",
+                "Bagaimana situasi stunting di indonesia?",
                 "Bagaimana kondisi stunting di Indonesia saat ini? Apakah masih mengkhawatirkan?",
                 "Berapa persentase tingkat prevelensi stunting nasional yang terakhir dilaporkan?",
                 "Bagaimana keadaan stunting di indonesia",
@@ -767,7 +721,7 @@
                 "apa status stunting di indonesia sekarang?",
                 "Bagaimana situasi stunting di Indonesia?",
                 "Berapa tingkat prevalensi stunting secara nasional di Indonesia?",
-                "Apakah angka stunting di Indonesia sudah memenuhi standar yang ditetapkan WHO?",
+                "Apakah angka stunting di Indonesia sudah rendah?",
                 "Bagaimana kondisi terkini stunting di Indonesia? Apakah masih memprihatinkan?",
                 "Berapa presentase terakhir tingkat prevalensi stunting di Indonesia yang dilaporkan?",
                 "Bagaimana keadaan stunting di seluruh Indonesia?",
@@ -777,12 +731,32 @@
                 "Bagaimana status terkini stunting di Indonesia?",
                 "Bagaimana tingkat keparahan stunting di Indonesia?",
                 "Sebutkan beberapa informasi tentang stunting di Indonesia.",
-                "Apa angka prevalensi stunting di Indonesia?",
+                "Berapa angka prevalensi stunting di Indonesia?",
                 "Apa saja informasi yang diperlukan untuk memahami stunting di Indonesia?",
                 "Apa yang bisa Anda sampaikan mengenai stunting di Indonesia?"
             ],
             "responses": [
-                "Menurut hasil Riskesdas 2018 (Riset Kesehatan Dasar), prevalensi stunting pada anak di Indonesia adalah 27,7%. Dalam angka absolut, terdapat sekitar 9,8 juta anak di Indonesia yang mengalami stunting. Prevalensi stunting di Indonesia mengalami penurunan dari Riskesdas 2013 yang sebesar 37,2%. Namun, penurunan tersebut masih belum mencapai target nasional yang ditetapkan dalam RPJMN (Rencana Pembangunan Jangka Menengah Nasional) 2015-2019 yaitu menurunkan prevalensi stunting menjadi 20% pada tahun 2019."
+                "Menurut hasil Riskesdas 2018 (Riset Kesehatan Dasar), prevalensi stunting pada anak di Indonesia adalah 30,8%. Dalam angka absolut, terdapat sekitar 9,8 juta anak di Indonesia yang mengalami stunting. Prevalensi stunting di Indonesia mengalami penurunan dari Riskesdas 2013 yang sebesar 37,2%. Namun, penurunan tersebut masih belum mencapai target nasional yang ditetapkan dalam RPJMN (Rencana Pembangunan Jangka Menengah Nasional) 2015-2019 yaitu menurunkan prevalensi stunting menjadi 20% pada tahun 2019.",
+                "Menurut hasil Riset Kesehatan Dasar (Riskesdas) tahun 2018, angka prevalensi stunting di Indonesia sebesar 30,8%. Angka ini menunjukkan penurunan dari hasil Riskesdas tahun 2013 yang mencapai 37,2%. Meskipun terjadi penurunan, angka stunting di Indonesia masih cukup tinggi dan menjadi salah satu isu kesehatan yang perlu mendapat perhatian serius.",
+                "Berdasarkan hasil Riskesdas 2018, sekitar 30,8% anak di Indonesia mengalami stunting, yang setara dengan sekitar 9,8 juta anak. Meskipun angka ini menunjukkan penurunan dari Riskesdas 2013 yang mencapai 37,2%, namun target nasional yang ditetapkan dalam RPJMN 2015-2019 yaitu menurunkan prevalensi stunting menjadi 20% pada tahun 2019 belum tercapai."
+            ]
+        },
+        {
+            "tag": "ates 123",
+            "patterns": [
+                "ejnjnrjnrkge"
+            ],
+            "responses": [
+                "wnjnwkr"
+            ]
+        },
+        {
+            "tag": "ates 123",
+            "patterns": [
+                "ejnjnrjnrkge"
+            ],
+            "responses": [
+                "wnjnwkr"
             ]
         }
     ]
