@@ -744,36 +744,35 @@
         {
             "tag": "1000_hpk",
             "patterns": [
-                "Apa yang dimaksud dengan program 1000 HPK?\r",
-                "Apa definisi dari 1000 HPK?\r",
-                "Bagaimana pengertian 1000 HPK?\r",
-                "Apa itu Program 1000 HPK?\r",
-                "Apa arti dari 1000 HPK\r",
-                "1000 HPK mempunyai maksud apa\r",
-                "apakah yang dimaksud dengan 1000 HPK\r",
-                "Jelaskan apa pengertian dari 1000 hpk\r",
-                "sebutkan definisi dari 1000 HPK\r",
-                "Apakah makna dari 1000 HPK?\r",
-                "Apa saja yang perlu diketahui tentang Program 1000 HPK untuk mewujudkan pertumbuhan anak yang sehat?\r",
-                "Apa tujuan dilakukannya Program 1000 HPK?\r",
-                "Sebutkan pengertian Program 1000 HPK \r",
-                "Definisi dari Program 1000 HPK adalah apa dan bagaimana cara kerjanya?\r",
-                "Apa konsep dasar dari Program 1000 HPK?\r",
-                "Jelaskan apa yang dimaksud dengan Program 1000 HPK\r",
-                "Apa itu Program 1000 HPK dan apa fungsinya?\r",
-                "Program 1000 HPK memiliki tujuan apa?\r",
-                "Apa itu Program 1000 HPK dan apa fungsinya?\r",
-                "Bagaimana pengertian Program 1000 HPK dalam konteks kesehatan anak?\r",
-                "Program 1000 HPK merujuk kepada apa?\r",
-                "Apa yang dimaksud dengan Program 1000 Hari Pertama Kehidupan (1000 HPK)?\r",
-                "Definisi Program 1000 HPK adalah apa?\r",
-                "Apa yang menjadi arti dari Program 1000 HPK?\r",
+                "Apa yang dimaksud dengan program 1000 HPK?",
+                "Apa definisi dari 1000 HPK?",
+                "Bagaimana pengertian 1000 HPK?",
+                "Apa itu Program 1000 HPK?",
+                "Apa arti dari 1000 HPK?",
+                "1000 HPK mempunyai maksud apa?",
+                "apakah yang dimaksud dengan 1000 HPK",
+                "Jelaskan apa pengertian dari 1000 hpk",
+                "sebutkan definisi dari 1000 HPK",
+                "Apakah makna dari 1000 HPK?",
+                "Apa saja yang perlu diketahui tentang Program 1000 HPK untuk mewujudkan pertumbuhan anak yang sehat?",
+                "Apa tujuan dilakukannya Program 1000 HPK?",
+                "Sebutkan pengertian Program 1000 HPK ",
+                "Definisi dari Program 1000 HPK adalah apa dan bagaimana cara kerjanya?",
+                "Apa konsep dasar dari Program 1000 HPK?",
+                "Jelaskan apa yang dimaksud dengan Program 1000 HPK",
+                "Apa itu Program 1000 HPK dan apa fungsinya?",
+                "Program 1000 HPK memiliki tujuan apa?",
+                "Apa itu Program 1000 HPK dan apa fungsinya?",
+                "Bagaimana pengertian Program 1000 HPK dalam konteks kesehatan anak?",
+                "Program 1000 HPK merujuk kepada apa?",
+                "Apa yang dimaksud dengan Program 1000 Hari Pertama Kehidupan (1000 HPK)?",
+                "Definisi Program 1000 HPK adalah apa?",
+                "Apa yang menjadi arti dari Program 1000 HPK?",
                 "Bagaimana penjelasan dari 1000 HPK?"
             ],
             "responses": [
-                "1000 HPK adalah kependekan dari 1000 Hari Pertama Kehidupan, yang merujuk pada periode waktu kritis dalam hidup seorang bayi, yaitu 24 jam pertama setelah kelahiran. Beberapa upaya penting yang dilakukan selama 1000 HPK antara lain: penilaian awal kondisi bayi, memberikan perawatan dasar bayi yang baik, inisiasi menyusui dini, serta deteksi dan penanganan dini komplikasi yang mungkin terjadi. Semua upaya ini dapat memainkan peran penting dalam membantu bayi melewati periode yang sangat penting ini dan memastikan pertumbuhannya yang sehat dan berkualitas.\r",
-                "Kegiatan 1000 HPK adalah serangkaian upaya penting yang dilakukan selama 24 jam pertama setelah kelahiran bayi untuk membantu bayi bertahan hidup dan tumbuh dengan sehat. Beberapa kegiatan penting dalam 1000 HPK antara lain: penilaian awal kondisi bayi, memberikan perawatan dasar yang baik, inisiasi menyusui dini, serta deteksi dan penanganan dini komplikasi yang mungkin terjadi.\r",
-                "1000 HPK (Hari Pertama Kehidupan) merujuk pada fase penting dalam hidup bayi, dimulai dari kehamilan hingga usia 2 tahun. Pada periode ini, penting untuk melakukan penilaian awal kondisi bayi, memberikan perawatan dasar, dan menangani komplikasi yang mungkin terjadi dengan cepat. Asupan gizi dan pola pengasuhan juga memainkan peran penting dalam membantu bayi tumbuh dengan sehat."
+                "1000 HPK adalah kependekan dari 1000 Hari Pertama Kehidupan, yang merujuk pada periode waktu kritis dalam hidup seorang bayi, yaitu 24 jam pertama setelah kelahiran. Beberapa upaya penting yang dilakukan selama 1000 HPK antara lain: penilaian awal kondisi bayi, memberikan perawatan dasar bayi yang baik, inisiasi menyusui dini, serta deteksi dan penanganan dini komplikasi yang mungkin terjadi. Semua upaya ini dapat memainkan peran penting dalam membantu bayi melewati periode yang sangat penting ini dan memastikan pertumbuhannya yang sehat dan berkualitas.",
+                "Kegiatan 1000 HPK adalah serangkaian upaya penting yang dilakukan selama 24 jam pertama setelah kelahiran bayi untuk membantu bayi bertahan hidup dan tumbuh dengan sehat. Beberapa kegiatan penting dalam 1000 HPK antara lain: penilaian awal kondisi bayi, memberikan perawatan dasar yang baik, inisiasi menyusui dini, serta deteksi dan penanganan dini komplikasi yang mungkin terjadi."
             ]
         },
         {
@@ -808,6 +807,24 @@
             "responses": [
                 "Ada 4 yang menjadi strategi dalam pemberian MPASI yaitu Tepat Waktu artinya berikan MPASI ketika ASI saja tidak cukup untuk memenuhi kebutuhan bayi (usia bayi sekitar 6 bulan). Adekuat berarti MPASI yang diberikan memenuhi kebutuhan energi, protein dan mikronutrien anak. Aman dan Higienis artinya proses persiapan dan pembuatan MPASI menggunakan cara, bahan, dan alat yang aman serta higienis. Responsif berarti MPASI diberikan secara konsisten sesuai dengan sinyal lapar atau kenyang dari anak.",
                 "Ketika memberikan makanan pendamping ASI (MPASI) pada bayi, ada empat strategi penting yang harus diperhatikan: Tepat waktu: MPASI harus diberikan pada waktu yang tepat, yaitu ketika ASI saja tidak cukup untuk memenuhi kebutuhan bayi (biasanya sekitar usia 6 bulan). Jangan terlalu terburu-buru memberikan MPASI sebelum waktunya, karena ASI tetap menjadi makanan utama yang paling baik bagi bayi. Adekuat: MPASI yang diberikan harus memenuhi kebutuhan energi, protein, dan nutrisi penting lainnya yang diperlukan oleh bayi untuk pertumbuhan dan perkembangan yang sehat. Aman dan Higienis: Persiapan dan pembuatan MPASI harus dilakukan dengan menggunakan cara, bahan, dan alat yang aman dan higienis. Hal ini akan membantu menghindari risiko terjadinya infeksi dan penyakit pada bayi. Responsif: MPASI harus diberikan secara konsisten sesuai dengan sinyal lapar atau kenyang yang diberikan oleh bayi. Ini berarti perlu memperhatikan tanda-tanda bayi yang lapar atau kenyang, dan memberikan makanan yang cukup atau tidak berlebihan. Dengan memperhatikan keempat strategi tersebut, orang tua dapat memberikan MPASI dengan tepat dan aman untuk mendukung pertumbuhan dan perkembangan bayi yang sehat. Jangan ragu untuk berkonsultasi dengan dokter atau konselor gizi jika ada kekhawatiran atau pertanyaan tentang pemberian MPASI."
+            ]
+        },
+        {
+            "tag": "ates 123",
+            "patterns": [
+                "ejnjnrjnrkge update"
+            ],
+            "responses": [
+                "wnjnwkr"
+            ]
+        },
+        {
+            "tag": "ates 123",
+            "patterns": [
+                "ejnjnrjnrkge"
+            ],
+            "responses": [
+                "wnjnwkr"
             ]
         }
     ]

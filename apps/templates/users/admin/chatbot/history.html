@@ -9,8 +9,8 @@
     </button>
 
     <!-- Modal -->
-    <div class="modal fade" id="modalll" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
+    <div class="modal fade show" id="modalll" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static" >
+      <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="exampleModalLabel">Petunjuk Pengelolaan Data {{ title }}</h5>
@@ -27,6 +27,7 @@
         </div>
       </div>
     </div>
+
 </div>
 {% endblock header %}
 
@@ -47,12 +48,10 @@
                     </thead>
                     <tbody>
                     {% for m in messages %}
-                    {% if m.status_data == True %}
-
                     <tr>
                         <th>{{ m.question }}</th>
                         <th>{{ m.response }}</th>
-                        <th>{{ m.date_posted.strftime("%d/%m/%Y, %H:%M") }}</th>
+                        <th>{{ m.date_posted.strftime("%d, %B %Y") }}</th>
                         <th>
                             <div>
         
@@ -74,7 +73,7 @@
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                                             
-                                            <form action="{{ url_for('chatbot.quest_delete', id=m.id) }}" method="POST">
+                                            <form action="{{ url_for('chatbot.history_delete', id=m.id) }}" method="POST">
                                                 <input type="submit" class="btn btn-danger" value="Delete">
                                             </form>
                                         </div>
@@ -84,8 +83,6 @@
                             </div>
                         </th>
                     </tr>
-
-                    {% endif %}
                     
                     {% endfor %}
                     </tbody>

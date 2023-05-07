@@ -27,9 +27,39 @@ class Chatbox {
         })
     }
 
-     prompt(chatbox) {
-        this.messages.push({ name: "Bot", message: "Selamat Datang di StuBot" });
+    prompt(chatbox) {
+        this.messages.push({ name: "Bot", message: "Selamat Datang di StuBot! Mari ajukan pertanyaan stunting di sini!" });
         this.updateChatText(chatbox)
+
+        const buttonsContainer = document.createElement('div');
+        buttonsContainer.classList.add('flex', 'justify-center');
+
+        const button1 = document.createElement('button');
+        button1.classList.add('bg-[#00b202]', 'hover:bg-green-700', 'text-white', 'font-medium', 'text-xs', 'py-1', 'px-2', 'rounded', 'mr-1', 'my-1');
+        button1.textContent = 'Tentang StuBot';
+        button1.addEventListener('click', () => {
+            this.messages.push({ name: "Bot", message: "StuBot merupakan bot yang dapat melayani pertanyaan umum tentang stunting ya!" });
+            this.updateChatText(chatbox);
+        });
+
+        const button2 = document.createElement('button');
+        button2.classList.add('bg-[#00b202]', 'hover:bg-green-700', 'text-white', 'font-medium', 'text-xs', 'py-1', 'px-2', 'rounded', 'mr-1', 'my-1');
+        button2.textContent = 'Contoh Pertanyaan';
+        button2.addEventListener('click', () => {
+            this.messages.push({ name: "Bot", message: "Contoh pertanyaan yang dapat kamu ajukan seperti: 1. Apa sih pengertian dari stunting? 2. Apa saja ciri-ciri dari anak stunting? Kamu juga dapat mengajukan pertanyaan lainnya seputar stunting loh!" });
+            this.updateChatText(chatbox);            
+        });
+
+        const button3 = document.createElement('button');
+        button3.classList.add('bg-[#00b202]', 'hover:bg-green-700', 'text-white', 'font-medium', 'text-xs', 'py-1', 'px-2', 'rounded', 'my-1');
+        button3.textContent = 'Pertanyaan Lain';
+        button3.addEventListener('click', () => {
+            this.messages.push({ name: "Bot", message: "Jika kamu ingin mengajukan pertanyaan lainnya yang belum dapat dijawab oleh StuBot, kamu bisa menuju ke menu kontak untuk mengajukan pertanyaan lewat email atau sosial media IDAI kalbar ya!" });
+            this.updateChatText(chatbox);            
+        });
+
+        buttonsContainer.append(button1, button2, button3);
+        chatbox.querySelector('.chatbox__btns').append(buttonsContainer);
     }
 
     toggleState(chatbox) {

@@ -23,8 +23,8 @@ for intent in intents['intents']:
         pattern = case_folding(pattern)
         pattern = clean_punct(pattern)
         words = tokenize(pattern)
-        words = stopwords_removal(words)
-        w = [stemmingIndo(w) for w in words]
+        w = stopwords_removal(words)
+        # w = [stemmingIndo(w) for w in words]
         all_words.extend(w)
         patternresponse.append((w, tag))
         all_pattern_done.append(w)

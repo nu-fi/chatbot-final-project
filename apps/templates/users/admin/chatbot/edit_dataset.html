@@ -1,0 +1,60 @@
+{% extends "layouts/base_dashboard.html" %}
+
+{% block header %}
+<div class="container">
+    <h1>Dataset Kategori {{ dataset.tag }}</h1>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#modalll">
+        <i class="fa-solid fa-circle-info"></i>&nbsp;Lihat Petunjuk
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modalll" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Petunjuk Pengelolaan {{ title }}</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>          
+          <div class="modal-body">
+            Untuk {{ title }}, Kolom Patterns/Pertanyaan diisi dengan contoh pertanyaan, minimal 5 kalimat dengan setiap kalimat baru dipisahkan dengan menekan enter. Kolom Jawaban diisi dengan jawaban dari pertanyaan, setiap kalimat atau jawaban baru dipisahkan dengan menekan enter.
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+{% endblock header %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+      <div class="col-12 col-md-12 col-lg-12">
+        <div class="card">
+          <section class="section m-4">
+            <form method="POST" action="{{ url_for('chatbot.edit_dataset', tag=dataset.tag) }}">
+                
+                <div class="form-group">
+                    <label for="patterns">Contoh atau Pola Pertanyaan:</label>
+                    <textarea class="form-control" id="patterns" name="patterns" style="width:100%; height:150px;">{{ '\n'.join(dataset.patterns) }}</textarea>
+                </div>
+                <div class="form-group">
+                    <label for="responses">Jawaban atau Respons:</label>
+                    <textarea class="form-control" id="responses" name="responses"  style="width:100%; height:150px;">{{ '\n'.join(dataset.responses) }}</textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Save</button>
+            </form>
+          </section>
+        </div>
+      </div>
+    </div>
+</div>
+
+{% endblock %}
+
+
+
