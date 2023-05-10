@@ -38,7 +38,8 @@ class Chatbox {
         button1.classList.add('bg-[#00b202]', 'hover:bg-green-700', 'text-white', 'font-medium', 'text-xs', 'py-1', 'px-2', 'rounded', 'mr-1', 'my-1');
         button1.textContent = 'Tentang StuBot';
         button1.addEventListener('click', () => {
-            this.messages.push({ name: "Bot", message: "StuBot merupakan bot yang dapat melayani pertanyaan umum tentang stunting ya!" });
+            this.messages.push({ name: "User", message: "Tentang StuBot" });
+            this.messages.push({ name: "Bot", message: "StuBot merupakan bot yang dapat melayani pertanyaan umum tentang stunting ya! Adapun informasi yang dapat disampaikan meliputi informasi stunting meliputi pengertian, ciri, pencegahan, dampak, perbedaan dengan pendek, serta tentang ASI, MPASI, tanda bayi yang lapar, data stunting di Kalimantan Barat dan lain-lain." });
             this.updateChatText(chatbox);
         });
 
@@ -46,7 +47,8 @@ class Chatbox {
         button2.classList.add('bg-[#00b202]', 'hover:bg-green-700', 'text-white', 'font-medium', 'text-xs', 'py-1', 'px-2', 'rounded', 'mr-1', 'my-1');
         button2.textContent = 'Contoh Pertanyaan';
         button2.addEventListener('click', () => {
-            this.messages.push({ name: "Bot", message: "Contoh pertanyaan yang dapat kamu ajukan seperti: 1. Apa sih pengertian dari stunting? 2. Apa saja ciri-ciri dari anak stunting? Kamu juga dapat mengajukan pertanyaan lainnya seputar stunting loh!" });
+            this.messages.push({ name: "User", message: "Contoh Pertanyaan" });
+            this.messages.push({ name: "Bot", message: "Contoh pertanyaan yang dapat kamu ajukan seperti: 1. Apa sih pengertian dari stunting? 2. Apa saja ciri-ciri dari anak stunting? 3. Bagaimana Perbedaan Pendek dan Stunting? Kamu juga dapat mengajukan pertanyaan lainnya seputar stunting loh!" });
             this.updateChatText(chatbox);            
         });
 
@@ -54,6 +56,7 @@ class Chatbox {
         button3.classList.add('bg-[#00b202]', 'hover:bg-green-700', 'text-white', 'font-medium', 'text-xs', 'py-1', 'px-2', 'rounded', 'my-1');
         button3.textContent = 'Pertanyaan Lain';
         button3.addEventListener('click', () => {
+            this.messages.push({ name: "User", message: "Pertanyaan Lain" });
             this.messages.push({ name: "Bot", message: "Jika kamu ingin mengajukan pertanyaan lainnya yang belum dapat dijawab oleh StuBot, kamu bisa menuju ke menu kontak untuk mengajukan pertanyaan lewat email atau sosial media IDAI kalbar ya!" });
             this.updateChatText(chatbox);            
         });

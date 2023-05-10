@@ -72,7 +72,7 @@ def dataset():
 @chatbot.route("/admin/dataset-training")
 @login_required
 def training():
-    subprocess.call("py apps/train.py", shell=True)
+    subprocess.call("py training.py", shell=True, cwd="apps")
     
     return redirect(url_for('chatbot.dataset'))
 

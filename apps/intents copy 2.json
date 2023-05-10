@@ -1,77 +1,6 @@
 {
     "intents": [
         {
-            "tag": "sapaan",
-            "patterns": [
-                "Hey",
-                "Apa Kabar?",
-                "Kabar Bagaimana ya?",
-                "Dengan siapa ya?",
-                "Hai",
-                "Halo",
-                "Selamat Siang",
-                "Selamat Malam",
-                "Selamat Pagi",
-                "Hei",
-                "Salam kenal!"
-            ],
-            "responses": [
-                "Halo, selamat datang",
-                "Hai Juga",
-                "Halo juga",
-                "Selamat Datang, di Stubot",
-                "Hai, ada yang bisa dibantu?",
-                "Halo, adakah pertanyaan yang ingin kamu ketahui tentang stunting?"
-            ]
-        },
-        {
-            "tag": "selamat_tinggal",
-            "patterns": [
-                "Bye Bye",
-                "Good Bye",
-                "Sampai Jumpa",
-                "Sampai ketemu kembali",
-                "Sampai jumpa kembali",
-                "sampai nanti",
-                "sampai nanti lagi",
-                "sampai ketemu lagi",
-                "sampai jumpa lagi",
-                "Selamat Tinggal",
-                "Sampai jumpa lain waktu!"
-            ],
-            "responses": [
-                "Bye Bye",
-                "Sampai jumpa kembali",
-                "Sampai jumpa lagi",
-                "Sampai nanti",
-                "Jangan lupa kembali lagi",
-                "Selamat beraktivitas dan sampai jumpa!"
-            ]
-        },
-        {
-            "tag": "terima_kasih",
-            "patterns": [
-                "berterima kasih",
-                "terima kasih kembali",
-                "terima kasih atas informasinya",
-                "saya berterima kasih",
-                "saya mengucapkan terima kasih",
-                "terima kasih banyak",
-                "sangat berterima kasih",
-                "saya ucapkan terima kasih",
-                "Terima Kasih",
-                "terima kasih atas bantuannya"
-            ],
-            "responses": [
-                "Terima Kasih Kembali",
-                "Senang bisa membantu",
-                "Sama-sama",
-                "Semoga informasi yang disampkaikan membantu",
-                "Tidak perlu berterima kasih, itu sudah menjadi tugas saya.",
-                "Tidak masalah, semoga informasinya bermanfaat."
-            ]
-        },
-        {
             "tag": "pengertian_stunting",
             "patterns": [
                 "Apa Pengertian Stunting?",
@@ -101,10 +30,11 @@
                 "Apakah Anda tahu apa maksud dari stunting?"
             ],
             "responses": [
-                "Wah, kamu tahu apa itu istilah stunting? Untuk lebih jelasnya stunting adalah kondisi di mana anak balita tidak bisa tumbuh seperti layaknya anak seusianya karena kekurangan gizi yang terjadi secara kronis. Ini membuat anak terlihat terlalu pendek dibandingkan dengan usianya.",
-                "Stunting itu dapat didefinisikan sebagai kondisi di mana tinggi badan anak terlalu pendek atau sangat pendek dibandingkan dengan usianya. Ini dapat ditentukan dengan melihat jarak antara tinggi badan anak dengan median tinggi badan pada usianya, dan jika anak tersebut melampaui -2 SD (deviasi standar), maka dapat dikatakan bahwa anak tersebut mengalami stunting.",
+                "Wah, kamu tahu apa itu stunting? Stunting adalah kondisi di mana anak balita tidak bisa tumbuh seperti layaknya anak seusianya karena kekurangan gizi yang terjadi secara kronis. Ini membuat anak terlihat terlalu pendek dibandingkan dengan usianya.",
+                "Stunting didefinisikan sebagai kondisi di mana tinggi badan anak terlalu pendek atau sangat pendek dibandingkan dengan usianya. Ini dapat ditentukan dengan melihat jarak antara tinggi badan anak dengan median tinggi badan pada usianya, dan jika anak tersebut melampaui -2 SD (deviasi standar), maka dapat dikatakan bahwa anak tersebut mengalami stunting.",
                 "Stunting didefinisikan sebagai kondisi tinggi badan anak yang pendek atau sangat pendek dibandingkan dengan usianya. Ini dapat ditentukan dengan membandingkan tinggi badan anak dengan median tinggi badan pada usianya dan jika anak tersebut melampaui -2 SD (deviasi standar), maka bisa dikatakan bahwa anak tersebut mengalami stunting.",
-                "Stunting adalah kondisi ketika anak balita gagal tumbuh karena kekurangan gizi yang berlangsung dalam jangka waktu lama, sehingga anak terlihat terlalu pendek dibandingkan dengan usia dan jenis kelaminnya. Kekurangan gizi dapat terjadi sejak bayi masih dalam kandungan atau setelah anak lahir, tetapi stunting biasanya baru terlihat ketika anak sudah berusia 2 tahun."
+                "Stunting adalah kondisi ketika anak balita gagal tumbuh karena kekurangan gizi yang berlangsung dalam jangka waktu lama, sehingga anak terlihat terlalu pendek dibandingkan dengan usia dan jenis kelaminnya. Kekurangan gizi dapat terjadi sejak bayi masih dalam kandungan atau setelah anak lahir, tetapi stunting biasanya baru terlihat ketika anak sudah berusia 2 tahun.",
+                "Stunting adalah kondisi di mana seseorang memiliki tinggi badan yang lebih pendek dari yang seharusnya sesuai dengan umur dan jenis kelaminnya, disebabkan oleh kekurangan gizi yang berlangsung lama atau kekurangan nutrisi kronis yang terus-menerus. "
             ]
         },
         {
@@ -667,10 +597,7 @@
                 "Apakah ada contoh pola jadwal pemberian makanan pada bayi?"
             ],
             "responses": [
-                "Berikut merupakan contoh dari jadwal pemberian MPASI: Berikut merupakan contoh dari jadwal pemberian MPASI: USIA 6 - 11 bulan [06.00 : ASI, 08.00 : Makan Pagi, 10.00 : ASI/Makanan Selingan, 12.00 : Makan Siang, 14.00 : ASI, 16.00 : Makanan Selingan, 18.00 : Makan Malam, 20.00 : ASI, 24.00 : ASI*, 03.00 : ASI*], USIA 12 - 23 bulan [06.00 : ASI, 08.00 : Makan Pagi, 10.00 : Makanan Selingan, 12.00 : Makan Siang, 14.00 : ASI, 16.00 : Makanan Selingan, 18.00 : Makan Malam, 20.00 : ASI, 24.00 : ASI*, 03.00 : ASI*] *Bila bayi/anak masih menghendaki",
-                "Contoh contoh dari jadwal pemberian MPASI yaitu -> USIA 6 - 11 bulan [06.00 : ASI, 08.00 : Makan Pagi, 10.00 : ASI/Makanan Selingan, 12.00 : Makan Siang, 14.00 : ASI, 16.00 : Makanan Selingan, 18.00 : Makan Malam, 20.00 : ASI, 24.00 : ASI*, 03.00 : ASI*], USIA 12 - 23 bulan [06.00 : ASI, 08.00 : Makan Pagi, 10.00 : Makanan Selingan, 12.00 : Makan Siang, 14.00 : ASI, 16.00 : Makanan Selingan, 18.00 : Makan Malam, 20.00 : ASI, 24.00 : ASI*, 03.00 : ASI*] *Bila bayi/anak masih menghendaki",
-                "Jadwal pemberian MPASI dapat mengikuti contoh berikut: USIA 6 - 11 bulan [06.00 : ASI, 08.00 : Makan Pagi, 10.00 : ASI/Makanan Selingan, 12.00 : Makan Siang, 14.00 : ASI, 16.00 : Makanan Selingan, 18.00 : Makan Malam, 20.00 : ASI, 24.00 : ASI*, 03.00 : ASI*], USIA 12 - 23 bulan [06.00 : ASI, 08.00 : Makan Pagi, 10.00 : Makanan Selingan, 12.00 : Makan Siang, 14.00 : ASI, 16.00 : Makanan Selingan, 18.00 : Makan Malam, 20.00 : ASI, 24.00 : ASI*, 03.00 : ASI*] *Bila bayi/anak masih menghendaki"
-
+                "Berikut merupakan contoh dari jadwal pemberian MPASI: https://drive.google.com/file/d/1ieRHwMPJ6hRMS9mxFbGZlONCayoO4j0d/view?usp=sharing"
             ]
         },
         {

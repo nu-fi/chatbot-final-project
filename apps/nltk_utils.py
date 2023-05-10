@@ -1,6 +1,6 @@
 import numpy as np
 from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
-import re, nltk
+import re, nltk, os
 from collections import Counter
 
 # Case Folding
@@ -59,7 +59,9 @@ def bag_of_words(tokenized_sentence, words):
 
 
 def words(text): return re.findall(r'\w+', text.lower())
-path_corpus = "apps/indonesian-words.txt"
+# path_corpus = "apps/indonesian-words.txt"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+path_corpus = os.path.join(BASE_DIR, 'indonesian-words.txt')
 WORDS = Counter(words(open(path_corpus).read()))
 
 def P(word, N=sum(WORDS.values())):

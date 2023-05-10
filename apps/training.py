@@ -3,11 +3,11 @@ import json
 import torch
 import torch.nn as nn
 from torch.utils.data import Dataset, DataLoader
-from apps.nltk_utils import tokenize, case_folding, clean_punct, stopwords_removal
-from apps.model import NeuralNet
+from nltk_utils import bag_of_words, tokenize, stemmingIndo, case_folding, clean_punct, stopwords_removal
+from model import NeuralNet
 from sklearn.feature_extraction.text import CountVectorizer
 
-with open('apps/intents.json', 'r') as f:
+with open('intents.json', 'r') as f:
     intents = json.load(f)
 
 all_words = [] # Semua Kata 
@@ -126,6 +126,6 @@ data = {
 "tags": tags
 }
 
-FILE = "apps/data.pth"
+FILE = "data.pth"
 torch.save(data, FILE)
 print(f'training complete. file saved to {FILE}')
