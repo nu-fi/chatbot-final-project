@@ -87,8 +87,8 @@
                         {% for c in cat %}
                         <tr>
                             <!-- <th scope="row"></th> -->
-                            <th>{{ c.name }}</th>
-                            <th>
+                            <td>{{ c.name }}</td>
+                            <td>
                                 <div >
                                     <button type="button" class="btn btn-success btn-md mr-1" data-toggle="modal" data-target="#updateModal{{c.id}}" title="Edit">
                                         <i class="fa-solid fa-pencil"></i>
@@ -151,7 +151,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </th>
+                            </td>
                         </tr>
                         
                         {% endfor %}

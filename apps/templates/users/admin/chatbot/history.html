@@ -49,10 +49,10 @@
                     <tbody>
                     {% for m in messages %}
                     <tr>
-                        <th>{{ m.question }}</th>
-                        <th>{{ m.response }}</th>
-                        <th>{{ m.date_posted.strftime("%d, %B %Y") }}</th>
-                        <th>
+                        <td>{{ m.question }}</td>
+                        <td>{{ m.response }}</td>
+                        <td>{{ m.date_posted.strftime("%d, %B %Y") }}</td>
+                        <td>
                             <div>
         
                                 <button class="btn btn-danger btn-md rounded-0" type="button" data-placement="top" title="Delete" data-toggle="modal" data-target="#deleteModal{{m.id}}"><i class="fa-solid fa-trash-can"></i></button>
@@ -81,7 +81,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </th>
+                        </td>
                     </tr>
                     
                     {% endfor %}

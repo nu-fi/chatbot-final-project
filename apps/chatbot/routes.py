@@ -67,7 +67,7 @@ def dataset():
     intents = json.dumps(intents)
     df = pd.read_json(StringIO(intents))
     
-    return render_template('users/admin/chatbot/dataset.html', title='Dataset', data=df)
+    return render_template('users/admin/chatbot/dataset.html', title='Manajemen Dataset', data=df)
 
 @chatbot.route("/admin/dataset-training")
 @login_required
@@ -117,7 +117,7 @@ def edit_dataset(tag):
 
         return redirect(url_for('chatbot.dataset'))
 
-    return render_template('users/admin/chatbot/edit_dataset.html', title='Edit Dataset', dataset=dataset)
+    return render_template('users/admin/chatbot/edit_dataset.html', title='Ubah Dataset', dataset=dataset)
 
 @chatbot.route("/admin/delete-dataset/<string:tag>", methods=['GET', 'POST', 'DELETE'])
 @login_required

@@ -40,11 +40,11 @@
                 
                 <div class="form-group">
                     <label for="patterns">Contoh atau Pola Pertanyaan:</label>
-                    <textarea class="form-control" id="patterns" name="patterns" style="width:100%; height:150px;">{{ '\n'.join(dataset.patterns) }}</textarea>
+                    <textarea class="form-control" id="patterns" name="patterns" style="width:100%; height:150px;" required>{{ '\n'.join(dataset.patterns) }}</textarea>
                 </div>
                 <div class="form-group">
                     <label for="responses">Jawaban atau Respons:</label>
-                    <textarea class="form-control" id="responses" name="responses"  style="width:100%; height:150px;">{{ '\n'.join(dataset.responses) }}</textarea>
+                    <textarea class="form-control" id="responses" name="responses"  style="width:100%; height:150px;" required>{{ '\n'.join(dataset.responses) }}</textarea>
                 </div>
                 <button type="submit" class="btn btn-primary">Save</button>
             </form>

@@ -3,7 +3,7 @@ import json
 import torch
 import torch.nn as nn
 from torch.utils.data import Dataset, DataLoader
-from apps.nltk_utils import tokenize, case_folding, clean_punct, stopwords_removal
+from apps.nltk_utils import tokenize, case_folding, clean_punct, stopwords_removal, stemmingIndo
 from apps.model import NeuralNet
 from sklearn.feature_extraction.text import CountVectorizer
 
@@ -23,8 +23,8 @@ for intent in intents['intents']:
         pattern = case_folding(pattern)
         pattern = clean_punct(pattern)
         words = tokenize(pattern)
-        w = stopwords_removal(words)
-        # w = [stemmingIndo(w) for w in words]
+        words = stopwords_removal(words)
+        w = [stemmingIndo(w) for w in words]
         all_words.extend(w)
         patternresponse.append((w, tag))
         all_pattern_done.append(w)
@@ -56,13 +56,13 @@ X_train = X.toarray()
 Y_train = np.array(Y_train)
 
 # Hyper-parameters
-num_epochs = 400
+num_epochs = 350
 batch_size = 16
-learning_rate = 0.004
+learning_rate = 0.005
 input_size = len(X_train[0])
-hidden_size = 22
+hidden_size = 20
 output_size = len(tags)
-dropout = 0.1
+dropout = 0.2
 
 print(input_size, output_size)
 

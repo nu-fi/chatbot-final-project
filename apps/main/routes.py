@@ -42,7 +42,7 @@ def predict():
     return jsonify(message)
 
 @main.route("/", methods=['GET', 'POST'])
-@main.route("/home", methods=['GET', 'POST'])
+@main.route("/beranda", methods=['GET', 'POST'])
 def home():
     artikel_terbaru = Article.query.order_by(Article.date_posted.desc()).first()
     artikel = Article.query.filter(Article.id < artikel_terbaru.id).limit(3)
@@ -61,11 +61,11 @@ def home():
         return redirect(url_for('main.search'))
         
 
-    return render_template('main/home.html', artikel=artikel, artikel_terbaru=artikel_terbaru, berita=berita, berita_terbaru=berita_terbaru, gall=gall, form=form, data_tp=data_tp)
+    return render_template('main/home.html', title="Beranda", artikel=artikel, artikel_terbaru=artikel_terbaru, berita=berita, berita_terbaru=berita_terbaru, gall=gall, form=form, data_tp=data_tp)
 
 @main.route("/profile")
 def profile():
-    return render_template('main/profile.html')
+    return render_template('main/profile.html', title="Profil Organisasi")
 
 @main.route("/search", methods=['GET', 'POST'])
 def search():
@@ -76,12 +76,12 @@ def search():
         searched = form.searched.data
         dokters = dokters.filter(or_(DataDokter.nama_lengkap.like('%' + searched + '%'), TempatPraktik.kota_praktik.like('%' + searched + '%')))
         dokters = dokters.order_by(DataDokter.nama_lengkap.desc()).all()
-        return render_template('main/search.html', dokters=dokters, form=form, data_tp=data_tp)
-    return render_template('main/search.html', dokters=dokters, form=form, data_tp=data_tp)
+        return render_template('main/search.html', title="Cari Dokter", dokters=dokters, form=form, data_tp=data_tp)
+    return render_template('main/search.html', title="Cari Dokter", dokters=dokters, form=form, data_tp=data_tp)
 
 @main.route("/kata-sambutan")
 def kata_sambutan():
-    return render_template('main/kata_sambutan.html')
+    return render_template('main/kata_sambutan.html', title="Sambutan Ketua")
 
 @main.route("/kontak", methods=['GET', 'POST'])
 def contact():
@@ -197,4 +197,4 @@ def file():
 @main.route("/berkas/<slug>")
 def file_view(slug):
     file = Files_Public.query.filter_by(slug=slug).first()
-    return render_template('main/berkas_detail.html', title='Berkas', file=file)
+    return render_template('main/berkas_detail.html', title='Berkas Detail', file=file)

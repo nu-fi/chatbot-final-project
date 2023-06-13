@@ -53,16 +53,16 @@
                 <tbody>
                     {% for n in news %}
                     <tr>
-                    <th>{{ n.title }}</th>
-                    <th>
+                    <td>{{ n.title }}</td>
+                    <td>
                         <div class="module line-clamp">
                             {{ n.content | safe}} 
                             </div>
-                    </th>
-                    <th>{{ n.categoryn.name }}</th>
+                    </td>
+                    <td>{{ n.categoryn.name }}</td>
     
-                    <th>{{ n.date_posted.strftime('%d %b, %Y') }}</th>
-                    <th>
+                    <td>{{ n.date_posted.strftime('%d %b, %Y') }}</td>
+                    <td>
                         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
     
                             <a href="{{ url_for('news.news_update', berita_id=n.id) }}" type="button" class="btn btn-success btn-md mr-1" title="Edit">
@@ -137,7 +137,7 @@
                                 </div>
                             </div>
                         </div>
-                    </th>
+                    </td>
                     </tr>
                     {% endfor %}
                 </tbody>
@@ -146,9 +146,7 @@
         </div>
       </div>
     </div>
-</div>
-
-    
+</div>    
 
 {% endblock content%}
 

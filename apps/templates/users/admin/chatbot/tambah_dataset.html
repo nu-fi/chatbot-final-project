@@ -34,42 +34,37 @@
 <div class="container">
   <div class="row">
     <div class="col-12 col-md-12 col-lg-12">
-      <div class="card">
         <section class="section m-4">
           <form action="/admin/tambah-dataset" method="post">
-            <div class="row">
-              <div class="col-12 col-md-6 col-lg-6">
-                <div class="card">
-                  
-                  <div class="card-body">
-                    
-                    <div class="form-group">
-                      <label>Kategori Pertanyaan</label>
-                      <input type="text" 
-                      name="tag"
-                      class="form-control" 
-                      value="{{ request.form['tag'] }}">
-                    </div>
-                    
-                    <div class="form-group">
-                      <label>Contoh Pertanyaan</label>
-                      <textarea class="form-control" name="patterns">{{ request.form['patterns'] }}</textarea>
-                    </div>
-      
-                    <div class="form-group">
-                      <label>Jawaban Pertanyaan</label>
-                      <textarea class="form-control" name="responses">{{ request.form['responses'] }}</textarea>
-                    </div>
-                    
-                  </div>
-                  <div class="card-footer text-right">
-                    <button class="btn btn-primary mr-1" type="submit">Tambah Dataset</button>
-                    <button class="btn btn-secondary" type="reset">Reset</button>
-                  </div>
-                </div>
-              </div>
+            <div class="card">
               
+              <div class="card-body">
+                
+                <div class="form-group">
+                  <label>Kategori Pertanyaan</label>
+                  <input type="text" 
+                  name="tag"
+                  class="form-control" 
+                  value="{{ request.form['tag'] }}" required>
+                </div>
+                
+                <div class="form-group">
+                  <label>Contoh Pertanyaan</label>
+                  <textarea class="form-control" name="patterns" style="width:100%; height:150px;" required>{{ request.form['patterns'] }}</textarea>
+                </div>
+  
+                <div class="form-group">
+                  <label>Jawaban Pertanyaan</label>
+                  <textarea class="form-control" name="responses" style="width:100%; height:150px;" required>{{ request.form['responses'] }}</textarea>
+                </div>
+                
+              </div>
+              <div class="card-footer text-right">
+                <button class="btn btn-primary mr-1" type="submit">Tambah Dataset</button>
+                <button class="btn btn-secondary" type="reset">Reset</button>
+              </div>
             </div>
+              
           </form>
         </section> 
       </div>

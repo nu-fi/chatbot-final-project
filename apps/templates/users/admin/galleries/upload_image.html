@@ -121,12 +121,12 @@
                         <tbody>
                         {% for i in imgs %}
                         <tr>
-                            <th>
+                            <td>
                                 <img src="{{url_for('static', filename='assets/img/galleries/' + i.image_gallery)}}" alt="" class="img-thumbnail img-fluid" style="width: 200px;">
-                            </th>
-                            <th>{{ i.gallery.title }}</th>
-                            <th>{{ i.description }}</th>
-                            <th>
+                            </td>
+                            <td>{{ i.gallery.title }}</td>
+                            <td>{{ i.description }}</td>
+                            <td>
                                 <div>
                                     <button type="button" class="btn btn-success btn-md mr-1" data-toggle="modal" data-target="#updateModal{{i.id}}" title="Edit">
                                         <i class="fa-solid fa-pencil"></i>
@@ -222,7 +222,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </th>
+                            </td>
                         </tr>
                         
                         {% endfor %}

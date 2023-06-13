@@ -90,8 +90,8 @@
                         <tbody>
                         {% for g in galls %}
                         <tr>
-                            <th>{{ g.title }}</th>
-                            <th>
+                            <td>{{ g.title }}</td>
+                            <td>
                                 <div>
 
                                     <button type="button" class="btn btn-success btn-md mr-1" data-toggle="modal" data-target="#updateModal{{g.id}}" title="Edit">
@@ -145,7 +145,7 @@
                                                         <div class="form-group">
                                                             <label>Nama Kategori:</label><br>
                                                             <input name="id" type="hidden" value=""><br>
-                                                            <input class="form-control" name="title" type="text" value="{{g.title}}">
+                                                            <input class="form-control" name="title" type="text" value="{{g.title}}" required>
                                                         </div>
                                                         <br>
                                                         <div class="form-group">
@@ -158,7 +158,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </th>
+                            </td>
                         </tr>
                         
                         {% endfor %}

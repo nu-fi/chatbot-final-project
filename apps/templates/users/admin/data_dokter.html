@@ -50,35 +50,30 @@
                     <tbody>
                     {% for d in data %}
                     <tr>
-                        <th>{{ d.nama_lengkap }}</th>
-                        <th>{{ d.no_hp }}</th>
-                        <th>{{ d.batas_sip }}</th>
+                        <td>{{ d.nama_lengkap }}</td>
+                        <td>{{ d.no_hp }}</td>
+                        <td>{{ d.batas_sip }}</td>
 
-                        <th>
+                        <td>
                           {% for dtp in data_tp %}
                           {% if d.user_id == dtp.user_id %}
                             {{ dtp.tempat_praktik }}<br>
                           {% endif %}
                           {% endfor %}
-                        </th>
-                        <th>
-                            <div>
-                                <a class="btn btn-info" href="{{ url_for('files.data_detail', id=d.user_id) }}" role="button" title="Lihat Data"><i class="fa-solid fa-eye"></i>&nbsp;</a>
-                                <!-- Trigger the modal with a button -->
-                            </div>
-                        </th>
-                        <th>
+                        </td>
+                        <td>
+                          <div>
+                            <a class="btn btn-info" href="{{ url_for('files.data_detail', id=d.user_id) }}" role="button" title="Lihat Data"><i class="fa-solid fa-eye"></i>&nbsp;</a>
+                          </div>
+                        </td>
+                        <td>
                             {% if d.status_data == false %}
                               <div class="p-2 mb-2 bg-danger text-white">Belum Diverifikasi</div>
-
                             {% else %}
                               <div class="p-2 mb-2 bg-success text-white">Terverifikasi</div>
-
-                              <!-- <a class="btn btn-primary border-0 shadow-none" >Terverifikasi </a> -->
                             {% endif %}
-                        </th>
-                    </tr>
-    
+                        </td>
+                    </tr>   
                     
                     {% endfor %}
                     </tbody>
