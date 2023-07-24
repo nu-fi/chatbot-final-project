@@ -5,7 +5,7 @@ from wtforms.validators import DataRequired
 
 class ImageForm(FlaskForm):
     picture = FileField('File Gambar', validators=[FileAllowed(['jpg', 'png', 'jpeg'])])
-    gallery = SelectField('Kategori Galeri', coerce=int)
+    gallery = SelectField('Kategori Galeri', coerce=int, validators=[DataRequired()])
     description = StringField('Deskripsi', validators=[DataRequired()])
     submit = SubmitField('Simpan Gambar')
 

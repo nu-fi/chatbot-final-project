@@ -8,17 +8,56 @@
           <p class="p-2 text-sm font-medium tracking-wider text-center uppercase">Ikatan Dokter Anak Indonesia <br>Cabang Kalimantan Barat</p>
           
           <div class="container mx-auto items-center pb-12">
-        
-            <div class="shadow-lg rounded-lg overflow-hidden">
-                <canvas class="p-10" id="chartLine"></canvas>
+            <br>
+            <h6 class="font-medium">Berikut merupakan grafik tinggi badan dan grafik berat badan sesuai usia anak berdasarkan rekomendasi WHO.</h6>
+            <br>
+            <div class="flex flex-wrap -mx-2">
+              <div class="w-full lg:w-6/12 px-2">
+                <label for="chart-select" class="block mb-2 text-sm font-medium text-gray-900">Pilih Jenis Grafik:</label>
+                <select id="chart-select" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                  <!-- <option selected>Pilih Jenis Grafik:</option> -->
+                  <option value="chart1">Berat Badan</option>
+                  <option value="chart2">Tinggi Badan</option>
+                </select>
+              </div>
+          
+              <div class="w-full lg:w-6/12 px-2">
+                <label for="age-select" class="block mb-2 text-sm font-medium text-gray-900">Pilih Usia Anak:</label>
+                <select id="age-select" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                  <!-- <option selected>Pilih Usia Anak:</option> -->
+                  <option value="0 Bulan">0 Bulan</option>
+                  <option value="1 Bulan">1 Bulan</option>
+                  <option value="2 Bulan">2 Bulan</option>
+                  <option value="3 Bulan">3 Bulan</option>
+                  <option value="4 Bulan">4 Bulan</option>
+                  <option value="5 Bulan">5 Bulan</option>
+                  <option value="6 Bulan">6 Bulan</option>
+                  <option value="7 Bulan">7 Bulan</option>
+                  <option value="8 Bulan">8 Bulan</option>
+                  <option value="9 Bulan">9 Bulan</option>
+                  <option value="10 Bulan">10 Bulan</option>
+                  <option value="11 Bulan">11 Bulan</option>
+                  <option value="12 Bulan">12 Bulan</option>
+                </select>
+              </div>
             </div>
+            <br>
+          
+            <div class="shadow-lg rounded-lg overflow-hidden">
+              <div id="chart-container"></div>
+            </div>
+          
+            <!-- <div class="wrap">
+              <div id="chart-year" class="chart-box"></div>
+              <div id="chart-quarter" class="chart-box"></div>
+            </div> -->
           </div>
-
+          
       </div>
   </section>
 </div>    
 
-<div class="chatbox">
+<div class="chatbox" style="z-index:100;">
     <div class="chatbox__support bg-green-900">
         <div class="chatbox__header bg-green-700 p-2">
             <div class="chatbox__image--header">
@@ -50,57 +89,621 @@
 <script type="text/javascript" src="{{ url_for('static', filename='assets/js/app.js') }}"></script>
 
 <!-- Required chart.js -->
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+
 
 <!-- Chart line -->
-<script>
-  const labels = ["0 Bulan", "1 Bulan", "2 Bulan", "3 Bulan", "4 Bulan", "5 Bulan", "6 Bulan", "7 Bulan", "8 Bulan", "9 Bulan", "10 Bulan", "11 Bulan"];
-  const data = {
-    labels: labels,
-    datasets: [
-      {
-        label: "Berat Badan Bayi Laki-Laki",
-        backgroundColor: "hsl(252, 82.9%, 67.8%)",
-        borderColor: "hsl(252, 82.9%, 67.8%)",
-        data: [2.8, 3.4, 4.2, 4.8, 5.3, 5.8, 6.3, 6.8, 7.2, 7.6, 7.9, 8.1],
-      },
-      //{
-        //label: "Berat Badan Bayi Laki-Laki",
-        //backgroundColor: "hsl(252, 82.9%, 67.8%)",
-        //borderColor: "hsl(252, 82.9%, 67.8%)",
-        //data: [3.9, 4.7, 5.5, 6.4, 7.1, 7.8, 8.4, 9.0, 9.5, 9.9, 10.3, 10.6],
-        //fill: 1
-      //},
-      {
-        label: "Berat Badan Bayi Perempuan",
-        backgroundColor: "HSL(320, 100%, 80%)",
-        borderColor: "HSL(320, 100%, 80%)",
-        data: [2.7, 3.3, 3.8, 4.4, 4.9, 5.3, 5.8, 6.2, 6.6, 6.9, 7.2, 7.5],
-      },
-    ],
-  };
-
-  const configLineChart = {
-    type: "line",
-    data: data,
-    options: {
-      responsive: true,
-      plugins: {
-        legend: {
-          position: 'top',
-        },
-        title: {
-          display: true,
-          text: 'Chart.js Line Chart'
-        }
+<!-- <script>
+  var options = {
+    series: [{
+      data: [{
+        x: '0 Bulan',
+        y: [1, 5]
+      }, {
+        x: '1 Bulan',
+        y: [4, 6]
+      }, {
+        x: '2 Bulan',
+        y: [5, 8]
+      }, {
+        x: '3 Bulan',
+        y: [3, 11]
+      }]
+    }, {
+      data: [{
+        x: '0 Bulan',
+        y: [2, 6]
+      }, {
+        x: '1 Bulan',
+        y: [1, 3]
+      }, {
+        x: '2 Bulan',
+        y: [7, 8]
+      }, {
+        x: '3 Bulan',
+        y: [5, 9]
+      }]
+    }],
+    chart: {
+      type: 'rangeBar',
+      height: 350
+    },
+    plotOptions: {
+      bar: {
+        horizontal: false
       }
     },
+    dataLabels: {
+      enabled: true
+    }
   };
 
-  var chartLine = new Chart(
-    document.getElementById("chartLine"),
-    configLineChart
-  );
+  var chart = new ApexCharts(document.querySelector('#range-chart'), options);
+  chart.render();
+
+  // Listen for select element change event
+  document.getElementById('age-select').addEventListener('change', function() {
+    var selectedTeam = this.value;
+    var newData = options.series.map(function(serie) {
+      return {
+        data: serie.data.filter(function(dataItem) {
+          return dataItem.x === selectedTeam;
+        })
+      };
+    });
+
+    chart.updateSeries(newData);
+  });
+</script> -->
+
+<script>
+  var options = {
+    chart1: {
+      series: [
+        {
+          name: 'Berat Badan Bayi Laki-Laki',
+          data: [
+            { x: '0 Bulan', y: [2.4, 3.8] },
+            { x: '1 Bulan', y: [3.5, 5] },
+            { x: '2 Bulan', y: [4.4, 6.2] },
+            { x: '3 Bulan', y: [5.1, 7.1] },
+            { x: '4 Bulan', y: [5.7, 7.7] },
+            { x: '5 Bulan', y: [6.1, 8.3] },
+            { x: '6 Bulan', y: [6.6, 8.7] },
+            { x: '7 Bulan', y: [6.8, 9.1] },
+            { x: '8 Bulan', y: [7, 9.5] },
+            { x: '9 Bulan', y: [7.2, 9.8] },
+            { x: '10 Bulan', y: [7.5, 10.1] },
+            { x: '11 Bulan', y: [7.7, 10.4] },
+            { x: '12 Bulan', y: [7.8, 10.9] }
+          ]
+        },
+        {
+          name: 'Berat Badan Bayi Perempuan',
+          data: [
+            { x: '0 Bulan', y: [2.5, 3.6] },
+            { x: '1 Bulan', y: [3.3, 4.7] },
+            { x: '2 Bulan', y: [4, 5.7] },
+            { x: '3 Bulan', y: [4.6, 6.5] },
+            { x: '4 Bulan', y: [5.1, 7.2] },
+            { x: '5 Bulan', y: [5.5, 7.7] },
+            { x: '6 Bulan', y: [5.8, 8.1] },
+            { x: '7 Bulan', y: [6.1, 8.5] },
+            { x: '8 Bulan', y: [6.4, 8.9] },
+            { x: '9 Bulan', y: [6.6, 9.2] },
+            { x: '10 Bulan', y: [6.8, 9.5] },
+            { x: '11 Bulan', y: [7, 9.8] },
+            { x: '12 Bulan', y: [7.1, 9.9] }
+          ]
+        }
+      ],
+      chart: {
+        type: 'rangeBar',
+        height: 400
+      },
+      plotOptions: {
+        bar: {
+          horizontal: false
+        }
+      },
+      dataLabels: {
+        enabled: false,
+      }
+      
+    },
+    chart2: {
+      series: [
+        {
+          name: 'Tinggi Badan Laki-Laki',
+          data: [
+            { x: '0 Bulan', y: [46.3, 53.4] },
+            { x: '1 Bulan', y: [51.1, 58.4] },
+            { x: '2 Bulan', y: [54.7, 62.2] },
+            { x: '3 Bulan', y: [57.6, 65.3] },
+            { x: '4 Bulan', y: [60.0, 67.8] },
+            { x: '5 Bulan', y: [61.9, 69.9] },
+            { x: '6 Bulan', y: [63.6, 71.6] },
+            { x: '7 Bulan', y: [65.1, 73.2] },
+            { x: '8 Bulan', y: [66.5, 74.7] },
+            { x: '9 Bulan', y: [67.7, 76.2] },
+            { x: '10 Bulan', y: [69.0, 77.6] },
+            { x: '11 Bulan', y: [70.2, 78.9] },
+            { x: '12 Bulan', y: [71.3, 80.2] }
+          ]
+        },
+        {
+          name: 'Tinggi Badan Perempuan',
+          data: [
+            { x: '0 Bulan', y: [45.6, 52.7] },
+            { x: '1 Bulan', y: [50.0, 57.4] },
+            { x: '2 Bulan', y: [53.2, 60.9] },
+            { x: '3 Bulan', y: [55.8, 63.8] },
+            { x: '4 Bulan', y: [58.0, 66.2] },
+            { x: '5 Bulan', y: [59.9, 68.2] },
+            { x: '6 Bulan', y: [61.5, 70.0] },
+            { x: '7 Bulan', y: [62.9, 71.6] },
+            { x: '8 Bulan', y: [64.3, 73.2] },
+            { x: '9 Bulan', y: [65.6, 74.7] },
+            { x: '10 Bulan', y: [66.8, 76.1] },
+            { x: '11 Bulan', y: [68.0, 77.5] },
+            { x: '12 Bulan', y: [69.2, 78.9] }
+          ]
+        }
+      ],
+      chart: {
+        type: 'rangeBar',
+        height: 400
+      },
+      plotOptions: {
+        bar: {
+          horizontal: false
+        }
+      },
+      dataLabels: {
+        enabled: false,
+      }
+    }
+  };
+  
+  var chart;
+  var selectedChart = 'chart1'; // Initial selected chart
+  var selectedTeam = '0 Bulan'; // Initial selected team
+  
+  function createChart() {
+    chart = new ApexCharts(document.querySelector('#chart-container'), options[selectedChart]);
+    chart.render();
+  }
+  
+  function updateChart() {
+    var newData = options[selectedChart].series.map(function(serie) {
+      return {
+        name: serie.name,
+        data: serie.data.filter(function(dataItem) {
+          return dataItem.x === selectedTeam;
+        })
+      };
+    });
+    chart.updateSeries(newData);
+  }
+  
+  // Listen for chart select element change event
+  document.getElementById('chart-select').addEventListener('change', function() {
+    selectedChart = this.value;
+    chart.destroy();
+    createChart();
+    updateChart();
+  });
+  
+  // Listen for team select element change event
+  document.getElementById('age-select').addEventListener('change', function() {
+    selectedTeam = this.value;
+    updateChart();
+  });
+  
+  // Initialize the chart
+  createChart();
+  
 </script>
 
+<script type="text/javascript">
+  /**
+   * Randomize array element order in-place.
+   * Using Durstenfeld shuffle algorithm.
+   */
+   function shuffleArray(array) {
+    for (var i = array.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var temp = array[i];
+      array[i] = array[j];
+      array[j] = temp;
+    }
+    return array;
+  }
+  
+  var arrayData = [
+    {
+      y: 400,
+      quarters: [
+        {
+          x: "Q1",
+          y: 120
+        },
+        {
+          x: "Q2",
+          y: 90
+        },
+        {
+          x: "Q3",
+          y: 100
+        },
+        {
+          x: "Q4",
+          y: 90
+        }
+      ]
+    },
+    {
+      y: 430,
+      quarters: [
+        {
+          x: "Q1",
+          y: 120
+        },
+        {
+          x: "Q2",
+          y: 110
+        },
+        {
+          x: "Q3",
+          y: 90
+        },
+        {
+          x: "Q4",
+          y: 110
+        }
+      ]
+    },
+    {
+      y: 448,
+      quarters: [
+        {
+          x: "Q1",
+          y: 70
+        },
+        {
+          x: "Q2",
+          y: 100
+        },
+        {
+          x: "Q3",
+          y: 140
+        },
+        {
+          x: "Q4",
+          y: 138
+        }
+      ]
+    },
+    {
+      y: 470,
+      quarters: [
+        {
+          x: "Q1",
+          y: 150
+        },
+        {
+          x: "Q2",
+          y: 60
+        },
+        {
+          x: "Q3",
+          y: 190
+        },
+        {
+          x: "Q4",
+          y: 70
+        }
+      ]
+    },
+    {
+      y: 540,
+      quarters: [
+        {
+          x: "Q1",
+          y: 120
+        },
+        {
+          x: "Q2",
+          y: 120
+        },
+        {
+          x: "Q3",
+          y: 130
+        },
+        {
+          x: "Q4",
+          y: 170
+        }
+      ]
+    },
+    {
+      y: 580,
+      quarters: [
+        {
+          x: "Q1",
+          y: 170
+        },
+        {
+          x: "Q2",
+          y: 130
+        },
+        {
+          x: "Q3",
+          y: 120
+        },
+        {
+          x: "Q4",
+          y: 160
+        }
+      ]
+    }
+  ];
+  
+  function makeData() {
+    var dataSet = shuffleArray(arrayData);
+  
+    var dataYearSeries = [
+      {
+        x: "2011",
+        y: dataSet[0].y,
+        color: colors[0],
+        quarters: dataSet[0].quarters
+      },
+      {
+        x: "2012",
+        y: dataSet[1].y,
+        color: colors[1],
+        quarters: dataSet[1].quarters
+      },
+      {
+        x: "2013",
+        y: dataSet[2].y,
+        color: colors[2],
+        quarters: dataSet[2].quarters
+      },
+      {
+        x: "2014",
+        y: dataSet[3].y,
+        color: colors[3],
+        quarters: dataSet[3].quarters
+      },
+      {
+        x: "2015",
+        y: dataSet[4].y,
+        color: colors[4],
+        quarters: dataSet[4].quarters
+      },
+      {
+        x: "2016",
+        y: dataSet[5].y,
+        color: colors[5],
+        quarters: dataSet[5].quarters
+      }
+    ];
+  
+    return dataYearSeries;
+  }
+  
+  </script>
+  
+  <script>
+    Apex = {
+      chart: {
+        toolbar: {
+          show: false
+        }
+      },
+      tooltip: {
+        shared: false
+      },
+    }
+    var colors = ['#008FFB', '#00E396', '#FEB019', '#FF4560', '#775DD0', '#00D9E9', '#FF66C3'];
+    var optionsYear = {
+      chart: {
+        id: 'barYear',
+        height: 400,
+        width: '100%',
+        type: 'bar',
+      },
+      plotOptions: {
+        bar: {
+          distributed: true,
+          horizontal: true,
+          endingShape: 'arrow',
+          barHeight: '75%',
+          dataLabels: {
+            position: 'bottom'
+          }
+        }
+      },
+      dataLabels: {
+        enabled: true,
+        textAnchor: 'start',
+        style: {
+          colors: ['#fff']
+        },
+        formatter: function(val, opt) {
+          return opt.w.globals.labels[opt.dataPointIndex]
+        },
+        offsetX: 0,
+        dropShadow: {
+          enabled: true
+        }
+      },
+      colors: colors,
+      series: [{
+        data: makeData()
+      }],
+      states: {
+        normal: {
+          filter: {
+            type: 'desaturate'
+          }
+        },
+        active: {
+          allowMultipleDataPointsSelection: true,
+          filter: {
+            type: 'darken',
+            value: 1
+          }
+        }
+      },
+      tooltip: {
+        x: {
+          show: false
+        },
+        y: {
+          title: {
+            formatter: function(val, opts) {
+              return opts.w.globals.labels[opts.dataPointIndex]
+            }
+          }
+        }
+      },
+      title: {
+        text: 'Yearly Results',
+        offsetX: 15
+      },
+      subtitle: {
+        text: '(Click on bar to see details)',
+        offsetX: 15
+      },
+      yaxis: {
+        labels: {
+          show: false
+        }
+      },
+    }
+    var yearChart = new ApexCharts(
+      document.querySelector("#chart-year"),
+      optionsYear
+    );
+    yearChart.render();
+  
+    function updateQuarterChart(sourceChart, destChartIDToUpdate) {
+      var series = [];
+      var seriesIndex = 0;
+      var colors = []
+      if (sourceChart.w.globals.selectedDataPoints[0]) {
+        var selectedPoints = sourceChart.w.globals.selectedDataPoints;
+        for (var i = 0; i < selectedPoints[seriesIndex].length; i++) {
+          var selectedIndex = selectedPoints[seriesIndex][i];
+          var yearSeries = sourceChart.w.config.series[seriesIndex];
+          series.push({
+            name: yearSeries.data[selectedIndex].x,
+            data: yearSeries.data[selectedIndex].quarters
+          })
+          colors.push(yearSeries.data[selectedIndex].color)
+        }
+        if (series.length === 0) series = [{
+          data: []
+        }]
+        return ApexCharts.exec(destChartIDToUpdate, 'updateOptions', {
+          series: series,
+          colors: colors,
+          fill: {
+            colors: colors
+          }
+        })
+      }
+    }
+    var optionsQuarters = {
+      chart: {
+        id: 'barQuarter',
+        height: 400,
+        width: '100%',
+        type: 'bar',
+        stacked: true
+      },
+      plotOptions: {
+        bar: {
+          columnWidth: '50%',
+          horizontal: false
+        }
+      },
+      series: [{
+        data: []
+      }],
+      legend: {
+        show: false
+      },
+      grid: {
+        yaxis: {
+          lines: {
+            show: false,
+          }
+        },
+        xaxis: {
+          lines: {
+            show: true,
+          }
+        }
+      },
+      yaxis: {
+        labels: {
+          show: false
+        }
+      },
+      title: {
+        text: 'Quarterly Results',
+        offsetX: 10
+      },
+      tooltip: {
+        x: {
+          formatter: function(val, opts) {
+            return opts.w.globals.seriesNames[opts.seriesIndex]
+          }
+        },
+        y: {
+          title: {
+            formatter: function(val, opts) {
+              return opts.w.globals.labels[opts.dataPointIndex]
+            }
+          }
+        }
+      }
+    }
+    var chartQuarters = new ApexCharts(
+      document.querySelector("#chart-quarter"),
+      optionsQuarters
+    )
+    chartQuarters.render();
+    yearChart.addEventListener('dataPointSelection', function(e, chart, opts) {
+      var quarterChartEl = document.querySelector("#chart-quarter");
+      var yearChartEl = document.querySelector("#chart-year");
+      if (opts.selectedDataPoints[0].length === 1) {
+        if (quarterChartEl.classList.contains("active")) {
+          updateQuarterChart(chart, 'barQuarter')
+        } else {
+          yearChartEl.classList.add("chart-quarter-activated")
+          quarterChartEl.classList.add("active");
+          updateQuarterChart(chart, 'barQuarter')
+        }
+      } else {
+        updateQuarterChart(chart, 'barQuarter')
+      }
+      if (opts.selectedDataPoints[0].length === 0) {
+        yearChartEl.classList.remove("chart-quarter-activated")
+        quarterChartEl.classList.remove("active");
+      }
+    })
+    yearChart.addEventListener('updated', function(chart) {
+      updateQuarterChart(chart, 'barQuarter')
+    })
+    document.querySelector("#model").addEventListener("change", function(e) {
+      yearChart.updateSeries([{
+        data: makeData()
+      }])
+    })
+  </script>
 {% endblock scripts %}

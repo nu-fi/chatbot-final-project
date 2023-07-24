@@ -5,7 +5,6 @@ from apps import db, mail
 from flask_mail import Message as Mess
 from apps.main.forms import ContactForm, SearchForm
 import os
-import json
 from flask_cors import cross_origin
 from sqlalchemy import or_
 
@@ -20,7 +19,7 @@ def page_not_found(error):
 def predict():
     text = request.get_json().get("message")
     if len(text) > 100:
-        message = {"answer": "Maaf, permintaan Anda memiliki terlalu banyak karakter untuk saya proses."}
+        message = {"answer": "Maaf, permintaan Anda memiliki terlalu banyak karakter untuk saya proses..."}
         mess = Message(question=text)
         db.session.add(mess)
         db.session.commit()
@@ -87,14 +86,20 @@ def kata_sambutan():
 def contact():
     form = ContactForm()
     if form.validate_on_submit():
-        email = form.email.data
+        email_sender = form.email.data
         message = form.message.data
         subject = form.subject.data
-        msg = Mess('Pesan '+ subject +' Telah Diterima', sender='idaikalbar123@gmail.com', recipients=[email])
-        msg.body = f''' Pesan anda yang berisi: {message} telah diterima.
-Terima kasih atas pesan yang telah diberikan. Mohon menunggu sebentar, Kami akan menjawab pesan anda dengan segera.
+        msg_sender = Mess('Pesan ' + subject + ' Telah Diterima', sender=email_sender, recipients=[email_sender])
+        msg_sender.body = f''' Pesan anda yang berisi: {message} telah diterima.
+Terima kasih atas pesan yang telah diberikan. Mohon menunggu sebentar, kami akan menjawab pesan anda dengan segera.
     '''
-        mail.send(msg)
+        mail.send(msg_sender)
+
+        msg_idaikb = Mess('Pesan ' + subject + ' Telah Diterima', sender=email_sender, recipients=['idaikalbar123@gmail.com'])
+        msg_idaikb.body = f''' Anda memiliki pesan baru dari {email_sender} yang berisi: {message} telah diterima.
+Mohon untuk menjawab pesan dengan segera.
+    '''
+        mail.send(msg_idaikb)
         flash('Pesan untuk email telah diterima. Terima Kasih.', 'info')
         return redirect(url_for('main.contact'))
 

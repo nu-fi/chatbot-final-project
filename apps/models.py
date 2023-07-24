@@ -206,5 +206,5 @@ class Message(db.Model):
     response = db.Column(db.String(300), default="No Answer")
     date_posted = db.Column(db.DateTime, default=datetime.now())
     
-    def __repr__(self):
-        return '<Message %r>' % self.username
+    # def __repr__(self):
+    #     return '<Message %r>' % self.id

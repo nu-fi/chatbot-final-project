@@ -3,7 +3,7 @@ import os
 class Config:
     SECRET_KEY = 'aa84a2e78ca27e834a2ab8aab8a0a924'
     SQLALCHEMY_DATABASE_URI = 'sqlite:///idaii.db'
-    MAIL_SERVER = 'smtp.gmail.com'
+    MAIL_SERVER = 'smtp.googlemail.com'
     MAIL_PORT = 587 
     MAIL_USE_TLS = True
     # MAIL_USE_SSL = True

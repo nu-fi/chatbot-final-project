@@ -7,7 +7,7 @@ from flask_ckeditor import CKEditorField
 class NewsForm(FlaskForm):
     title = StringField('Judul Berita', validators=[DataRequired()], render_kw={"placeholder": "Judul Berita"})
     content = CKEditorField('Isi Berita', validators=[DataRequired()])
-    picture = FileField('Gambar Berita', validators=[FileAllowed(['jpg', 'png', 'jpeg'])])
+    picture = FileField('Gambar Berita', validators=[DataRequired(), FileAllowed(['jpg', 'png', 'jpeg'])])
     category = SelectField('Kategori', coerce=int)
     submit = SubmitField('Simpan Berita')
 

@@ -1,5 +1,4 @@
 import secrets
-from turtle import title
 from flask import Blueprint, render_template, url_for, flash, redirect, request, abort, current_app
 from apps.models import Gallery, Images_Gallery
 from apps import db

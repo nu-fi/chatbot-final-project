@@ -1,10 +1,9 @@
-from flask import Blueprint, render_template, url_for, redirect, request
+from flask import Blueprint, render_template, url_for, redirect, request, send_from_directory, current_app, flash
 from apps.models import Message
 from apps import db
 from flask_login import login_required
-import json
+import json, os
 import pandas as pd
-import subprocess
 from io import StringIO
 
 chatbot = Blueprint('chatbot', __name__)
@@ -69,12 +68,31 @@ def dataset():
     
     return render_template('users/admin/chatbot/dataset.html', title='Manajemen Dataset', data=df)
 
-@chatbot.route("/admin/dataset-training")
-@login_required
-def training():
-    subprocess.call("py training.py", shell=True, cwd="apps")
-    
+@chatbot.route("/admin/download-dataset")
+def dataset_download():
+    filename = "intents.json"
+    path = os.path.join(current_app.root_path)
+    return send_from_directory(path, filename, as_attachment=True)
+
+@chatbot.route('/admin/upload-dataset', methods=['POST'])
+def upload_dataset():
+    if request.method == 'POST':
+        file = request.files['file']
+        if file:
+            filename = "data.pth"
+            file.save(os.path.join(current_app.root_path, filename))
+            flash('New model uploaded successfully!!', 'primary')
+            # return redirect(url_for('chatbot.dataset'))
+        else:
+            flash('No file selected.', 'error')
     return redirect(url_for('chatbot.dataset'))
+    
+# @chatbot.route("/admin/dataset-training")
+# @login_required
+# def training():
+#     subprocess.call("py training.py", shell=True, cwd="apps")
+    
+#     return redirect(url_for('chatbot.dataset'))
 
 @chatbot.route("/admin/tambah-dataset", methods=['GET', 'POST'])
 @login_required
@@ -94,7 +112,7 @@ def add_dataset():
         }
 
         write_json(y)
-
+        flash("Dataset berhasil ditambah", 'primary')
         return redirect(url_for('chatbot.dataset'))
     return render_template('users/admin/chatbot/tambah_dataset.html', title='Tambah Dataset')
 
@@ -114,6 +132,7 @@ def edit_dataset(tag):
         dataset['responses'] = responses
 
         ubah_dataset(dataset['tag'], patterns, responses)
+        flash("Dataset berhasil diubah", 'success')
 
         return redirect(url_for('chatbot.dataset'))
 
@@ -123,6 +142,7 @@ def edit_dataset(tag):
 @login_required
 def delete_dataset(tag):
     delete_tag(tag)
+    flash("Dataset berhasil dihapus", 'danger')
     return redirect(url_for('chatbot.dataset'))
 
 @chatbot.route("/admin/history")
@@ -143,6 +163,7 @@ def unans_delete(id):
     message = Message.query.get_or_404(id)
     db.session.delete(message)
     db.session.commit()
+    flash("Data percakapan tidak terjawab berhasil dihapus", 'danger')
     
     return redirect(url_for('chatbot.unans_chat'))
 
@@ -152,5 +173,6 @@ def history_delete(id):
     message = Message.query.get_or_404(id)
     db.session.delete(message)
     db.session.commit()
+    flash("Data percakapan berhasil dihapus", 'danger')
     
     return redirect(url_for('chatbot.history'))

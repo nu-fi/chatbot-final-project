@@ -38,8 +38,42 @@
         <section class="section m-4">
           <div class="mb-3">
             <a href="{{ url_for('chatbot.add_dataset') }}" type="button" class="btn btn-warning btn-md" data-placement="top" title="Tambah Dataset"><i class="fa-solid fa-plus"></i></a>
+
+            <!-- <a href="" type="button" class="btn btn-danger btn-md" data-placement="top" title="Upload Model"><i class="fa-solid fa-upload"></i>&nbsp;Upload Model Baru</a> -->
             
-            <a href="{{ url_for('chatbot.training') }}" type="button" class="btn btn-success btn-md text-right" data-placement="top" title="Training Dataset">Training Dataset</a>
+            <!-- Button to trigger the modal -->
+          <a href="#" type="button" class="btn btn-danger btn-md" data-toggle="modal" data-target="#uploadModal">
+            <i class="fa-solid fa-upload"></i>&nbsp;Upload Model Baru
+          </a>
+
+          <!-- Modal -->
+          <div class="modal fade" id="uploadModal" tabindex="-1" role="dialog" aria-labelledby="uploadModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="uploadModalLabel">Upload Model</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <!-- File input to select the file to upload -->
+                  <form action="{{ url_for('chatbot.upload_dataset') }}" method="POST" enctype="multipart/form-data">
+                    <input type="file" name="file" id="fileInput" class="form-control">
+                    <br>
+                    <div class="d-flex justify-content-end">
+                      <input type="submit" class="btn btn-primary mr-2" value="Upload">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                  </form>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+
+            <a href="{{ url_for('chatbot.dataset_download') }}" type="button" class="btn btn-info btn-md" data-placement="top" title="Download Dataset"><i class="fa-solid fa-download"></i>&nbsp;Download Dataset</a>            
+            <!-- <a href="" type="button" class="btn btn-success btn-md text-right" data-placement="top" title="Training Dataset">Training Dataset</a> -->
           </div>
         
           <table id="data" class="table table-striped table-hover">
@@ -151,3 +185,49 @@
 </div>
     
 {% endblock content%}
+
+{% block scripts%}
+<!-- JavaScript code to handle the modal behavior and file upload -->
+<!-- <script>
+  $(document).ready(function() {
+    // When the upload button is clicked
+    $('#uploadBtn').click(function() {
+      // Get the selected file from the input
+      var file = $('#fileInput')[0].files[0];
+      // Create a FormData object to store the file
+      var formData = new FormData();
+      formData.append('file', file);
+
+      // Send an AJAX request to the Flask route to handle the file upload
+      $.ajax({
+        url: '/admin/upload-dataset',
+        type: 'POST',
+        data: formData,
+        processData: false,
+        contentType: false,
+        success: function(data) {
+          // Handle the response from the server (if needed)
+          console.log(data);
+          // Close the modal after successful upload
+          $('#uploadModal').modal('hide');
+          // Reload the page to display flash messages
+          location.reload();
+        },
+        error: function(error) {
+          // Handle the error (if needed)
+          console.error(error);
+        }
+      });
+    });
+  });
+</script> -->
+
+<script>
+  $(document).ready(function() {
+    $('#uploadModal').on('hidden.bs.modal', function () {
+      // Clear the file input when the modal is closed
+      $('#fileInput').val('');
+    });
+  });
+</script>
+{% endblock scripts%}

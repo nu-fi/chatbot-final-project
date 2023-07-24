@@ -22,7 +22,7 @@ def tokenize(sentence):
 
 # Filtering (stopword removal)
 def stopwords_removal(word):
-    listStopword = ["yang", "apa", "untuk", "pada", "dengan", "saja", "itu", "ya", "dari", "anda", "kamu", "saya", "ini"]
+    listStopword = ["yang", "apa", "untuk", "pada", "dengan", "saja", "itu", "ya", "dari", "anda", "kamu", "saya", "ini", "bagaimana", "ini", "mengapa"]
     words = []
     for t in word:
         if t not in listStopword:
@@ -59,7 +59,7 @@ def bag_of_words(tokenized_sentence, words):
 
 
 def words(text): return re.findall(r'\w+', text.lower())
-# path_corpus = "apps/indonesian-words.txt"
+# path_corpus = "apps/spell_checker.txt"
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 path_corpus = os.path.join(BASE_DIR, 'indonesian-words.txt')
 WORDS = Counter(words(open(path_corpus).read()))
