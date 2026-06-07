@@ -1,5 +1,12 @@
-apps/config.py
-apps/__pycache__/
-apps/*.pyc
+# Configuration files
+config.py
+
+# Python cache (targets cache anywhere in the project)
+__pycache__/
+*.pyc
+
+# Databases
 *.db
+
+# Virtual Environment
 venv/
