@@ -1,2 +1,5 @@
 apps/config.py
+apps/__pycache__/
+apps/*.pyc
+*.db
 venv/
