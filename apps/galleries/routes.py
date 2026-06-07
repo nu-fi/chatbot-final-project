@@ -29,7 +29,6 @@ def new_gallery():
         db.session.add(gall)
         db.session.commit()
         flash('Your Image Gallery has been added!', 'primary')
-
         return redirect(url_for('galleries.new_gallery'))
         
     return render_template('users/admin/galleries/galeri_kategori.html', form=form, galls=galls, title='Kategori Galeri')
@@ -56,9 +55,7 @@ def gal_update(gal_id):
         return redirect(url_for('galleries.new_gallery', gal_id=gal.id))
     elif request.method == 'GET':
         form.title.data = gal.title
-
     return render_template('users/admin/galleries/galeri_kategori.html', title='Update Kategori', legend='Update Kategori', form=form)
-
 
 @galleries.route("/admin/galeri", methods=['GET', 'POST'])
 @login_required

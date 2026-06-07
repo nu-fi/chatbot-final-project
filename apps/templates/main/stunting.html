@@ -1,6 +1,7 @@
 {% extends "layouts/base.html" %}
 
 {% block content %}
+
 <div class="">
   <section class="pb-6  text-gray-900">
       <div class="container flex flex-col items-center justify-center p-4 mx-auto sm:p-10">
@@ -8,8 +9,15 @@
           <p class="p-2 text-sm font-medium tracking-wider text-center uppercase">Ikatan Dokter Anak Indonesia <br>Cabang Kalimantan Barat</p>
           
           <div class="container mx-auto items-center pb-12">
+            <h6 class="justify">Berikut merupakan grafik tinggi badan dan grafik berat badan sesuai usia anak berdasarkan rekomendasi WHO. Berikut merupakan grafik tinggi badan dan grafik berat badan sesuai usia anak berdasarkan rekomendasi WHO. Jika Anda memiliki pertanyaan lebih lanjut tentang stunting dan masalah pertumbuhan anak, StuBot siap membantu! StuBot adalah asisten virtual yang memiliki pengetahuan tentang stunting, termasuk pengertian stunting, ciri-ciri anak stunting, pencegahan, dampak, dan perbedaan dengan anak pendek.  </h6>
+            <!-- Add a button below the chart -->
             <br>
-            <h6 class="font-medium">Berikut merupakan grafik tinggi badan dan grafik berat badan sesuai usia anak berdasarkan rekomendasi WHO.</h6>
+            <button id="chatbot-button" class="px-4 py-2 bg-green-900 hover:bg-green-600 text-white font-semibold rounded shadow-md">
+              Chat with StuBot
+            </button>
+            
+            <br>
+
             <br>
             <div class="flex flex-wrap -mx-2">
               <div class="w-full lg:w-6/12 px-2">
@@ -86,75 +94,8 @@
 {% endblock content%}
 
 {% block scripts %}
+
 <script type="text/javascript" src="{{ url_for('static', filename='assets/js/app.js') }}"></script>
-
-<!-- Required chart.js -->
-<!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
-
-
-<!-- Chart line -->
-<!-- <script>
-  var options = {
-    series: [{
-      data: [{
-        x: '0 Bulan',
-        y: [1, 5]
-      }, {
-        x: '1 Bulan',
-        y: [4, 6]
-      }, {
-        x: '2 Bulan',
-        y: [5, 8]
-      }, {
-        x: '3 Bulan',
-        y: [3, 11]
-      }]
-    }, {
-      data: [{
-        x: '0 Bulan',
-        y: [2, 6]
-      }, {
-        x: '1 Bulan',
-        y: [1, 3]
-      }, {
-        x: '2 Bulan',
-        y: [7, 8]
-      }, {
-        x: '3 Bulan',
-        y: [5, 9]
-      }]
-    }],
-    chart: {
-      type: 'rangeBar',
-      height: 350
-    },
-    plotOptions: {
-      bar: {
-        horizontal: false
-      }
-    },
-    dataLabels: {
-      enabled: true
-    }
-  };
-
-  var chart = new ApexCharts(document.querySelector('#range-chart'), options);
-  chart.render();
-
-  // Listen for select element change event
-  document.getElementById('age-select').addEventListener('change', function() {
-    var selectedTeam = this.value;
-    var newData = options.series.map(function(serie) {
-      return {
-        data: serie.data.filter(function(dataItem) {
-          return dataItem.x === selectedTeam;
-        })
-      };
-    });
-
-    chart.updateSeries(newData);
-  });
-</script> -->
 
 <script>
   var options = {

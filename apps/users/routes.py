@@ -7,7 +7,6 @@ from flask_login import login_user, current_user, logout_user, login_required
 import json
 from sqlalchemy import func, extract
 from datetime import datetime
-import calendar
 
 users = Blueprint('users', __name__)
 
@@ -50,18 +49,8 @@ def admin():
             'message_count': result.message_count
         }
         message_count_list.append(message_count_dict)
-
-
-
-    # Cetak hasil
-    # for result in message_count_by_month:
-    #     month = result.month
-    #     message_count = result.message_count
-    #     print(f"Bulan {month}: {message_count} pesan")
-
         
     all_msg = len(Message.query.all())
-
     return render_template('users/admin/admin_dash.html', current_user=current_user, roles=current_user.role.title, num_article=len(num_article), num_datadok=len(num_datadok), num_news=len(num_news), num_dok=len(num_dok), title='Dashboard Admin', num_answered=json.dumps(num_answered), num_unanswered=num_unanswered, all_msg=all_msg, msg_month=json.dumps(msg_month), month_labels=json.dumps(month_labels), message_count_by_month=json.dumps(message_count_list))
 
 

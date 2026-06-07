@@ -8,5 +8,3 @@ class FilesForm(FlaskForm):
     description = StringField('Deskripsi Berkas', validators=[DataRequired()])
     file = FileField('Berkas', validators=[DataRequired(), FileAllowed(['pdf', 'doc', 'docx', 'xlsx', 'csv'])])
     submit = SubmitField('Simpan File')
-    
-

@@ -3,60 +3,11 @@ import json
 import torch
 from apps.model import NeuralNet
 from apps.nltk_utils import tokenize, case_folding, clean_punct, stopwords_removal, correction, de_tokenize, stemmingIndo, bag_of_words
-import numpy as np
-from sklearn.feature_extraction.text import CountVectorizer
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 with open('apps/intents.json', 'r') as json_data:
     intents = json.load(json_data)
-
-# all_words = [] # Semua Kata 
-# tags = [] # Tag 
-# patternresponse = [] # udh tokenize sm label
-# all_pattern_done = [] # semua kalimat udh di preprocessing
-
-# # loop through the tags (classes)
-# for intent in intents['intents']:
-#     tag = intent['tag']
-#     tags.append(tag)
-#     for pattern in intent['patterns']:
-#         pattern = case_folding(pattern)
-#         pattern = clean_punct(pattern)
-#         words = tokenize(pattern)
-#         w = stopwords_removal(words)
-#         # w = [stemmingIndo(w) for w in words]
-#         all_words.extend(w)
-#         patternresponse.append((w, tag))
-#         all_pattern_done.append(w)
-
-# # stem and lower each word
-# ignore_words = ['?', '.', '!', ',', '-']
-# # all_words = [stemmingIndo(w) for w in all_words if w not in ignore_words]
-# # remove duplicates and sort
-# all_words = sorted(set(all_words))
-# tags = sorted(set(tags))
-# all_pattern_done = [ ' '.join(lst) for lst in all_pattern_done ]
-
-# print(len(all_pattern_done), "patterns")
-# print(len(tags), "tags:", tags)
-# print(len(all_words), "unique stemmed words:", all_words)
-
-# # stemmed_words = sorted(set(all_words))  # Assuming `all_words` contains the stemmed words
-# # with open("apps/stemmed_words.txt", "w") as file:
-# #     for word in stemmed_words:
-# #         file.write(word + "\n")
-
-# # create training data
-# X_train = []
-# Y_train = []
-
-# for (pattern_sentence, tag) in patternresponse:
-#         label = tags.index(tag)
-#         Y_train.append(label)
-
-# vectorizer = CountVectorizer(max_features = 1000, dtype=np.float32)
-# X = vectorizer.fit_transform(all_pattern_done)
 
 FILE = "apps/data.pth"
 data = torch.load(FILE)
@@ -71,8 +22,6 @@ model_state = data["model_state"]
 model = NeuralNet(input_size, hidden_size, output_size).to(device)
 model.load_state_dict(model_state)
 model.eval()
-
-bot_name = "Bot"
 
 def get_response(msg):
     sentence = case_folding(msg)
@@ -108,7 +57,7 @@ def get_response(msg):
         for intent in intents['intents']:
             if tag == intent["tag"]:
                 return random.choice(intent['responses'])
-    elif prob.item() > 0.6:
+    elif prob.item() > 0.75:
         for intent in intents['intents']:
             if tag == intent["tag"]:
                 return f"Sepertinya jawaban yang cocok untuk pertanyaan kamu adalah {random.choice(intent['responses'])}"

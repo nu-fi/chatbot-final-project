@@ -1,12 +1,11 @@
 import secrets
-from flask import Blueprint, render_template, url_for, flash, redirect, request, abort, current_app
-from apps.models import Files_Public, Message, DataDokter, Roles, TempatPraktik
+from flask import Blueprint, render_template, url_for, flash, redirect, request, current_app
+from apps.models import Files_Public, DataDokter, Roles, TempatPraktik
 from apps import db
 from apps.files.forms import FilesForm
 from flask_login import current_user, login_required
 import os
 from slugify import slugify
-from apps.users.utils import admin_required
 
 files = Blueprint('files', __name__)
 
@@ -15,7 +14,6 @@ def save_file(form_file):
     _, f_ext = os.path.splitext(form_file.filename)
     file_fn = random_hex + f_ext
     files_path = os.path.join(current_app.root_path, 'static/assets/files/public', file_fn)
-        
     form_file.save(files_path)
     return file_fn
 
@@ -30,6 +28,7 @@ def new_files():
         file = Files_Public(title=form.title.data, description=form.description.data, filename=file_name, slug = slugify(request.form.get("title")))
         db.session.add(file)
         db.session.commit()
+        flash('Your file has been added!', 'success')
     
     files = Files_Public.query.all()
     return render_template('users/admin/berkas_admin.html', form=form, title='Berkas Publik', files=files)
@@ -99,7 +98,6 @@ def data_verifikasi(id):
         data.status_data = False
     db.session.commit()
     flash('Your Data has been updated!', 'success')
-
     return redirect(url_for('files.data_dokter'))
 
 @files.route("/admin/data-detail/<int:id>", methods=['GET', 'POST'])

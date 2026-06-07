@@ -82,17 +82,10 @@ def upload_dataset():
             filename = "data.pth"
             file.save(os.path.join(current_app.root_path, filename))
             flash('New model uploaded successfully!!', 'primary')
-            # return redirect(url_for('chatbot.dataset'))
+            return redirect(url_for('chatbot.dataset'))
         else:
             flash('No file selected.', 'error')
     return redirect(url_for('chatbot.dataset'))
-    
-# @chatbot.route("/admin/dataset-training")
-# @login_required
-# def training():
-#     subprocess.call("py training.py", shell=True, cwd="apps")
-    
-#     return redirect(url_for('chatbot.dataset'))
 
 @chatbot.route("/admin/tambah-dataset", methods=['GET', 'POST'])
 @login_required

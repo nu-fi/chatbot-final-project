@@ -16,4 +16,3 @@ class BerkasForm(FlaskForm):
     batas_sip = DateField('Terakhir Berlaku SIP', validators=[DataRequired()], format='%Y-%m-%d')
 
     submit = SubmitField('Simpan Data')
-

@@ -100,7 +100,6 @@ def berkas_delete(id):
 
     return redirect(url_for('doctors.tambah_data'))
 
-
 @doctors.route("/data-dokter", methods=['GET', 'POST'])
 @login_required
 def data_dokter():
@@ -121,8 +120,7 @@ def tambah_tempatpraktik():
     else:
         data_valid=False
 
-    form = TempatPraktikForm()
-    
+    form = TempatPraktikForm()    
     if form.validate_on_submit():
         tempat_praktik = form.tempat_praktik.data
         alamat_praktik = form.alamat_praktik.data
@@ -135,7 +133,6 @@ def tambah_tempatpraktik():
         db.session.commit()
 
         flash('Your Data has been added!', 'success')
-
         return redirect(url_for('doctors.get_data', id=current_user.id))
 
     return render_template('users/doctor/tempat_praktik.html', title='Tempat Praktik Dokter', legend='Tempat Praktik Dokter', form=form, roles=current_user.role.title, data_valid = data_valid)
@@ -147,7 +144,6 @@ def update_tp(id):
     cekdata = DataDokter.query.filter_by(user_id=current_user.id).first()
 
     data = TempatPraktik.query.filter_by(id=id).first()
-
     # form = BerkasForm()
     form = TempatPraktikForm()
 
@@ -170,7 +166,6 @@ def update_tp(id):
         form.jam_mulai.data = data.jam_mulai
         form.jam_selesai.data = data.jam_selesai
         # request.form['hidden_days'] = data.hari_praktik
-        
 
     return render_template('users/doctor/update_tempat_praktik.html', title='Ubah Tempat Praktik', legend='Data Pribadi', form=form, data=data, roles=current_user.role.title, data_valid = cekdata.status_data)
 
@@ -182,5 +177,4 @@ def tp_delete(id):
     db.session.delete(tp)
     db.session.commit()
     flash('Your Data has been deleted!', 'danger')
-
     return redirect(url_for('doctors.tambah_data'))

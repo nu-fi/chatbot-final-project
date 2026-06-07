@@ -37,7 +37,6 @@ def predict():
         db.session.add(mess)
         db.session.commit()
 
-
     return jsonify(message)
 
 @main.route("/", methods=['GET', 'POST'])
@@ -102,13 +101,11 @@ Mohon untuk menjawab pesan dengan segera.
         mail.send(msg_idaikb)
         flash('Pesan untuk email telah diterima. Terima Kasih.', 'info')
         return redirect(url_for('main.contact'))
-
     return render_template('main/kontak.html', title='Kontak Kami', form=form)
 
 @main.route("/stunting")
 def stunting():
     return render_template('main/stunting.html', title='Tentang Stunting')
-
 
 # @main.route("/jurnal")
 # def journal():

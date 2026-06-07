@@ -8,7 +8,6 @@ import os
 import secrets
 from slugify import slugify
 
-
 news = Blueprint('news', __name__)
 
 def save_picture(form_picture):

@@ -12,9 +12,11 @@ class Chatbox {
 
     display() {
         const {openButton, chatBox, sendButton} = this.args;
+        const chatbotButton = document.getElementById('chatbot-button');
 
         this.prompt(chatBox)
 
+        chatbotButton.addEventListener('click', () => this.toggleState(chatBox))
         openButton.addEventListener('click', () => this.toggleState(chatBox))
 
         sendButton.addEventListener('click', () => this.onSendButton(chatBox))
